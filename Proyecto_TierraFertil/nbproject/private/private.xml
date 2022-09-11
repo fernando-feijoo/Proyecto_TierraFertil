@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/C:/Users/chuchei/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo3/FernandoFeijoo.java</file>
+            <file>file:/C:/Users/chuchei/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo3/danielchupapitos.java</file>
+            <file>file:/C:/Users/chuchei/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/vista_login.java</file>
+            <file>file:/C:/Users/chuchei/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/mod_vista.java</file>
+        </group>
+>>>>>>> 7cedcf33c774fb79191912b6ba79491e6e4d08b3
     </open-files>
 </project-private>

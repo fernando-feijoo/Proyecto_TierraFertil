@@ -4,6 +4,8 @@
  */
 package Vista.Grupo2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Daniel Bravo
@@ -26,21 +28,40 @@ public class PruebaDaniel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Presioname = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Presioname.setText("TOCAME");
+        Presioname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionameActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(Presioname)
+                .addContainerGap(167, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(Presioname)
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PresionameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PresionameActionPerformed
+        JOptionPane.showMessageDialog(null, "ESTAAAAA XD");
+    }//GEN-LAST:event_PresionameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +99,6 @@ public class PruebaDaniel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Presioname;
     // End of variables declaration//GEN-END:variables
 }

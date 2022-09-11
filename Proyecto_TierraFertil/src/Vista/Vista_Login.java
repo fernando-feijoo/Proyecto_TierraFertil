@@ -6,22 +6,14 @@ package Vista;
 
 /**
  *
- * @author Brayan Carmona
+ * @author Fabricio F. Feijoo
  */
-<<<<<<<< HEAD:Proyecto_TierraFertil/src/Vista/vista_login.java
-public class vista_login extends javax.swing.JFrame {
-========
-public class Vista_General extends javax.swing.JFrame {
->>>>>>>> 2595951ff867a8d0476612b92b35ec600931f5c6:Proyecto_TierraFertil/src/Vista/Vista_General.java
+public class Vista_Login extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame
+     * Creates new form Vista_Login
      */
-<<<<<<<< HEAD:Proyecto_TierraFertil/src/Vista/vista_login.java
-    public vista_login() {
-========
-    public Vista_General() {
->>>>>>>> 2595951ff867a8d0476612b92b35ec600931f5c6:Proyecto_TierraFertil/src/Vista/Vista_General.java
+    public Vista_Login() {
         initComponents();
     }
 
@@ -37,6 +29,7 @@ public class Vista_General extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -70,35 +63,20 @@ public class Vista_General extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-<<<<<<<< HEAD:Proyecto_TierraFertil/src/Vista/vista_login.java
-            java.util.logging.Logger.getLogger(vista_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vista_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vista_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vista_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-========
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
->>>>>>>> 2595951ff867a8d0476612b92b35ec600931f5c6:Proyecto_TierraFertil/src/Vista/Vista_General.java
+            java.util.logging.Logger.getLogger(Vista_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-<<<<<<<< HEAD:Proyecto_TierraFertil/src/Vista/vista_login.java
-                new vista_login().setVisible(true);
-========
-                new Vista_General().setVisible(true);
->>>>>>>> 2595951ff867a8d0476612b92b35ec600931f5c6:Proyecto_TierraFertil/src/Vista/Vista_General.java
+                new Vista_Login().setVisible(true);
             }
         });
     }

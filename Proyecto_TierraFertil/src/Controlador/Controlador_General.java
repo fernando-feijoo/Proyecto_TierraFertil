@@ -96,7 +96,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorSeleccionExit);
         }
-        //
     }
 
     @Override
@@ -107,7 +106,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorNormal);
         }
-        //
     }
 
     @Override

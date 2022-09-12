@@ -15,6 +15,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
      */
     public Vis_evaluacion() {
         initComponents();
+
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
         
     }
@@ -385,6 +386,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
 
     private void txt_calibracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_calibracionActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txt_calibracionActionPerformed
 
 

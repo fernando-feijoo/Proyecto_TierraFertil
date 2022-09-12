@@ -51,6 +51,10 @@ public class Vista_General extends javax.swing.JFrame {
         jp_menu_general = new Recursos_Codigo.Redondeado();
         jp_redondeado_escritorio = new Recursos_Codigo.Redondeado();
         jp_escritorio_general = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -70,6 +74,7 @@ public class Vista_General extends javax.swing.JFrame {
         jp_opcionModoOscuro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jp_opcionModoOscuro.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setMinimumSize(new java.awt.Dimension(220, 40));
+        jp_opcionModoOscuro.setPreferredSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -90,7 +95,7 @@ public class Vista_General extends javax.swing.JFrame {
         lbl_nombre_usuario.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         lbl_nombre_usuario.setForeground(new java.awt.Color(0, 0, 0));
         lbl_nombre_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ProfileUser_32px.png"))); // NOI18N
-        lbl_nombre_usuario.setText("Nombre Usuario");
+        lbl_nombre_usuario.setText("NombreUsuario");
         lbl_nombre_usuario.setAlignmentX(0.5F);
         jp_opcionInicial.add(lbl_nombre_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
@@ -119,8 +124,8 @@ public class Vista_General extends javax.swing.JFrame {
         jp_banner.setPreferredSize(new java.awt.Dimension(1280, 80));
         jp_banner.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_icono_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/LogoTierraFertil_250px_68px.png"))); // NOI18N
-        jp_banner.add(lbl_icono_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, -1, -1));
+        lbl_icono_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/LogoTierraFertil_305px_75px.png"))); // NOI18N
+        jp_banner.add(lbl_icono_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 6, -1, -1));
 
         btn_cerrar.setBackground(new java.awt.Color(247, 246, 246));
         btn_cerrar.setMaximumSize(new java.awt.Dimension(36, 36));
@@ -219,15 +224,60 @@ public class Vista_General extends javax.swing.JFrame {
         jp_escritorio_general.setMinimumSize(new java.awt.Dimension(970, 605));
         jp_escritorio_general.setPreferredSize(new java.awt.Dimension(965, 605));
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 862, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 378, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 862, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 378, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab2", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 862, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 378, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab3", jPanel3);
+
         javax.swing.GroupLayout jp_escritorio_generalLayout = new javax.swing.GroupLayout(jp_escritorio_general);
         jp_escritorio_general.setLayout(jp_escritorio_generalLayout);
         jp_escritorio_generalLayout.setHorizontalGroup(
             jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 970, Short.MAX_VALUE)
+            .addGroup(jp_escritorio_generalLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 862, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jp_escritorio_generalLayout.setVerticalGroup(
             jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 605, Short.MAX_VALUE)
+            .addGroup(jp_escritorio_generalLayout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         jp_redondeado_escritorio.add(jp_escritorio_general, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 13, 965, 605));
@@ -292,6 +342,10 @@ public class Vista_General extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JPanel jp_banner;
     public javax.swing.JPanel jp_contenedor_menu;
     public javax.swing.JPanel jp_contenedor_opciones;

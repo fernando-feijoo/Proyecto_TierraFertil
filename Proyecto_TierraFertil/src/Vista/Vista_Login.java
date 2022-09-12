@@ -27,6 +27,20 @@ public class Vista_Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
+        redondeado1 = new Recursos_Codigo.Redondeado();
+        redondeado2 = new Recursos_Codigo.Redondeado();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        redondeado3 = new Recursos_Codigo.Redondeado();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        redondeado4 = new Recursos_Codigo.Redondeado();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel12 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -35,6 +49,88 @@ public class Vista_Login extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setPreferredSize(new java.awt.Dimension(1280, 720));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        redondeado1.setBackground(new java.awt.Color(255, 255, 255,80));
+        redondeado1.setMaximumSize(new java.awt.Dimension(681, 646));
+        redondeado1.setMinimumSize(new java.awt.Dimension(681, 646));
+        redondeado1.setPreferredSize(new java.awt.Dimension(681, 646));
+        redondeado1.setRoundBottomLeft(50);
+        redondeado1.setRoundBottomRight(50);
+        redondeado1.setRoundTopLeft(50);
+        redondeado1.setRoundTopRight(50);
+        redondeado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        redondeado2.setBackground(new java.awt.Color(255, 255, 255));
+        redondeado2.setPreferredSize(new java.awt.Dimension(490, 66));
+        redondeado2.setRoundBottomLeft(50);
+        redondeado2.setRoundBottomRight(50);
+        redondeado2.setRoundTopLeft(50);
+        redondeado2.setRoundTopRight(50);
+        redondeado2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/eye.png"))); // NOI18N
+        redondeado2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("Contraseña");
+        redondeado2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        redondeado1.add(redondeado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
+
+        redondeado3.setPreferredSize(new java.awt.Dimension(490, 66));
+        redondeado3.setRoundBottomLeft(50);
+        redondeado3.setRoundBottomRight(50);
+        redondeado3.setRoundTopLeft(50);
+        redondeado3.setRoundTopRight(50);
+        redondeado3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setBackground(new java.awt.Color(204, 204, 204,80));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/user.png"))); // NOI18N
+        redondeado3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("Usuario");
+        redondeado3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        redondeado1.add(redondeado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
+
+        redondeado4.setBackground(new java.awt.Color(75, 174, 0));
+        redondeado4.setPreferredSize(new java.awt.Dimension(362, 60));
+        redondeado4.setRoundBottomLeft(50);
+        redondeado4.setRoundBottomRight(50);
+        redondeado4.setRoundTopLeft(50);
+        redondeado4.setRoundTopRight(50);
+        redondeado4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Iniciar Sesión");
+        redondeado4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
+
+        redondeado1.add(redondeado4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 510, -1, -1));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(112, 39, 1));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel1.setText("BANANO ORGÁNICO");
+        redondeado1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Logo4kfullHd.png"))); // NOI18N
+        redondeado1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Roboto", 1, 17)); // NOI18N
+        jLabel9.setText("¿Olvidó su contraseña?");
+        redondeado1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, -1, -1));
+        redondeado1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 190, 10));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/aso.png"))); // NOI18N
+        redondeado1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
+
+        jPanel3.add(redondeado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/fondo.jpg"))); // NOI18N
         jPanel3.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -81,6 +177,20 @@ public class Vista_Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel Fondo;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel12;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabel6;
+    public javax.swing.JLabel jLabel7;
+    public javax.swing.JLabel jLabel8;
+    public javax.swing.JLabel jLabel9;
     public javax.swing.JPanel jPanel3;
+    public javax.swing.JSeparator jSeparator1;
+    public Recursos_Codigo.Redondeado redondeado1;
+    public Recursos_Codigo.Redondeado redondeado2;
+    public Recursos_Codigo.Redondeado redondeado3;
+    public Recursos_Codigo.Redondeado redondeado4;
     // End of variables declaration//GEN-END:variables
 }

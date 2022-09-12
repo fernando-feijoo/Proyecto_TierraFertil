@@ -17,7 +17,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Color colorNormal = new Color(247,246,246);
     Color colorSeleccionMinimizar = new Color(133, 193, 233 );
     Color colorSeleccionExit = new Color(231, 76, 60 );
-    int xMouse, yMouse;
+    int xMouse, yMouse, cont = 0;
     public Controlador_General(Vista_General vistaGeneral) {
         this.vistaGeneral = vistaGeneral;
         // MouseListeners
@@ -27,18 +27,25 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.icono_cerrar.addMouseListener(this);
         this.vistaGeneral.jp_banner.addMouseListener(this);
         this.vistaGeneral.btn_minimizar.addMouseListener(this);
+        this.vistaGeneral.jp_opcionInicial.addMouseListener(this);
+        //this.vistaGeneral.lbl_nombre_usuario.addMouseListener(this);
         //ActionListesner
         
         //PruebaMenu
         this.menuPrueba();
         //MouseMotionListener
         this.vistaGeneral.jp_banner.addMouseMotionListener(this);
+        
+        //Ocultar
+        this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
+        this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
     }
     
     public void menuPrueba(){
         this.vistaGeneral.jp_menu_general.add(pruebaMenu);
         this.pruebaMenu.setBorder(null);
         this.pruebaMenu.setVisible(true);
+        
     }
 
     @Override
@@ -51,7 +58,21 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         if (me.getSource() == this.vistaGeneral.btn_minimizar || me.getSource() == this.vistaGeneral.icono_minimizar) {
             this.vistaGeneral.setExtendedState(ICONIFIED);
-            System.out.println("Presionado");
+        }
+        if (me.getSource() == this.vistaGeneral.jp_opcionInicial || me.getSource() == this.vistaGeneral.lbl_nombre_usuario) {
+            if (cont == 0) {
+                this.vistaGeneral.jp_opcionModoOscuro.setVisible(true);
+                this.vistaGeneral.jp_opcionCerrarSesion.setVisible(true);
+            }
+            cont++;    
+        }
+        
+        if (me.getSource() == this.vistaGeneral.jp_opcionInicial && cont == 2) {
+            this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
+            this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
+            this.vistaGeneral.jp_lienzo_principal.setVisible(false);
+            this.vistaGeneral.jp_lienzo_principal.setVisible(true);
+            cont = 0;
         }
     }
 
@@ -75,6 +96,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorSeleccionExit);
         }
+        //
     }
 
     @Override
@@ -85,6 +107,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorNormal);
         }
+        //
     }
 
     @Override

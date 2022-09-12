@@ -53,14 +53,10 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
         txt_codigo = new javax.swing.JTextField();
         txt_destino1 = new javax.swing.JTextField();
         jcom_finca = new javax.swing.JComboBox<>();
-        btn_siguiente1 = new Controlador.Redondeado();
-        jb_btn_reporte = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        jb_btn_tabulacion1 = new javax.swing.JLabel();
-        jb_btn_datos2 = new javax.swing.JLabel();
-        btn_siguiente = new Controlador.Redondeado();
-        jb_btn_siguiente = new javax.swing.JLabel();
+
+        setMaximumSize(new java.awt.Dimension(965, 605));
+        setMinimumSize(new java.awt.Dimension(965, 605));
+        setPreferredSize(new java.awt.Dimension(965, 605));
 
         jp_lienzoPrincipal.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -276,86 +272,21 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        btn_siguiente1.setBackground(new java.awt.Color(204, 204, 204));
-        btn_siguiente1.setRoundBottomLeft(15);
-        btn_siguiente1.setRoundBottomRight(15);
-        btn_siguiente1.setRoundTopLeft(15);
-        btn_siguiente1.setRoundTopRight(15);
-        btn_siguiente1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jb_btn_reporte.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jb_btn_reporte.setForeground(new java.awt.Color(0, 0, 0));
-        jb_btn_reporte.setText("GENERAR REPORTE");
-        btn_siguiente1.add(jb_btn_reporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, -1, -1));
-
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        btn_siguiente1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 18, 30));
-
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        btn_siguiente1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 18, 30));
-
-        jb_btn_tabulacion1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jb_btn_tabulacion1.setForeground(new java.awt.Color(0, 0, 0));
-        jb_btn_tabulacion1.setText("TABULACION");
-        btn_siguiente1.add(jb_btn_tabulacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
-
-        jb_btn_datos2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jb_btn_datos2.setForeground(new java.awt.Color(0, 0, 0));
-        jb_btn_datos2.setText("DATOS");
-        btn_siguiente1.add(jb_btn_datos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
-
-        btn_siguiente.setBackground(new java.awt.Color(204, 204, 204));
-        btn_siguiente.setRoundBottomLeft(15);
-        btn_siguiente.setRoundBottomRight(15);
-        btn_siguiente.setRoundTopLeft(15);
-        btn_siguiente.setRoundTopRight(15);
-
-        jb_btn_siguiente.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jb_btn_siguiente.setForeground(new java.awt.Color(0, 0, 0));
-        jb_btn_siguiente.setText("SIGUIENTE");
-
-        javax.swing.GroupLayout btn_siguienteLayout = new javax.swing.GroupLayout(btn_siguiente);
-        btn_siguiente.setLayout(btn_siguienteLayout);
-        btn_siguienteLayout.setHorizontalGroup(
-            btn_siguienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_siguienteLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jb_btn_siguiente)
-                .addGap(33, 33, 33))
-        );
-        btn_siguienteLayout.setVerticalGroup(
-            btn_siguienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btn_siguienteLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jb_btn_siguiente)
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout jp_lienzoPrincipalLayout = new javax.swing.GroupLayout(jp_lienzoPrincipal);
         jp_lienzoPrincipal.setLayout(jp_lienzoPrincipalLayout);
         jp_lienzoPrincipalLayout.setHorizontalGroup(
             jp_lienzoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_lienzoPrincipalLayout.createSequentialGroup()
                 .addContainerGap(55, Short.MAX_VALUE)
-                .addGroup(jp_lienzoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btn_siguiente1, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jp_contenedorGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jp_contenedorGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
-            .addGroup(jp_lienzoPrincipalLayout.createSequentialGroup()
-                .addGap(350, 350, 350)
-                .addComponent(btn_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp_lienzoPrincipalLayout.setVerticalGroup(
             jp_lienzoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_lienzoPrincipalLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(btn_siguiente1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(119, 119, 119)
                 .addComponent(jp_contenedorGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(btn_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -374,14 +305,6 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Controlador.Redondeado btn_siguiente;
-    private Controlador.Redondeado btn_siguiente1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JLabel jb_btn_datos2;
-    private javax.swing.JLabel jb_btn_reporte;
-    private javax.swing.JLabel jb_btn_siguiente;
-    private javax.swing.JLabel jb_btn_tabulacion1;
     private javax.swing.JLabel jb_calibracion;
     private javax.swing.JLabel jb_codigo;
     private javax.swing.JLabel jb_destino;
@@ -399,7 +322,6 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jcomb_semana;
     private javax.swing.JPanel jp_contenedorGrupo;
     private javax.swing.JPanel jp_lienzoPrincipal;
-    private Controlador.Redondeado redondeado3;
     private javax.swing.JTextField txt_calibracion;
     private javax.swing.JTextField txt_codigo;
     private javax.swing.JTextField txt_dedos;

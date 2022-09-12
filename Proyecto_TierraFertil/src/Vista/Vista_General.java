@@ -28,14 +28,20 @@ public class Vista_General extends javax.swing.JFrame {
     private void initComponents() {
 
         jp_lienzo_principal = new javax.swing.JPanel();
+        jp_contenedor_opciones = new javax.swing.JPanel();
+        jp_opcionModoOscuro = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jp_opcionInicial = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        lbl_nombre_usuario = new javax.swing.JLabel();
+        jp_opcionCerrarSesion = new Recursos_Codigo.Redondeado();
+        jLabel3 = new javax.swing.JLabel();
         jp_banner = new javax.swing.JPanel();
         lbl_icono_logo = new javax.swing.JLabel();
         btn_cerrar = new Recursos_Codigo.Redondeado();
         icono_cerrar = new javax.swing.JLabel();
         btn_minimizar = new Recursos_Codigo.Redondeado();
         icono_minimizar = new javax.swing.JLabel();
-        jp_campo_usuario = new javax.swing.JPanel();
-        lbl_nombre_usuario = new javax.swing.JLabel();
         jp_contenedor_menu = new javax.swing.JPanel();
         jp_hora_fecha = new Recursos_Codigo.Redondeado();
         lbl_icono_reloj = new javax.swing.JLabel();
@@ -55,6 +61,57 @@ public class Vista_General extends javax.swing.JFrame {
         jp_lienzo_principal.setBackground(new java.awt.Color(247, 246, 246));
         jp_lienzo_principal.setMaximumSize(new java.awt.Dimension(1280, 720));
         jp_lienzo_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jp_contenedor_opciones.setBackground(new java.awt.Color(247, 246, 246, 1));
+        jp_contenedor_opciones.setMaximumSize(new java.awt.Dimension(250, 120));
+        jp_contenedor_opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jp_opcionModoOscuro.setBackground(new java.awt.Color(102, 255, 204));
+        jp_opcionModoOscuro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jp_opcionModoOscuro.setMaximumSize(new java.awt.Dimension(220, 40));
+        jp_opcionModoOscuro.setMinimumSize(new java.awt.Dimension(220, 40));
+        jp_opcionModoOscuro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Modo Oscuro");
+        jp_opcionModoOscuro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
+
+        jp_contenedor_opciones.add(jp_opcionModoOscuro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 220, 40));
+
+        jp_opcionInicial.setBackground(new java.awt.Color(247, 246, 246));
+        jp_opcionInicial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jp_opcionInicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/flechaMenu_24px.png"))); // NOI18N
+        jp_opcionInicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
+
+        lbl_nombre_usuario.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        lbl_nombre_usuario.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_nombre_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ProfileUser_32px.png"))); // NOI18N
+        lbl_nombre_usuario.setText("Nombre Usuario");
+        lbl_nombre_usuario.setAlignmentX(0.5F);
+        jp_opcionInicial.add(lbl_nombre_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
+
+        jp_contenedor_opciones.add(jp_opcionInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
+
+        jp_opcionCerrarSesion.setBackground(new java.awt.Color(204, 255, 102));
+        jp_opcionCerrarSesion.setMaximumSize(new java.awt.Dimension(220, 40));
+        jp_opcionCerrarSesion.setMinimumSize(new java.awt.Dimension(220, 40));
+        jp_opcionCerrarSesion.setPreferredSize(new java.awt.Dimension(220, 40));
+        jp_opcionCerrarSesion.setRoundBottomLeft(25);
+        jp_opcionCerrarSesion.setRoundBottomRight(25);
+        jp_opcionCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Cerrar Sesion");
+        jp_opcionCerrarSesion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, -1, -1));
+
+        jp_contenedor_opciones.add(jp_opcionCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 220, 40));
+
+        jp_lienzo_principal.add(jp_contenedor_opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 37, 250, 120));
 
         jp_banner.setBackground(new java.awt.Color(247, 246, 246));
         jp_banner.setMaximumSize(new java.awt.Dimension(1280, 80));
@@ -93,17 +150,6 @@ public class Vista_General extends javax.swing.JFrame {
         btn_minimizar.add(icono_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 13, 30, -1));
 
         jp_banner.add(btn_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 2, -1, -1));
-
-        jp_campo_usuario.setBackground(new java.awt.Color(247, 246, 246));
-        jp_campo_usuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lbl_nombre_usuario.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        lbl_nombre_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ProfileUser_32px.png"))); // NOI18N
-        lbl_nombre_usuario.setText("Nombre Usuario");
-        lbl_nombre_usuario.setAlignmentX(0.5F);
-        jp_campo_usuario.add(lbl_nombre_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
-
-        jp_banner.add(jp_campo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 250, 40));
 
         jp_lienzo_principal.add(jp_banner, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 80));
 
@@ -243,13 +289,19 @@ public class Vista_General extends javax.swing.JFrame {
     public Recursos_Codigo.Redondeado btn_minimizar;
     public javax.swing.JLabel icono_cerrar;
     public javax.swing.JLabel icono_minimizar;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
     public javax.swing.JPanel jp_banner;
-    public javax.swing.JPanel jp_campo_usuario;
     public javax.swing.JPanel jp_contenedor_menu;
+    public javax.swing.JPanel jp_contenedor_opciones;
     public javax.swing.JPanel jp_escritorio_general;
     public Recursos_Codigo.Redondeado jp_hora_fecha;
     public javax.swing.JPanel jp_lienzo_principal;
     public Recursos_Codigo.Redondeado jp_menu_general;
+    public Recursos_Codigo.Redondeado jp_opcionCerrarSesion;
+    public javax.swing.JPanel jp_opcionInicial;
+    public javax.swing.JPanel jp_opcionModoOscuro;
     public Recursos_Codigo.Redondeado jp_redondeado_escritorio;
     public javax.swing.JLabel lbl_icono_calendario;
     public javax.swing.JLabel lbl_icono_logo;

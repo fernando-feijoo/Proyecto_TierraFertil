@@ -8,6 +8,5 @@ public class Main_Grupo3_Pruebas {
         Vista_General vistaGeneral = new Vista_General();
         Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);
         vistaGeneral.show();
-        
     }
 }

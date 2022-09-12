@@ -1,6 +1,6 @@
 package Controlador;
 
-import Vista.Grupo3.Prueba_InstanciarMenu;
+import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Vista_General;
 import java.awt.Color;
 import static java.awt.Frame.ICONIFIED;
@@ -13,7 +13,7 @@ import java.awt.event.MouseMotionListener;
 public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener {
     
     Vista_General vistaGeneral;
-    Prueba_InstanciarMenu pruebaMenu = new Prueba_InstanciarMenu();
+    Vista_Menu_Acopio pruebaMenu = new Vista_Menu_Acopio();
     Color colorNormal = new Color(247,246,246);
     Color colorSeleccionMinimizar = new Color(133, 193, 233 );
     Color colorSeleccionExit = new Color(231, 76, 60 );
@@ -96,7 +96,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorSeleccionExit);
         }
-        //
     }
 
     @Override
@@ -107,7 +106,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorNormal);
         }
-        //
     }
 
     @Override

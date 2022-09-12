@@ -170,14 +170,14 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_escritorio_general.setBackground(new java.awt.Color(255, 204, 102));
         jp_escritorio_general.setMaximumSize(new java.awt.Dimension(965, 605));
-        jp_escritorio_general.setMinimumSize(new java.awt.Dimension(965, 605));
+        jp_escritorio_general.setMinimumSize(new java.awt.Dimension(970, 605));
         jp_escritorio_general.setPreferredSize(new java.awt.Dimension(965, 605));
 
         javax.swing.GroupLayout jp_escritorio_generalLayout = new javax.swing.GroupLayout(jp_escritorio_general);
         jp_escritorio_general.setLayout(jp_escritorio_generalLayout);
         jp_escritorio_generalLayout.setHorizontalGroup(
             jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 965, Short.MAX_VALUE)
+            .addGap(0, 970, Short.MAX_VALUE)
         );
         jp_escritorio_generalLayout.setVerticalGroup(
             jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

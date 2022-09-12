@@ -9,6 +9,5 @@ public class Main_Grupo3_Pruebas {
         Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);
         vistaGeneral.show();
         
-        
     }
 }

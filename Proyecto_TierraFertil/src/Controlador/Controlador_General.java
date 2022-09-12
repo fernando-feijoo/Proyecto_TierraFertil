@@ -1,6 +1,5 @@
 package Controlador;
 
-import Vista.Grupo2.Vis_evaluacion;
 import Vista.Grupo3.Prueba_InstanciarMenu;
 import Vista.Vista_General;
 import java.awt.Color;
@@ -62,7 +61,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial || me.getSource() == this.vistaGeneral.lbl_nombre_usuario) {
             if (cont == 0) {
-                System.out.println("Ingreso Valido");
                 this.vistaGeneral.jp_opcionModoOscuro.setVisible(true);
                 this.vistaGeneral.jp_opcionCerrarSesion.setVisible(true);
             }
@@ -70,7 +68,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial && cont == 2) {
-            System.out.println("Salio");
             this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
             this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
             this.vistaGeneral.jp_lienzo_principal.setVisible(false);

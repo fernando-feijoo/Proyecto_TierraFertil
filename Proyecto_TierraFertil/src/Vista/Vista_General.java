@@ -62,11 +62,11 @@ public class Vista_General extends javax.swing.JFrame {
         jp_lienzo_principal.setMaximumSize(new java.awt.Dimension(1280, 720));
         jp_lienzo_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_contenedor_opciones.setBackground(new java.awt.Color(247, 246, 246, 1));
+        jp_contenedor_opciones.setBackground(new java.awt.Color(255, 255, 255, 1));
         jp_contenedor_opciones.setMaximumSize(new java.awt.Dimension(250, 120));
         jp_contenedor_opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_opcionModoOscuro.setBackground(new java.awt.Color(102, 255, 204));
+        jp_opcionModoOscuro.setBackground(new java.awt.Color(204, 204, 204));
         jp_opcionModoOscuro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jp_opcionModoOscuro.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setMinimumSize(new java.awt.Dimension(220, 40));
@@ -96,12 +96,12 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_contenedor_opciones.add(jp_opcionInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
-        jp_opcionCerrarSesion.setBackground(new java.awt.Color(204, 255, 102));
+        jp_opcionCerrarSesion.setBackground(new java.awt.Color(153, 153, 153));
         jp_opcionCerrarSesion.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setMinimumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setPreferredSize(new java.awt.Dimension(220, 40));
-        jp_opcionCerrarSesion.setRoundBottomLeft(25);
-        jp_opcionCerrarSesion.setRoundBottomRight(25);
+        jp_opcionCerrarSesion.setRoundBottomLeft(35);
+        jp_opcionCerrarSesion.setRoundBottomRight(35);
         jp_opcionCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N

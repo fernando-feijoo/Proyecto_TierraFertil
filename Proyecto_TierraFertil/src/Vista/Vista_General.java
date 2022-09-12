@@ -30,19 +30,25 @@ public class Vista_General extends javax.swing.JFrame {
         jp_lienzo_principal = new javax.swing.JPanel();
         jp_banner = new javax.swing.JPanel();
         lbl_icono_logo = new javax.swing.JLabel();
-        jp_icono_minimizar = new javax.swing.JPanel();
-        lbl_icono_minimizar = new javax.swing.JLabel();
-        jp_icono_cerrar = new javax.swing.JPanel();
-        lbl_icono_cerrar = new javax.swing.JLabel();
+        btn_cerrar = new Recursos_Codigo.Redondeado();
+        icono_cerrar = new javax.swing.JLabel();
+        btn_minimizar = new Recursos_Codigo.Redondeado();
+        icono_minimizar = new javax.swing.JLabel();
         jp_campo_usuario = new javax.swing.JPanel();
         lbl_nombre_usuario = new javax.swing.JLabel();
         jp_contenedor_menu = new javax.swing.JPanel();
         jp_menu_general = new javax.swing.JPanel();
         jp_hora_fecha = new javax.swing.JPanel();
+        rSLabelHora1 = new rojeru_san.RSLabelHora();
+        rSLabelFecha1 = new rojeru_san.RSLabelFecha();
+        lbl_icono_reloj = new javax.swing.JLabel();
+        lbl_icono_calendario = new javax.swing.JLabel();
         jp_escritorio_general = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        setUndecorated(true);
         setResizable(false);
 
         jp_lienzo_principal.setBackground(new java.awt.Color(153, 153, 153));
@@ -58,40 +64,41 @@ public class Vista_General extends javax.swing.JFrame {
         lbl_icono_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/LogoTierraFertil_250px_68px.png"))); // NOI18N
         jp_banner.add(lbl_icono_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, -1, -1));
 
-        jp_icono_minimizar.setMaximumSize(new java.awt.Dimension(36, 36));
-        jp_icono_minimizar.setMinimumSize(new java.awt.Dimension(36, 36));
-        jp_icono_minimizar.setPreferredSize(new java.awt.Dimension(36, 36));
-        jp_icono_minimizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_cerrar.setMaximumSize(new java.awt.Dimension(36, 36));
+        btn_cerrar.setMinimumSize(new java.awt.Dimension(36, 36));
+        btn_cerrar.setRoundBottomLeft(25);
+        btn_cerrar.setRoundBottomRight(25);
+        btn_cerrar.setRoundTopLeft(25);
+        btn_cerrar.setRoundTopRight(25);
+        btn_cerrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_icono_minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/minimizeSign_24px.png"))); // NOI18N
-        jp_icono_minimizar.add(lbl_icono_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 15, -1, 15));
+        icono_cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/power_24px.png"))); // NOI18N
+        btn_cerrar.add(icono_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 3, 30, 30));
 
-        jp_banner.add(jp_icono_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 0, -1, -1));
+        jp_banner.add(btn_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 2, -1, 36));
 
-        jp_icono_cerrar.setMaximumSize(new java.awt.Dimension(36, 36));
-        jp_icono_cerrar.setMinimumSize(new java.awt.Dimension(36, 36));
-        jp_icono_cerrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_minimizar.setMaximumSize(new java.awt.Dimension(36, 36));
+        btn_minimizar.setMinimumSize(new java.awt.Dimension(36, 36));
+        btn_minimizar.setPreferredSize(new java.awt.Dimension(36, 36));
+        btn_minimizar.setRoundBottomLeft(25);
+        btn_minimizar.setRoundBottomRight(25);
+        btn_minimizar.setRoundTopLeft(25);
+        btn_minimizar.setRoundTopRight(25);
+        btn_minimizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_icono_cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/power_24px.png"))); // NOI18N
-        jp_icono_cerrar.add(lbl_icono_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        icono_minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/minimizeSign_24px.png"))); // NOI18N
+        btn_minimizar.add(icono_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 13, 30, -1));
 
-        jp_banner.add(jp_icono_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, -1));
+        jp_banner.add(btn_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 2, -1, -1));
+
+        jp_campo_usuario.setBackground(new java.awt.Color(255, 255, 204));
+        jp_campo_usuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_nombre_usuario.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         lbl_nombre_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ProfileUser_32px.png"))); // NOI18N
         lbl_nombre_usuario.setText("Nombre Usuario");
         lbl_nombre_usuario.setAlignmentX(0.5F);
-
-        javax.swing.GroupLayout jp_campo_usuarioLayout = new javax.swing.GroupLayout(jp_campo_usuario);
-        jp_campo_usuario.setLayout(jp_campo_usuarioLayout);
-        jp_campo_usuarioLayout.setHorizontalGroup(
-            jp_campo_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_nombre_usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-        );
-        jp_campo_usuarioLayout.setVerticalGroup(
-            jp_campo_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_nombre_usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
+        jp_campo_usuario.add(lbl_nombre_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
         jp_banner.add(jp_campo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 250, 40));
 
@@ -104,6 +111,7 @@ public class Vista_General extends javax.swing.JFrame {
         jp_contenedor_menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jp_menu_general.setBackground(new java.awt.Color(51, 102, 255));
+        jp_menu_general.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jp_menu_general.setMaximumSize(new java.awt.Dimension(310, 540));
         jp_menu_general.setMinimumSize(new java.awt.Dimension(310, 540));
         jp_menu_general.setPreferredSize(new java.awt.Dimension(310, 540));
@@ -125,23 +133,28 @@ public class Vista_General extends javax.swing.JFrame {
         jp_hora_fecha.setMaximumSize(new java.awt.Dimension(310, 100));
         jp_hora_fecha.setMinimumSize(new java.awt.Dimension(310, 100));
         jp_hora_fecha.setPreferredSize(new java.awt.Dimension(310, 100));
+        jp_hora_fecha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jp_hora_fechaLayout = new javax.swing.GroupLayout(jp_hora_fecha);
-        jp_hora_fecha.setLayout(jp_hora_fechaLayout);
-        jp_hora_fechaLayout.setHorizontalGroup(
-            jp_hora_fechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
-        jp_hora_fechaLayout.setVerticalGroup(
-            jp_hora_fechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        rSLabelHora1.setForeground(new java.awt.Color(0, 0, 0));
+        rSLabelHora1.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
+        jp_hora_fecha.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 140, 30));
+
+        rSLabelFecha1.setForeground(new java.awt.Color(0, 0, 0));
+        rSLabelFecha1.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
+        jp_hora_fecha.add(rSLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 140, 30));
+
+        lbl_icono_reloj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/clock_32px.png"))); // NOI18N
+        jp_hora_fecha.add(lbl_icono_reloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+
+        lbl_icono_calendario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/calendar_32px.png"))); // NOI18N
+        jp_hora_fecha.add(lbl_icono_calendario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
         jp_contenedor_menu.add(jp_hora_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 100));
 
         jp_lienzo_principal.add(jp_contenedor_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 310, 640));
 
         jp_escritorio_general.setBackground(new java.awt.Color(204, 204, 204));
+        jp_escritorio_general.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jp_escritorio_general.setMaximumSize(new java.awt.Dimension(970, 640));
         jp_escritorio_general.setMinimumSize(new java.awt.Dimension(970, 640));
 
@@ -209,18 +222,22 @@ public class Vista_General extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public Recursos_Codigo.Redondeado btn_cerrar;
+    public Recursos_Codigo.Redondeado btn_minimizar;
+    public javax.swing.JLabel icono_cerrar;
+    public javax.swing.JLabel icono_minimizar;
     public javax.swing.JPanel jp_banner;
     public javax.swing.JPanel jp_campo_usuario;
     public javax.swing.JPanel jp_contenedor_menu;
     public javax.swing.JPanel jp_escritorio_general;
     public javax.swing.JPanel jp_hora_fecha;
-    public javax.swing.JPanel jp_icono_cerrar;
-    public javax.swing.JPanel jp_icono_minimizar;
     public javax.swing.JPanel jp_lienzo_principal;
     public javax.swing.JPanel jp_menu_general;
-    public javax.swing.JLabel lbl_icono_cerrar;
+    public javax.swing.JLabel lbl_icono_calendario;
     public javax.swing.JLabel lbl_icono_logo;
-    public javax.swing.JLabel lbl_icono_minimizar;
+    public javax.swing.JLabel lbl_icono_reloj;
     public javax.swing.JLabel lbl_nombre_usuario;
+    public rojeru_san.RSLabelFecha rSLabelFecha1;
+    public rojeru_san.RSLabelHora rSLabelHora1;
     // End of variables declaration//GEN-END:variables
 }

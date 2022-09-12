@@ -8,12 +8,12 @@ package Vista.Grupo3;
  *
  * @author Fabricio F. Feijoo
  */
-public class Menu_Acopio extends javax.swing.JInternalFrame {
+public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Prueba_InstanciarMenu
      */
-    public Menu_Acopio() {
+    public Vista_Menu_Acopio() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
@@ -46,7 +46,6 @@ public class Menu_Acopio extends javax.swing.JInternalFrame {
         setMaximumSize(new java.awt.Dimension(300, 516));
         setMinimumSize(new java.awt.Dimension(300, 516));
         setPreferredSize(new java.awt.Dimension(300, 516));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jp_contenedor_menu_acopio.setMaximumSize(new java.awt.Dimension(290, 480));
         jp_contenedor_menu_acopio.setMinimumSize(new java.awt.Dimension(290, 480));
@@ -56,30 +55,15 @@ public class Menu_Acopio extends javax.swing.JInternalFrame {
 
         jPanel1.setMaximumSize(new java.awt.Dimension(270, 48));
         jPanel1.setMinimumSize(new java.awt.Dimension(270, 48));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ico_acopio_32px.png"))); // NOI18N
         jLabel1.setText("Acopio");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 2, 247, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-
-        jp_contenedor_menu_acopio.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, -1));
+        jp_contenedor_menu_acopio.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 25, 270, -1));
 
         jPanel2.setBackground(new java.awt.Color(112, 39, 1));
         jPanel2.setMaximumSize(new java.awt.Dimension(267, 3));
@@ -159,7 +143,7 @@ public class Menu_Acopio extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jp_contenedor_menu_acopio.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 198, -1, 40));
+        jp_contenedor_menu_acopio.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, 48));
 
         redondeado3.setBackground(new java.awt.Color(204, 204, 204));
         redondeado3.setMaximumSize(new java.awt.Dimension(218, 38));
@@ -195,7 +179,16 @@ public class Menu_Acopio extends javax.swing.JInternalFrame {
 
         jp_contenedor_menu_acopio.add(redondeado4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
 
-        getContentPane().add(jp_contenedor_menu_acopio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 480));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jp_contenedor_menu_acopio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jp_contenedor_menu_acopio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

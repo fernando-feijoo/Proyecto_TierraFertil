@@ -3,6 +3,7 @@ package Controlador;
 import Vista.Grupo3.Prueba_InstanciarMenu;
 import Vista.Vista_General;
 import java.awt.Color;
+import static java.awt.Frame.ICONIFIED;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -25,6 +26,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.icono_minimizar.addMouseListener(this);
         this.vistaGeneral.icono_cerrar.addMouseListener(this);
         this.vistaGeneral.jp_banner.addMouseListener(this);
+        this.vistaGeneral.btn_minimizar.addMouseListener(this);
         //ActionListesner
         
         //PruebaMenu
@@ -46,6 +48,10 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             System.exit(0);
+        }
+        if (me.getSource() == this.vistaGeneral.btn_minimizar || me.getSource() == this.vistaGeneral.icono_minimizar) {
+            this.vistaGeneral.setExtendedState(ICONIFIED);
+            System.out.println("Presionado");
         }
     }
 

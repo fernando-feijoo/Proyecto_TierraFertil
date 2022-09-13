@@ -62,14 +62,15 @@ public class Vista_General extends javax.swing.JFrame {
         jp_lienzo_principal.setMaximumSize(new java.awt.Dimension(1280, 720));
         jp_lienzo_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_contenedor_opciones.setBackground(new java.awt.Color(247, 246, 246, 1));
+        jp_contenedor_opciones.setBackground(new java.awt.Color(255, 255, 255, 1));
         jp_contenedor_opciones.setMaximumSize(new java.awt.Dimension(250, 120));
         jp_contenedor_opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_opcionModoOscuro.setBackground(new java.awt.Color(102, 255, 204));
+        jp_opcionModoOscuro.setBackground(new java.awt.Color(204, 204, 204));
         jp_opcionModoOscuro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jp_opcionModoOscuro.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setMinimumSize(new java.awt.Dimension(220, 40));
+        jp_opcionModoOscuro.setPreferredSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -90,18 +91,18 @@ public class Vista_General extends javax.swing.JFrame {
         lbl_nombre_usuario.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         lbl_nombre_usuario.setForeground(new java.awt.Color(0, 0, 0));
         lbl_nombre_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ProfileUser_32px.png"))); // NOI18N
-        lbl_nombre_usuario.setText("Nombre Usuario");
+        lbl_nombre_usuario.setText("NombreUsuario");
         lbl_nombre_usuario.setAlignmentX(0.5F);
         jp_opcionInicial.add(lbl_nombre_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
         jp_contenedor_opciones.add(jp_opcionInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
-        jp_opcionCerrarSesion.setBackground(new java.awt.Color(204, 255, 102));
+        jp_opcionCerrarSesion.setBackground(new java.awt.Color(153, 153, 153));
         jp_opcionCerrarSesion.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setMinimumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setPreferredSize(new java.awt.Dimension(220, 40));
-        jp_opcionCerrarSesion.setRoundBottomLeft(25);
-        jp_opcionCerrarSesion.setRoundBottomRight(25);
+        jp_opcionCerrarSesion.setRoundBottomLeft(35);
+        jp_opcionCerrarSesion.setRoundBottomRight(35);
         jp_opcionCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -119,8 +120,8 @@ public class Vista_General extends javax.swing.JFrame {
         jp_banner.setPreferredSize(new java.awt.Dimension(1280, 80));
         jp_banner.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_icono_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/LogoTierraFertil_250px_68px.png"))); // NOI18N
-        jp_banner.add(lbl_icono_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, -1, -1));
+        lbl_icono_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/LogoTierraFertil_305px_75px.png"))); // NOI18N
+        jp_banner.add(lbl_icono_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 6, -1, -1));
 
         btn_cerrar.setBackground(new java.awt.Color(247, 246, 246));
         btn_cerrar.setMaximumSize(new java.awt.Dimension(36, 36));

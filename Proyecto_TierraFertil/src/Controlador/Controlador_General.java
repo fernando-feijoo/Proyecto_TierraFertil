@@ -1,7 +1,7 @@
 package Controlador;
 
-import Vista.Grupo2.Vis_evaluacion;
-import Vista.Grupo3.Prueba_InstanciarMenu;
+import Controlador.Grupo3.Controlador_Menu_Acopio;
+import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Vista_General;
 import java.awt.Color;
 import static java.awt.Frame.ICONIFIED;
@@ -14,7 +14,8 @@ import java.awt.event.MouseMotionListener;
 public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener {
     
     Vista_General vistaGeneral;
-    Prueba_InstanciarMenu pruebaMenu = new Prueba_InstanciarMenu();
+    Vista_Menu_Acopio vistaMenuAcopio = new Vista_Menu_Acopio();
+    Controlador_Menu_Acopio controladorMenuAcopio = new Controlador_Menu_Acopio(vistaMenuAcopio);
     Color colorNormal = new Color(247,246,246);
     Color colorSeleccionMinimizar = new Color(133, 193, 233 );
     Color colorSeleccionExit = new Color(231, 76, 60 );
@@ -43,9 +44,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     }
     
     public void menuPrueba(){
-        this.vistaGeneral.jp_menu_general.add(pruebaMenu);
-        this.pruebaMenu.setBorder(null);
-        this.pruebaMenu.setVisible(true);
+        this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
+        this.vistaMenuAcopio.setBorder(null);
+        this.vistaMenuAcopio.setVisible(true);
         
     }
 
@@ -62,7 +63,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial || me.getSource() == this.vistaGeneral.lbl_nombre_usuario) {
             if (cont == 0) {
-                System.out.println("Ingreso Valido");
                 this.vistaGeneral.jp_opcionModoOscuro.setVisible(true);
                 this.vistaGeneral.jp_opcionCerrarSesion.setVisible(true);
             }
@@ -70,7 +70,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial && cont == 2) {
-            System.out.println("Salio");
             this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
             this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
             this.vistaGeneral.jp_lienzo_principal.setVisible(false);
@@ -99,7 +98,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorSeleccionExit);
         }
-        //
     }
 
     @Override
@@ -110,7 +108,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorNormal);
         }
-        //
     }
 
     @Override

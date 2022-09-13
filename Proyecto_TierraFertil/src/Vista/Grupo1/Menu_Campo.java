@@ -62,7 +62,7 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ico_acopio_32px.png"))); // NOI18N
-        jLabel1.setText("Acopio");
+        jLabel1.setText("Control");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -113,7 +113,7 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Registro contenedores");
+        jLabel2.setText("Registro bandejas");
         redondeado1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(redondeado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
@@ -130,7 +130,7 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Listado contenedores");
+        jLabel3.setText("Listado bamdejas");
         redondeado2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(redondeado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));

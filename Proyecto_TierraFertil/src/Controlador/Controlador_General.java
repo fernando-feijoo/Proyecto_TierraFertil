@@ -1,5 +1,6 @@
 package Controlador;
 
+import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Vista_General;
 import java.awt.Color;
@@ -13,7 +14,8 @@ import java.awt.event.MouseMotionListener;
 public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener {
     
     Vista_General vistaGeneral;
-    Vista_Menu_Acopio pruebaMenu = new Vista_Menu_Acopio();
+    Vista_Menu_Acopio vistaMenuAcopio = new Vista_Menu_Acopio();
+    Controlador_Menu_Acopio controladorMenuAcopio = new Controlador_Menu_Acopio(vistaMenuAcopio);
     Color colorNormal = new Color(247,246,246);
     Color colorSeleccionMinimizar = new Color(133, 193, 233 );
     Color colorSeleccionExit = new Color(231, 76, 60 );
@@ -42,9 +44,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     }
     
     public void menuPrueba(){
-        this.vistaGeneral.jp_menu_general.add(pruebaMenu);
-        this.pruebaMenu.setBorder(null);
-        this.pruebaMenu.setVisible(true);
+        this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
+        this.vistaMenuAcopio.setBorder(null);
+        this.vistaMenuAcopio.setVisible(true);
         
     }
 

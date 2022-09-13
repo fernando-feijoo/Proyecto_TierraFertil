@@ -47,17 +47,19 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
         setMinimumSize(new java.awt.Dimension(300, 546));
         setPreferredSize(new java.awt.Dimension(300, 546));
 
+        jp_contenedor_menu_acopio.setBackground(new java.awt.Color(204, 204, 204));
         jp_contenedor_menu_acopio.setMaximumSize(new java.awt.Dimension(300, 480));
         jp_contenedor_menu_acopio.setMinimumSize(new java.awt.Dimension(300, 480));
         jp_contenedor_menu_acopio.setName(""); // NOI18N
         jp_contenedor_menu_acopio.setPreferredSize(new java.awt.Dimension(300, 480));
         jp_contenedor_menu_acopio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jp_titulo_uno.setBackground(new java.awt.Color(204, 204, 204));
         jp_titulo_uno.setMaximumSize(new java.awt.Dimension(270, 48));
         jp_titulo_uno.setMinimumSize(new java.awt.Dimension(270, 48));
         jp_titulo_uno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_titutlo_acopio.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
+        lbl_titutlo_acopio.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
         lbl_titutlo_acopio.setForeground(new java.awt.Color(0, 0, 0));
         lbl_titutlo_acopio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ico_acopio_32px.png"))); // NOI18N
         lbl_titutlo_acopio.setText("Acopio");
@@ -117,11 +119,12 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
 
         jp_contenedor_menu_acopio.add(btn_acopio_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
+        jp_titulo_dos.setBackground(new java.awt.Color(204, 204, 204));
         jp_titulo_dos.setMaximumSize(new java.awt.Dimension(270, 48));
         jp_titulo_dos.setMinimumSize(new java.awt.Dimension(270, 48));
         jp_titulo_dos.setPreferredSize(new java.awt.Dimension(270, 48));
 
-        lbl_titulo_reporte.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
+        lbl_titulo_reporte.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
         lbl_titulo_reporte.setForeground(new java.awt.Color(0, 0, 0));
         lbl_titulo_reporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/playlist_32px.png"))); // NOI18N
         lbl_titulo_reporte.setText("Reportes");

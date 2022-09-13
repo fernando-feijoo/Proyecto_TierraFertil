@@ -1,21 +1,13 @@
 
 package Main;
 import Vista.Grupo2.Vista_Escritorio_Prueba;
-import Vista.Grupo2.Vis_evaluacion;
+import Controlador.Grupo2.Controlador_Escritorio;
 public class Main_Grupo2_Pruebas {
 
     
     public static void main(String[] args) {
         Vista_Escritorio_Prueba visEscritorio = new Vista_Escritorio_Prueba();
-        Vis_evaluacion vistaEvaluacion = new Vis_evaluacion();
+        Controlador_Escritorio ctrlEscritorio = new Controlador_Escritorio(visEscritorio);
         visEscritorio.setVisible(true);
-        visEscritorio.escritorio.add(vistaEvaluacion);
-        vistaEvaluacion.setVisible(true);
-        
-        
-                
-        
     }
-    
-    
 }

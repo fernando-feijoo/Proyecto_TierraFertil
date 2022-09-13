@@ -67,7 +67,7 @@ public class Vista_General extends javax.swing.JFrame {
         jp_contenedor_opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jp_opcionModoOscuro.setBackground(new java.awt.Color(204, 204, 204));
-        jp_opcionModoOscuro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jp_opcionModoOscuro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jp_opcionModoOscuro.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setMinimumSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setPreferredSize(new java.awt.Dimension(220, 40));
@@ -82,7 +82,7 @@ public class Vista_General extends javax.swing.JFrame {
         jp_contenedor_opciones.add(jp_opcionModoOscuro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 220, 40));
 
         jp_opcionInicial.setBackground(new java.awt.Color(247, 246, 246));
-        jp_opcionInicial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jp_opcionInicial.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jp_opcionInicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/flechaMenu_24px.png"))); // NOI18N

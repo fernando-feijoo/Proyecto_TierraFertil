@@ -56,9 +56,8 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         btn_control = new Recursos_Codigo.Redondeado();
         lb_control = new javax.swing.JLabel();
-        jajaaa = new javax.swing.JPanel();
-        jp_redondeado_escritorio = new Recursos_Codigo.Redondeado();
-        jp_escritorio_general = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jp_redon_escritorio = new Recursos_Codigo.Redondeado();
         escritorio = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -167,18 +166,18 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
         jp_hora_fecha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_icono_reloj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/clock_32px.png"))); // NOI18N
-        jp_hora_fecha.add(lbl_icono_reloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+        jp_hora_fecha.add(lbl_icono_reloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         rSLabelHora1.setForeground(new java.awt.Color(0, 0, 0));
         rSLabelHora1.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
-        jp_hora_fecha.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 140, 30));
+        jp_hora_fecha.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 140, 30));
 
         lbl_icono_calendario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/calendar_32px.png"))); // NOI18N
-        jp_hora_fecha.add(lbl_icono_calendario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+        jp_hora_fecha.add(lbl_icono_calendario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
 
         rSLabelFecha1.setForeground(new java.awt.Color(0, 0, 0));
         rSLabelFecha1.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
-        jp_hora_fecha.add(rSLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 140, 30));
+        jp_hora_fecha.add(rSLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 140, 30));
 
         jp_contenedor_menu.add(jp_hora_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 300, 95));
 
@@ -225,22 +224,11 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
         lb_control.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         lb_control.setForeground(new java.awt.Color(0, 0, 0));
         lb_control.setText("Control de calidad");
-        btn_control.add(lb_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+        lb_control.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_control.add(lb_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 40));
 
         jPanel1.add(btn_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 150, 40));
-
-        javax.swing.GroupLayout jajaaaLayout = new javax.swing.GroupLayout(jajaaa);
-        jajaaa.setLayout(jajaaaLayout);
-        jajaaaLayout.setHorizontalGroup(
-            jajaaaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jajaaaLayout.setVerticalGroup(
-            jajaaaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jajaaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, -1));
 
         javax.swing.GroupLayout jp_menu_generalLayout = new javax.swing.GroupLayout(jp_menu_general);
         jp_menu_general.setLayout(jp_menu_generalLayout);
@@ -255,53 +243,37 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
 
         jp_contenedor_menu.add(jp_menu_general, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 100, 300, 535));
 
-        jp_redondeado_escritorio.setBackground(new java.awt.Color(204, 204, 204));
-        jp_redondeado_escritorio.setMaximumSize(new java.awt.Dimension(970, 640));
-        jp_redondeado_escritorio.setMinimumSize(new java.awt.Dimension(970, 640));
-        jp_redondeado_escritorio.setRoundBottomLeft(45);
-        jp_redondeado_escritorio.setRoundBottomRight(30);
-        jp_redondeado_escritorio.setRoundTopLeft(45);
-        jp_redondeado_escritorio.setRoundTopRight(30);
-        jp_redondeado_escritorio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jp_redon_escritorio.setBackground(new java.awt.Color(204, 204, 204));
+        jp_redon_escritorio.setMaximumSize(new java.awt.Dimension(970, 640));
+        jp_redon_escritorio.setMinimumSize(new java.awt.Dimension(970, 640));
+        jp_redon_escritorio.setRoundBottomLeft(45);
+        jp_redon_escritorio.setRoundBottomRight(30);
+        jp_redon_escritorio.setRoundTopLeft(45);
+        jp_redon_escritorio.setRoundTopRight(30);
+        jp_redon_escritorio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_escritorio_general.setBackground(new java.awt.Color(255, 204, 102));
-        jp_escritorio_general.setMaximumSize(new java.awt.Dimension(965, 605));
-        jp_escritorio_general.setMinimumSize(new java.awt.Dimension(970, 605));
-        jp_escritorio_general.setPreferredSize(new java.awt.Dimension(965, 605));
-
-        escritorio.setBackground(new java.awt.Color(255, 204, 102));
+        escritorio.setMaximumSize(new java.awt.Dimension(965, 605));
+        escritorio.setMinimumSize(new java.awt.Dimension(965, 605));
+        escritorio.setPreferredSize(new java.awt.Dimension(965, 605));
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 959, Short.MAX_VALUE)
+            .addGap(0, 971, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 605, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-
-        javax.swing.GroupLayout jp_escritorio_generalLayout = new javax.swing.GroupLayout(jp_escritorio_general);
-        jp_escritorio_general.setLayout(jp_escritorio_generalLayout);
-        jp_escritorio_generalLayout.setHorizontalGroup(
-            jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_escritorio_generalLayout.createSequentialGroup()
-                .addComponent(escritorio)
-                .addContainerGap())
-        );
-        jp_escritorio_generalLayout.setVerticalGroup(
-            jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio)
-        );
-
-        jp_redondeado_escritorio.add(jp_escritorio_general, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 13, 965, 605));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 309, Short.MAX_VALUE)
+                .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 971, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -310,7 +282,7 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
                         .addComponent(jp_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(305, 305, 305)
-                            .addComponent(jp_redondeado_escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jp_redon_escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(1020, 1020, 1020)
                             .addComponent(jp_contenedor_opciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -318,7 +290,9 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 160, Short.MAX_VALUE)
+                .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -329,7 +303,7 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
                         .addComponent(jp_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(85, 85, 85)
-                            .addComponent(jp_redondeado_escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jp_redon_escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(37, 37, 37)
                             .addComponent(jp_contenedor_opciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -401,17 +375,16 @@ public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel6;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel2;
-    public javax.swing.JPanel jajaaa;
+    public javax.swing.JSeparator jSeparator1;
     public javax.swing.JPanel jp_banner;
     public javax.swing.JPanel jp_contenedor_menu;
     public javax.swing.JPanel jp_contenedor_opciones;
-    public javax.swing.JPanel jp_escritorio_general;
     public Recursos_Codigo.Redondeado jp_hora_fecha;
     public Recursos_Codigo.Redondeado jp_menu_general;
     public Recursos_Codigo.Redondeado jp_opcionCerrarSesion;
     public javax.swing.JPanel jp_opcionInicial;
     public javax.swing.JPanel jp_opcionModoOscuro;
-    public Recursos_Codigo.Redondeado jp_redondeado_escritorio;
+    public Recursos_Codigo.Redondeado jp_redon_escritorio;
     public javax.swing.JLabel lb_control;
     public javax.swing.JLabel lbl_icono_calendario;
     public javax.swing.JLabel lbl_icono_logo;

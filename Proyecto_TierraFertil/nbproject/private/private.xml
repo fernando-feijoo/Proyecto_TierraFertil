@@ -3,10 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Vista_General.java</file>
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo3/Vista_Menu_Acopio.java</file>
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Main/Main_Grupo3_Pruebas.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto%20TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo3/Vista_Menu_Acopio.java</file>
+            <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto%20TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
+            <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto%20TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo3/Controlador_Menu_Acopio.java</file>
+=======
+            <file>file:/C:/Users/chuchei/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo3/Vista_Llegada.java</file>
+>>>>>>> d9bde9cc9b08183b76ac037702b2eebf9edffb94
+>>>>>>> 27db5540448e99e975e85b800c2167b84de887f5
         </group>
     </open-files>
 </project-private>

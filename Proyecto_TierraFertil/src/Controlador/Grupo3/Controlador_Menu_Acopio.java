@@ -2,10 +2,12 @@ package Controlador.Grupo3;
 
 import Vista.Grupo3.Vista_Menu_Acopio;
 import java.awt.Color;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Controlador_Menu_Acopio implements MouseListener {
+public class Controlador_Menu_Acopio implements MouseListener, ComponentListener {
 
     Vista_Menu_Acopio vistaMenuAcopio;
     
@@ -25,15 +27,19 @@ public class Controlador_Menu_Acopio implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno) {
+            this.vistaMenuAcopio.btn_acopio_opcion_uno.setBackground(colorSeleccionIngreso);
             opcionClick = 1;
         }
         if (e.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_dos) {
+            this.vistaMenuAcopio.btn_acopio_opcion_dos.setBackground(colorSeleccionIngreso);
             opcionClick = 2;
         }
         if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_uno) {
+            this.vistaMenuAcopio.btn_reportes_opcion_uno.setBackground(colorSeleccionIngreso);
             opcionClick = 3;
         }
         if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_dos) {
+            this.vistaMenuAcopio.btn_reportes_opcion_dos.setBackground(colorSeleccionIngreso);
             opcionClick = 4;
         }
     }
@@ -72,6 +78,22 @@ public class Controlador_Menu_Acopio implements MouseListener {
         } else if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_dos && (opcionClick != 4)) {
             this.vistaMenuAcopio.btn_reportes_opcion_dos.setBackground(colorNormal);
         }
+    }
+
+    @Override
+    public void componentResized(ComponentEvent e) {
+    }
+
+    @Override
+    public void componentMoved(ComponentEvent e) {
+    }
+
+    @Override
+    public void componentShown(ComponentEvent e) {
+    }
+
+    @Override
+    public void componentHidden(ComponentEvent e) {
     }
 
 }

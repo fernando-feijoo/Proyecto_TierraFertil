@@ -10,7 +10,6 @@ import java.awt.event.MouseListener;
 public class Controlador_Menu_Acopio implements MouseListener, ComponentListener {
 
     Vista_Menu_Acopio vistaMenuAcopio;
-    
     Color colorNormal = new Color(204, 204, 204);
     Color colorSeleccionOpcion = new Color(133, 193, 233);
     Color colorSeleccionIngreso = new Color(0, 115, 255);
@@ -21,11 +20,11 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
-
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        //  Codigo para el cabio de colores, cuando se pasa el mouse y cuando se hace click se asigna un numero.
         if (e.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno) {
             this.vistaMenuAcopio.btn_acopio_opcion_uno.setBackground(colorSeleccionIngreso);
             opcionClick = 1;
@@ -54,7 +53,10 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        //        Asigno color al jPanel donde se encuentre el mouse.
+        /*  
+            Asigno color al jPanel donde se encuentre el mouse y filtramos segun el numero si tiene asignado un numero
+            se interpreta que entro a ese apartado.
+        */
         if (e.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno && (opcionClick != 1)) {
             this.vistaMenuAcopio.btn_acopio_opcion_uno.setBackground(colorSeleccionOpcion);
         } else if (e.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_dos && (opcionClick != 2)) {
@@ -68,7 +70,7 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
 
     @Override
     public void mouseExited(MouseEvent e) {
-        //        Asigno nuevo color, que es el base cuando sale el mouse del jPanel.
+        //  Asigno nuevo color, que basicamente es el base o inicial del munu; cuando sale el mouse del jPanel.
         if (e.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno && (opcionClick != 1)) {
             this.vistaMenuAcopio.btn_acopio_opcion_uno.setBackground(colorNormal);
         } else if (e.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_dos && (opcionClick != 2)) {

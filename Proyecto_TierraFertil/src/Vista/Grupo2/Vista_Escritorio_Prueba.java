@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vista;
+package Vista.Grupo2;
 
 /**
  *
- * @author Brayan Carmona
+ * @author Daniel Bravo
  */
-public class Vista_General extends javax.swing.JFrame {
+public class Vista_Escritorio_Prueba extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame
+     * Creates new form Vista_Escritorio_Prueba
      */
-    public Vista_General() {
+    public Vista_Escritorio_Prueba() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -27,7 +27,7 @@ public class Vista_General extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jp_lienzo_principal = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jp_contenedor_opciones = new javax.swing.JPanel();
         jp_opcionModoOscuro = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -49,18 +49,19 @@ public class Vista_General extends javax.swing.JFrame {
         lbl_icono_calendario = new javax.swing.JLabel();
         rSLabelFecha1 = new rojeru_san.RSLabelFecha();
         jp_menu_general = new Recursos_Codigo.Redondeado();
-        jp_redondeado_escritorio = new Recursos_Codigo.Redondeado();
-        jp_escritorio_general = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btn_listar = new Recursos_Codigo.Redondeado();
+        jLabel6 = new javax.swing.JLabel();
+        btn_control = new Recursos_Codigo.Redondeado();
+        lb_control = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jp_redon_escritorio = new Recursos_Codigo.Redondeado();
+        escritorio = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        setMinimumSize(new java.awt.Dimension(1280, 720));
-        setUndecorated(true);
-        setResizable(false);
-
-        jp_lienzo_principal.setBackground(new java.awt.Color(247, 246, 246));
-        jp_lienzo_principal.setMaximumSize(new java.awt.Dimension(1280, 720));
-        jp_lienzo_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMinimumSize(new java.awt.Dimension(965, 605));
 
         jp_contenedor_opciones.setBackground(new java.awt.Color(255, 255, 255, 1));
         jp_contenedor_opciones.setMaximumSize(new java.awt.Dimension(250, 120));
@@ -112,8 +113,6 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_contenedor_opciones.add(jp_opcionCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 220, 40));
 
-        jp_lienzo_principal.add(jp_contenedor_opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 37, 250, 120));
-
         jp_banner.setBackground(new java.awt.Color(247, 246, 246));
         jp_banner.setMaximumSize(new java.awt.Dimension(1280, 80));
         jp_banner.setMinimumSize(new java.awt.Dimension(1280, 80));
@@ -152,8 +151,6 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_banner.add(btn_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 2, -1, -1));
 
-        jp_lienzo_principal.add(jp_banner, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 80));
-
         jp_contenedor_menu.setBackground(new java.awt.Color(247, 246, 246));
         jp_contenedor_menu.setMaximumSize(new java.awt.Dimension(310, 640));
         jp_contenedor_menu.setMinimumSize(new java.awt.Dimension(310, 640));
@@ -169,81 +166,159 @@ public class Vista_General extends javax.swing.JFrame {
         jp_hora_fecha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_icono_reloj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/clock_32px.png"))); // NOI18N
-        jp_hora_fecha.add(lbl_icono_reloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+        jp_hora_fecha.add(lbl_icono_reloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         rSLabelHora1.setForeground(new java.awt.Color(0, 0, 0));
         rSLabelHora1.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
-        jp_hora_fecha.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 140, 30));
+        jp_hora_fecha.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 140, 30));
 
         lbl_icono_calendario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/calendar_32px.png"))); // NOI18N
-        jp_hora_fecha.add(lbl_icono_calendario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+        jp_hora_fecha.add(lbl_icono_calendario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
 
         rSLabelFecha1.setForeground(new java.awt.Color(0, 0, 0));
         rSLabelFecha1.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
-        jp_hora_fecha.add(rSLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 140, 30));
+        jp_hora_fecha.add(rSLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 140, 30));
 
         jp_contenedor_menu.add(jp_hora_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 300, 95));
 
         jp_menu_general.setBackground(new java.awt.Color(204, 204, 204));
         jp_menu_general.setMaximumSize(new java.awt.Dimension(310, 540));
         jp_menu_general.setMinimumSize(new java.awt.Dimension(310, 540));
-        jp_menu_general.setPreferredSize(new java.awt.Dimension(310, 540));
         jp_menu_general.setRoundBottomLeft(45);
         jp_menu_general.setRoundBottomRight(45);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Acopio");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 21, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Banana_96x96-32_37912.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 18, -1, -1));
+
+        btn_listar.setBackground(new java.awt.Color(153, 153, 153));
+        btn_listar.setForeground(new java.awt.Color(204, 204, 204));
+        btn_listar.setRoundBottomLeft(20);
+        btn_listar.setRoundBottomRight(20);
+        btn_listar.setRoundTopLeft(20);
+        btn_listar.setRoundTopRight(20);
+        btn_listar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Listar datos");
+        btn_listar.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+
+        jPanel1.add(btn_listar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 150, 40));
+
+        btn_control.setBackground(new java.awt.Color(153, 153, 153));
+        btn_control.setForeground(new java.awt.Color(204, 204, 204));
+        btn_control.setRoundBottomLeft(20);
+        btn_control.setRoundBottomRight(20);
+        btn_control.setRoundTopLeft(20);
+        btn_control.setRoundTopRight(20);
+        btn_control.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lb_control.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        lb_control.setForeground(new java.awt.Color(0, 0, 0));
+        lb_control.setText("Control de calidad");
+        lb_control.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_control.add(lb_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 40));
+
+        jPanel1.add(btn_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 150, 40));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, -1));
 
         javax.swing.GroupLayout jp_menu_generalLayout = new javax.swing.GroupLayout(jp_menu_general);
         jp_menu_general.setLayout(jp_menu_generalLayout);
         jp_menu_generalLayout.setHorizontalGroup(
             jp_menu_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jp_menu_generalLayout.setVerticalGroup(
             jp_menu_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jp_contenedor_menu.add(jp_menu_general, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 100, 300, 535));
 
-        jp_lienzo_principal.add(jp_contenedor_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 310, 640));
+        jp_redon_escritorio.setBackground(new java.awt.Color(204, 204, 204));
+        jp_redon_escritorio.setMaximumSize(new java.awt.Dimension(970, 640));
+        jp_redon_escritorio.setMinimumSize(new java.awt.Dimension(970, 640));
+        jp_redon_escritorio.setRoundBottomLeft(45);
+        jp_redon_escritorio.setRoundBottomRight(30);
+        jp_redon_escritorio.setRoundTopLeft(45);
+        jp_redon_escritorio.setRoundTopRight(30);
+        jp_redon_escritorio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_redondeado_escritorio.setBackground(new java.awt.Color(204, 204, 204));
-        jp_redondeado_escritorio.setMaximumSize(new java.awt.Dimension(970, 640));
-        jp_redondeado_escritorio.setMinimumSize(new java.awt.Dimension(970, 640));
-        jp_redondeado_escritorio.setRoundBottomLeft(45);
-        jp_redondeado_escritorio.setRoundBottomRight(30);
-        jp_redondeado_escritorio.setRoundTopLeft(45);
-        jp_redondeado_escritorio.setRoundTopRight(30);
-        jp_redondeado_escritorio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        escritorio.setMaximumSize(new java.awt.Dimension(965, 605));
+        escritorio.setMinimumSize(new java.awt.Dimension(965, 605));
+        escritorio.setPreferredSize(new java.awt.Dimension(965, 605));
 
-        jp_escritorio_general.setBackground(new java.awt.Color(255, 204, 102));
-        jp_escritorio_general.setMaximumSize(new java.awt.Dimension(965, 605));
-        jp_escritorio_general.setMinimumSize(new java.awt.Dimension(970, 605));
-        jp_escritorio_general.setPreferredSize(new java.awt.Dimension(965, 605));
-
-        javax.swing.GroupLayout jp_escritorio_generalLayout = new javax.swing.GroupLayout(jp_escritorio_general);
-        jp_escritorio_general.setLayout(jp_escritorio_generalLayout);
-        jp_escritorio_generalLayout.setHorizontalGroup(
-            jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 970, Short.MAX_VALUE)
+        javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
+        escritorio.setLayout(escritorioLayout);
+        escritorioLayout.setHorizontalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 971, Short.MAX_VALUE)
         );
-        jp_escritorio_generalLayout.setVerticalGroup(
-            jp_escritorio_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 605, Short.MAX_VALUE)
+        escritorioLayout.setVerticalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jp_redondeado_escritorio.add(jp_escritorio_general, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 13, 965, 605));
-
-        jp_lienzo_principal.add(jp_redondeado_escritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 85, 970, 630));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 309, Short.MAX_VALUE)
+                .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 971, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jp_contenedor_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jp_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(305, 305, 305)
+                            .addComponent(jp_redon_escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(1020, 1020, 1020)
+                            .addComponent(jp_contenedor_opciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 160, Short.MAX_VALUE)
+                .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(80, 80, 80)
+                            .addComponent(jp_contenedor_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jp_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(85, 85, 85)
+                            .addComponent(jp_redon_escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addComponent(jp_contenedor_opciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_lienzo_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_lienzo_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -266,44 +341,51 @@ public class Vista_General extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Escritorio_Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Escritorio_Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Escritorio_Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista_General.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Escritorio_Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Vista_General().setVisible(true);
+                new Vista_Escritorio_Prueba().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public Recursos_Codigo.Redondeado btn_cerrar;
+    public Recursos_Codigo.Redondeado btn_control;
+    public Recursos_Codigo.Redondeado btn_listar;
     public Recursos_Codigo.Redondeado btn_minimizar;
+    public javax.swing.JDesktopPane escritorio;
     public javax.swing.JLabel icono_cerrar;
     public javax.swing.JLabel icono_minimizar;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabel6;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JSeparator jSeparator1;
     public javax.swing.JPanel jp_banner;
     public javax.swing.JPanel jp_contenedor_menu;
     public javax.swing.JPanel jp_contenedor_opciones;
-    public javax.swing.JPanel jp_escritorio_general;
     public Recursos_Codigo.Redondeado jp_hora_fecha;
-    public javax.swing.JPanel jp_lienzo_principal;
     public Recursos_Codigo.Redondeado jp_menu_general;
     public Recursos_Codigo.Redondeado jp_opcionCerrarSesion;
     public javax.swing.JPanel jp_opcionInicial;
     public javax.swing.JPanel jp_opcionModoOscuro;
-    public Recursos_Codigo.Redondeado jp_redondeado_escritorio;
+    public Recursos_Codigo.Redondeado jp_redon_escritorio;
+    public javax.swing.JLabel lb_control;
     public javax.swing.JLabel lbl_icono_calendario;
     public javax.swing.JLabel lbl_icono_logo;
     public javax.swing.JLabel lbl_icono_reloj;

@@ -42,16 +42,15 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
         btn_reportes_opcion_dos = new Recursos_Codigo.Redondeado();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
-        setMaximumSize(new java.awt.Dimension(300, 546));
-        setMinimumSize(new java.awt.Dimension(300, 546));
-        setPreferredSize(new java.awt.Dimension(300, 546));
+        setMaximumSize(new java.awt.Dimension(300, 511));
+        setMinimumSize(new java.awt.Dimension(300, 511));
+        setPreferredSize(new java.awt.Dimension(300, 511));
 
         jp_contenedor_menu_acopio.setBackground(new java.awt.Color(204, 204, 204));
-        jp_contenedor_menu_acopio.setMaximumSize(new java.awt.Dimension(300, 480));
-        jp_contenedor_menu_acopio.setMinimumSize(new java.awt.Dimension(300, 480));
+        jp_contenedor_menu_acopio.setMaximumSize(new java.awt.Dimension(300, 511));
+        jp_contenedor_menu_acopio.setMinimumSize(new java.awt.Dimension(300, 511));
         jp_contenedor_menu_acopio.setName(""); // NOI18N
-        jp_contenedor_menu_acopio.setPreferredSize(new java.awt.Dimension(300, 480));
+        jp_contenedor_menu_acopio.setPreferredSize(new java.awt.Dimension(300, 511));
         jp_contenedor_menu_acopio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jp_titulo_uno.setBackground(new java.awt.Color(204, 204, 204));
@@ -186,11 +185,11 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_contenedor_menu_acopio, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jp_contenedor_menu_acopio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_contenedor_menu_acopio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jp_contenedor_menu_acopio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

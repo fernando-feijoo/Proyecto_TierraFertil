@@ -35,9 +35,11 @@ public class Vista_Login extends javax.swing.JFrame {
         redondeado1 = new Recursos_Codigo.Redondeado();
         redondeado2 = new Recursos_Codigo.Redondeado();
         jLabel3 = new javax.swing.JLabel();
+        txt_contra = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         redondeado3 = new Recursos_Codigo.Redondeado();
         jLabel4 = new javax.swing.JLabel();
+        txt_usuario = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         btn_iniciar_sesion = new Recursos_Codigo.Redondeado();
         lbl_iniciar_sesion = new javax.swing.JLabel();
@@ -106,10 +108,16 @@ public class Vista_Login extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/eye.png"))); // NOI18N
         redondeado2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 20, -1, -1));
 
+        txt_contra.setBackground(new java.awt.Color(255, 255, 255));
+        txt_contra.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        txt_contra.setForeground(new java.awt.Color(0, 0, 0));
+        txt_contra.setBorder(null);
+        redondeado2.add(txt_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 390, 30));
+
         jLabel7.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(204, 204, 204));
         jLabel7.setText("Contraseña");
-        redondeado2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 25, -1, -1));
+        redondeado2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
 
         redondeado1.add(redondeado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
@@ -124,6 +132,12 @@ public class Vista_Login extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(204, 204, 204,80));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/user.png"))); // NOI18N
         redondeado3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
+
+        txt_usuario.setBackground(new java.awt.Color(255, 255, 255));
+        txt_usuario.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        txt_usuario.setForeground(new java.awt.Color(0, 0, 0));
+        txt_usuario.setBorder(null);
+        redondeado3.add(txt_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 13, 380, 40));
 
         jLabel8.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(204, 204, 204));
@@ -232,5 +246,7 @@ public class Vista_Login extends javax.swing.JFrame {
     public Recursos_Codigo.Redondeado redondeado1;
     public Recursos_Codigo.Redondeado redondeado2;
     public Recursos_Codigo.Redondeado redondeado3;
+    public javax.swing.JPasswordField txt_contra;
+    public javax.swing.JTextField txt_usuario;
     // End of variables declaration//GEN-END:variables
 }

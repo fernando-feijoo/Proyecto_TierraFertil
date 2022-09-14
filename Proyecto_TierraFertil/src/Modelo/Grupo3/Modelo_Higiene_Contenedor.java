@@ -6,12 +6,8 @@ package Modelo.Grupo3;
 
 /**
  *
- * @author chuchei
+ * @author Brayan Carmona
  */
-public class mod_vista {
-    int a = 1;
-    int b = 2;
-    int c = 0;
-    
+public class Modelo_Higiene_Contenedor {
     
 }

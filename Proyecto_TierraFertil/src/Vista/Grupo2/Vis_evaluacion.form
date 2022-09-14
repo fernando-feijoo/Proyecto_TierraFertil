@@ -50,7 +50,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="293" max="32767" attributes="0"/>
                   <Component id="jInternalFrame1" min="-2" pref="0" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="293" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="294" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -233,7 +233,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                               <Component id="jp_contenedorGrupo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -241,10 +241,10 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               <Component id="jp_contenedorGrupo" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <EmptySpace pref="25" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -263,133 +263,141 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jb_transporte" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jb_calibracion" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jb_vapor" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jb_fecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txt_transporte" min="-2" pref="121" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="txt_calibracion" max="32767" attributes="0"/>
+                                              <Component id="jDateChooser1" pref="120" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jSeparator10" min="-2" pref="21" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jb_lDedos" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_pedidos" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jb_semana" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jb_calibracion" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jb_vapor" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jb_fecha" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="txt_calibracion" max="32767" attributes="0"/>
-                                                      <Component id="jDateChooser1" pref="120" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="jb_lDedos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jb_pedidos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                                          <Component id="jb_semana" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jcomb_semana" min="-2" pref="122" max="-2" attributes="0"/>
-                                                      <Component id="txt_pedidos" min="-2" pref="121" max="-2" attributes="0"/>
-                                                      <Component id="txt_dedos" min="-2" pref="121" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                                                  <Component id="txt_vapor" min="-2" pref="120" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="jb_tipoCaja" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jb_finca" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jcom_finca" min="-2" pref="122" max="-2" attributes="0"/>
-                                                      <Component id="txt_tipoCaja" min="-2" pref="121" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                  <Component id="txt_vapor" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jb_transporte" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="txt_transporte" min="-2" pref="121" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="48" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jb_destino" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="txt_destino1" min="-2" pref="121" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                  <Component id="jcom_finca" min="-2" pref="122" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jb_codigo" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="txt_codigo" min="-2" pref="121" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jb_destino2" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="txt_destino2" min="-2" pref="121" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jb_fumigacion" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="49" max="32767" attributes="0"/>
-                                                  <Component id="txt_fumigacion" min="-2" pref="121" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="txt_pedidos" min="-2" pref="121" max="-2" attributes="0"/>
+                                                      <Component id="txt_tipoCaja" min="-2" pref="121" max="-2" attributes="0"/>
+                                                      <Component id="txt_dedos" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
+                                                      <Component id="jcomb_semana" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jSeparator11" min="-2" pref="21" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jb_destino" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_codigo" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_fumigacion" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_destino2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="txt_destino2" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <Component id="txt_fumigacion" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <Component id="txt_codigo" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <Component id="txt_destino1" min="-2" pref="121" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jb_semana" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jcomb_semana" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jb_destino" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_destino1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jSeparator11" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="jb_semana" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jcomb_semana" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_destino" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txt_destino1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jb_fecha" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jb_calibracion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_calibracion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_lDedos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_dedos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_codigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_codigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="txt_vapor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_vapor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_pedidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_pedidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_fumigacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_fumigacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="txt_transporte" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_transporte" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_destino2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_destino2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jcom_finca" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_finca" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="jSeparator10" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="jb_fecha" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jb_calibracion" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_calibracion" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_lDedos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_dedos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_codigo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_codigo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txt_vapor" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_vapor" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_pedidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_pedidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_fumigacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_fumigacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txt_transporte" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_transporte" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_destino2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_destino2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jcom_finca" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_finca" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="44" max="32767" attributes="0"/>
                               </Group>
@@ -614,6 +622,16 @@
                             </Property>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator10">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator11">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                   </SubComponents>
@@ -732,7 +750,9 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="125" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jSeparator9" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="431" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                               </Group>
@@ -763,6 +783,7 @@
                                           </Group>
                                           <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
                                       </Group>
+                                      <Component id="jSeparator9" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -915,6 +936,11 @@
                             </Component>
                           </SubComponents>
                         </Container>
+                        <Component class="javax.swing.JSeparator" name="jSeparator9">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="Recursos_Codigo.Redondeado" name="redondeado_contenedor_1">
@@ -932,79 +958,121 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jb_caja_insp" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jb_caja_insp" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txt_caja_insp" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jb_total_gajos" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txt_embalador" min="-2" pref="103" max="-2" attributes="0"/>
+                                          <Component id="jTextField1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="jSeparator5" min="-2" pref="21" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jTextField3" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Component id="jSeparator6" min="-2" pref="21" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="txt_caja_insp" min="-2" pref="108" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace pref="36" max="32767" attributes="0"/>
+                                          <Component id="jSeparator3" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                          <Component id="jb_total_gajos" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_embalador" min="-2" pref="103" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                          <Component id="jSeparator4" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextField2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jSeparator7" min="-2" pref="21" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextField4" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Component id="jSeparator8" min="-2" pref="21" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextField5" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
                                           <Component id="jb_peso_neto" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txt_peso_neto" min="-2" pref="109" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jb_total_gajos1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_total_gajos" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="txt_peso_neto" min="-2" pref="109" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="redondeado8" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="redondeado8" alignment="1" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jb_caja_insp" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_caja_insp" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_total_gajos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_embalador" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_peso_neto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_peso_neto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_total_gajos1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_total_gajos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jRadioButton5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="jSeparator3" alignment="1" min="-2" pref="18" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jb_caja_insp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_caja_insp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jb_total_gajos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_embalador" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jb_peso_neto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_peso_neto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Component id="redondeado8" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <Component id="jSeparator4" alignment="1" min="-2" pref="18" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="redondeado8" min="-2" pref="34" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jSeparator5" min="-2" pref="18" max="-2" attributes="0"/>
+                                              <Component id="jSeparator6" alignment="1" min="-2" pref="18" max="-2" attributes="0"/>
+                                              <Component id="jSeparator7" alignment="1" min="-2" pref="18" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                  <Component id="jSeparator8" min="-2" pref="18" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1026,16 +1094,6 @@
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="EMBALADOR:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txt_total_gajos">
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jb_total_gajos1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="TOTAL DE GAJOS:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_embalador">
@@ -1100,50 +1158,69 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+                        <Component class="javax.swing.JLabel" name="jLabel7">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="PAR 4"/>
-                          </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
-                          </Events>
-                        </Component>
-                        <Component class="javax.swing.JRadioButton" name="jRadioButton2">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="PAR 6"/>
+                            <Property name="text" type="java.lang.String" value="PAR 4:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+                        <Component class="javax.swing.JLabel" name="jLabel8">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="PAR 8"/>
+                            <Property name="text" type="java.lang.String" value="PAR 6:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+                        <Component class="javax.swing.JLabel" name="jLabel9">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="IMPAR 5"/>
+                            <Property name="text" type="java.lang.String" value="PAR 8:"/>
                           </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4ActionPerformed"/>
-                          </Events>
                         </Component>
-                        <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+                        <Component class="javax.swing.JLabel" name="jLabel10">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="IMPAR 7"/>
+                            <Property name="text" type="java.lang.String" value="IMPAR 5:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel11">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="IMPAR 7:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField1">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField2">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField3">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField4">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField5">
+                        </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator3">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator4">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator5">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator6">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator7">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JSeparator" name="jSeparator8">
+                          <Properties>
+                            <Property name="orientation" type="int" value="1"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -1286,7 +1363,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="558" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="559" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>

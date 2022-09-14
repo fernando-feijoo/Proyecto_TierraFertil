@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Vista;
 
-/**
- *
- * @author Brayan Carmona
- */
 public class Vista_General extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
+    
     public Vista_General() {
         initComponents();
         this.setLocationRelativeTo(null);

@@ -1,19 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-
 public class Modelo_Login {
     Modelo_Conexion conn = new Modelo_Conexion();
-    public String user;
+    public static String user;
     public String pass;
-    
+    public static String rol;
     
      public ResultSet consultarUsuario() {
         try {
@@ -29,5 +24,4 @@ public class Modelo_Login {
         }
         return null;
     }
-    
 }

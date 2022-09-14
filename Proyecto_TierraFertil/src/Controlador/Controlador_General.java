@@ -37,7 +37,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.icono_minimizar.addMouseListener(this);
         this.vistaGeneral.icono_cerrar.addMouseListener(this);
         this.vistaGeneral.jp_banner.addMouseListener(this);
-        this.vistaGeneral.btn_minimizar.addMouseListener(this);
         this.vistaGeneral.jp_opcionInicial.addMouseListener(this);
         //  ActionListesner de los distintos elementos.
         

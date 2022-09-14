@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-package Vista.Grupo3;
+package Vista.Grupo1;
+
+import Vista.Grupo3.*;
 
 /**
  *
  * @author Fabricio F. Feijoo
  */
-public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
+public class Vista_Menu_Solucion_Campo extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Prueba_InstanciarMenu
      */
-    public Vista_Menu_Acopio() {
+    public Vista_Menu_Solucion_Campo() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
@@ -61,7 +63,7 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
         lbl_titutlo_acopio.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
         lbl_titutlo_acopio.setForeground(new java.awt.Color(0, 0, 0));
         lbl_titutlo_acopio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ico_acopio_32px.png"))); // NOI18N
-        lbl_titutlo_acopio.setText("Acopio");
+        lbl_titutlo_acopio.setText("Menu Grupo 1");
         jp_titulo_uno.add(lbl_titutlo_acopio, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 2, 247, -1));
 
         jp_contenedor_menu_acopio.add(jp_titulo_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 25, 270, -1));

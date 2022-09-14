@@ -48,9 +48,9 @@
           <Component id="jp_lienzoPrincipal" alignment="0" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="290" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="299" max="32767" attributes="0"/>
                   <Component id="jInternalFrame1" min="-2" pref="0" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="291" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="299" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -82,9 +82,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
           </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
@@ -109,7 +106,7 @@
                       <Component id="jSeparator2" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSeparator1" min="-2" pref="965" max="-2" attributes="0"/>
+                              <Component id="jSeparator1" alignment="1" min="-2" pref="965" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -120,34 +117,34 @@
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="398" max="-2" attributes="0"/>
-                          <Component id="redondeado2" min="-2" pref="145" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="redondeado_contenedor_4" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="386" max="-2" attributes="0"/>
+                          <Component id="redondeado2" min="-2" pref="145" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jSeparator1" min="-2" pref="11" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="redondeado_contenedor_4" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="redondeado2" min="-2" pref="41" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="redondeado2" min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -161,9 +158,6 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Roboto" size="18" style="0"/>
                     </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Ingrese todos los datos solicitados."/>
                   </Properties>
                 </Component>
@@ -174,9 +168,6 @@
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Roboto" size="18" style="1"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bienvenido al apartado de Evaluacion  PMCS"/>
                   </Properties>
@@ -200,9 +191,6 @@
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Roboto" size="12" style="0"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="SIGUIENTE"/>
                       </Properties>
@@ -245,7 +233,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                               <Component id="jp_contenedorGrupo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -254,7 +242,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="25" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="jp_contenedorGrupo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
@@ -414,9 +402,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="FECHA:"/>
                           </Properties>
                         </Component>
@@ -424,9 +409,6 @@
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CALIBRACION:"/>
                           </Properties>
@@ -436,9 +418,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="VAPOR:"/>
                           </Properties>
                         </Component>
@@ -447,17 +426,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="TRANSPORTE:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_calibracion">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -468,9 +441,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_vapor">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -478,9 +448,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_transporte">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -491,17 +458,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="SEMANA:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jcomb_semana">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -520,17 +481,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="L. DEDOS:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_dedos">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -541,17 +496,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="PEDIDO:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_pedidos">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -562,17 +511,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="TIPO DE CAJA:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_tipoCaja">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -583,9 +526,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="FINCA:"/>
                           </Properties>
                         </Component>
@@ -593,9 +533,6 @@
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="DESTINO:"/>
                           </Properties>
@@ -605,9 +542,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="CODIGO:"/>
                           </Properties>
                         </Component>
@@ -615,9 +549,6 @@
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="FUMIGACION:"/>
                           </Properties>
@@ -627,17 +558,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="DESTINO:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_fumigacion">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -645,9 +570,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_destino2">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -655,9 +577,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_codigo">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -665,9 +584,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_destino1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -675,9 +591,6 @@
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jcom_finca">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -729,7 +642,10 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -754,7 +670,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="402" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="387" max="-2" attributes="0"/>
                               <Component id="redondeado6" min="-2" pref="161" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -763,15 +679,15 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                               <Component id="redondeado_contenedor_1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="redondeado_contenedor_2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="redondeado_contenedor_3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="redondeado6" min="-2" pref="34" max="-2" attributes="0"/>
-                              <EmptySpace pref="7" max="32767" attributes="0"/>
+                              <EmptySpace pref="41" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -794,7 +710,12 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jb_defectos" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="redondeado1" min="-2" pref="153" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="redondeado4" min="-2" pref="153" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jb_defectos" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -810,13 +731,10 @@
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="redondeado1" min="-2" pref="153" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="redondeado4" min="-2" pref="153" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="431" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -824,23 +742,29 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Component id="jb_defectos" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txt_caja_insp1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_nomb_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jb_defectos" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="txt_caja_insp1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jb_nomb_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jb_contenedor_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_contenedor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="redondeado1" min="-2" pref="34" max="-2" attributes="0"/>
+                                              <Component id="redondeado4" min="-2" pref="34" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jb_contenedor_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_contenedor" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="redondeado1" min="-2" pref="34" max="-2" attributes="0"/>
-                                      <Component id="redondeado4" min="-2" pref="34" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -851,9 +775,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="14" style="1"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="DEFECTOS ENCONTRADOS"/>
                           </Properties>
                         </Component>
@@ -862,36 +783,20 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="NOMBRE:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_caja_insp1">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jb_contenedor_defecto">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="CONTENEDOR:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_contenedor">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Container class="Recursos_Codigo.Redondeado" name="redondeado1">
                           <Properties>
@@ -912,9 +817,6 @@
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Roboto" size="12" style="0"/>
-                                </Property>
-                                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="0" red="0" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="AGREGAR DEFECTOS"/>
                               </Properties>
@@ -945,9 +847,6 @@
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Roboto" size="12" style="0"/>
-                                </Property>
-                                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="0" red="0" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="NUEVOS DATOS"/>
                               </Properties>
@@ -982,9 +881,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Roboto" size="12" style="0"/>
                                     </Property>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="0" green="0" red="0" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="NUEVOS DATOS"/>
                                   </Properties>
                                   <Constraints>
@@ -995,6 +891,28 @@
                                 </Component>
                               </SubComponents>
                             </Container>
+                          </SubComponents>
+                        </Container>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="tabla_defectos">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="0" rowCount="4"/>
+                                </Property>
+                                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                  <TableColumnModel selectionModel="0"/>
+                                </Property>
+                                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                </Property>
+                              </Properties>
+                            </Component>
                           </SubComponents>
                         </Container>
                       </SubComponents>
@@ -1029,12 +947,12 @@
                                       <Group type="102" attributes="0">
                                           <Component id="jb_total_gajos" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txt_embalador" pref="146" max="32767" attributes="0"/>
+                                          <Component id="txt_embalador" pref="245" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jb_peso_neto" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="txt_peso_neto" pref="146" max="32767" attributes="0"/>
+                                          <Component id="txt_peso_neto" pref="242" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1046,7 +964,7 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jb_impares" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                          <Component id="txt_impares" max="32767" attributes="0"/>
+                                          <Component id="txt_impares" pref="8" max="32767" attributes="0"/>
                                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
@@ -1080,7 +998,7 @@
                                       <Component id="txt_impares" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jb_total_gajos1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                                  <EmptySpace pref="23" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1091,80 +1009,45 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="CAJA INSPECCIONADA:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_caja_insp">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jb_total_gajos">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="EMBALADOR:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_total_gajos">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jb_total_gajos1">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="TOTAL DE GAJOS:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_embalador">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jb_peso_neto">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="PESO NETO:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_peso_neto">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jb_gajeo">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="% GAJEO"/>
                           </Properties>
@@ -1174,36 +1057,20 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="PARES:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_pares">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jb_impares">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="IMPARES:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_impares">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1221,12 +1088,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="953" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="945" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="197" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="185" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -1251,14 +1118,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="GENERAR REPORTE"/>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="30" y="10" width="-1" height="-1"/>
+                              <AbsoluteConstraints x="20" y="10" width="-1" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -1310,7 +1174,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="548" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="570" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1372,9 +1236,6 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
               </Properties>
 
@@ -1603,9 +1464,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="FECHA:"/>
                           </Properties>
                         </Component>
@@ -1613,9 +1471,6 @@
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CALIBRACION:"/>
                           </Properties>
@@ -1625,9 +1480,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="VAPOR:"/>
                           </Properties>
                         </Component>
@@ -1636,17 +1488,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="TRANSPORTE:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_calibracion1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1657,9 +1503,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_vapor1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1667,9 +1510,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_transporte1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1680,17 +1520,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="SEMANA:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jcomb_semana1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1709,17 +1543,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="L. DEDOS:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_dedos1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1730,17 +1558,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="PEDIDO:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_pedidos1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1751,17 +1573,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="TIPO DE CAJA:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_tipoCaja1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1772,9 +1588,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="FINCA:"/>
                           </Properties>
                         </Component>
@@ -1782,9 +1595,6 @@
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="DESTINO:"/>
                           </Properties>
@@ -1794,9 +1604,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="CODIGO:"/>
                           </Properties>
                         </Component>
@@ -1804,9 +1611,6 @@
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="FUMIGACION:"/>
                           </Properties>
@@ -1816,17 +1620,11 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="DESTINO:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_fumigacion1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1834,9 +1632,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_destino3">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1844,9 +1639,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_codigo1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1854,9 +1646,6 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_destino4">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1864,9 +1653,6 @@
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jcom_finca1">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
@@ -1899,9 +1685,6 @@
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Roboto" size="12" style="0"/>
-                                </Property>
-                                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="0" red="0" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="SIGUIENTE"/>
                               </Properties>
@@ -1945,9 +1728,6 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Roboto" size="18" style="0"/>
                         </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="0" green="0" red="0" type="rgb"/>
-                        </Property>
                         <Property name="text" type="java.lang.String" value="Ingrese todos los datos solicitados."/>
                       </Properties>
                     </Component>
@@ -1958,9 +1738,6 @@
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Roboto" size="18" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Bienvenido al apartado de Evaluacion  PMCS"/>
                       </Properties>

@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controlador.Grupo3;
 
-/**
- *
- * @author Brayan Carmona
- */
+import Vista.Grupo3.Vista_Llegada;
+
 public class Controlador_Datos_Llegada {
+    Vista_Llegada vistaLlegada;
+
+    public Controlador_Datos_Llegada(Vista_Llegada vistaLlegada) {
+        this.vistaLlegada = vistaLlegada;
+    }
     
 }

@@ -1,11 +1,17 @@
 package Controlador;
 
 import Controlador.Grupo2.Controlador_Menu;
+import Controlador.Grupo3.Controlador_Datos_Llegada;
+import Controlador.Grupo3.Controlador_Despacho;
+import Controlador.Grupo3.Controlador_Higiene_Contenedor;
+import Controlador.Grupo3.Controlador_Inspeccion_Contenedor;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
+import Controlador.Grupo3.Controlador_Paletizado;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
 import Vista.Grupo2.Vis_evaluacion;
 import Vista.Grupo2.Vista_Menu_Calidad;
+import Vista.Grupo3.Vista_Llegada;
 import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Vista_General;
 import Vista.Vista_Login;
@@ -43,7 +49,12 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Vis_evaluacion vistaEvaluacion = new Vis_evaluacion();
     
     //  GRUPO 3
-    
+    Vista_Llegada vistaLlegada = new Vista_Llegada();
+    Controlador_Datos_Llegada controlDatosLlegada = new Controlador_Datos_Llegada(vistaLlegada);
+    Controlador_Despacho controlDespacho = new Controlador_Despacho(vistaLlegada);
+    Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
+    Controlador_Inspeccion_Contenedor controlInspeccion = new Controlador_Inspeccion_Contenedor(vistaLlegada);
+    Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -77,6 +88,10 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         
         // Grupo 3
+        this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
+        this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
+        this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
+        this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
         //  ActionListesner de los distintos elementos.
 
         //  Area de pruebas para los metodos a ejecutar en el constructor.
@@ -119,7 +134,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaMenuAcopio.setVisible(true);
             }
         } catch (Exception ex) {
-
+            
         }
     }
 
@@ -157,12 +172,19 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaGeneral.setVisible(false);
             this.vistaLogin.setVisible(true);
         }
+        //  GRUPO 1 OPCIONES DE BOTONES
+        
         //  GRUPO 2 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaMenuCalidad.btn_acopio_control) {
-            System.out.println("Se presiono el boton control.");
             this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
             this.vistaEvaluacion.setBorder(null);
             this.vistaEvaluacion.setVisible(true);
+        }
+        //  GRUPO 3 OPCIONES DE BOTONES
+        if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno) {
+            this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
+            this.vistaLlegada.setBorder(null);
+            this.vistaLlegada.setVisible(true);
         }
     }
 

@@ -10,13 +10,12 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
-import javax.swing.JOptionPane;
 
 public class Controlador_Login implements MouseListener, KeyListener {
 
     Vista_Login vistaLogin;
 
-    Modelo_Login ModLogin = new Modelo_Login();
+    Modelo_Login modeloLogin = new Modelo_Login();
 
     Color colorNormal = new Color(255, 255, 255, 80);
     Color colorSeleccionMinimizar = new Color(133, 193, 233);
@@ -56,33 +55,27 @@ public class Controlador_Login implements MouseListener, KeyListener {
             //Colocar codigo de inicio de sesion con validor de rol, para las vistas de cada grupo.
             try {
                 String rol = "";
-                
-                ModLogin.user = this.vistaLogin.txt_usuario.getText();
-                ModLogin.pass = this.vistaLogin.txt_contra.getText();
+                int temp = 0;
+                modeloLogin.user = this.vistaLogin.txt_usuario.getText();
+                modeloLogin.pass = this.vistaLogin.txt_contra.getText();
 
-                ResultSet rs = ModLogin.consultarUsuario();
+                ResultSet rs = modeloLogin.consultarUsuario();
 
                 while (rs.next()) {
                     rol = rs.getString("rol");
-
+                    temp = 1;
                 }
-                if (rol.equals("Grupo 1")) {
-
-                }
-                if (rol.equals("Grupo 2")) {
-
-                }
-                if (rol.equals("Grupo 3")) {
-
-                    Vista_General visMenu = new Vista_General();
-                    Controlador_General ctrMenu = new Controlador_General(visMenu);
-                    visMenu.show();
+                if (temp == 1) {
+                    this.modeloLogin.rol = rol;
+                    Vista_General vistaGeneral = new Vista_General();
+                    Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);
+                    vistaGeneral.show();
                     this.vistaLogin.setVisible(false);
                 }
 
             } catch (Exception ex) {
-            }
 
+            }
         }
     }
 

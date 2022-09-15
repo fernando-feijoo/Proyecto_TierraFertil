@@ -26,7 +26,7 @@ public class Vista_General extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         lbl_nombre_usuario = new javax.swing.JLabel();
         jp_opcionCerrarSesion = new Recursos_Codigo.Redondeado();
-        jLabel3 = new javax.swing.JLabel();
+        lbl_cerrarSesion = new javax.swing.JLabel();
         jp_banner = new javax.swing.JPanel();
         lbl_icono_logo = new javax.swing.JLabel();
         btn_cerrar = new Recursos_Codigo.Redondeado();
@@ -96,10 +96,10 @@ public class Vista_General extends javax.swing.JFrame {
         jp_opcionCerrarSesion.setRoundBottomRight(35);
         jp_opcionCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Cerrar Sesion");
-        jp_opcionCerrarSesion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, -1, -1));
+        lbl_cerrarSesion.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        lbl_cerrarSesion.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_cerrarSesion.setText("Cerrar Sesion");
+        jp_opcionCerrarSesion.add(lbl_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, -1, -1));
 
         jp_contenedor_opciones.add(jp_opcionCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 220, 40));
 
@@ -283,7 +283,6 @@ public class Vista_General extends javax.swing.JFrame {
     public javax.swing.JLabel icono_minimizar;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
     public javax.swing.JPanel jp_banner;
     public javax.swing.JPanel jp_contenedor_menu;
     public javax.swing.JPanel jp_contenedor_opciones;
@@ -295,6 +294,7 @@ public class Vista_General extends javax.swing.JFrame {
     public javax.swing.JPanel jp_opcionInicial;
     public javax.swing.JPanel jp_opcionModoOscuro;
     public Recursos_Codigo.Redondeado jp_redondeado_escritorio;
+    public javax.swing.JLabel lbl_cerrarSesion;
     public javax.swing.JLabel lbl_icono_calendario;
     public javax.swing.JLabel lbl_icono_logo;
     public javax.swing.JLabel lbl_icono_reloj;

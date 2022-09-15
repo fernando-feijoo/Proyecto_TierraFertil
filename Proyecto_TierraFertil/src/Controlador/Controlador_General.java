@@ -4,7 +4,7 @@ import Controlador.Grupo2.Controlador_Menu;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
-import Vista.Grupo2.Vista_Menu_DanielModifica;
+import Vista.Grupo2.Vista_Menu_Calidad;
 import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Vista_General;
 import Vista.Vista_Login;
@@ -30,7 +30,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Menu_Acopio controladorMenuAcopio = new Controlador_Menu_Acopio(vistaMenuAcopio);
     Vista_Menu_Solucion_Campo vistaMenuCampo = new Vista_Menu_Solucion_Campo();
     
-    Vista_Menu_DanielModifica vistaMenuDaniel = new Vista_Menu_DanielModifica();
+    Vista_Menu_Calidad vistaMenuDaniel = new Vista_Menu_Calidad();
     
     // Prueba de dataLogin
     Modelo_Login modeloLogin = new Modelo_Login();

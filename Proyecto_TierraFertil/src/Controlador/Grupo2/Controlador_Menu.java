@@ -3,7 +3,7 @@ package Controlador.Grupo2;
 //importaciones de la vista
 import Vista.Vista_General;
 import Vista.Grupo2.Vista_Listado;
-import Vista.Grupo2.Vista_Menu_DanielModifica;
+import Vista.Grupo2.Vista_Menu_Calidad;
 import Vista.Grupo2.Vis_evaluacion;
 //importaciones del controlador
 import Controlador.Grupo2.Controlador_Evaluacion;
@@ -16,31 +16,29 @@ import javax.swing.JOptionPane;
 
 public class Controlador_Menu implements MouseListener {
 
-    Vista_Menu_DanielModifica vistaMenu;
+    Vista_Menu_Calidad vistaMenu = new Vista_Menu_Calidad();
     Vista_Listado vistaListado;
     Vis_evaluacion vistaEvaluacion;
 
-    Vista_General vistaGeneral;
+    Vista_General vistaGeneral = new Vista_General();
 
     //Colores para eventos con el mouse
     Color colorNormal = new Color(247, 246, 246);
     Color colorUsuarioSeleccion = new Color(223, 238, 255);
 
-    public Controlador_Menu(Vista_Menu_DanielModifica vistaMenu) {
+    public Controlador_Menu(Vista_Menu_Calidad vistaMenu) {
         this.vistaMenu = vistaMenu;
 
         //componentes de la vistaMenu de daniel
         this.vistaMenu.btn_acopio_control.addMouseListener(this);
         this.vistaMenu.btn_acopio_listado.addMouseListener(this);
 
-        this.vistaGeneral = vistaGeneral;
-
         /*componentes de la vistaGeneral de Fernando +
             uso de su vista mas la mia para la visualización de vistaMenu
                 en su vistageneral.
          */
-        this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
-        this.vistaGeneral.jp_escritorio_general.add(vistaListado);
+        this.vistaGeneral.jp_menu_general.add(vistaMenu);
+        this.vistaMenu.setVisible(true);
 
     }
 
@@ -53,10 +51,9 @@ public class Controlador_Menu implements MouseListener {
 
             try {
                 Controlador_Evaluacion controladorEvaluacion = new Controlador_Evaluacion(vistaEvaluacion);
-                vistaEvaluacion.setBorder(null);
-                //En caso de que esten otras vistas abiertas.
-                vistaListado.dispose();
+                this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
 
+                //En caso de que esten otras vistas abiertas.
                 vistaEvaluacion.setVisible(true);
 
             } catch (Exception ex) {
@@ -70,9 +67,9 @@ public class Controlador_Menu implements MouseListener {
 
             try {
                 Controlador_Listado controladorListado = new Controlador_Listado(vistaListado);
+                this.vistaGeneral.jp_escritorio_general.add(vistaListado);
                 vistaListado.setBorder(null);
                 //En caso de que esten otras vistas abiertas.
-                vistaEvaluacion.dispose();
 
                 vistaListado.setVisible(true);
 
@@ -101,7 +98,7 @@ public class Controlador_Menu implements MouseListener {
         }
         if (e.getSource() == this.vistaMenu.btn_acopio_listado) {
             this.vistaMenu.btn_acopio_listado.setBackground(colorUsuarioSeleccion);
-            
+
         }
 
     }
@@ -115,7 +112,7 @@ public class Controlador_Menu implements MouseListener {
         }
         if (e.getSource() == this.vistaMenu.btn_acopio_listado) {
             this.vistaMenu.btn_acopio_listado.setBackground(colorNormal);
-            
+
         }
     }
 

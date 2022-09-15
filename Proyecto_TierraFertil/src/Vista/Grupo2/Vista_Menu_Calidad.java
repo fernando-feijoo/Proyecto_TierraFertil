@@ -10,12 +10,12 @@ import Vista.Grupo3.*;
  *
  * @author Fabricio F. Feijoo
  */
-public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
+public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Prueba_InstanciarMenu
      */
-    public Vista_Menu_DanielModifica() {
+    public Vista_Menu_Calidad() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }

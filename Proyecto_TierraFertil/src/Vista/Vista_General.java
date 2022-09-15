@@ -35,7 +35,7 @@ public class Vista_General extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         lbl_nombre_usuario = new javax.swing.JLabel();
         jp_opcionCerrarSesion = new Recursos_Codigo.Redondeado();
-        jLabel3 = new javax.swing.JLabel();
+        lbl_cerrarSesion = new javax.swing.JLabel();
         jp_banner = new javax.swing.JPanel();
         lbl_icono_logo = new javax.swing.JLabel();
         btn_cerrar = new Recursos_Codigo.Redondeado();
@@ -97,7 +97,7 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_contenedor_opciones.add(jp_opcionInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
-        jp_opcionCerrarSesion.setBackground(new java.awt.Color(153, 153, 153));
+        jp_opcionCerrarSesion.setBackground(new java.awt.Color(204, 204, 204));
         jp_opcionCerrarSesion.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setMinimumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setPreferredSize(new java.awt.Dimension(220, 40));
@@ -105,10 +105,10 @@ public class Vista_General extends javax.swing.JFrame {
         jp_opcionCerrarSesion.setRoundBottomRight(35);
         jp_opcionCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Cerrar Sesion");
-        jp_opcionCerrarSesion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, -1, -1));
+        lbl_cerrarSesion.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        lbl_cerrarSesion.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_cerrarSesion.setText("Cerrar Sesion");
+        jp_opcionCerrarSesion.add(lbl_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, -1, -1));
 
         jp_contenedor_opciones.add(jp_opcionCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 220, 40));
 
@@ -206,7 +206,7 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_lienzo_principal.add(jp_contenedor_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 310, 640));
 
-        jp_redondeado_escritorio.setBackground(new java.awt.Color(204, 204, 204));
+        jp_redondeado_escritorio.setBackground(new java.awt.Color(230, 230, 230));
         jp_redondeado_escritorio.setMaximumSize(new java.awt.Dimension(970, 640));
         jp_redondeado_escritorio.setMinimumSize(new java.awt.Dimension(970, 640));
         jp_redondeado_escritorio.setRoundBottomLeft(45);
@@ -215,7 +215,7 @@ public class Vista_General extends javax.swing.JFrame {
         jp_redondeado_escritorio.setRoundTopRight(30);
         jp_redondeado_escritorio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_escritorio_general.setBackground(new java.awt.Color(255, 204, 102));
+        jp_escritorio_general.setBackground(new java.awt.Color(230, 230, 230));
         jp_escritorio_general.setMaximumSize(new java.awt.Dimension(965, 605));
         jp_escritorio_general.setMinimumSize(new java.awt.Dimension(970, 605));
         jp_escritorio_general.setPreferredSize(new java.awt.Dimension(965, 605));
@@ -292,7 +292,6 @@ public class Vista_General extends javax.swing.JFrame {
     public javax.swing.JLabel icono_minimizar;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
     public javax.swing.JPanel jp_banner;
     public javax.swing.JPanel jp_contenedor_menu;
     public javax.swing.JPanel jp_contenedor_opciones;
@@ -304,6 +303,7 @@ public class Vista_General extends javax.swing.JFrame {
     public javax.swing.JPanel jp_opcionInicial;
     public javax.swing.JPanel jp_opcionModoOscuro;
     public Recursos_Codigo.Redondeado jp_redondeado_escritorio;
+    public javax.swing.JLabel lbl_cerrarSesion;
     public javax.swing.JLabel lbl_icono_calendario;
     public javax.swing.JLabel lbl_icono_logo;
     public javax.swing.JLabel lbl_icono_reloj;

@@ -1,9 +1,17 @@
 package Controlador;
 
+import Controlador.Grupo2.Controlador_Menu;
+import Controlador.Grupo3.Controlador_Datos_Llegada;
+import Controlador.Grupo3.Controlador_Despacho;
+import Controlador.Grupo3.Controlador_Higiene_Contenedor;
+import Controlador.Grupo3.Controlador_Inspeccion_Contenedor;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
+import Controlador.Grupo3.Controlador_Paletizado;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
-import Vista.Grupo2.Vista_Menu_DanielModifica;
+import Vista.Grupo2.Vis_evaluacion;
+import Vista.Grupo2.Vista_Menu_Calidad;
+import Vista.Grupo3.Vista_Llegada;
 import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Vista_General;
 import Vista.Vista_Login;
@@ -25,19 +33,32 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Vista_Login vistaLogin = new Vista_Login();
     Controlador_Login controladorLogin = new Controlador_Login(vistaLogin);
     //  Aqui vamos a instanciar todas las vistas de cada grupo para trabajar los menus y sus escritorios.
+    //  -> Importacion de Vistas Menus y sus controladores.
+    //  GRUPO 1
+    Vista_Menu_Solucion_Campo vistaMenuCampo = new Vista_Menu_Solucion_Campo();
+    //  GRUPO 2
+    Vista_Menu_Calidad vistaMenuCalidad = new Vista_Menu_Calidad();
+    Controlador_Menu controladorMenuCalidad = new Controlador_Menu(vistaMenuCalidad);
+    //  GRUPO 3
     Vista_Menu_Acopio vistaMenuAcopio = new Vista_Menu_Acopio();
     Controlador_Menu_Acopio controladorMenuAcopio = new Controlador_Menu_Acopio(vistaMenuAcopio);
-    Vista_Menu_Solucion_Campo vistaMenuCampo = new Vista_Menu_Solucion_Campo();
+    //  -> Importacion de Vistas Escritorios y sus controladores.
+    //  GRUPO 1
     
-    Vista_Menu_DanielModifica vistaMenuDaniel = new Vista_Menu_DanielModifica();
-    // Prueba de dataLogin
-    Modelo_Login modeloLogin = new Modelo_Login();
-
-    //  Fin de instanciaciones Vistas.
-    //  Aqui vamos a instanciar las vitas de todos los grupos.
-    //  ->Aqui va el codigo instanciacion Menus.
-    //  Fin de instanciaciones Menus.
+    //  GRUPO 2
+    Vis_evaluacion vistaEvaluacion = new Vis_evaluacion();
+    
+    //  GRUPO 3
+    Vista_Llegada vistaLlegada = new Vista_Llegada();
+    Controlador_Datos_Llegada controlDatosLlegada = new Controlador_Datos_Llegada(vistaLlegada);
+    Controlador_Despacho controlDespacho = new Controlador_Despacho(vistaLlegada);
+    Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
+    Controlador_Inspeccion_Contenedor controlInspeccion = new Controlador_Inspeccion_Contenedor(vistaLlegada);
+    Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
+    //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
+    // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
+    Modelo_Login modeloLogin = new Modelo_Login();
     //  Forma de colocar los colores de los botones generales.
     Color colorNormal = new Color(247, 246, 246);
     Color colorSeleccionMinimizar = new Color(133, 193, 233);
@@ -61,6 +82,16 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.lbl_cerrarSesion.addMouseListener(this);
         this.vistaGeneral.jp_opcionModoOscuro.addMouseListener(this);
         this.vistaGeneral.jp_opcionCerrarSesion.addMouseListener(this);
+        // Grupo 1
+        
+        // Grupo 2
+        this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
+        
+        // Grupo 3
+        this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
+        this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
+        this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
+        this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
         //  ActionListesner de los distintos elementos.
 
         //  Area de pruebas para los metodos a ejecutar en el constructor.
@@ -82,28 +113,28 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaGeneral.jp_menu_general.add(vistaMenuCampo);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaMenuAcopio.setVisible(false);
-                this.vistaMenuDaniel.setVisible(false);
+                this.vistaMenuCalidad.setVisible(false);
                 this.vistaMenuCampo.setBorder(null);
                 this.vistaMenuCampo.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 2")) {
-                this.vistaGeneral.jp_menu_general.add(vistaMenuDaniel);
+                this.vistaGeneral.jp_menu_general.add(vistaMenuCalidad);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaMenuAcopio.setVisible(false);
                 this.vistaMenuCampo.setVisible(false);
-                this.vistaMenuDaniel.setBorder(null);
-                this.vistaMenuDaniel.setVisible(true);
+                this.vistaMenuCalidad.setBorder(null);
+                this.vistaMenuCalidad.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 3")) {
                 this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaMenuCampo.setVisible(false);
-                this.vistaMenuDaniel.setVisible(false);
+                this.vistaMenuCalidad.setVisible(false);
                 this.vistaMenuAcopio.setBorder(null);
                 this.vistaMenuAcopio.setVisible(true);
             }
         } catch (Exception ex) {
-
+            
         }
     }
 
@@ -141,7 +172,20 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaGeneral.setVisible(false);
             this.vistaLogin.setVisible(true);
         }
+        //  GRUPO 1 OPCIONES DE BOTONES
         
+        //  GRUPO 2 OPCIONES DE BOTONES
+        if (me.getSource() == this.vistaMenuCalidad.btn_acopio_control) {
+            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
+            this.vistaEvaluacion.setBorder(null);
+            this.vistaEvaluacion.setVisible(true);
+        }
+        //  GRUPO 3 OPCIONES DE BOTONES
+        if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno) {
+            this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
+            this.vistaLlegada.setBorder(null);
+            this.vistaLlegada.setVisible(true);
+        }
     }
 
     @Override

@@ -1,5 +1,6 @@
 package Controlador;
 
+import Controlador.Grupo2.Controlador_Menu;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
@@ -30,6 +31,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Vista_Menu_Solucion_Campo vistaMenuCampo = new Vista_Menu_Solucion_Campo();
     
     Vista_Menu_DanielModifica vistaMenuDaniel = new Vista_Menu_DanielModifica();
+    
     // Prueba de dataLogin
     Modelo_Login modeloLogin = new Modelo_Login();
 
@@ -87,6 +89,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaMenuCampo.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 2")) {
+                Controlador_Menu controladorMenuDaniel = new Controlador_Menu(vistaMenuDaniel);
                 this.vistaGeneral.jp_menu_general.add(vistaMenuDaniel);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaMenuAcopio.setVisible(false);

@@ -67,6 +67,7 @@ public class Controlador_Login implements MouseListener, KeyListener {
                     temp = 1;
                 }
                 if (temp == 1) {
+                    System.out.println("Ingreso Login");
                     this.modeloLogin.rol = rol;
                     Vista_General vistaGeneral = new Vista_General();
                     Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);

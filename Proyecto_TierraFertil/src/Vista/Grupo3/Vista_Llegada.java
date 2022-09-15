@@ -341,7 +341,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         jd_fechahora_salida.setBackground(new java.awt.Color(255, 255, 255));
         jd_fechahora_salida.setForeground(new java.awt.Color(0, 0, 0));
-        jd_fechahora_salida.setDateFormatString("yyyy/MM/dd/");
+        jd_fechahora_salida.setDateFormatString("yyyy/MM/dd/ hh:mm:ss");
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));

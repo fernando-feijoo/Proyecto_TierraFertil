@@ -138,7 +138,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Container class="Recursos_Codigo.Redondeado" name="btn_acopio_opcion_uno">
+        <Container class="Recursos_Codigo.Redondeado" name="btn_acopio_control">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -185,7 +185,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="Recursos_Codigo.Redondeado" name="btn_acopio_opcion_dos">
+        <Container class="Recursos_Codigo.Redondeado" name="btn_acopio_listado">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>

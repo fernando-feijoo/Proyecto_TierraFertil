@@ -33,9 +33,9 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
         jp_titulo_uno = new javax.swing.JPanel();
         lbl_titutlo_acopio = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        btn_acopio_opcion_uno = new Recursos_Codigo.Redondeado();
+        btn_acopio_control = new Recursos_Codigo.Redondeado();
         jLabel2 = new javax.swing.JLabel();
-        btn_acopio_opcion_dos = new Recursos_Codigo.Redondeado();
+        btn_acopio_listado = new Recursos_Codigo.Redondeado();
         jLabel3 = new javax.swing.JLabel();
         jp_titulo_dos = new javax.swing.JPanel();
         lbl_titulo_reporte = new javax.swing.JLabel();
@@ -86,39 +86,39 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
 
         jp_contenedor_menu_acopio.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 6, -1, -1));
 
-        btn_acopio_opcion_uno.setBackground(new java.awt.Color(204, 204, 204));
-        btn_acopio_opcion_uno.setMaximumSize(new java.awt.Dimension(218, 38));
-        btn_acopio_opcion_uno.setMinimumSize(new java.awt.Dimension(218, 38));
-        btn_acopio_opcion_uno.setPreferredSize(new java.awt.Dimension(218, 38));
-        btn_acopio_opcion_uno.setRoundBottomLeft(30);
-        btn_acopio_opcion_uno.setRoundBottomRight(30);
-        btn_acopio_opcion_uno.setRoundTopLeft(30);
-        btn_acopio_opcion_uno.setRoundTopRight(30);
-        btn_acopio_opcion_uno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_acopio_control.setBackground(new java.awt.Color(204, 204, 204));
+        btn_acopio_control.setMaximumSize(new java.awt.Dimension(218, 38));
+        btn_acopio_control.setMinimumSize(new java.awt.Dimension(218, 38));
+        btn_acopio_control.setPreferredSize(new java.awt.Dimension(218, 38));
+        btn_acopio_control.setRoundBottomLeft(30);
+        btn_acopio_control.setRoundBottomRight(30);
+        btn_acopio_control.setRoundTopLeft(30);
+        btn_acopio_control.setRoundTopRight(30);
+        btn_acopio_control.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Control de calidad");
-        btn_acopio_opcion_uno.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
+        btn_acopio_control.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(btn_acopio_opcion_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        jp_contenedor_menu_acopio.add(btn_acopio_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
-        btn_acopio_opcion_dos.setBackground(new java.awt.Color(204, 204, 204));
-        btn_acopio_opcion_dos.setMaximumSize(new java.awt.Dimension(218, 38));
-        btn_acopio_opcion_dos.setMinimumSize(new java.awt.Dimension(218, 38));
-        btn_acopio_opcion_dos.setPreferredSize(new java.awt.Dimension(218, 38));
-        btn_acopio_opcion_dos.setRoundBottomLeft(30);
-        btn_acopio_opcion_dos.setRoundBottomRight(30);
-        btn_acopio_opcion_dos.setRoundTopLeft(30);
-        btn_acopio_opcion_dos.setRoundTopRight(30);
-        btn_acopio_opcion_dos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_acopio_listado.setBackground(new java.awt.Color(204, 204, 204));
+        btn_acopio_listado.setMaximumSize(new java.awt.Dimension(218, 38));
+        btn_acopio_listado.setMinimumSize(new java.awt.Dimension(218, 38));
+        btn_acopio_listado.setPreferredSize(new java.awt.Dimension(218, 38));
+        btn_acopio_listado.setRoundBottomLeft(30);
+        btn_acopio_listado.setRoundBottomRight(30);
+        btn_acopio_listado.setRoundTopLeft(30);
+        btn_acopio_listado.setRoundTopRight(30);
+        btn_acopio_listado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Listado de reportes");
-        btn_acopio_opcion_dos.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
+        btn_acopio_listado.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(btn_acopio_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+        jp_contenedor_menu_acopio.add(btn_acopio_listado, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
         jp_titulo_dos.setBackground(new java.awt.Color(204, 204, 204));
         jp_titulo_dos.setMaximumSize(new java.awt.Dimension(270, 48));
@@ -199,8 +199,8 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public Recursos_Codigo.Redondeado btn_acopio_opcion_dos;
-    public Recursos_Codigo.Redondeado btn_acopio_opcion_uno;
+    public Recursos_Codigo.Redondeado btn_acopio_control;
+    public Recursos_Codigo.Redondeado btn_acopio_listado;
     public Recursos_Codigo.Redondeado btn_reportes_opcion_dos;
     public Recursos_Codigo.Redondeado btn_reportes_opcion_uno;
     public javax.swing.JLabel jLabel2;

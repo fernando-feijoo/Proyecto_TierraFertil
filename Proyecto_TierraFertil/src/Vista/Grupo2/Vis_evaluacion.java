@@ -29,6 +29,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator12 = new javax.swing.JSeparator();
         jp_lienzoPrincipal = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jp_pestaña_datos = new javax.swing.JPanel();
@@ -118,7 +119,6 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
         redondeado6 = new Recursos_Codigo.Redondeado();
         jb_contenedor_defecto4 = new javax.swing.JLabel();
         redondeado7 = new Recursos_Codigo.Redondeado();
-        jPanel3 = new javax.swing.JPanel();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jp_lienzoPrincipal1 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -421,7 +421,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
                         .addGroup(jp_pestaña_datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))))
-                .addGap(0, 2, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jp_pestaña_datosLayout.createSequentialGroup()
                 .addGroup(jp_pestaña_datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_pestaña_datosLayout.createSequentialGroup()
@@ -764,7 +764,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
         redondeado_contenedor_3.setLayout(redondeado_contenedor_3Layout);
         redondeado_contenedor_3Layout.setHorizontalGroup(
             redondeado_contenedor_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 925, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(redondeado_contenedor_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(redondeado_contenedor_3Layout.createSequentialGroup()
                     .addGap(57, 57, 57)
@@ -806,14 +806,11 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
             jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
                 .addGroup(jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(redondeado_contenedor_2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(redondeado_contenedor_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
-                            .addContainerGap()
+                    .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(redondeado_contenedor_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(redondeado_contenedor_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(redondeado_contenedor_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
                         .addGap(398, 398, 398)
@@ -831,7 +828,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
                 .addComponent(redondeado_contenedor_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(redondeado6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jp_pestaña_reportesLayout = new javax.swing.GroupLayout(jp_pestaña_reportes);
@@ -848,21 +845,6 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
         );
 
         jTabbedPane1.addTab("TABULACION", jp_pestaña_reportes);
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 967, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 548, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("GENERAR REPORTES", jPanel3);
 
         javax.swing.GroupLayout jp_lienzoPrincipalLayout = new javax.swing.GroupLayout(jp_lienzoPrincipal);
         jp_lienzoPrincipal.setLayout(jp_lienzoPrincipalLayout);
@@ -1192,7 +1174,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_lienzoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jp_lienzoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 965, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 483, Short.MAX_VALUE)
@@ -1201,7 +1183,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_lienzoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jp_lienzoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 291, Short.MAX_VALUE)
@@ -1212,14 +1194,14 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_calibracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_calibracionActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_txt_calibracionActionPerformed
-
     private void txt_calibracion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_calibracion1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_calibracion1ActionPerformed
+
+    private void txt_calibracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_calibracionActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_txt_calibracionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1237,7 +1219,6 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1246,6 +1227,7 @@ public class Vis_evaluacion extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;

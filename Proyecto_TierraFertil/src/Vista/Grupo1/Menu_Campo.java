@@ -8,7 +8,7 @@ import Vista.Grupo3.*;
 
 /**
  *
- * @author Fabricio F. Feijoo
+ * @author sitrayas
  */
 public class Menu_Campo extends javax.swing.JInternalFrame {
 
@@ -43,34 +43,35 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         redondeado4 = new Recursos_Codigo.Redondeado();
         jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setMaximumSize(new java.awt.Dimension(300, 516));
         setMinimumSize(new java.awt.Dimension(300, 516));
         setPreferredSize(new java.awt.Dimension(300, 516));
 
+        jp_contenedor_menu_acopio.setBackground(new java.awt.Color(204, 204, 204));
         jp_contenedor_menu_acopio.setMaximumSize(new java.awt.Dimension(290, 480));
         jp_contenedor_menu_acopio.setMinimumSize(new java.awt.Dimension(290, 480));
         jp_contenedor_menu_acopio.setName(""); // NOI18N
         jp_contenedor_menu_acopio.setPreferredSize(new java.awt.Dimension(290, 480));
         jp_contenedor_menu_acopio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setMaximumSize(new java.awt.Dimension(270, 48));
         jPanel1.setMinimumSize(new java.awt.Dimension(270, 48));
 
-        jLabel1.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ico_acopio_32px.png"))); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/control1.png"))); // NOI18N
         jLabel1.setText("Control");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -112,8 +113,8 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         redondeado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Registro bandejas");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         redondeado1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(redondeado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
@@ -129,18 +130,19 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         redondeado2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Listado bamdejas");
+        jLabel3.setText("Listado bandejas");
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         redondeado2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(redondeado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setMaximumSize(new java.awt.Dimension(270, 48));
         jPanel3.setMinimumSize(new java.awt.Dimension(270, 48));
         jPanel3.setPreferredSize(new java.awt.Dimension(270, 48));
 
-        jLabel4.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel4.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/playlist_32px.png"))); // NOI18N
         jLabel4.setText("Reportes");
 
@@ -174,8 +176,8 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         redondeado3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Nuevo reporte");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         redondeado3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(redondeado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
@@ -191,16 +193,11 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         redondeado4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Reportes generados");
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         redondeado4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(redondeado4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Nuevo reporte");
-        jp_contenedor_menu_acopio.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -222,7 +219,6 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;

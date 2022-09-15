@@ -10,6 +10,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 
 public class Controlador_Login implements MouseListener, KeyListener {
 
@@ -66,11 +67,14 @@ public class Controlador_Login implements MouseListener, KeyListener {
                     temp = 1;
                 }
                 if (temp == 1) {
+                    System.out.println("Ingreso Login");
                     this.modeloLogin.rol = rol;
                     Vista_General vistaGeneral = new Vista_General();
                     Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);
                     vistaGeneral.show();
                     this.vistaLogin.setVisible(false);
+                }else{
+                    JOptionPane.showMessageDialog(vistaLogin, "Contraseña o usuario incorrecto.", "Error de Login", JOptionPane.INFORMATION_MESSAGE);
                 }
 
             } catch (Exception ex) {

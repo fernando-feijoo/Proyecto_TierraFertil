@@ -1,5 +1,6 @@
 package Controlador;
 
+import Controlador.Grupo2.Controlador_Menu;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
@@ -30,6 +31,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Vista_Menu_Solucion_Campo vistaMenuCampo = new Vista_Menu_Solucion_Campo();
     
     Vista_Menu_DanielModifica vistaMenuDaniel = new Vista_Menu_DanielModifica();
+    
     // Prueba de dataLogin
     Modelo_Login modeloLogin = new Modelo_Login();
 
@@ -42,6 +44,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Color colorNormal = new Color(247, 246, 246);
     Color colorSeleccionMinimizar = new Color(133, 193, 233);
     Color colorSeleccionExit = new Color(231, 76, 60);
+    Color colorUsuarioSeleccion = new Color(223,238,255);
+    Color colorUsuarioNormal = new Color(204,204,204);
     //  Variables locales para usar en vista general de la clase.
     int xMouse, yMouse, contTemp = 0;
 
@@ -57,6 +61,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.jp_opcionInicial.addMouseListener(this);
         this.vistaGeneral.jp_opcionCerrarSesion.addMouseListener(this);
         this.vistaGeneral.lbl_cerrarSesion.addMouseListener(this);
+        this.vistaGeneral.jp_opcionModoOscuro.addMouseListener(this);
+        this.vistaGeneral.jp_opcionCerrarSesion.addMouseListener(this);
         //  ActionListesner de los distintos elementos.
 
         //  Area de pruebas para los metodos a ejecutar en el constructor.
@@ -77,18 +83,25 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             if (this.modeloLogin.rol.equals("Grupo 1")) {
                 this.vistaGeneral.jp_menu_general.add(vistaMenuCampo);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
+                this.vistaMenuAcopio.setVisible(false);
+                this.vistaMenuDaniel.setVisible(false);
                 this.vistaMenuCampo.setBorder(null);
                 this.vistaMenuCampo.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 2")) {
+                Controlador_Menu controladorMenuDaniel = new Controlador_Menu(vistaMenuDaniel);
                 this.vistaGeneral.jp_menu_general.add(vistaMenuDaniel);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
+                this.vistaMenuAcopio.setVisible(false);
+                this.vistaMenuCampo.setVisible(false);
                 this.vistaMenuDaniel.setBorder(null);
                 this.vistaMenuDaniel.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 3")) {
                 this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
+                this.vistaMenuCampo.setVisible(false);
+                this.vistaMenuDaniel.setVisible(false);
                 this.vistaMenuAcopio.setBorder(null);
                 this.vistaMenuAcopio.setVisible(true);
             }
@@ -162,6 +175,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorSeleccionExit);
         }
+        if (me.getSource() == this.vistaGeneral.jp_opcionInicial) {
+            this.vistaGeneral.jp_opcionInicial.setBackground(colorUsuarioSeleccion);
+        }
+        if (me.getSource() == this.vistaGeneral.jp_opcionModoOscuro) {
+            this.vistaGeneral.jp_opcionModoOscuro.setBackground(colorUsuarioSeleccion);
+        }
+        if (me.getSource() == this.vistaGeneral.jp_opcionCerrarSesion) {
+            this.vistaGeneral.jp_opcionCerrarSesion.setBackground(colorUsuarioSeleccion);
+        }
     }
 
     @Override
@@ -177,6 +199,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         //  -> Este es el boton cerrar.
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorNormal);
+        }
+        if (me.getSource() == this.vistaGeneral.jp_opcionInicial) {
+            this.vistaGeneral.jp_opcionInicial.setBackground(colorNormal);
+        }
+        if (me.getSource() == this.vistaGeneral.jp_opcionModoOscuro) {
+            this.vistaGeneral.jp_opcionModoOscuro.setBackground(colorUsuarioNormal);
+        }
+        if (me.getSource() == this.vistaGeneral.jp_opcionCerrarSesion) {
+            this.vistaGeneral.jp_opcionCerrarSesion.setBackground(colorUsuarioNormal);
         }
     }
 

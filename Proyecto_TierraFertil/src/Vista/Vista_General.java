@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Vista;
 
-/**
- *
- * @author Brayan Carmona
- */
 public class Vista_General extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
+    
     public Vista_General() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -97,7 +88,7 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_contenedor_opciones.add(jp_opcionInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
-        jp_opcionCerrarSesion.setBackground(new java.awt.Color(153, 153, 153));
+        jp_opcionCerrarSesion.setBackground(new java.awt.Color(204, 204, 204));
         jp_opcionCerrarSesion.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setMinimumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setPreferredSize(new java.awt.Dimension(220, 40));
@@ -206,7 +197,7 @@ public class Vista_General extends javax.swing.JFrame {
 
         jp_lienzo_principal.add(jp_contenedor_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 310, 640));
 
-        jp_redondeado_escritorio.setBackground(new java.awt.Color(204, 204, 204));
+        jp_redondeado_escritorio.setBackground(new java.awt.Color(230, 230, 230));
         jp_redondeado_escritorio.setMaximumSize(new java.awt.Dimension(970, 640));
         jp_redondeado_escritorio.setMinimumSize(new java.awt.Dimension(970, 640));
         jp_redondeado_escritorio.setRoundBottomLeft(45);
@@ -215,7 +206,7 @@ public class Vista_General extends javax.swing.JFrame {
         jp_redondeado_escritorio.setRoundTopRight(30);
         jp_redondeado_escritorio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jp_escritorio_general.setBackground(new java.awt.Color(255, 204, 102));
+        jp_escritorio_general.setBackground(new java.awt.Color(230, 230, 230));
         jp_escritorio_general.setMaximumSize(new java.awt.Dimension(965, 605));
         jp_escritorio_general.setMinimumSize(new java.awt.Dimension(970, 605));
         jp_escritorio_general.setPreferredSize(new java.awt.Dimension(965, 605));

@@ -62,8 +62,8 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
 
         lbl_titutlo_acopio.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
         lbl_titutlo_acopio.setForeground(new java.awt.Color(0, 0, 0));
-        lbl_titutlo_acopio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ico_acopio_32px.png"))); // NOI18N
-        lbl_titutlo_acopio.setText("Menu Grupo 2");
+        lbl_titutlo_acopio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Banana_96x96-32_37912.png"))); // NOI18N
+        lbl_titutlo_acopio.setText("Acopio");
         jp_titulo_uno.add(lbl_titutlo_acopio, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 2, 247, -1));
 
         jp_contenedor_menu_acopio.add(jp_titulo_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 25, 270, -1));
@@ -98,7 +98,7 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Registro contenedores");
+        jLabel2.setText("Control de calidad");
         btn_acopio_opcion_uno.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_acopio_opcion_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
@@ -115,7 +115,7 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Listado contenedores");
+        jLabel3.setText("Listado de reportes");
         btn_acopio_opcion_dos.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_acopio_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
@@ -147,7 +147,7 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jp_contenedor_menu_acopio.add(jp_titulo_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, 48));
+        jp_contenedor_menu_acopio.add(jp_titulo_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 48));
 
         btn_reportes_opcion_uno.setBackground(new java.awt.Color(204, 204, 204));
         btn_reportes_opcion_uno.setMaximumSize(new java.awt.Dimension(218, 38));
@@ -164,7 +164,7 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
         jLabel5.setText("Nuevo reporte");
         btn_reportes_opcion_uno.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(btn_reportes_opcion_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+        jp_contenedor_menu_acopio.add(btn_reportes_opcion_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         btn_reportes_opcion_dos.setBackground(new java.awt.Color(204, 204, 204));
         btn_reportes_opcion_dos.setMaximumSize(new java.awt.Dimension(218, 38));
@@ -181,7 +181,7 @@ public class Vista_Menu_DanielModifica extends javax.swing.JInternalFrame {
         jLabel6.setText("Reportes generados");
         btn_reportes_opcion_dos.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(btn_reportes_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        jp_contenedor_menu_acopio.add(btn_reportes_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

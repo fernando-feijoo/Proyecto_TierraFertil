@@ -1,37 +1,46 @@
 package Controlador.Grupo2;
 
+//importaciones de la vista
 import Vista.Vista_General;
+import Vista.Grupo2.Vista_Listado;
 import Vista.Grupo2.Vista_Menu_DanielModifica;
+import Vista.Grupo2.Vis_evaluacion;
+//importaciones del controlador
+import Controlador.Grupo2.Controlador_Evaluacion;
+import Controlador.Grupo2.Controlador_Listado;
+
 import java.awt.event.MouseEvent;
 import java.awt.Color;
-
 import java.awt.event.MouseListener;
+import javax.swing.JOptionPane;
 
 public class Controlador_Menu implements MouseListener {
 
     Vista_Menu_DanielModifica vistaMenu;
+    Vista_Listado vistaListado;
+    Vis_evaluacion vistaEvaluacion;
+
     Vista_General vistaGeneral;
 
     //Colores para eventos con el mouse
     Color colorNormal = new Color(247, 246, 246);
-    Color colorSeleccionMinimizar = new Color(133, 193, 233);
-    Color colorSeleccionExit = new Color(231, 76, 60);
     Color colorUsuarioSeleccion = new Color(223, 238, 255);
-    Color colorUsuarioNormal = new Color(204, 204, 204);
 
     public Controlador_Menu(Vista_Menu_DanielModifica vistaMenu) {
         this.vistaMenu = vistaMenu;
 
-        this.vistaGeneral = vistaGeneral;
-
         //componentes de la vistaMenu de daniel
         this.vistaMenu.btn_acopio_control.addMouseListener(this);
+        this.vistaMenu.btn_acopio_listado.addMouseListener(this);
+
+        this.vistaGeneral = vistaGeneral;
 
         /*componentes de la vistaGeneral de Fernando +
             uso de su vista mas la mia para la visualización de vistaMenu
                 en su vistageneral.
-        */
-        this.vistaGeneral.jp_escritorio_general.add(vistaMenu);
+         */
+        this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
+        this.vistaGeneral.jp_escritorio_general.add(vistaListado);
 
     }
 
@@ -41,7 +50,36 @@ public class Controlador_Menu implements MouseListener {
         //Captura de la accion del boton control
         if (e.getSource() == this.vistaMenu.btn_acopio_control) {
             System.out.println("Se presiono el boton control.");
-            vistaMenu.setVisible(true);
+
+            try {
+                Controlador_Evaluacion controladorEvaluacion = new Controlador_Evaluacion(vistaEvaluacion);
+                vistaEvaluacion.setBorder(null);
+                //En caso de que esten otras vistas abiertas.
+                vistaListado.dispose();
+
+                vistaEvaluacion.setVisible(true);
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Error en el boton control de acopio. " + e);
+            }
+
+        }
+
+        if (e.getSource() == this.vistaMenu.btn_acopio_listado) {
+            System.out.println("Se presiono el boton listado");
+
+            try {
+                Controlador_Listado controladorListado = new Controlador_Listado(vistaListado);
+                vistaListado.setBorder(null);
+                //En caso de que esten otras vistas abiertas.
+                vistaEvaluacion.dispose();
+
+                vistaListado.setVisible(true);
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Error en el boton listado de acopio. " + e);
+
+            }
 
         }
 
@@ -61,15 +99,23 @@ public class Controlador_Menu implements MouseListener {
         if (e.getSource() == this.vistaMenu.btn_acopio_control) {
             this.vistaMenu.btn_acopio_control.setBackground(colorUsuarioSeleccion);
         }
-       
+        if (e.getSource() == this.vistaMenu.btn_acopio_listado) {
+            this.vistaMenu.btn_acopio_listado.setBackground(colorUsuarioSeleccion);
+            
+        }
+
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        
-           if (e.getSource() == this.vistaMenu.btn_acopio_control) {
-               this.vistaMenu.btn_acopio_control.setBackground(colorNormal);
-               
+
+        if (e.getSource() == this.vistaMenu.btn_acopio_control) {
+            this.vistaMenu.btn_acopio_control.setBackground(colorNormal);
+
+        }
+        if (e.getSource() == this.vistaMenu.btn_acopio_listado) {
+            this.vistaMenu.btn_acopio_listado.setBackground(colorNormal);
+            
         }
     }
 

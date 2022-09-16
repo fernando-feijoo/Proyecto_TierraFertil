@@ -7,6 +7,7 @@ public class Controlador_Datos_Llegada {
 
     public Controlador_Datos_Llegada(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
+        
     }
     
 }

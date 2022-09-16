@@ -23,6 +23,16 @@ public class Controlador_Login implements MouseListener, KeyListener {
     Color colorSeleccionExit = new Color(231, 76, 60);
     Color colorNormalInicioSesion = new Color(75, 174, 0);
     Color colorSeleccionInicioSesion = new Color(75, 174, 0, 140);
+    /*  
+        Variables locales para hacer inicio de sesion y compartir valores dentro del scope "alcance"
+        general de la clase, contTemp valida que solo se haga click 1 vez en el boton para que salga 1 sola
+        ventana. temp es el validado de que si coincide usuario y contraseña. rol es el valor que se comparte 
+        con el modelo para asiganar los roles en la vista general.
+        ResulSet es donde se almacenan los valores del SELECT del metodo consulta.
+     */
+    int contTemp = 0, temp = 0;
+    String rol = "";
+    ResultSet rs;
 
     public Controlador_Login(Vista_Login vistaLogin) {
         this.vistaLogin = vistaLogin;
@@ -35,6 +45,37 @@ public class Controlador_Login implements MouseListener, KeyListener {
         this.vistaLogin.txt_usuario.addKeyListener(this);
         this.vistaLogin.txt_contra.addKeyListener(this);
 
+    }
+
+    public void inicioSesion(int temp) {
+        modeloLogin.user = this.vistaLogin.txt_usuario.getText();
+        modeloLogin.pass = this.vistaLogin.txt_contra.getText();
+        rs = modeloLogin.consultarUsuario();
+        try {
+            while (rs.next()) {
+                rol = rs.getString("rol");
+                temp = 1;
+            }
+            /*  
+                    Aqui validamos el valor de 1 solo click, si hace 1 click suma +1 entonces 
+                    solo ingresa 1 vez si esta bien el usuario.
+             */
+            if (contTemp == 0) {
+                if (temp == 1) {
+                    System.out.println("Ingreso Login");
+                    this.modeloLogin.rol = rol;
+                    Vista_General vistaGeneral = new Vista_General();
+                    Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);
+                    vistaGeneral.show();
+                    this.vistaLogin.setVisible(false);
+                    contTemp++;
+                } else {
+                    JOptionPane.showMessageDialog(vistaLogin, "Contraseña o usuario incorrecto.", "Error de Login", JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+        } catch (Exception ex) {
+
+        }
     }
 
     @Override
@@ -52,34 +93,11 @@ public class Controlador_Login implements MouseListener, KeyListener {
         }
         //  Este es el boton iniciar sesion.
         if (me.getSource() == this.vistaLogin.btn_iniciar_sesion || me.getSource() == this.vistaLogin.lbl_iniciar_sesion) {
-
-            //Colocar codigo de inicio de sesion con validor de rol, para las vistas de cada grupo.
-            try {
-                String rol = "";
-                int temp = 0;
-                modeloLogin.user = this.vistaLogin.txt_usuario.getText();
-                modeloLogin.pass = this.vistaLogin.txt_contra.getText();
-
-                ResultSet rs = modeloLogin.consultarUsuario();
-
-                while (rs.next()) {
-                    rol = rs.getString("rol");
-                    temp = 1;
-                }
-                if (temp == 1) {
-                    System.out.println("Ingreso Login");
-                    this.modeloLogin.rol = rol;
-                    Vista_General vistaGeneral = new Vista_General();
-                    Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);
-                    vistaGeneral.show();
-                    this.vistaLogin.setVisible(false);
-                }else{
-                    JOptionPane.showMessageDialog(vistaLogin, "Contraseña o usuario incorrecto.", "Error de Login", JOptionPane.INFORMATION_MESSAGE);
-                }
-
-            } catch (Exception ex) {
-
-            }
+        /*  
+            Ejecutamos o llamamos al metodo iniciar sesion, enviamos el valor almacenado en temp si ingresa de forma correcta
+            se validara el usuario y contraseña por lo que ingresara al menu del rol asignado a ese usuario.
+        */
+            inicioSesion(temp);
         }
     }
 
@@ -130,6 +148,11 @@ public class Controlador_Login implements MouseListener, KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
+        //  Hace la escucha de la tecla enter, si hace enter ingresa al metodo iniciar sesion.
+        char teclas = e.getKeyChar();
+        if (teclas == KeyEvent.VK_ENTER) {
+            inicioSesion(temp);
+        }
     }
 
     @Override

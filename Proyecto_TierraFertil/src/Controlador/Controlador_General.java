@@ -19,11 +19,13 @@ import java.awt.Color;
 import static java.awt.Frame.ICONIFIED;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener {
+public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener, ComponentListener {
 
     Vista_General vistaGeneral;
     /*  
@@ -64,7 +66,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Color colorSeleccionMinimizar = new Color(133, 193, 233);
     Color colorSeleccionExit = new Color(231, 76, 60);
     Color colorUsuarioSeleccion = new Color(223,238,255);
-    Color colorUsuarioNormal = new Color(204,204,204);
+    Color colorNormalOscuro = new Color(204,204,204);
     //  Variables locales para usar en vista general de la clase.
     int xMouse, yMouse, contTemp = 0;
 
@@ -92,13 +94,12 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
-        //  ActionListesner de los distintos elementos.
-
+        this.vistaLlegada.boton_home.addMouseListener(this);
+        this.vistaLlegada.addComponentListener(this);
         //  Area de pruebas para los metodos a ejecutar en el constructor.
         this.menuRoles();
         //  MouseMotionListener de los distintos elementos.
         this.vistaGeneral.jp_banner.addMouseMotionListener(this);
-
         //  Ocultar, es temporal debe ir en un metodo.
         this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
         this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
@@ -185,6 +186,17 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
             this.vistaLlegada.setBorder(null);
             this.vistaLlegada.setVisible(true);
+            //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
+                this.controlDatosLlegada.idContenedor++;
+                System.out.println("Dato heredado General: " + this.controlDatosLlegada.idContenedor);
+                this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor);
+                
+            //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
+        }
+            //  G3 Oculta el escritorio y muestra el principal, falta implementar la vista principal.
+        if (me.getSource() == this.vistaLlegada.boton_home) {
+            this.vistaLlegada.dispose();
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
     }
 
@@ -216,12 +228,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorSeleccionExit);
         }
+        //  -> Es el boton usuario.
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial) {
             this.vistaGeneral.jp_opcionInicial.setBackground(colorUsuarioSeleccion);
         }
+        //  -> Es el boton modoSocuro.
         if (me.getSource() == this.vistaGeneral.jp_opcionModoOscuro) {
             this.vistaGeneral.jp_opcionModoOscuro.setBackground(colorUsuarioSeleccion);
         }
+        //  -> Es el boton cerarSesion.
         if (me.getSource() == this.vistaGeneral.jp_opcionCerrarSesion) {
             this.vistaGeneral.jp_opcionCerrarSesion.setBackground(colorUsuarioSeleccion);
         }
@@ -241,14 +256,17 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaGeneral.btn_cerrar || me.getSource() == this.vistaGeneral.icono_cerrar) {
             this.vistaGeneral.btn_cerrar.setBackground(colorNormal);
         }
+        //  -> Es el boton usuario.
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial) {
             this.vistaGeneral.jp_opcionInicial.setBackground(colorNormal);
         }
+        //  -> Es el boton modoSocuro.
         if (me.getSource() == this.vistaGeneral.jp_opcionModoOscuro) {
-            this.vistaGeneral.jp_opcionModoOscuro.setBackground(colorUsuarioNormal);
+            this.vistaGeneral.jp_opcionModoOscuro.setBackground(colorNormalOscuro);
         }
+        //  -> Es el boton cerarSesion.
         if (me.getSource() == this.vistaGeneral.jp_opcionCerrarSesion) {
-            this.vistaGeneral.jp_opcionCerrarSesion.setBackground(colorUsuarioNormal);
+            this.vistaGeneral.jp_opcionCerrarSesion.setBackground(colorNormalOscuro);
         }
     }
 
@@ -270,5 +288,28 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
 
     @Override
     public void mouseMoved(MouseEvent me) {
+    }
+
+    @Override
+    public void componentResized(ComponentEvent ce) {
+    }
+
+    @Override
+    public void componentMoved(ComponentEvent ce) {
+    }
+
+    @Override
+    public void componentShown(ComponentEvent ce) {
+    }
+
+    @Override
+    public void componentHidden(ComponentEvent ce) {
+        //  Coloca el color base del boton del menu del se se sale "vista".
+        //  GRUPO 3
+        if (ce.getSource() == this.vistaLlegada)
+        {
+            this.vistaMenuAcopio.btn_acopio_opcion_uno.setBackground(colorNormalOscuro);
+        }
+        
     }
 }

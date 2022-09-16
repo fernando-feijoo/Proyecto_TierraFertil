@@ -43,13 +43,13 @@
       <Border info="null"/>
     </Property>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[970, 605]"/>
+      <Dimension value="[965, 629]"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[970, 605]"/>
+      <Dimension value="[965, 629]"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[970, 605]"/>
+      <Dimension value="[965, 629]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -104,7 +104,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                  <Component id="icono_home" min="-2" max="-2" attributes="0"/>
+                  <Component id="boton_home" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="132" pref="132" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -133,7 +133,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="icono_home" min="-2" max="-2" attributes="0"/>
+                              <Component id="boton_home" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -199,7 +199,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="javax.swing.JLabel" name="icono_home">
+        <Component class="javax.swing.JLabel" name="boton_home">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Icon/home 32x32.png"/>
@@ -287,53 +287,53 @@
                               <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                              <Component id="jc_fecha_insp" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_fechaInsp" min="-2" pref="119" max="-2" attributes="0"/>
                               <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                              <Component id="js_semana" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_semana" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              <Component id="jd_fechahora_salida" min="-2" pref="137" max="-2" attributes="0"/>
+                              <Component id="salida_fechaHora" min="-2" pref="137" max="-2" attributes="0"/>
                               <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                              <Component id="js_llegada_salida" min="-2" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_horaSalida" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              <Component id="js_hora_llegada" min="-2" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_horaLlegada" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                              <Component id="txt_tipocaja" min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_tipocaja" min="-2" pref="95" max="-2" attributes="0"/>
                               <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                              <Component id="txt_cupo" min="-2" pref="146" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_cupo" min="-2" pref="146" max="-2" attributes="0"/>
                               <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                              <Component id="txt_contenedor" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_contenedor" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                              <Component id="txt_placa" min="-2" pref="127" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_placa" min="-2" pref="127" max="-2" attributes="0"/>
                               <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
                               <Component id="jLabel13" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="txt_chasis" min="-2" pref="103" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_chasis" min="-2" pref="103" max="-2" attributes="0"/>
                               <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
                               <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="txt_chofer" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_chofer" min="-2" pref="131" max="-2" attributes="0"/>
                               <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
                               <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                              <Component id="txt_ci" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_ci" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
@@ -341,13 +341,13 @@
                                   <Component id="jLabel16" min="-2" pref="112" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
-                                      <Component id="txt_nombrefinca" min="-2" pref="420" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_nombrefinca" min="-2" pref="420" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                               <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                              <Component id="txt_candadosllegada" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_candadosllegada" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -359,41 +359,41 @@
                               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel5" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="jc_fecha_insp" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_fechaInsp" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel6" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="js_semana" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_semana" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="jd_fechahora_salida" min="-2" max="-2" attributes="0"/>
-                                  <Component id="js_llegada_salida" min="-2" max="-2" attributes="0"/>
+                                  <Component id="salida_fechaHora" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_horaSalida" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel8" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="js_hora_llegada" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_horaLlegada" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel9" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_tipocaja" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_tipocaja" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel10" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_cupo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_cupo" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel11" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_contenedor" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_contenedor" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel12" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_placa" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_placa" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel13" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_chasis" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_chasis" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel14" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_chofer" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_chofer" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel15" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_ci" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_ci" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel16" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_nombrefinca" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_nombrefinca" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel17" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="txt_candadosllegada" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_candadosllegada" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -423,7 +423,7 @@
                         <Property name="text" type="java.lang.String" value="FECHA INSP:"/>
                       </Properties>
                     </Component>
-                    <Component class="com.toedter.calendar.JDateChooser" name="jc_fecha_insp">
+                    <Component class="com.toedter.calendar.JDateChooser" name="datosLlegada_fechaInsp">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -450,7 +450,7 @@
                         <Property name="text" type="java.lang.String" value="SEMANA:"/>
                       </Properties>
                     </Component>
-                    <Component class="com.toedter.components.JSpinField" name="js_semana">
+                    <Component class="com.toedter.components.JSpinField" name="datosLlegada_semana">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -471,7 +471,7 @@
                         <Property name="text" type="java.lang.String" value="FECHA/HORA SALIDA PATIO:"/>
                       </Properties>
                     </Component>
-                    <Component class="com.toedter.calendar.JDateChooser" name="jd_fechahora_salida">
+                    <Component class="com.toedter.calendar.JDateChooser" name="salida_fechaHora">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -506,7 +506,7 @@
                         <Property name="text" type="java.lang.String" value="TIPOS DE CAJA:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_tipocaja">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_tipocaja">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -530,7 +530,7 @@
                         <Property name="text" type="java.lang.String" value="CUPO:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_cupo">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_cupo">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -551,7 +551,7 @@
                         <Property name="text" type="java.lang.String" value="CONTENEDOR:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_contenedor">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_contenedor">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -572,7 +572,7 @@
                         <Property name="text" type="java.lang.String" value="PLACA:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_placa">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_placa">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -593,7 +593,7 @@
                         <Property name="text" type="java.lang.String" value="CHASIS:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_chasis">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_chasis">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -614,7 +614,7 @@
                         <Property name="text" type="java.lang.String" value="CHOFER CONTENEDOR:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_chofer">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_chofer">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -635,7 +635,7 @@
                         <Property name="text" type="java.lang.String" value="C.I:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_ci">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_ci">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -645,7 +645,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_ciActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="datosLlegada_ciActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel16">
@@ -659,7 +659,7 @@
                         <Property name="text" type="java.lang.String" value="NOMBRE DE FINCA:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_nombrefinca">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_nombrefinca">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -683,7 +683,7 @@
                         <Property name="text" type="java.lang.String" value="CANDADOS DE LLEGADA:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_candadosllegada">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_candadosllegada">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -696,7 +696,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JSpinner" name="js_llegada_salida">
+                    <Component class="javax.swing.JSpinner" name="datosLlegada_horaSalida">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[110, 22]"/>
@@ -711,10 +711,10 @@
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JSpinner(sm)"/>
                         <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Date date = new Date();&#xa;  SpinnerDateModel sm = &#xa;  new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);"/>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JSpinner.DateEditor de = new JSpinner.DateEditor(js_llegada_salida, &quot;HH:mm:ss&quot;);&#xa;js_llegada_salida.setEditor(de);"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JSpinner.DateEditor de = new JSpinner.DateEditor(datosLlegada_horaSalida, &quot;HH:mm:ss&quot;);&#xa;datosLlegada_horaSalida.setEditor(de);"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JSpinner" name="js_hora_llegada">
+                    <Component class="javax.swing.JSpinner" name="datosLlegada_horaLlegada">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[110, 22]"/>
@@ -729,7 +729,7 @@
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JSpinner(sm1)"/>
                         <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Date date1 = new Date();&#xa;  SpinnerDateModel sm1 = &#xa;  new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);"/>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JSpinner.DateEditor de1 = new JSpinner.DateEditor(js_hora_llegada, &quot;HH:mm:ss&quot;);&#xa;js_hora_llegada.setEditor(de1);"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JSpinner.DateEditor de1 = new JSpinner.DateEditor(datosLlegada_horaLlegada, &quot;HH:mm:ss&quot;);&#xa;datosLlegada_horaLlegada.setEditor(de1);"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -758,38 +758,38 @@
                                       <Component id="jSeparator2" min="-2" pref="530" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="txf_sellosInternos_1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosInternos_1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="113" pref="113" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_4" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_7" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="txf_sellosInternos_2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosInternos_2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="113" pref="113" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_8" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="txf_sellosInternos_3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosInternos_3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="113" pref="113" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                      <Component id="txf_sellosExtrenos_9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="datosLlegada_sellosExtrenos_9" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lb_siguiente_llegada" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_siguiente_llegada" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -809,27 +809,27 @@
                               </Group>
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txf_sellosInternos_1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_4" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosInternos_1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_7" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txf_sellosInternos_2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_5" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosInternos_2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_8" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txf_sellosInternos_3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_6" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txf_sellosExtrenos_9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosInternos_3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_sellosExtrenos_9" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="75" max="32767" attributes="0"/>
-                              <Component id="lb_siguiente_llegada" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_siguiente_llegada" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -858,7 +858,7 @@
                         <Property name="text" type="java.lang.String" value="SELLOS EXTERNOS:"/>
                       </Properties>
                     </Component>
-                    <Container class="Recursos_Codigo.Redondeado" name="lb_siguiente_llegada">
+                    <Container class="Recursos_Codigo.Redondeado" name="btn_siguiente_llegada">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -917,7 +917,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JTextField" name="txf_sellosInternos_1">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosInternos_1">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -930,7 +930,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosInternos_2">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosInternos_2">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -943,7 +943,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosInternos_3">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosInternos_3">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -956,7 +956,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_1">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_1">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -969,7 +969,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_2">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_2">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -982,7 +982,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_3">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_3">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -995,7 +995,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_4">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_4">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -1008,7 +1008,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_5">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_5">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -1021,7 +1021,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_7">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_7">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -1034,7 +1034,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_6">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_6">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -1047,7 +1047,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_8">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_8">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -1060,7 +1060,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txf_sellosExtrenos_9">
+                    <Component class="javax.swing.JTextField" name="datosLlegada_sellosExtrenos_9">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[160, 32]"/>
@@ -2403,19 +2403,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_puertas1" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_puertas1" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_puertas1" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_puertas1" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_puertas1">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_puertas1">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2499,10 +2499,7 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel48" pref="103" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel48" alignment="1" pref="109" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
@@ -2552,19 +2549,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_parediz2" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_parediz2" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_parediz2" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_parediz2" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_parediz2">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_parediz2">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2599,19 +2596,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_espaciadores3" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_espaciadores3" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_espaciadores3" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_espaciadores3" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_espaciadores3">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_espaciadores3">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2646,19 +2643,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_paredfro4" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_paredfro4" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_paredfro4" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_paredfro4" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_paredfro4">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_paredfro4">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2669,7 +2666,7 @@
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_paredfro4ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inspCont_check_paredfro4ActionPerformed"/>
                               </Events>
                             </Component>
                           </SubComponents>
@@ -2696,19 +2693,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_paredde5" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_paredde5" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_paredde5" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_paredde5" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_paredde5">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_paredde5">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2743,19 +2740,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_techo6" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_techo6" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_techo6" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_techo6" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_techo6">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_techo6">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2790,19 +2787,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_pisoin7" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_pisoin7" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_pisoin7" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_pisoin7" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_pisoin7">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_pisoin7">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2837,19 +2834,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_pisoex8" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_pisoex8" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_pisoex8" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_pisoex8" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_pisoex8">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_pisoex8">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2884,19 +2881,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_evaporadores9" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_evaporadores9" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_evaporadores9" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_evaporadores9" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_evaporadores9">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_evaporadores9">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2931,19 +2928,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_tornillo10" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_tornillo10" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_tornillo10" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_tornillo10" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_tornillo10">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_tornillo10">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2978,19 +2975,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_delefactor11" pref="97" max="32767" attributes="0"/>
+                                      <Component id="inspCont_check_delefactor11" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="check_delefactor11" alignment="0" pref="28" max="32767" attributes="0"/>
+                                  <Component id="inspCont_check_delefactor11" alignment="0" pref="28" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JCheckBox" name="check_delefactor11">
+                            <Component class="javax.swing.JCheckBox" name="inspCont_check_delefactor11">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3005,7 +3002,7 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                    <Container class="Recursos_Codigo.Redondeado" name="lb_siguiente_llegada1">
+                    <Container class="Recursos_Codigo.Redondeado" name="btn_siguiente_inspCont">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3108,7 +3105,7 @@
                           <Component id="jLabel21" min="-2" pref="940" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lb_siguiente_llegada2" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_siguiente_higCont" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -3130,7 +3127,7 @@
                               <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
                               <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="59" max="32767" attributes="0"/>
-                              <Component id="lb_siguiente_llegada2" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_siguiente_higCont" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -3472,9 +3469,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_si_lavado" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_lavado" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_lavado" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_lavado" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3484,8 +3481,8 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_lavado" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_lavado" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_lavado" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_lavado" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -3493,7 +3490,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_lavado">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_lavado">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3510,7 +3507,7 @@
                                 <Property name="text" type="java.lang.String" value="SI"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_lavado">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_lavado">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3554,9 +3551,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_si_drenajes" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_drenajes" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_drenajes" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_drenajes" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3566,8 +3563,8 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_drenajes" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_drenajes" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_drenajes" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_drenajes" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -3575,7 +3572,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_drenajes">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_drenajes">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3592,7 +3589,7 @@
                                 <Property name="text" type="java.lang.String" value="NO"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_drenajes">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_drenajes">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3633,9 +3630,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="rb_si_residuos" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_residuos" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_residuos" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_residuos" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3645,8 +3642,8 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_residuos" alignment="0" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_residuos" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_residuos" alignment="0" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_residuos" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -3654,7 +3651,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_residuos">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_residuos">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3671,7 +3668,7 @@
                                 <Property name="text" type="java.lang.String" value="NO"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_residuos">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_residuos">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3712,9 +3709,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="rb_si_olor" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_olor" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_olor" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_olor" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3724,8 +3721,8 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_olor" alignment="0" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_olor" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_olor" alignment="0" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_olor" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -3733,7 +3730,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_olor">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_olor">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3750,7 +3747,7 @@
                                 <Property name="text" type="java.lang.String" value="SI"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_olor">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_olor">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3928,9 +3925,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_si_insectos" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_insectos" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_insectos" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_insectos" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3940,8 +3937,8 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_insectos" alignment="0" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_insectos" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_insectos" alignment="0" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_insectos" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -3949,7 +3946,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_insectos">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_insectos">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3966,7 +3963,7 @@
                                 <Property name="text" type="java.lang.String" value="SI"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_insectos">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_insectos">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4059,9 +4056,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_si_sello" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_sello" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_sello" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_sello" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4071,8 +4068,8 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_sello" alignment="0" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_sello" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_sello" alignment="0" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_sello" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -4080,7 +4077,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_sello">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_sello">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4097,7 +4094,7 @@
                                 <Property name="text" type="java.lang.String" value="NO"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_sello">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_sello">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4190,9 +4187,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_si_moho" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_moho" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_moho" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_moho" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4202,8 +4199,8 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_moho" alignment="0" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_moho" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_moho" alignment="0" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_moho" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -4211,7 +4208,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_moho">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_moho">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4228,7 +4225,7 @@
                                 <Property name="text" type="java.lang.String" value="SI"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_moho">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_moho">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4269,9 +4266,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_si_contenedor_aceptable" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_si_contenedor_aceptable" min="-2" pref="41" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rb_no_contenedor_aceptable" min="-2" max="-2" attributes="0"/>
+                                      <Component id="higCont_rb_no_contenedor_aceptable" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4281,8 +4278,8 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rb_si_contenedor_aceptable" alignment="0" pref="26" max="32767" attributes="0"/>
-                                          <Component id="rb_no_contenedor_aceptable" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_si_contenedor_aceptable" alignment="0" pref="26" max="32767" attributes="0"/>
+                                          <Component id="higCont_rb_no_contenedor_aceptable" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -4290,7 +4287,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JRadioButton" name="rb_si_contenedor_aceptable">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_si_contenedor_aceptable">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4307,7 +4304,7 @@
                                 <Property name="text" type="java.lang.String" value="SI"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JRadioButton" name="rb_no_contenedor_aceptable">
+                            <Component class="javax.swing.JRadioButton" name="higCont_rb_no_contenedor_aceptable">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4394,7 +4391,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_observaciones_higiene" pref="645" max="32767" attributes="0"/>
+                                  <Component id="higCont_observaciones" pref="645" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -4405,7 +4402,7 @@
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel20" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="txt_observaciones_higiene" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="higCont_observaciones" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="21" max="32767" attributes="0"/>
                               </Group>
@@ -4424,7 +4421,7 @@
                             <Property name="text" type="java.lang.String" value="OBSERVACIONES:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="txt_observaciones_higiene">
+                        <Component class="javax.swing.JTextField" name="higCont_observaciones">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4456,7 +4453,7 @@
                         <Property name="text" type="java.lang.String" value="DATOS DE HIGIENE DEL CONTENEDOR"/>
                       </Properties>
                     </Component>
-                    <Container class="Recursos_Codigo.Redondeado" name="lb_siguiente_llegada2">
+                    <Container class="Recursos_Codigo.Redondeado" name="btn_siguiente_higCont">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4559,7 +4556,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_filtro1">
+                <Component class="javax.swing.JCheckBox" name="despacho_check_filtro1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -4583,7 +4580,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_filtro2">
+                <Component class="javax.swing.JCheckBox" name="despacho_check_filtro2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -4607,7 +4604,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="chek_filtrono">
+                <Component class="javax.swing.JCheckBox" name="despacho_chek_filtrono">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -4647,7 +4644,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_termografo_19">
+                <Component class="javax.swing.JCheckBox" name="despacho_check_termografo_19">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -4671,7 +4668,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_termografo_18">
+                <Component class="javax.swing.JCheckBox" name="despacho_check_termografo_18">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -4695,7 +4692,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_termografo_no">
+                <Component class="javax.swing.JCheckBox" name="despacho_check_termografo_no">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -4735,7 +4732,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_termografo">
+                <Component class="javax.swing.JTextField" name="despacho_termografo">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4785,7 +4782,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_sello_adhesivo">
+                <Component class="javax.swing.JTextField" name="despacho_sello_adhesivo">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4803,7 +4800,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_sello_verificador">
+                <Component class="javax.swing.JTextField" name="despacho_sello_verificador">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4853,7 +4850,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_sello_exportador">
+                <Component class="javax.swing.JTextField" name="despacho_sello_exportador">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4871,7 +4868,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jd_fechahora_salida_despacho">
+                <Component class="com.toedter.calendar.JDateChooser" name="despacho_fechaSalida">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4921,7 +4918,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_sello_cable">
+                <Component class="javax.swing.JTextField" name="despacho_sello_cable">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4955,7 +4952,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_sello_naviero">
+                <Component class="javax.swing.JTextField" name="despacho_sello_naviero">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4989,7 +4986,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_destino">
+                <Component class="javax.swing.JTextField" name="despacho_destino">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5023,7 +5020,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_vapor">
+                <Component class="javax.swing.JTextField" name="despacho_vapor">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5057,7 +5054,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_nombre_paletizadores">
+                <Component class="javax.swing.JTextField" name="despacho_nombre_paletizadores">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5091,7 +5088,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_total_viajar">
+                <Component class="javax.swing.JTextField" name="despacho_total_viajar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5119,7 +5116,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_cajas_total">
+                <Component class="javax.swing.JTextField" name="despacho_cajas_total">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5147,7 +5144,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txt_cantidad_pallets">
+                <Component class="javax.swing.JTextField" name="despacho_cantidad_pallets">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5184,7 +5181,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_observaciones_higiene1" pref="655" max="32767" attributes="0"/>
+                              <Component id="despacho_observaciones" pref="655" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5195,7 +5192,7 @@
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel71" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="txt_observaciones_higiene1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="despacho_observaciones" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="17" max="32767" attributes="0"/>
                           </Group>
@@ -5214,7 +5211,7 @@
                         <Property name="text" type="java.lang.String" value="OBSERVACIONES:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txt_observaciones_higiene1">
+                    <Component class="javax.swing.JTextField" name="despacho_observaciones">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5234,7 +5231,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JTextField" name="txt_compa&#xf1;ia_tansportista">
+                <Component class="javax.swing.JTextField" name="despacho_compa&#xf1;ia_tansportista">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5252,7 +5249,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="jSpinner1">
+                <Component class="javax.swing.JSpinner" name="despacho_horaSalida">
                   <Properties>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[110, 22]"/>
@@ -5267,7 +5264,7 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JSpinner(sm2)"/>
                     <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Date date2 = new Date();&#xa;  SpinnerDateModel sm2 = &#xa;  new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);"/>
-                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JSpinner.DateEditor de2 = new JSpinner.DateEditor(jSpinner1, &quot;HH:mm:ss&quot;);&#xa;jSpinner1.setEditor(de2);"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JSpinner.DateEditor de2 = new JSpinner.DateEditor(despacho_horaSalida, &quot;HH:mm:ss&quot;);&#xa;despacho_horaSalida.setEditor(de2);"/>
                   </AuxValues>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -5275,7 +5272,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Container class="Recursos_Codigo.Redondeado" name="lb_siguiente_llegada4">
+                <Container class="Recursos_Codigo.Redondeado" name="btn_siguiente_despacho">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5290,7 +5287,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="806" y="429" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="808" y="427" width="-1" height="-1"/>
                     </Constraint>
                   </Constraints>
 
@@ -5364,60 +5361,8 @@
                     </Property>
                   </Properties>
 
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel50" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="26" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="cb_numero_cajas" alignment="1" min="-2" pref="105" max="-2" attributes="0"/>
-                                          <Component id="jLabel53" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jPanel3" min="-2" pref="220" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jPanel82" min="-2" pref="220" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jPanel93" min="-2" pref="220" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jPanel104" min="-2" pref="220" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="lb_siguiente_llegada3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel53" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cb_numero_cajas" min="-2" pref="26" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jPanel3" alignment="1" min="-2" pref="225" max="-2" attributes="0"/>
-                                  <Component id="jPanel104" alignment="1" min="-2" pref="225" max="-2" attributes="0"/>
-                                  <Component id="jPanel82" min="-2" pref="225" max="-2" attributes="0"/>
-                                  <Component id="jPanel93" min="-2" pref="225" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="80" max="32767" attributes="0"/>
-                              <Component id="lb_siguiente_llegada3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                    <Property name="useNullLayout" type="boolean" value="false"/>
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel50">
@@ -5431,6 +5376,11 @@
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="CONTROL DE PALETIZADO EN CONTENEDOR"/>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="0" y="27" width="934" height="-1"/>
+                        </Constraint>
+                      </Constraints>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel53">
                       <Properties>
@@ -5443,8 +5393,13 @@
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="N&#xfa;mero de cajas"/>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="819" y="57" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="cb_numero_cajas">
+                    <Component class="javax.swing.JComboBox" name="paletizado_cb_numero_cajas">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5465,6 +5420,11 @@
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="819" y="80" width="105" height="26"/>
+                        </Constraint>
+                      </Constraints>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel3">
                       <Properties>
@@ -5475,6 +5435,11 @@
                           <Dimension value="[225, 0]"/>
                         </Property>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="26" y="124" width="220" height="225"/>
+                        </Constraint>
+                      </Constraints>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                         <Property name="useNullLayout" type="boolean" value="true"/>
@@ -5609,7 +5574,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet1" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet1" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5618,14 +5583,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet1" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet1" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet1">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet1">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5723,7 +5688,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet2" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet2" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5732,14 +5697,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet2" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet2" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet2">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet2">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5785,7 +5750,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet3" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet3" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5794,14 +5759,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet3" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet3" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet3">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet3">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5850,7 +5815,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet4" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet4" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5859,14 +5824,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet4" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet4" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet4">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet4">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5964,7 +5929,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet5" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet5" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5973,14 +5938,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet5" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet5" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet5">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet5">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6058,6 +6023,11 @@
                           <Dimension value="[225, 0]"/>
                         </Property>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="252" y="124" width="220" height="225"/>
+                        </Constraint>
+                      </Constraints>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                         <Property name="useNullLayout" type="boolean" value="true"/>
@@ -6189,7 +6159,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet6" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet6" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6198,14 +6168,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet6" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet6" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet6">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet6">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6300,7 +6270,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet7" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet7" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6309,14 +6279,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet7" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet7" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet7">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet7">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6362,7 +6332,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet8" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet8" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6371,14 +6341,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet8" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet8" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet8">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet8">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6424,7 +6394,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet9" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet9" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6433,14 +6403,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet9" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet9" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet9">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet9">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6535,7 +6505,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField10" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet10" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6544,14 +6514,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField10" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet10" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="jTextField10">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet10">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6629,6 +6599,11 @@
                           <Dimension value="[225, 0]"/>
                         </Property>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="478" y="124" width="220" height="225"/>
+                        </Constraint>
+                      </Constraints>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                         <Property name="useNullLayout" type="boolean" value="true"/>
@@ -6760,7 +6735,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet11" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet11" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6769,14 +6744,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet11" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet11" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet11">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet11">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6871,7 +6846,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet12" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet12" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6880,14 +6855,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet12" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet12" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet12">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet12">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6933,7 +6908,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet13" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet13" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6942,14 +6917,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet13" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet13" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet13">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet13">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -6995,7 +6970,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet14" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet14" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7004,14 +6979,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet14" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet14" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet14">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet14">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7106,7 +7081,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet15" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet15" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7115,14 +7090,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet15" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet15" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet15">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet15">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7200,6 +7175,11 @@
                           <Dimension value="[225, 0]"/>
                         </Property>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="704" y="124" width="220" height="225"/>
+                        </Constraint>
+                      </Constraints>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                         <Property name="useNullLayout" type="boolean" value="true"/>
@@ -7331,7 +7311,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet16" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet16" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7340,14 +7320,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet16" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet16" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet16">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet16">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7442,7 +7422,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet17" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet17" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7451,14 +7431,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet17" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet17" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet17">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet17">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7504,7 +7484,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet18" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet18" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7513,14 +7493,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet18" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet18" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet18">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet18">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7566,7 +7546,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet19" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet19" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7575,14 +7555,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet19" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet19" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet19">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet19">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7677,7 +7657,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet20" pref="116" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet20" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7686,14 +7666,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txf_pallet20" pref="31" max="32767" attributes="0"/>
+                                      <Component id="paletizado_pallet20" pref="31" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txf_pallet20">
+                            <Component class="javax.swing.JTextField" name="paletizado_pallet20">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7762,7 +7742,7 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                    <Container class="Recursos_Codigo.Redondeado" name="lb_siguiente_llegada3">
+                    <Container class="Recursos_Codigo.Redondeado" name="btn_guardar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7775,6 +7755,11 @@
                         <Property name="roundTopLeft" type="int" value="25"/>
                         <Property name="roundTopRight" type="int" value="25"/>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="808" y="428" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -7783,7 +7768,7 @@
                         <Component class="javax.swing.JLabel" name="jLabel95">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Roboto" size="16" style="0"/>
+                              <Font name="Roboto" size="16" style="1"/>
                             </Property>
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -7799,7 +7784,7 @@
                         <Component class="javax.swing.JLabel" name="jLabel96">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/Icon/iconSiguienteG2.png"/>
+                              <Image iconType="3" name="/Icon/diskette_24px.png"/>
                             </Property>
                           </Properties>
                           <Constraints>
@@ -7807,6 +7792,75 @@
                               <AbsoluteConstraints x="87" y="5" width="-1" height="-1"/>
                             </Constraint>
                           </Constraints>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jPanel115">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="e6" green="e6" red="e6" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="80" y="360" width="790" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel99" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="paletizado_observacionesGenerales" pref="655" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel99" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="paletizado_observacionesGenerales" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="17" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel99">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Roboto" size="14" style="1"/>
+                            </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="OBSERVACIONES:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="paletizado_observacionesGenerales">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Roboto" size="12" style="0"/>
+                            </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder/>
+                              </Border>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>

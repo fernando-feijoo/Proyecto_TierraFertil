@@ -47,62 +47,62 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        icono_home = new javax.swing.JLabel();
+        boton_home = new javax.swing.JLabel();
         jp_grupoOpciones_datosLlegada = new javax.swing.JTabbedPane();
         jp_opcion_DatosLlegada = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jc_fecha_insp = new com.toedter.calendar.JDateChooser();
+        datosLlegada_fechaInsp = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
-        js_semana = new com.toedter.components.JSpinField();
+        datosLlegada_semana = new com.toedter.components.JSpinField();
         jLabel7 = new javax.swing.JLabel();
-        jd_fechahora_salida = new com.toedter.calendar.JDateChooser();
+        salida_fechaHora = new com.toedter.calendar.JDateChooser();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        txt_tipocaja = new javax.swing.JTextField();
+        datosLlegada_tipocaja = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txt_cupo = new javax.swing.JTextField();
+        datosLlegada_cupo = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        txt_contenedor = new javax.swing.JTextField();
+        datosLlegada_contenedor = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        txt_placa = new javax.swing.JTextField();
+        datosLlegada_placa = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        txt_chasis = new javax.swing.JTextField();
+        datosLlegada_chasis = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        txt_chofer = new javax.swing.JTextField();
+        datosLlegada_chofer = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        txt_ci = new javax.swing.JTextField();
+        datosLlegada_ci = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        txt_nombrefinca = new javax.swing.JTextField();
+        datosLlegada_nombrefinca = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        txt_candadosllegada = new javax.swing.JTextField();
+        datosLlegada_candadosllegada = new javax.swing.JTextField();
         Date date = new Date();
         SpinnerDateModel sm =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
-        js_llegada_salida = new javax.swing.JSpinner(sm);
+        datosLlegada_horaSalida = new javax.swing.JSpinner(sm);
         Date date1 = new Date();
         SpinnerDateModel sm1 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
-        js_hora_llegada = new javax.swing.JSpinner(sm1);
+        datosLlegada_horaLlegada = new javax.swing.JSpinner(sm1);
         jPanel9 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        lb_siguiente_llegada = new Recursos_Codigo.Redondeado();
+        btn_siguiente_llegada = new Recursos_Codigo.Redondeado();
         jLabel3 = new javax.swing.JLabel();
         jLabel72 = new javax.swing.JLabel();
-        txf_sellosInternos_1 = new javax.swing.JTextField();
-        txf_sellosInternos_2 = new javax.swing.JTextField();
-        txf_sellosInternos_3 = new javax.swing.JTextField();
-        txf_sellosExtrenos_1 = new javax.swing.JTextField();
-        txf_sellosExtrenos_2 = new javax.swing.JTextField();
-        txf_sellosExtrenos_3 = new javax.swing.JTextField();
-        txf_sellosExtrenos_4 = new javax.swing.JTextField();
-        txf_sellosExtrenos_5 = new javax.swing.JTextField();
-        txf_sellosExtrenos_7 = new javax.swing.JTextField();
-        txf_sellosExtrenos_6 = new javax.swing.JTextField();
-        txf_sellosExtrenos_8 = new javax.swing.JTextField();
-        txf_sellosExtrenos_9 = new javax.swing.JTextField();
+        datosLlegada_sellosInternos_1 = new javax.swing.JTextField();
+        datosLlegada_sellosInternos_2 = new javax.swing.JTextField();
+        datosLlegada_sellosInternos_3 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_1 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_2 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_3 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_4 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_5 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_7 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_6 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_8 = new javax.swing.JTextField();
+        datosLlegada_sellosExtrenos_9 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jp_opcion_InspeccionContendor = new javax.swing.JPanel();
@@ -157,32 +157,32 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel56 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
         jPanel57 = new javax.swing.JPanel();
-        check_puertas1 = new javax.swing.JCheckBox();
+        inspCont_check_puertas1 = new javax.swing.JCheckBox();
         jPanel58 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jPanel59 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
         jPanel60 = new javax.swing.JPanel();
-        check_parediz2 = new javax.swing.JCheckBox();
+        inspCont_check_parediz2 = new javax.swing.JCheckBox();
         jPanel61 = new javax.swing.JPanel();
-        check_espaciadores3 = new javax.swing.JCheckBox();
+        inspCont_check_espaciadores3 = new javax.swing.JCheckBox();
         jPanel62 = new javax.swing.JPanel();
-        check_paredfro4 = new javax.swing.JCheckBox();
+        inspCont_check_paredfro4 = new javax.swing.JCheckBox();
         jPanel63 = new javax.swing.JPanel();
-        check_paredde5 = new javax.swing.JCheckBox();
+        inspCont_check_paredde5 = new javax.swing.JCheckBox();
         jPanel64 = new javax.swing.JPanel();
-        check_techo6 = new javax.swing.JCheckBox();
+        inspCont_check_techo6 = new javax.swing.JCheckBox();
         jPanel65 = new javax.swing.JPanel();
-        check_pisoin7 = new javax.swing.JCheckBox();
+        inspCont_check_pisoin7 = new javax.swing.JCheckBox();
         jPanel66 = new javax.swing.JPanel();
-        check_pisoex8 = new javax.swing.JCheckBox();
+        inspCont_check_pisoex8 = new javax.swing.JCheckBox();
         jPanel67 = new javax.swing.JPanel();
-        check_evaporadores9 = new javax.swing.JCheckBox();
+        inspCont_check_evaporadores9 = new javax.swing.JCheckBox();
         jPanel68 = new javax.swing.JPanel();
-        check_tornillo10 = new javax.swing.JCheckBox();
+        inspCont_check_tornillo10 = new javax.swing.JCheckBox();
         jPanel69 = new javax.swing.JPanel();
-        check_delefactor11 = new javax.swing.JCheckBox();
-        lb_siguiente_llegada1 = new Recursos_Codigo.Redondeado();
+        inspCont_check_delefactor11 = new javax.swing.JCheckBox();
+        btn_siguiente_inspCont = new Recursos_Codigo.Redondeado();
         jLabel91 = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
         jp_opcion_HiegieneContenedor = new javax.swing.JPanel();
@@ -200,119 +200,119 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel17 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
-        rb_si_lavado = new javax.swing.JRadioButton();
-        rb_no_lavado = new javax.swing.JRadioButton();
+        higCont_rb_si_lavado = new javax.swing.JRadioButton();
+        higCont_rb_no_lavado = new javax.swing.JRadioButton();
         jPanel19 = new javax.swing.JPanel();
-        rb_no_drenajes = new javax.swing.JRadioButton();
-        rb_si_drenajes = new javax.swing.JRadioButton();
+        higCont_rb_no_drenajes = new javax.swing.JRadioButton();
+        higCont_rb_si_drenajes = new javax.swing.JRadioButton();
         jPanel21 = new javax.swing.JPanel();
-        rb_no_residuos = new javax.swing.JRadioButton();
-        rb_si_residuos = new javax.swing.JRadioButton();
+        higCont_rb_no_residuos = new javax.swing.JRadioButton();
+        higCont_rb_si_residuos = new javax.swing.JRadioButton();
         jPanel20 = new javax.swing.JPanel();
-        rb_si_olor = new javax.swing.JRadioButton();
-        rb_no_olor = new javax.swing.JRadioButton();
+        higCont_rb_si_olor = new javax.swing.JRadioButton();
+        higCont_rb_no_olor = new javax.swing.JRadioButton();
         jPanel22 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         txt_insectos = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
-        rb_si_insectos = new javax.swing.JRadioButton();
-        rb_no_insectos = new javax.swing.JRadioButton();
+        higCont_rb_si_insectos = new javax.swing.JRadioButton();
+        higCont_rb_no_insectos = new javax.swing.JRadioButton();
         jPanel26 = new javax.swing.JPanel();
         txt_sello = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
-        rb_no_sello = new javax.swing.JRadioButton();
-        rb_si_sello = new javax.swing.JRadioButton();
+        higCont_rb_no_sello = new javax.swing.JRadioButton();
+        higCont_rb_si_sello = new javax.swing.JRadioButton();
         jPanel28 = new javax.swing.JPanel();
         txt_moho = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
-        rb_si_moho = new javax.swing.JRadioButton();
-        rb_no_moho = new javax.swing.JRadioButton();
+        higCont_rb_si_moho = new javax.swing.JRadioButton();
+        higCont_rb_no_moho = new javax.swing.JRadioButton();
         jPanel31 = new javax.swing.JPanel();
-        rb_si_contenedor_aceptable = new javax.swing.JRadioButton();
-        rb_no_contenedor_aceptable = new javax.swing.JRadioButton();
+        higCont_rb_si_contenedor_aceptable = new javax.swing.JRadioButton();
+        higCont_rb_no_contenedor_aceptable = new javax.swing.JRadioButton();
         jPanel30 = new javax.swing.JPanel();
         txt_contenedor_aceptable = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        txt_observaciones_higiene = new javax.swing.JTextField();
+        higCont_observaciones = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
-        lb_siguiente_llegada2 = new Recursos_Codigo.Redondeado();
+        btn_siguiente_higCont = new Recursos_Codigo.Redondeado();
         jLabel93 = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
         jp_opcion_Despacho = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
-        check_filtro1 = new javax.swing.JCheckBox();
-        check_filtro2 = new javax.swing.JCheckBox();
-        chek_filtrono = new javax.swing.JCheckBox();
+        despacho_check_filtro1 = new javax.swing.JCheckBox();
+        despacho_check_filtro2 = new javax.swing.JCheckBox();
+        despacho_chek_filtrono = new javax.swing.JCheckBox();
         jLabel56 = new javax.swing.JLabel();
-        check_termografo_19 = new javax.swing.JCheckBox();
-        check_termografo_18 = new javax.swing.JCheckBox();
-        check_termografo_no = new javax.swing.JCheckBox();
+        despacho_check_termografo_19 = new javax.swing.JCheckBox();
+        despacho_check_termografo_18 = new javax.swing.JCheckBox();
+        despacho_check_termografo_no = new javax.swing.JCheckBox();
         jLabel57 = new javax.swing.JLabel();
-        txt_termografo = new javax.swing.JTextField();
+        despacho_termografo = new javax.swing.JTextField();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
-        txt_sello_adhesivo = new javax.swing.JTextField();
-        txt_sello_verificador = new javax.swing.JTextField();
+        despacho_sello_adhesivo = new javax.swing.JTextField();
+        despacho_sello_verificador = new javax.swing.JTextField();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
-        txt_sello_exportador = new javax.swing.JTextField();
-        jd_fechahora_salida_despacho = new com.toedter.calendar.JDateChooser();
+        despacho_sello_exportador = new javax.swing.JTextField();
+        despacho_fechaSalida = new com.toedter.calendar.JDateChooser();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
-        txt_sello_cable = new javax.swing.JTextField();
+        despacho_sello_cable = new javax.swing.JTextField();
         jLabel64 = new javax.swing.JLabel();
-        txt_sello_naviero = new javax.swing.JTextField();
+        despacho_sello_naviero = new javax.swing.JTextField();
         jLabel65 = new javax.swing.JLabel();
-        txt_destino = new javax.swing.JTextField();
+        despacho_destino = new javax.swing.JTextField();
         jLabel66 = new javax.swing.JLabel();
-        txt_vapor = new javax.swing.JTextField();
+        despacho_vapor = new javax.swing.JTextField();
         jLabel67 = new javax.swing.JLabel();
-        txt_nombre_paletizadores = new javax.swing.JTextField();
+        despacho_nombre_paletizadores = new javax.swing.JTextField();
         jLabel68 = new javax.swing.JLabel();
-        txt_total_viajar = new javax.swing.JTextField();
+        despacho_total_viajar = new javax.swing.JTextField();
         jLabel69 = new javax.swing.JLabel();
-        txt_cajas_total = new javax.swing.JTextField();
+        despacho_cajas_total = new javax.swing.JTextField();
         jLabel70 = new javax.swing.JLabel();
-        txt_cantidad_pallets = new javax.swing.JTextField();
+        despacho_cantidad_pallets = new javax.swing.JTextField();
         jPanel71 = new javax.swing.JPanel();
         jLabel71 = new javax.swing.JLabel();
-        txt_observaciones_higiene1 = new javax.swing.JTextField();
-        txt_compañia_tansportista = new javax.swing.JTextField();
+        despacho_observaciones = new javax.swing.JTextField();
+        despacho_compañia_tansportista = new javax.swing.JTextField();
         Date date2 = new Date();
         SpinnerDateModel sm2 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
-        jSpinner1 = new javax.swing.JSpinner(sm2);
-        lb_siguiente_llegada4 = new Recursos_Codigo.Redondeado();
+        despacho_horaSalida = new javax.swing.JSpinner(sm2);
+        btn_siguiente_despacho = new Recursos_Codigo.Redondeado();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
         jp_opcion_Paletizado = new javax.swing.JPanel();
         jPanel70 = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        cb_numero_cajas = new javax.swing.JComboBox<>();
+        paletizado_cb_numero_cajas = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
         jPanel73 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jPanel74 = new javax.swing.JPanel();
-        txf_pallet1 = new javax.swing.JTextField();
+        paletizado_pallet1 = new javax.swing.JTextField();
         jPanel75 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
         jPanel76 = new javax.swing.JPanel();
-        txf_pallet2 = new javax.swing.JTextField();
+        paletizado_pallet2 = new javax.swing.JTextField();
         jPanel77 = new javax.swing.JPanel();
-        txf_pallet3 = new javax.swing.JTextField();
+        paletizado_pallet3 = new javax.swing.JTextField();
         jPanel78 = new javax.swing.JPanel();
-        txf_pallet4 = new javax.swing.JTextField();
+        paletizado_pallet4 = new javax.swing.JTextField();
         jPanel79 = new javax.swing.JPanel();
         jLabel73 = new javax.swing.JLabel();
         jPanel80 = new javax.swing.JPanel();
-        txf_pallet5 = new javax.swing.JTextField();
+        paletizado_pallet5 = new javax.swing.JTextField();
         jPanel81 = new javax.swing.JPanel();
         jLabel75 = new javax.swing.JLabel();
         jPanel82 = new javax.swing.JPanel();
@@ -321,19 +321,19 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel84 = new javax.swing.JPanel();
         jLabel77 = new javax.swing.JLabel();
         jPanel85 = new javax.swing.JPanel();
-        txf_pallet6 = new javax.swing.JTextField();
+        paletizado_pallet6 = new javax.swing.JTextField();
         jPanel86 = new javax.swing.JPanel();
         jLabel78 = new javax.swing.JLabel();
         jPanel87 = new javax.swing.JPanel();
-        txf_pallet7 = new javax.swing.JTextField();
+        paletizado_pallet7 = new javax.swing.JTextField();
         jPanel88 = new javax.swing.JPanel();
-        txf_pallet8 = new javax.swing.JTextField();
+        paletizado_pallet8 = new javax.swing.JTextField();
         jPanel89 = new javax.swing.JPanel();
-        txf_pallet9 = new javax.swing.JTextField();
+        paletizado_pallet9 = new javax.swing.JTextField();
         jPanel90 = new javax.swing.JPanel();
         jLabel79 = new javax.swing.JLabel();
         jPanel91 = new javax.swing.JPanel();
-        jTextField10 = new javax.swing.JTextField();
+        paletizado_pallet10 = new javax.swing.JTextField();
         jPanel92 = new javax.swing.JPanel();
         jLabel80 = new javax.swing.JLabel();
         jPanel93 = new javax.swing.JPanel();
@@ -342,19 +342,19 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel95 = new javax.swing.JPanel();
         jLabel82 = new javax.swing.JLabel();
         jPanel96 = new javax.swing.JPanel();
-        txf_pallet11 = new javax.swing.JTextField();
+        paletizado_pallet11 = new javax.swing.JTextField();
         jPanel97 = new javax.swing.JPanel();
         jLabel83 = new javax.swing.JLabel();
         jPanel98 = new javax.swing.JPanel();
-        txf_pallet12 = new javax.swing.JTextField();
+        paletizado_pallet12 = new javax.swing.JTextField();
         jPanel99 = new javax.swing.JPanel();
-        txf_pallet13 = new javax.swing.JTextField();
+        paletizado_pallet13 = new javax.swing.JTextField();
         jPanel100 = new javax.swing.JPanel();
-        txf_pallet14 = new javax.swing.JTextField();
+        paletizado_pallet14 = new javax.swing.JTextField();
         jPanel101 = new javax.swing.JPanel();
         jLabel84 = new javax.swing.JLabel();
         jPanel102 = new javax.swing.JPanel();
-        txf_pallet15 = new javax.swing.JTextField();
+        paletizado_pallet15 = new javax.swing.JTextField();
         jPanel103 = new javax.swing.JPanel();
         jLabel85 = new javax.swing.JLabel();
         jPanel104 = new javax.swing.JPanel();
@@ -363,24 +363,27 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel106 = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
         jPanel107 = new javax.swing.JPanel();
-        txf_pallet16 = new javax.swing.JTextField();
+        paletizado_pallet16 = new javax.swing.JTextField();
         jPanel108 = new javax.swing.JPanel();
         jLabel88 = new javax.swing.JLabel();
         jPanel109 = new javax.swing.JPanel();
-        txf_pallet17 = new javax.swing.JTextField();
+        paletizado_pallet17 = new javax.swing.JTextField();
         jPanel110 = new javax.swing.JPanel();
-        txf_pallet18 = new javax.swing.JTextField();
+        paletizado_pallet18 = new javax.swing.JTextField();
         jPanel111 = new javax.swing.JPanel();
-        txf_pallet19 = new javax.swing.JTextField();
+        paletizado_pallet19 = new javax.swing.JTextField();
         jPanel112 = new javax.swing.JPanel();
         jLabel89 = new javax.swing.JLabel();
         jPanel113 = new javax.swing.JPanel();
-        txf_pallet20 = new javax.swing.JTextField();
+        paletizado_pallet20 = new javax.swing.JTextField();
         jPanel114 = new javax.swing.JPanel();
         jLabel90 = new javax.swing.JLabel();
-        lb_siguiente_llegada3 = new Recursos_Codigo.Redondeado();
+        btn_guardar = new Recursos_Codigo.Redondeado();
         jLabel95 = new javax.swing.JLabel();
         jLabel96 = new javax.swing.JLabel();
+        jPanel115 = new javax.swing.JPanel();
+        jLabel99 = new javax.swing.JLabel();
+        paletizado_observacionesGenerales = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
         jPanel72.setLayout(jPanel72Layout);
@@ -394,9 +397,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         );
 
         setBorder(null);
-        setMaximumSize(new java.awt.Dimension(970, 605));
-        setMinimumSize(new java.awt.Dimension(970, 605));
-        setPreferredSize(new java.awt.Dimension(970, 605));
+        setMaximumSize(new java.awt.Dimension(965, 629));
+        setMinimumSize(new java.awt.Dimension(965, 629));
+        setPreferredSize(new java.awt.Dimension(965, 629));
 
         jPanel1.setBackground(new java.awt.Color(230, 230, 230));
         jPanel1.setForeground(new java.awt.Color(204, 204, 204));
@@ -428,7 +431,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        icono_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
+        boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
 
         jp_grupoOpciones_datosLlegada.setBackground(new java.awt.Color(230, 230, 230));
         jp_grupoOpciones_datosLlegada.setForeground(new java.awt.Color(0, 0, 0));
@@ -452,25 +455,25 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("FECHA INSP:");
 
-        jc_fecha_insp.setBackground(new java.awt.Color(255, 255, 255));
-        jc_fecha_insp.setForeground(new java.awt.Color(0, 0, 0));
-        jc_fecha_insp.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_fechaInsp.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_fechaInsp.setForeground(new java.awt.Color(0, 0, 0));
+        datosLlegada_fechaInsp.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("SEMANA:");
 
-        js_semana.setBackground(new java.awt.Color(255, 255, 255));
-        js_semana.setForeground(new java.awt.Color(0, 0, 0));
+        datosLlegada_semana.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_semana.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("FECHA/HORA SALIDA PATIO:");
 
-        jd_fechahora_salida.setBackground(new java.awt.Color(255, 255, 255));
-        jd_fechahora_salida.setForeground(new java.awt.Color(0, 0, 0));
-        jd_fechahora_salida.setDateFormatString("dd/MM/yyyy");
+        salida_fechaHora.setBackground(new java.awt.Color(255, 255, 255));
+        salida_fechaHora.setForeground(new java.awt.Color(0, 0, 0));
+        salida_fechaHora.setDateFormatString("dd/MM/yyyy");
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
@@ -480,54 +483,54 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("TIPOS DE CAJA:");
 
-        txt_tipocaja.setBackground(new java.awt.Color(255, 255, 255));
-        txt_tipocaja.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_tipocaja.setForeground(new java.awt.Color(0, 0, 0));
+        datosLlegada_tipocaja.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_tipocaja.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_tipocaja.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("CUPO:");
 
-        txt_cupo.setBackground(new java.awt.Color(255, 255, 255));
-        txt_cupo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_cupo.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_cupo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("CONTENEDOR:");
 
-        txt_contenedor.setBackground(new java.awt.Color(255, 255, 255));
-        txt_contenedor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_contenedor.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_contenedor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("PLACA:");
 
-        txt_placa.setBackground(new java.awt.Color(255, 255, 255));
-        txt_placa.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_placa.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_placa.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("CHASIS:");
 
-        txt_chasis.setBackground(new java.awt.Color(255, 255, 255));
-        txt_chasis.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_chasis.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_chasis.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("CHOFER CONTENEDOR:");
 
-        txt_chofer.setBackground(new java.awt.Color(255, 255, 255));
-        txt_chofer.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_chofer.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_chofer.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jLabel15.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("C.I:");
 
-        txt_ci.setBackground(new java.awt.Color(255, 255, 255));
-        txt_ci.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_ci.addActionListener(new java.awt.event.ActionListener() {
+        datosLlegada_ci.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_ci.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_ci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_ciActionPerformed(evt);
+                datosLlegada_ciActionPerformed(evt);
             }
         });
 
@@ -535,29 +538,29 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("NOMBRE DE FINCA:");
 
-        txt_nombrefinca.setBackground(new java.awt.Color(255, 255, 255));
-        txt_nombrefinca.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_nombrefinca.setForeground(new java.awt.Color(0, 0, 0));
+        datosLlegada_nombrefinca.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_nombrefinca.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_nombrefinca.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel17.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("CANDADOS DE LLEGADA:");
 
-        txt_candadosllegada.setBackground(new java.awt.Color(255, 255, 255));
-        txt_candadosllegada.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_candadosllegada.setForeground(new java.awt.Color(0, 0, 0));
+        datosLlegada_candadosllegada.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_candadosllegada.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        datosLlegada_candadosllegada.setForeground(new java.awt.Color(0, 0, 0));
 
-        JSpinner.DateEditor de = new JSpinner.DateEditor(js_llegada_salida, "HH:mm:ss");
-        js_llegada_salida.setEditor(de);
-        js_llegada_salida.setMaximumSize(new java.awt.Dimension(110, 22));
-        js_llegada_salida.setMinimumSize(new java.awt.Dimension(110, 22));
-        js_llegada_salida.setPreferredSize(new java.awt.Dimension(110, 22));
+        JSpinner.DateEditor de = new JSpinner.DateEditor(datosLlegada_horaSalida, "HH:mm:ss");
+        datosLlegada_horaSalida.setEditor(de);
+        datosLlegada_horaSalida.setMaximumSize(new java.awt.Dimension(110, 22));
+        datosLlegada_horaSalida.setMinimumSize(new java.awt.Dimension(110, 22));
+        datosLlegada_horaSalida.setPreferredSize(new java.awt.Dimension(110, 22));
 
-        JSpinner.DateEditor de1 = new JSpinner.DateEditor(js_hora_llegada, "HH:mm:ss");
-        js_hora_llegada.setEditor(de1);
-        js_hora_llegada.setMaximumSize(new java.awt.Dimension(110, 22));
-        js_hora_llegada.setMinimumSize(new java.awt.Dimension(110, 22));
-        js_hora_llegada.setPreferredSize(new java.awt.Dimension(110, 22));
+        JSpinner.DateEditor de1 = new JSpinner.DateEditor(datosLlegada_horaLlegada, "HH:mm:ss");
+        datosLlegada_horaLlegada.setEditor(de1);
+        datosLlegada_horaLlegada.setMaximumSize(new java.awt.Dimension(110, 22));
+        datosLlegada_horaLlegada.setMinimumSize(new java.awt.Dimension(110, 22));
+        datosLlegada_horaLlegada.setPreferredSize(new java.awt.Dimension(110, 22));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -570,62 +573,62 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addGap(50, 50, 50)
                 .addComponent(jLabel5)
                 .addGap(8, 8, 8)
-                .addComponent(jc_fecha_insp, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_fechaInsp, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addComponent(jLabel6)
                 .addGap(8, 8, 8)
-                .addComponent(js_semana, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_semana, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
                 .addComponent(jLabel7)
                 .addGap(11, 11, 11)
-                .addComponent(jd_fechahora_salida, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(salida_fechaHora, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
-                .addComponent(js_llegada_salida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(datosLlegada_horaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jLabel8)
                 .addGap(11, 11, 11)
-                .addComponent(js_hora_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_horaLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(jLabel9)
                 .addGap(2, 2, 2)
-                .addComponent(txt_tipocaja, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_tipocaja, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addComponent(jLabel10)
                 .addGap(5, 5, 5)
-                .addComponent(txt_cupo, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_cupo, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
                 .addComponent(jLabel11)
                 .addGap(9, 9, 9)
-                .addComponent(txt_contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(datosLlegada_contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jLabel12)
                 .addGap(9, 9, 9)
-                .addComponent(txt_placa, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_placa, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(txt_chasis, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_chasis, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
                 .addComponent(jLabel14)
                 .addGap(10, 10, 10)
-                .addComponent(txt_chofer, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_chofer, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(jLabel15)
                 .addGap(13, 13, 13)
-                .addComponent(txt_ci, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(datosLlegada_ci, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(110, 110, 110)
-                        .addComponent(txt_nombrefinca, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(datosLlegada_nombrefinca, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(20, 20, 20)
                 .addComponent(jLabel17)
                 .addGap(21, 21, 21)
-                .addComponent(txt_candadosllegada, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(datosLlegada_candadosllegada, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -635,38 +638,38 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addGap(2, 2, 2)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jc_fecha_insp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_fechaInsp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(js_semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jd_fechahora_salida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(js_llegada_salida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(salida_fechaHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_horaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(js_hora_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_horaLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_tipocaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_tipocaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_cupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_cupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datosLlegada_contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_placa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_placa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_chasis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_chasis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_chofer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_chofer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_ci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datosLlegada_ci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_nombrefinca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_nombrefinca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_candadosllegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(datosLlegada_candadosllegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jPanel9.setBackground(new java.awt.Color(230, 230, 230));
@@ -679,12 +682,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("SELLOS EXTERNOS:");
 
-        lb_siguiente_llegada.setBackground(new java.awt.Color(255, 255, 255));
-        lb_siguiente_llegada.setPreferredSize(new java.awt.Dimension(120, 32));
-        lb_siguiente_llegada.setRoundBottomLeft(25);
-        lb_siguiente_llegada.setRoundBottomRight(25);
-        lb_siguiente_llegada.setRoundTopLeft(25);
-        lb_siguiente_llegada.setRoundTopRight(25);
+        btn_siguiente_llegada.setBackground(new java.awt.Color(255, 255, 255));
+        btn_siguiente_llegada.setPreferredSize(new java.awt.Dimension(120, 32));
+        btn_siguiente_llegada.setRoundBottomLeft(25);
+        btn_siguiente_llegada.setRoundBottomRight(25);
+        btn_siguiente_llegada.setRoundTopLeft(25);
+        btn_siguiente_llegada.setRoundTopRight(25);
 
         jLabel3.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -692,73 +695,73 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/iconSiguienteG2.png"))); // NOI18N
 
-        javax.swing.GroupLayout lb_siguiente_llegadaLayout = new javax.swing.GroupLayout(lb_siguiente_llegada);
-        lb_siguiente_llegada.setLayout(lb_siguiente_llegadaLayout);
-        lb_siguiente_llegadaLayout.setHorizontalGroup(
-            lb_siguiente_llegadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lb_siguiente_llegadaLayout.createSequentialGroup()
+        javax.swing.GroupLayout btn_siguiente_llegadaLayout = new javax.swing.GroupLayout(btn_siguiente_llegada);
+        btn_siguiente_llegada.setLayout(btn_siguiente_llegadaLayout);
+        btn_siguiente_llegadaLayout.setHorizontalGroup(
+            btn_siguiente_llegadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_siguiente_llegadaLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel3)
                 .addGap(6, 6, 6)
                 .addComponent(jLabel72))
         );
-        lb_siguiente_llegadaLayout.setVerticalGroup(
-            lb_siguiente_llegadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lb_siguiente_llegadaLayout.createSequentialGroup()
+        btn_siguiente_llegadaLayout.setVerticalGroup(
+            btn_siguiente_llegadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_siguiente_llegadaLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(jLabel3))
-            .addGroup(lb_siguiente_llegadaLayout.createSequentialGroup()
+            .addGroup(btn_siguiente_llegadaLayout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addComponent(jLabel72))
         );
 
-        txf_sellosInternos_1.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosInternos_1.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosInternos_1.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_1.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_1.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_1.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosInternos_2.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosInternos_2.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosInternos_2.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_2.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_2.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_2.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosInternos_3.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosInternos_3.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosInternos_3.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_3.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_3.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosInternos_3.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_1.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_1.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_1.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_1.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_1.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_1.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_2.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_2.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_2.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_2.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_2.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_2.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_3.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_3.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_3.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_3.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_3.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_3.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_4.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_4.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_4.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_4.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_4.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_4.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_5.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_5.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_5.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_5.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_5.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_5.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_7.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_7.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_7.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_7.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_7.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_7.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_6.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_6.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_6.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_6.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_6.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_6.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_8.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_8.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_8.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_8.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_8.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_8.setPreferredSize(new java.awt.Dimension(160, 32));
 
-        txf_sellosExtrenos_9.setMaximumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_9.setMinimumSize(new java.awt.Dimension(160, 32));
-        txf_sellosExtrenos_9.setPreferredSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_9.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_9.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_9.setPreferredSize(new java.awt.Dimension(160, 32));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -776,33 +779,33 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                         .addGap(93, 93, 93)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(txf_sellosInternos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosInternos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(113, 113, 113)
-                        .addComponent(txf_sellosExtrenos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosExtrenos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(txf_sellosExtrenos_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosExtrenos_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(txf_sellosExtrenos_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(datosLlegada_sellosExtrenos_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(txf_sellosInternos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosInternos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(113, 113, 113)
-                        .addComponent(txf_sellosExtrenos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosExtrenos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(txf_sellosExtrenos_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosExtrenos_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(txf_sellosExtrenos_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(datosLlegada_sellosExtrenos_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(txf_sellosInternos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosInternos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(113, 113, 113)
-                        .addComponent(txf_sellosExtrenos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosExtrenos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(txf_sellosExtrenos_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(datosLlegada_sellosExtrenos_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(txf_sellosExtrenos_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(datosLlegada_sellosExtrenos_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(99, 99, 99))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lb_siguiente_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_siguiente_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -818,24 +821,24 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txf_sellosInternos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datosLlegada_sellosInternos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txf_sellosInternos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datosLlegada_sellosInternos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txf_sellosInternos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txf_sellosExtrenos_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datosLlegada_sellosInternos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_sellosExtrenos_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(lb_siguiente_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_siguiente_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1513,9 +1516,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel57.setBackground(new java.awt.Color(255, 255, 255));
         jPanel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_puertas1.setBackground(new java.awt.Color(255, 255, 255));
-        check_puertas1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_puertas1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_puertas1.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_puertas1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_puertas1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
         jPanel57.setLayout(jPanel57Layout);
@@ -1523,12 +1526,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel57Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_puertas1, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_puertas1, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel57Layout.setVerticalGroup(
             jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_puertas1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_puertas1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 111, 30));
@@ -1571,9 +1574,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel59.setLayout(jPanel59Layout);
         jPanel59Layout.setHorizontalGroup(
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel59Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
+            .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
         );
         jPanel59Layout.setVerticalGroup(
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1588,9 +1589,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel60.setBackground(new java.awt.Color(255, 255, 255));
         jPanel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_parediz2.setBackground(new java.awt.Color(255, 255, 255));
-        check_parediz2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_parediz2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_parediz2.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_parediz2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_parediz2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
         jPanel60.setLayout(jPanel60Layout);
@@ -1598,12 +1599,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_parediz2, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_parediz2, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_parediz2, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_parediz2, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 111, 30));
@@ -1611,9 +1612,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel61.setBackground(new java.awt.Color(255, 255, 255));
         jPanel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_espaciadores3.setBackground(new java.awt.Color(255, 255, 255));
-        check_espaciadores3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_espaciadores3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_espaciadores3.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_espaciadores3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_espaciadores3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
         jPanel61.setLayout(jPanel61Layout);
@@ -1621,12 +1622,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel61Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_espaciadores3, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_espaciadores3, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel61Layout.setVerticalGroup(
             jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_espaciadores3, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_espaciadores3, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 111, 30));
@@ -1634,12 +1635,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel62.setBackground(new java.awt.Color(255, 255, 255));
         jPanel62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_paredfro4.setBackground(new java.awt.Color(255, 255, 255));
-        check_paredfro4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_paredfro4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        check_paredfro4.addActionListener(new java.awt.event.ActionListener() {
+        inspCont_check_paredfro4.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_paredfro4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_paredfro4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_paredfro4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_paredfro4ActionPerformed(evt);
+                inspCont_check_paredfro4ActionPerformed(evt);
             }
         });
 
@@ -1649,12 +1650,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel62Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_paredfro4, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_paredfro4, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel62Layout.setVerticalGroup(
             jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_paredfro4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_paredfro4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 111, 30));
@@ -1662,9 +1663,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel63.setBackground(new java.awt.Color(255, 255, 255));
         jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_paredde5.setBackground(new java.awt.Color(255, 255, 255));
-        check_paredde5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_paredde5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_paredde5.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_paredde5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_paredde5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
         jPanel63.setLayout(jPanel63Layout);
@@ -1672,12 +1673,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel63Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_paredde5, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_paredde5, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel63Layout.setVerticalGroup(
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_paredde5, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_paredde5, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 111, 30));
@@ -1685,9 +1686,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel64.setBackground(new java.awt.Color(255, 255, 255));
         jPanel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_techo6.setBackground(new java.awt.Color(255, 255, 255));
-        check_techo6.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_techo6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_techo6.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_techo6.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_techo6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel64Layout = new javax.swing.GroupLayout(jPanel64);
         jPanel64.setLayout(jPanel64Layout);
@@ -1695,12 +1696,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel64Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_techo6, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_techo6, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel64Layout.setVerticalGroup(
             jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_techo6, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_techo6, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 111, 30));
@@ -1708,9 +1709,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel65.setBackground(new java.awt.Color(255, 255, 255));
         jPanel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_pisoin7.setBackground(new java.awt.Color(255, 255, 255));
-        check_pisoin7.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_pisoin7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_pisoin7.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_pisoin7.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_pisoin7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
         jPanel65.setLayout(jPanel65Layout);
@@ -1718,12 +1719,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel65Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_pisoin7, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_pisoin7, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel65Layout.setVerticalGroup(
             jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_pisoin7, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_pisoin7, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 111, 30));
@@ -1731,9 +1732,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel66.setBackground(new java.awt.Color(255, 255, 255));
         jPanel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_pisoex8.setBackground(new java.awt.Color(255, 255, 255));
-        check_pisoex8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_pisoex8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_pisoex8.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_pisoex8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_pisoex8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
         jPanel66.setLayout(jPanel66Layout);
@@ -1741,12 +1742,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel66Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_pisoex8, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_pisoex8, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel66Layout.setVerticalGroup(
             jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_pisoex8, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_pisoex8, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 111, 30));
@@ -1754,9 +1755,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel67.setBackground(new java.awt.Color(255, 255, 255));
         jPanel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_evaporadores9.setBackground(new java.awt.Color(255, 255, 255));
-        check_evaporadores9.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_evaporadores9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_evaporadores9.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_evaporadores9.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_evaporadores9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel67Layout = new javax.swing.GroupLayout(jPanel67);
         jPanel67.setLayout(jPanel67Layout);
@@ -1764,12 +1765,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel67Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_evaporadores9, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_evaporadores9, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel67Layout.setVerticalGroup(
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_evaporadores9, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_evaporadores9, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 111, 30));
@@ -1777,9 +1778,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel68.setBackground(new java.awt.Color(255, 255, 255));
         jPanel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_tornillo10.setBackground(new java.awt.Color(255, 255, 255));
-        check_tornillo10.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_tornillo10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_tornillo10.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_tornillo10.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_tornillo10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel68Layout = new javax.swing.GroupLayout(jPanel68);
         jPanel68.setLayout(jPanel68Layout);
@@ -1787,12 +1788,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel68Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_tornillo10, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_tornillo10, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel68Layout.setVerticalGroup(
             jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_tornillo10, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_tornillo10, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 111, 30));
@@ -1800,9 +1801,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel69.setBackground(new java.awt.Color(255, 255, 255));
         jPanel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        check_delefactor11.setBackground(new java.awt.Color(255, 255, 255));
-        check_delefactor11.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_delefactor11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inspCont_check_delefactor11.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_check_delefactor11.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_check_delefactor11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
         jPanel69.setLayout(jPanel69Layout);
@@ -1810,12 +1811,12 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel69Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(check_delefactor11, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(inspCont_check_delefactor11, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel69Layout.setVerticalGroup(
             jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(check_delefactor11, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(inspCont_check_delefactor11, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
         jPanel32.add(jPanel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 111, 30));
@@ -1823,24 +1824,24 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         panel_inspeccion.add(jPanel32);
         jPanel32.setBounds(24, 60, 331, 360);
 
-        lb_siguiente_llegada1.setBackground(new java.awt.Color(255, 255, 255));
-        lb_siguiente_llegada1.setPreferredSize(new java.awt.Dimension(120, 32));
-        lb_siguiente_llegada1.setRoundBottomLeft(25);
-        lb_siguiente_llegada1.setRoundBottomRight(25);
-        lb_siguiente_llegada1.setRoundTopLeft(25);
-        lb_siguiente_llegada1.setRoundTopRight(25);
-        lb_siguiente_llegada1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_siguiente_inspCont.setBackground(new java.awt.Color(255, 255, 255));
+        btn_siguiente_inspCont.setPreferredSize(new java.awt.Dimension(120, 32));
+        btn_siguiente_inspCont.setRoundBottomLeft(25);
+        btn_siguiente_inspCont.setRoundBottomRight(25);
+        btn_siguiente_inspCont.setRoundTopLeft(25);
+        btn_siguiente_inspCont.setRoundTopRight(25);
+        btn_siguiente_inspCont.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel91.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
         jLabel91.setForeground(new java.awt.Color(0, 0, 0));
         jLabel91.setText("Siguiente");
-        lb_siguiente_llegada1.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
+        btn_siguiente_inspCont.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
 
         jLabel92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/iconSiguienteG2.png"))); // NOI18N
-        lb_siguiente_llegada1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
+        btn_siguiente_inspCont.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
 
-        panel_inspeccion.add(lb_siguiente_llegada1);
-        lb_siguiente_llegada1.setBounds(808, 427, 120, 32);
+        panel_inspeccion.add(btn_siguiente_inspCont);
+        btn_siguiente_inspCont.setBounds(808, 427, 120, 32);
 
         javax.swing.GroupLayout jp_opcion_InspeccionContendorLayout = new javax.swing.GroupLayout(jp_opcion_InspeccionContendor);
         jp_opcion_InspeccionContendor.setLayout(jp_opcion_InspeccionContendorLayout);
@@ -2022,17 +2023,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rb_si_lavado.setBackground(new java.awt.Color(255, 255, 255));
-        bg_lavado.add(rb_si_lavado);
-        rb_si_lavado.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_lavado.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_lavado.setText("SI");
+        higCont_rb_si_lavado.setBackground(new java.awt.Color(255, 255, 255));
+        bg_lavado.add(higCont_rb_si_lavado);
+        higCont_rb_si_lavado.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_lavado.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_lavado.setText("SI");
 
-        rb_no_lavado.setBackground(new java.awt.Color(255, 255, 255));
-        bg_lavado.add(rb_no_lavado);
-        rb_no_lavado.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_lavado.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_lavado.setText("NO");
+        higCont_rb_no_lavado.setBackground(new java.awt.Color(255, 255, 255));
+        bg_lavado.add(higCont_rb_no_lavado);
+        higCont_rb_no_lavado.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_lavado.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_lavado.setText("NO");
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -2040,9 +2041,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rb_si_lavado, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_lavado, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_lavado)
+                .addComponent(higCont_rb_no_lavado)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
@@ -2050,8 +2051,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_lavado, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_lavado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_lavado, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_lavado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2061,17 +2062,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel19.setForeground(new java.awt.Color(0, 0, 0));
 
-        rb_no_drenajes.setBackground(new java.awt.Color(255, 255, 255));
-        bg_drenajes.add(rb_no_drenajes);
-        rb_no_drenajes.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_drenajes.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_drenajes.setText("NO");
+        higCont_rb_no_drenajes.setBackground(new java.awt.Color(255, 255, 255));
+        bg_drenajes.add(higCont_rb_no_drenajes);
+        higCont_rb_no_drenajes.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_drenajes.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_drenajes.setText("NO");
 
-        rb_si_drenajes.setBackground(new java.awt.Color(255, 255, 255));
-        bg_drenajes.add(rb_si_drenajes);
-        rb_si_drenajes.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_drenajes.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_drenajes.setText("SI");
+        higCont_rb_si_drenajes.setBackground(new java.awt.Color(255, 255, 255));
+        bg_drenajes.add(higCont_rb_si_drenajes);
+        higCont_rb_si_drenajes.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_drenajes.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_drenajes.setText("SI");
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -2079,9 +2080,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rb_si_drenajes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_drenajes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_drenajes)
+                .addComponent(higCont_rb_no_drenajes)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
@@ -2089,8 +2090,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_drenajes, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_drenajes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_drenajes, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_drenajes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2099,17 +2100,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel21.setBackground(new java.awt.Color(255, 255, 255));
         jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rb_no_residuos.setBackground(new java.awt.Color(255, 255, 255));
-        bg_residuos.add(rb_no_residuos);
-        rb_no_residuos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_residuos.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_residuos.setText("NO");
+        higCont_rb_no_residuos.setBackground(new java.awt.Color(255, 255, 255));
+        bg_residuos.add(higCont_rb_no_residuos);
+        higCont_rb_no_residuos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_residuos.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_residuos.setText("NO");
 
-        rb_si_residuos.setBackground(new java.awt.Color(255, 255, 255));
-        bg_residuos.add(rb_si_residuos);
-        rb_si_residuos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_residuos.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_residuos.setText("SI");
+        higCont_rb_si_residuos.setBackground(new java.awt.Color(255, 255, 255));
+        bg_residuos.add(higCont_rb_si_residuos);
+        higCont_rb_si_residuos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_residuos.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_residuos.setText("SI");
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
@@ -2117,9 +2118,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(rb_si_residuos, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_residuos, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_residuos)
+                .addComponent(higCont_rb_no_residuos)
                 .addGap(20, 20, 20))
         );
         jPanel21Layout.setVerticalGroup(
@@ -2127,8 +2128,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_residuos, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_residuos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_residuos, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_residuos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2137,17 +2138,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel20.setBackground(new java.awt.Color(255, 255, 255));
         jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rb_si_olor.setBackground(new java.awt.Color(255, 255, 255));
-        bg_olor.add(rb_si_olor);
-        rb_si_olor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_olor.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_olor.setText("SI");
+        higCont_rb_si_olor.setBackground(new java.awt.Color(255, 255, 255));
+        bg_olor.add(higCont_rb_si_olor);
+        higCont_rb_si_olor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_olor.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_olor.setText("SI");
 
-        rb_no_olor.setBackground(new java.awt.Color(255, 255, 255));
-        bg_olor.add(rb_no_olor);
-        rb_no_olor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_olor.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_olor.setText("NO");
+        higCont_rb_no_olor.setBackground(new java.awt.Color(255, 255, 255));
+        bg_olor.add(higCont_rb_no_olor);
+        higCont_rb_no_olor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_olor.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_olor.setText("NO");
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -2155,9 +2156,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(rb_si_olor, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_olor, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_olor)
+                .addComponent(higCont_rb_no_olor)
                 .addGap(20, 20, 20))
         );
         jPanel20Layout.setVerticalGroup(
@@ -2165,8 +2166,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_olor, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_olor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_olor, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_olor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2246,17 +2247,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel25.setBackground(new java.awt.Color(255, 255, 255));
         jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rb_si_insectos.setBackground(new java.awt.Color(255, 255, 255));
-        bg_insectos.add(rb_si_insectos);
-        rb_si_insectos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_insectos.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_insectos.setText("SI");
+        higCont_rb_si_insectos.setBackground(new java.awt.Color(255, 255, 255));
+        bg_insectos.add(higCont_rb_si_insectos);
+        higCont_rb_si_insectos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_insectos.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_insectos.setText("SI");
 
-        rb_no_insectos.setBackground(new java.awt.Color(255, 255, 255));
-        bg_insectos.add(rb_no_insectos);
-        rb_no_insectos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_insectos.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_insectos.setText("NO");
+        higCont_rb_no_insectos.setBackground(new java.awt.Color(255, 255, 255));
+        bg_insectos.add(higCont_rb_no_insectos);
+        higCont_rb_no_insectos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_insectos.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_insectos.setText("NO");
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
@@ -2264,9 +2265,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rb_si_insectos, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_insectos, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_insectos)
+                .addComponent(higCont_rb_no_insectos)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel25Layout.setVerticalGroup(
@@ -2274,8 +2275,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_insectos, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_insectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_insectos, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_insectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2311,17 +2312,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel27.setBackground(new java.awt.Color(255, 255, 255));
         jPanel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rb_no_sello.setBackground(new java.awt.Color(255, 255, 255));
-        bg_sello.add(rb_no_sello);
-        rb_no_sello.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_sello.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_sello.setText("NO");
+        higCont_rb_no_sello.setBackground(new java.awt.Color(255, 255, 255));
+        bg_sello.add(higCont_rb_no_sello);
+        higCont_rb_no_sello.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_sello.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_sello.setText("NO");
 
-        rb_si_sello.setBackground(new java.awt.Color(255, 255, 255));
-        bg_sello.add(rb_si_sello);
-        rb_si_sello.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_sello.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_sello.setText("SI");
+        higCont_rb_si_sello.setBackground(new java.awt.Color(255, 255, 255));
+        bg_sello.add(higCont_rb_si_sello);
+        higCont_rb_si_sello.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_sello.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_sello.setText("SI");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -2329,9 +2330,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rb_si_sello, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_sello, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_sello)
+                .addComponent(higCont_rb_no_sello)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel27Layout.setVerticalGroup(
@@ -2339,8 +2340,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_sello, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_sello, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_sello, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_sello, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2376,17 +2377,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel29.setBackground(new java.awt.Color(255, 255, 255));
         jPanel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rb_si_moho.setBackground(new java.awt.Color(255, 255, 255));
-        bg_moho.add(rb_si_moho);
-        rb_si_moho.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_moho.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_moho.setText("SI");
+        higCont_rb_si_moho.setBackground(new java.awt.Color(255, 255, 255));
+        bg_moho.add(higCont_rb_si_moho);
+        higCont_rb_si_moho.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_moho.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_moho.setText("SI");
 
-        rb_no_moho.setBackground(new java.awt.Color(255, 255, 255));
-        bg_moho.add(rb_no_moho);
-        rb_no_moho.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_moho.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_moho.setText("NO");
+        higCont_rb_no_moho.setBackground(new java.awt.Color(255, 255, 255));
+        bg_moho.add(higCont_rb_no_moho);
+        higCont_rb_no_moho.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_moho.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_moho.setText("NO");
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
@@ -2394,9 +2395,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rb_si_moho, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_moho, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_moho)
+                .addComponent(higCont_rb_no_moho)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel29Layout.setVerticalGroup(
@@ -2404,8 +2405,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_moho, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_moho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_moho, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_moho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2414,17 +2415,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel31.setBackground(new java.awt.Color(255, 255, 255));
         jPanel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rb_si_contenedor_aceptable.setBackground(new java.awt.Color(255, 255, 255));
-        bg_contenedor_aceptable.add(rb_si_contenedor_aceptable);
-        rb_si_contenedor_aceptable.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_si_contenedor_aceptable.setForeground(new java.awt.Color(0, 0, 0));
-        rb_si_contenedor_aceptable.setText("SI");
+        higCont_rb_si_contenedor_aceptable.setBackground(new java.awt.Color(255, 255, 255));
+        bg_contenedor_aceptable.add(higCont_rb_si_contenedor_aceptable);
+        higCont_rb_si_contenedor_aceptable.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_si_contenedor_aceptable.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_si_contenedor_aceptable.setText("SI");
 
-        rb_no_contenedor_aceptable.setBackground(new java.awt.Color(255, 255, 255));
-        bg_contenedor_aceptable.add(rb_no_contenedor_aceptable);
-        rb_no_contenedor_aceptable.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        rb_no_contenedor_aceptable.setForeground(new java.awt.Color(0, 0, 0));
-        rb_no_contenedor_aceptable.setText("NO");
+        higCont_rb_no_contenedor_aceptable.setBackground(new java.awt.Color(255, 255, 255));
+        bg_contenedor_aceptable.add(higCont_rb_no_contenedor_aceptable);
+        higCont_rb_no_contenedor_aceptable.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_rb_no_contenedor_aceptable.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_rb_no_contenedor_aceptable.setText("NO");
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -2432,9 +2433,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rb_si_contenedor_aceptable, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(higCont_rb_si_contenedor_aceptable, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb_no_contenedor_aceptable)
+                .addComponent(higCont_rb_no_contenedor_aceptable)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel31Layout.setVerticalGroup(
@@ -2442,8 +2443,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rb_si_contenedor_aceptable, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(rb_no_contenedor_aceptable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(higCont_rb_si_contenedor_aceptable, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(higCont_rb_no_contenedor_aceptable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2482,10 +2483,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("OBSERVACIONES:");
 
-        txt_observaciones_higiene.setBackground(new java.awt.Color(255, 255, 255));
-        txt_observaciones_higiene.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_observaciones_higiene.setForeground(new java.awt.Color(0, 0, 0));
-        txt_observaciones_higiene.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        higCont_observaciones.setBackground(new java.awt.Color(255, 255, 255));
+        higCont_observaciones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        higCont_observaciones.setForeground(new java.awt.Color(0, 0, 0));
+        higCont_observaciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -2495,7 +2496,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(jLabel20)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_observaciones_higiene, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
+                .addComponent(higCont_observaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
@@ -2504,7 +2505,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_observaciones_higiene, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(higCont_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -2513,21 +2514,21 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("DATOS DE HIGIENE DEL CONTENEDOR");
 
-        lb_siguiente_llegada2.setBackground(new java.awt.Color(255, 255, 255));
-        lb_siguiente_llegada2.setPreferredSize(new java.awt.Dimension(120, 32));
-        lb_siguiente_llegada2.setRoundBottomLeft(25);
-        lb_siguiente_llegada2.setRoundBottomRight(25);
-        lb_siguiente_llegada2.setRoundTopLeft(25);
-        lb_siguiente_llegada2.setRoundTopRight(25);
-        lb_siguiente_llegada2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_siguiente_higCont.setBackground(new java.awt.Color(255, 255, 255));
+        btn_siguiente_higCont.setPreferredSize(new java.awt.Dimension(120, 32));
+        btn_siguiente_higCont.setRoundBottomLeft(25);
+        btn_siguiente_higCont.setRoundBottomRight(25);
+        btn_siguiente_higCont.setRoundTopLeft(25);
+        btn_siguiente_higCont.setRoundTopRight(25);
+        btn_siguiente_higCont.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel93.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
         jLabel93.setForeground(new java.awt.Color(0, 0, 0));
         jLabel93.setText("Siguiente");
-        lb_siguiente_llegada2.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
+        btn_siguiente_higCont.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
 
         jLabel94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/iconSiguienteG2.png"))); // NOI18N
-        lb_siguiente_llegada2.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
+        btn_siguiente_higCont.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -2536,7 +2537,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 940, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lb_siguiente_llegada2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_siguiente_higCont, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
@@ -2554,7 +2555,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addComponent(lb_siguiente_llegada2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_siguiente_higCont, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -2585,74 +2586,74 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel55.setText("FILTRO:");
         jp_opcion_Despacho.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, 20));
 
-        check_filtro1.setBackground(new java.awt.Color(230, 230, 230));
-        bg_filtro.add(check_filtro1);
-        check_filtro1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_filtro1.setForeground(new java.awt.Color(0, 0, 0));
-        check_filtro1.setText("1");
-        check_filtro1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        check_filtro1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jp_opcion_Despacho.add(check_filtro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, -1));
+        despacho_check_filtro1.setBackground(new java.awt.Color(230, 230, 230));
+        bg_filtro.add(despacho_check_filtro1);
+        despacho_check_filtro1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_check_filtro1.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_check_filtro1.setText("1");
+        despacho_check_filtro1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        despacho_check_filtro1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jp_opcion_Despacho.add(despacho_check_filtro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, -1));
 
-        check_filtro2.setBackground(new java.awt.Color(230, 230, 230));
-        bg_filtro.add(check_filtro2);
-        check_filtro2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_filtro2.setForeground(new java.awt.Color(0, 0, 0));
-        check_filtro2.setText("2");
-        check_filtro2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        check_filtro2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jp_opcion_Despacho.add(check_filtro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
+        despacho_check_filtro2.setBackground(new java.awt.Color(230, 230, 230));
+        bg_filtro.add(despacho_check_filtro2);
+        despacho_check_filtro2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_check_filtro2.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_check_filtro2.setText("2");
+        despacho_check_filtro2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        despacho_check_filtro2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jp_opcion_Despacho.add(despacho_check_filtro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
 
-        chek_filtrono.setBackground(new java.awt.Color(230, 230, 230));
-        bg_filtro.add(chek_filtrono);
-        chek_filtrono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        chek_filtrono.setForeground(new java.awt.Color(0, 0, 0));
-        chek_filtrono.setText("Ninguno");
-        chek_filtrono.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        chek_filtrono.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jp_opcion_Despacho.add(chek_filtrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, -1, -1));
+        despacho_chek_filtrono.setBackground(new java.awt.Color(230, 230, 230));
+        bg_filtro.add(despacho_chek_filtrono);
+        despacho_chek_filtrono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_chek_filtrono.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_chek_filtrono.setText("Ninguno");
+        despacho_chek_filtrono.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        despacho_chek_filtrono.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jp_opcion_Despacho.add(despacho_chek_filtrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, -1, -1));
 
         jLabel56.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel56.setForeground(new java.awt.Color(0, 0, 0));
         jLabel56.setText("TERMOGRAFO:");
         jp_opcion_Despacho.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, 20));
 
-        check_termografo_19.setBackground(new java.awt.Color(230, 230, 230));
-        bg_termografo.add(check_termografo_19);
-        check_termografo_19.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_termografo_19.setForeground(new java.awt.Color(0, 0, 0));
-        check_termografo_19.setText("P:19");
-        check_termografo_19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        check_termografo_19.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jp_opcion_Despacho.add(check_termografo_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, -1, -1));
+        despacho_check_termografo_19.setBackground(new java.awt.Color(230, 230, 230));
+        bg_termografo.add(despacho_check_termografo_19);
+        despacho_check_termografo_19.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_check_termografo_19.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_check_termografo_19.setText("P:19");
+        despacho_check_termografo_19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        despacho_check_termografo_19.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jp_opcion_Despacho.add(despacho_check_termografo_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, -1, -1));
 
-        check_termografo_18.setBackground(new java.awt.Color(230, 230, 230));
-        bg_termografo.add(check_termografo_18);
-        check_termografo_18.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_termografo_18.setForeground(new java.awt.Color(0, 0, 0));
-        check_termografo_18.setText("P:18");
-        check_termografo_18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        check_termografo_18.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jp_opcion_Despacho.add(check_termografo_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
+        despacho_check_termografo_18.setBackground(new java.awt.Color(230, 230, 230));
+        bg_termografo.add(despacho_check_termografo_18);
+        despacho_check_termografo_18.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_check_termografo_18.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_check_termografo_18.setText("P:18");
+        despacho_check_termografo_18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        despacho_check_termografo_18.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jp_opcion_Despacho.add(despacho_check_termografo_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
 
-        check_termografo_no.setBackground(new java.awt.Color(230, 230, 230));
-        bg_termografo.add(check_termografo_no);
-        check_termografo_no.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        check_termografo_no.setForeground(new java.awt.Color(0, 0, 0));
-        check_termografo_no.setText("Ninguno");
-        check_termografo_no.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        check_termografo_no.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jp_opcion_Despacho.add(check_termografo_no, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, -1, -1));
+        despacho_check_termografo_no.setBackground(new java.awt.Color(230, 230, 230));
+        bg_termografo.add(despacho_check_termografo_no);
+        despacho_check_termografo_no.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_check_termografo_no.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_check_termografo_no.setText("Ninguno");
+        despacho_check_termografo_no.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        despacho_check_termografo_no.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jp_opcion_Despacho.add(despacho_check_termografo_no, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, -1, -1));
 
         jLabel57.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel57.setForeground(new java.awt.Color(0, 0, 0));
         jLabel57.setText("TERMOGRAFO #:");
         jp_opcion_Despacho.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, -1, 20));
 
-        txt_termografo.setBackground(new java.awt.Color(255, 255, 255));
-        txt_termografo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_termografo.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_termografo, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 180, -1));
+        despacho_termografo.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_termografo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_termografo.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_termografo, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 180, -1));
 
         jLabel58.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel58.setForeground(new java.awt.Color(0, 0, 0));
@@ -2664,15 +2665,15 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel59.setText("SELLO VERIFICADOR:");
         jp_opcion_Despacho.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, -1, 20));
 
-        txt_sello_adhesivo.setBackground(new java.awt.Color(255, 255, 255));
-        txt_sello_adhesivo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_sello_adhesivo.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_sello_adhesivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 384, -1));
+        despacho_sello_adhesivo.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_sello_adhesivo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_sello_adhesivo.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_sello_adhesivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 384, -1));
 
-        txt_sello_verificador.setBackground(new java.awt.Color(255, 255, 255));
-        txt_sello_verificador.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_sello_verificador.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_sello_verificador, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 170, -1));
+        despacho_sello_verificador.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_sello_verificador.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_sello_verificador.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_sello_verificador, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 170, -1));
 
         jLabel60.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel60.setForeground(new java.awt.Color(0, 0, 0));
@@ -2684,15 +2685,15 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel61.setText("FECHA Y HORA SALIDA:");
         jp_opcion_Despacho.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, -1, 20));
 
-        txt_sello_exportador.setBackground(new java.awt.Color(255, 255, 255));
-        txt_sello_exportador.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_sello_exportador.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_sello_exportador, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 214, -1));
+        despacho_sello_exportador.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_sello_exportador.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_sello_exportador.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_sello_exportador, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 214, -1));
 
-        jd_fechahora_salida_despacho.setBackground(new java.awt.Color(255, 255, 255));
-        jd_fechahora_salida_despacho.setForeground(new java.awt.Color(0, 0, 0));
-        jd_fechahora_salida_despacho.setDateFormatString("dd/MM/yyyy");
-        jp_opcion_Despacho.add(jd_fechahora_salida_despacho, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 124, -1));
+        despacho_fechaSalida.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_fechaSalida.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_fechaSalida.setDateFormatString("dd/MM/yyyy");
+        jp_opcion_Despacho.add(despacho_fechaSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 124, -1));
 
         jLabel62.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel62.setForeground(new java.awt.Color(0, 0, 0));
@@ -2704,76 +2705,76 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel63.setText("COMPAÑIA TRANSPORTISTA:");
         jp_opcion_Despacho.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, 20));
 
-        txt_sello_cable.setBackground(new java.awt.Color(255, 255, 255));
-        txt_sello_cable.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_sello_cable.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_sello_cable, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 270, -1));
+        despacho_sello_cable.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_sello_cable.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_sello_cable.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_sello_cable, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 270, -1));
 
         jLabel64.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel64.setForeground(new java.awt.Color(0, 0, 0));
         jLabel64.setText("SELLO NAVIERO:");
         jp_opcion_Despacho.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 90, 20));
 
-        txt_sello_naviero.setBackground(new java.awt.Color(255, 255, 255));
-        txt_sello_naviero.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_sello_naviero.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_sello_naviero, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 150, -1));
+        despacho_sello_naviero.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_sello_naviero.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_sello_naviero.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_sello_naviero, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 150, -1));
 
         jLabel65.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel65.setForeground(new java.awt.Color(0, 0, 0));
         jLabel65.setText("VAPOR:");
         jp_opcion_Despacho.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, -1, 20));
 
-        txt_destino.setBackground(new java.awt.Color(255, 255, 255));
-        txt_destino.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_destino.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_destino, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 210, -1));
+        despacho_destino.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_destino.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_destino.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_destino, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 210, -1));
 
         jLabel66.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel66.setForeground(new java.awt.Color(0, 0, 0));
         jLabel66.setText("DESTINO:");
         jp_opcion_Despacho.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, -1, 20));
 
-        txt_vapor.setBackground(new java.awt.Color(255, 255, 255));
-        txt_vapor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_vapor.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_vapor, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 183, -1));
+        despacho_vapor.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_vapor.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_vapor.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_vapor, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 183, -1));
 
         jLabel67.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel67.setForeground(new java.awt.Color(0, 0, 0));
         jLabel67.setText("NOMBRE DE PALETIZADORES:");
         jp_opcion_Despacho.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, 20));
 
-        txt_nombre_paletizadores.setBackground(new java.awt.Color(255, 255, 255));
-        txt_nombre_paletizadores.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_nombre_paletizadores.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_nombre_paletizadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 610, -1));
+        despacho_nombre_paletizadores.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_nombre_paletizadores.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_nombre_paletizadores.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_nombre_paletizadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 610, -1));
 
         jLabel68.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel68.setForeground(new java.awt.Color(0, 0, 0));
         jLabel68.setText("TOTAL A VIAJAR:");
         jp_opcion_Despacho.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, 20));
 
-        txt_total_viajar.setBackground(new java.awt.Color(255, 255, 255));
-        jp_opcion_Despacho.add(txt_total_viajar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 110, -1));
+        despacho_total_viajar.setBackground(new java.awt.Color(255, 255, 255));
+        jp_opcion_Despacho.add(despacho_total_viajar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 110, -1));
 
         jLabel69.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel69.setForeground(new java.awt.Color(0, 0, 0));
         jLabel69.setText("CAJAS:");
         jp_opcion_Despacho.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, -1, 20));
 
-        txt_cajas_total.setBackground(new java.awt.Color(255, 255, 255));
-        jp_opcion_Despacho.add(txt_cajas_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 140, -1));
+        despacho_cajas_total.setBackground(new java.awt.Color(255, 255, 255));
+        jp_opcion_Despacho.add(despacho_cajas_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 140, -1));
 
         jLabel70.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel70.setForeground(new java.awt.Color(0, 0, 0));
         jLabel70.setText("CANTIDAD DE PALLETS:");
         jp_opcion_Despacho.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, -1, 20));
 
-        txt_cantidad_pallets.setBackground(new java.awt.Color(255, 255, 255));
-        txt_cantidad_pallets.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_cantidad_pallets.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_cantidad_pallets, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, 150, -1));
+        despacho_cantidad_pallets.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_cantidad_pallets.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_cantidad_pallets.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_cantidad_pallets, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, 150, -1));
 
         jPanel71.setBackground(new java.awt.Color(230, 230, 230));
 
@@ -2781,10 +2782,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel71.setForeground(new java.awt.Color(0, 0, 0));
         jLabel71.setText("OBSERVACIONES:");
 
-        txt_observaciones_higiene1.setBackground(new java.awt.Color(255, 255, 255));
-        txt_observaciones_higiene1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_observaciones_higiene1.setForeground(new java.awt.Color(0, 0, 0));
-        txt_observaciones_higiene1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        despacho_observaciones.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_observaciones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_observaciones.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_observaciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel71Layout = new javax.swing.GroupLayout(jPanel71);
         jPanel71.setLayout(jPanel71Layout);
@@ -2794,7 +2795,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(jLabel71)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_observaciones_higiene1, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+                .addComponent(despacho_observaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel71Layout.setVerticalGroup(
@@ -2803,62 +2804,66 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addGap(16, 16, 16)
                 .addGroup(jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_observaciones_higiene1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(despacho_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jp_opcion_Despacho.add(jPanel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 790, -1));
 
-        txt_compañia_tansportista.setBackground(new java.awt.Color(255, 255, 255));
-        txt_compañia_tansportista.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txt_compañia_tansportista.setForeground(new java.awt.Color(0, 0, 0));
-        jp_opcion_Despacho.add(txt_compañia_tansportista, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, 170, -1));
+        despacho_compañia_tansportista.setBackground(new java.awt.Color(255, 255, 255));
+        despacho_compañia_tansportista.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_compañia_tansportista.setForeground(new java.awt.Color(0, 0, 0));
+        jp_opcion_Despacho.add(despacho_compañia_tansportista, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, 170, -1));
 
-        JSpinner.DateEditor de2 = new JSpinner.DateEditor(jSpinner1, "HH:mm:ss");
-        jSpinner1.setEditor(de2);
-        jSpinner1.setMaximumSize(new java.awt.Dimension(110, 22));
-        jSpinner1.setMinimumSize(new java.awt.Dimension(110, 22));
-        jSpinner1.setPreferredSize(new java.awt.Dimension(110, 22));
-        jp_opcion_Despacho.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 130, -1, -1));
+        JSpinner.DateEditor de2 = new JSpinner.DateEditor(despacho_horaSalida, "HH:mm:ss");
+        despacho_horaSalida.setEditor(de2);
+        despacho_horaSalida.setMaximumSize(new java.awt.Dimension(110, 22));
+        despacho_horaSalida.setMinimumSize(new java.awt.Dimension(110, 22));
+        despacho_horaSalida.setPreferredSize(new java.awt.Dimension(110, 22));
+        jp_opcion_Despacho.add(despacho_horaSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 130, -1, -1));
 
-        lb_siguiente_llegada4.setBackground(new java.awt.Color(255, 255, 255));
-        lb_siguiente_llegada4.setPreferredSize(new java.awt.Dimension(120, 32));
-        lb_siguiente_llegada4.setRoundBottomLeft(25);
-        lb_siguiente_llegada4.setRoundBottomRight(25);
-        lb_siguiente_llegada4.setRoundTopLeft(25);
-        lb_siguiente_llegada4.setRoundTopRight(25);
-        lb_siguiente_llegada4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_siguiente_despacho.setBackground(new java.awt.Color(255, 255, 255));
+        btn_siguiente_despacho.setPreferredSize(new java.awt.Dimension(120, 32));
+        btn_siguiente_despacho.setRoundBottomLeft(25);
+        btn_siguiente_despacho.setRoundBottomRight(25);
+        btn_siguiente_despacho.setRoundTopLeft(25);
+        btn_siguiente_despacho.setRoundTopRight(25);
+        btn_siguiente_despacho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel97.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
         jLabel97.setForeground(new java.awt.Color(0, 0, 0));
         jLabel97.setText("Siguiente");
-        lb_siguiente_llegada4.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
+        btn_siguiente_despacho.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
 
         jLabel98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/iconSiguienteG2.png"))); // NOI18N
-        lb_siguiente_llegada4.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
+        btn_siguiente_despacho.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
 
-        jp_opcion_Despacho.add(lb_siguiente_llegada4, new org.netbeans.lib.awtextra.AbsoluteConstraints(806, 429, -1, -1));
+        jp_opcion_Despacho.add(btn_siguiente_despacho, new org.netbeans.lib.awtextra.AbsoluteConstraints(808, 427, -1, -1));
 
         jp_grupoOpciones_datosLlegada.addTab("    Despacho  ", jp_opcion_Despacho);
 
         jp_opcion_Paletizado.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel70.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel70.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel50.setFont(new java.awt.Font("Roboto", 1, 20)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(0, 0, 0));
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel50.setText("CONTROL DE PALETIZADO EN CONTENEDOR");
+        jPanel70.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 27, 934, -1));
 
         jLabel53.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(0, 0, 0));
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel53.setText("Número de cajas");
+        jPanel70.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(819, 57, -1, -1));
 
-        cb_numero_cajas.setBackground(new java.awt.Color(255, 255, 255));
-        cb_numero_cajas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        cb_numero_cajas.setForeground(new java.awt.Color(0, 0, 0));
-        cb_numero_cajas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "48", "54" }));
+        paletizado_cb_numero_cajas.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_cb_numero_cajas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        paletizado_cb_numero_cajas.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_cb_numero_cajas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "48", "54" }));
+        jPanel70.add(paletizado_cb_numero_cajas, new org.netbeans.lib.awtextra.AbsoluteConstraints(819, 80, 105, 26));
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
         jPanel3.setPreferredSize(new java.awt.Dimension(225, 0));
@@ -2924,10 +2929,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel74.setMinimumSize(new java.awt.Dimension(130, 45));
         jPanel74.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet1.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet1.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet1.setBorder(null);
+        paletizado_pallet1.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet1.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet1.setBorder(null);
 
         javax.swing.GroupLayout jPanel74Layout = new javax.swing.GroupLayout(jPanel74);
         jPanel74.setLayout(jPanel74Layout);
@@ -2935,14 +2940,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel74Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet1, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet1, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel74Layout.setVerticalGroup(
             jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel74Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2982,10 +2987,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel76.setMinimumSize(new java.awt.Dimension(130, 45));
         jPanel76.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet2.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet2.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet2.setBorder(null);
+        paletizado_pallet2.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet2.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet2.setBorder(null);
 
         javax.swing.GroupLayout jPanel76Layout = new javax.swing.GroupLayout(jPanel76);
         jPanel76.setLayout(jPanel76Layout);
@@ -2993,14 +2998,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel76Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet2, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet2, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel76Layout.setVerticalGroup(
             jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel76Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3012,10 +3017,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel77.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel77.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet3.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet3.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet3.setBorder(null);
+        paletizado_pallet3.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet3.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet3.setBorder(null);
 
         javax.swing.GroupLayout jPanel77Layout = new javax.swing.GroupLayout(jPanel77);
         jPanel77.setLayout(jPanel77Layout);
@@ -3023,14 +3028,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel77Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet3, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet3, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel77Layout.setVerticalGroup(
             jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel77Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet3, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet3, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3043,10 +3048,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel78.setMinimumSize(new java.awt.Dimension(130, 45));
         jPanel78.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet4.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet4.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet4.setBorder(null);
+        paletizado_pallet4.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet4.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet4.setBorder(null);
 
         javax.swing.GroupLayout jPanel78Layout = new javax.swing.GroupLayout(jPanel78);
         jPanel78.setLayout(jPanel78Layout);
@@ -3054,14 +3059,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel78Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel78Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet4, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet4, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel78Layout.setVerticalGroup(
             jPanel78Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel78Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet4, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet4, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3101,10 +3106,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel80.setMinimumSize(new java.awt.Dimension(130, 45));
         jPanel80.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet5.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet5.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet5.setBorder(null);
+        paletizado_pallet5.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet5.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet5.setBorder(null);
 
         javax.swing.GroupLayout jPanel80Layout = new javax.swing.GroupLayout(jPanel80);
         jPanel80.setLayout(jPanel80Layout);
@@ -3112,14 +3117,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel80Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet5, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet5, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel80Layout.setVerticalGroup(
             jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel80Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet5, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet5, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3152,6 +3157,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         jPanel3.add(jPanel81);
         jPanel81.setBounds(0, 180, 90, 45);
+
+        jPanel70.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 124, 220, 225));
 
         jPanel82.setBackground(new java.awt.Color(204, 204, 255));
         jPanel82.setPreferredSize(new java.awt.Dimension(225, 0));
@@ -3216,10 +3223,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel85.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel85.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet6.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet6.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet6.setBorder(null);
+        paletizado_pallet6.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet6.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet6.setBorder(null);
 
         javax.swing.GroupLayout jPanel85Layout = new javax.swing.GroupLayout(jPanel85);
         jPanel85.setLayout(jPanel85Layout);
@@ -3227,14 +3234,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel85Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel85Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet6, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet6, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel85Layout.setVerticalGroup(
             jPanel85Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel85Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet6, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet6, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3273,10 +3280,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel87.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel87.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet7.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet7.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet7.setBorder(null);
+        paletizado_pallet7.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet7.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet7.setBorder(null);
 
         javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
         jPanel87.setLayout(jPanel87Layout);
@@ -3284,14 +3291,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel87Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet7, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet7, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel87Layout.setVerticalGroup(
             jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel87Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet7, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet7, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3303,10 +3310,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel88.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel88.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet8.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet8.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet8.setBorder(null);
+        paletizado_pallet8.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet8.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet8.setBorder(null);
 
         javax.swing.GroupLayout jPanel88Layout = new javax.swing.GroupLayout(jPanel88);
         jPanel88.setLayout(jPanel88Layout);
@@ -3314,14 +3321,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel88Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet8, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet8, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel88Layout.setVerticalGroup(
             jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel88Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet8, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet8, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3333,10 +3340,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel89.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel89.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet9.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet9.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet9.setBorder(null);
+        paletizado_pallet9.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet9.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet9.setBorder(null);
 
         javax.swing.GroupLayout jPanel89Layout = new javax.swing.GroupLayout(jPanel89);
         jPanel89.setLayout(jPanel89Layout);
@@ -3344,14 +3351,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel89Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel89Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet9, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet9, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel89Layout.setVerticalGroup(
             jPanel89Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel89Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet9, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet9, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3390,10 +3397,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel91.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel91.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        jTextField10.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField10.setBorder(null);
+        paletizado_pallet10.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet10.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet10.setBorder(null);
 
         javax.swing.GroupLayout jPanel91Layout = new javax.swing.GroupLayout(jPanel91);
         jPanel91.setLayout(jPanel91Layout);
@@ -3401,14 +3408,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel91Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet10, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel91Layout.setVerticalGroup(
             jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel91Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet10, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3441,6 +3448,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         jPanel82.add(jPanel92);
         jPanel92.setBounds(0, 180, 90, 45);
+
+        jPanel70.add(jPanel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 124, 220, 225));
 
         jPanel93.setBackground(new java.awt.Color(204, 204, 255));
         jPanel93.setPreferredSize(new java.awt.Dimension(225, 0));
@@ -3505,10 +3514,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel96.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel96.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet11.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet11.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet11.setBorder(null);
+        paletizado_pallet11.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet11.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet11.setBorder(null);
 
         javax.swing.GroupLayout jPanel96Layout = new javax.swing.GroupLayout(jPanel96);
         jPanel96.setLayout(jPanel96Layout);
@@ -3516,14 +3525,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel96Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel96Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet11, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet11, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel96Layout.setVerticalGroup(
             jPanel96Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel96Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet11, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet11, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3562,10 +3571,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel98.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel98.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet12.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet12.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet12.setBorder(null);
+        paletizado_pallet12.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet12.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet12.setBorder(null);
 
         javax.swing.GroupLayout jPanel98Layout = new javax.swing.GroupLayout(jPanel98);
         jPanel98.setLayout(jPanel98Layout);
@@ -3573,14 +3582,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel98Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel98Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet12, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet12, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel98Layout.setVerticalGroup(
             jPanel98Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel98Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet12, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet12, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3592,10 +3601,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel99.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel99.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet13.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet13.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet13.setBorder(null);
+        paletizado_pallet13.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet13.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet13.setBorder(null);
 
         javax.swing.GroupLayout jPanel99Layout = new javax.swing.GroupLayout(jPanel99);
         jPanel99.setLayout(jPanel99Layout);
@@ -3603,14 +3612,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel99Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel99Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet13, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet13, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel99Layout.setVerticalGroup(
             jPanel99Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel99Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet13, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet13, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3622,10 +3631,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel100.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel100.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet14.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet14.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet14.setBorder(null);
+        paletizado_pallet14.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet14.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet14.setBorder(null);
 
         javax.swing.GroupLayout jPanel100Layout = new javax.swing.GroupLayout(jPanel100);
         jPanel100.setLayout(jPanel100Layout);
@@ -3633,14 +3642,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel100Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet14, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet14, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel100Layout.setVerticalGroup(
             jPanel100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel100Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet14, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet14, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3679,10 +3688,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel102.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel102.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet15.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet15.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet15.setBorder(null);
+        paletizado_pallet15.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet15.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet15.setBorder(null);
 
         javax.swing.GroupLayout jPanel102Layout = new javax.swing.GroupLayout(jPanel102);
         jPanel102.setLayout(jPanel102Layout);
@@ -3690,14 +3699,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel102Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel102Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet15, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet15, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel102Layout.setVerticalGroup(
             jPanel102Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel102Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet15, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet15, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3730,6 +3739,8 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         jPanel93.add(jPanel103);
         jPanel103.setBounds(0, 180, 90, 45);
+
+        jPanel70.add(jPanel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(478, 124, 220, 225));
 
         jPanel104.setBackground(new java.awt.Color(204, 204, 255));
         jPanel104.setPreferredSize(new java.awt.Dimension(225, 0));
@@ -3794,10 +3805,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel107.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel107.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet16.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet16.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet16.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet16.setBorder(null);
+        paletizado_pallet16.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet16.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet16.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet16.setBorder(null);
 
         javax.swing.GroupLayout jPanel107Layout = new javax.swing.GroupLayout(jPanel107);
         jPanel107.setLayout(jPanel107Layout);
@@ -3805,14 +3816,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel107Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel107Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet16, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet16, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel107Layout.setVerticalGroup(
             jPanel107Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel107Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet16, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet16, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3851,10 +3862,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel109.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel109.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet17.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet17.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet17.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet17.setBorder(null);
+        paletizado_pallet17.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet17.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet17.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet17.setBorder(null);
 
         javax.swing.GroupLayout jPanel109Layout = new javax.swing.GroupLayout(jPanel109);
         jPanel109.setLayout(jPanel109Layout);
@@ -3862,14 +3873,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel109Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel109Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet17, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet17, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel109Layout.setVerticalGroup(
             jPanel109Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel109Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet17, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet17, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3881,10 +3892,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel110.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel110.setPreferredSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet18.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet18.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet18.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet18.setBorder(null);
+        paletizado_pallet18.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet18.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet18.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet18.setBorder(null);
 
         javax.swing.GroupLayout jPanel110Layout = new javax.swing.GroupLayout(jPanel110);
         jPanel110.setLayout(jPanel110Layout);
@@ -3892,14 +3903,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel110Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel110Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet18, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet18, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel110Layout.setVerticalGroup(
             jPanel110Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel110Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet18, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet18, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3911,10 +3922,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel111.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel111.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet19.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet19.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet19.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet19.setBorder(null);
+        paletizado_pallet19.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet19.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet19.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet19.setBorder(null);
 
         javax.swing.GroupLayout jPanel111Layout = new javax.swing.GroupLayout(jPanel111);
         jPanel111.setLayout(jPanel111Layout);
@@ -3922,14 +3933,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel111Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel111Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet19, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet19, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel111Layout.setVerticalGroup(
             jPanel111Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel111Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet19, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet19, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3968,10 +3979,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel113.setMaximumSize(new java.awt.Dimension(130, 45));
         jPanel113.setMinimumSize(new java.awt.Dimension(130, 45));
 
-        txf_pallet20.setBackground(new java.awt.Color(255, 255, 255));
-        txf_pallet20.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txf_pallet20.setForeground(new java.awt.Color(0, 0, 0));
-        txf_pallet20.setBorder(null);
+        paletizado_pallet20.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_pallet20.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        paletizado_pallet20.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_pallet20.setBorder(null);
 
         javax.swing.GroupLayout jPanel113Layout = new javax.swing.GroupLayout(jPanel113);
         jPanel113.setLayout(jPanel113Layout);
@@ -3979,14 +3990,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel113Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel113Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet20, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet20, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel113Layout.setVerticalGroup(
             jPanel113Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel113Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txf_pallet20, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(paletizado_pallet20, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -4020,67 +4031,59 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel104.add(jPanel114);
         jPanel114.setBounds(0, 180, 90, 45);
 
-        lb_siguiente_llegada3.setBackground(new java.awt.Color(255, 255, 255));
-        lb_siguiente_llegada3.setPreferredSize(new java.awt.Dimension(120, 32));
-        lb_siguiente_llegada3.setRoundBottomLeft(25);
-        lb_siguiente_llegada3.setRoundBottomRight(25);
-        lb_siguiente_llegada3.setRoundTopLeft(25);
-        lb_siguiente_llegada3.setRoundTopRight(25);
-        lb_siguiente_llegada3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel70.add(jPanel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(704, 124, 220, 225));
 
-        jLabel95.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        btn_guardar.setBackground(new java.awt.Color(255, 255, 255));
+        btn_guardar.setPreferredSize(new java.awt.Dimension(120, 32));
+        btn_guardar.setRoundBottomLeft(25);
+        btn_guardar.setRoundBottomRight(25);
+        btn_guardar.setRoundTopLeft(25);
+        btn_guardar.setRoundTopRight(25);
+        btn_guardar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel95.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel95.setForeground(new java.awt.Color(0, 0, 0));
         jLabel95.setText("Guardar");
-        lb_siguiente_llegada3.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
+        btn_guardar.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
 
-        jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/iconSiguienteG2.png"))); // NOI18N
-        lb_siguiente_llegada3.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
+        jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/diskette_24px.png"))); // NOI18N
+        btn_guardar.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
 
-        javax.swing.GroupLayout jPanel70Layout = new javax.swing.GroupLayout(jPanel70);
-        jPanel70.setLayout(jPanel70Layout);
-        jPanel70Layout.setHorizontalGroup(
-            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel70Layout.createSequentialGroup()
-                .addGroup(jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel70Layout.createSequentialGroup()
-                        .addContainerGap(26, Short.MAX_VALUE)
-                        .addGroup(jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cb_numero_cajas, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel53)
-                            .addGroup(jPanel70Layout.createSequentialGroup()
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel104, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(10, 10, 10))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel70Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lb_siguiente_llegada3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        jPanel70.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(808, 428, -1, -1));
+
+        jPanel115.setBackground(new java.awt.Color(230, 230, 230));
+
+        jLabel99.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel99.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel99.setText("OBSERVACIONES:");
+
+        paletizado_observacionesGenerales.setBackground(new java.awt.Color(255, 255, 255));
+        paletizado_observacionesGenerales.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        paletizado_observacionesGenerales.setForeground(new java.awt.Color(0, 0, 0));
+        paletizado_observacionesGenerales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout jPanel115Layout = new javax.swing.GroupLayout(jPanel115);
+        jPanel115.setLayout(jPanel115Layout);
+        jPanel115Layout.setHorizontalGroup(
+            jPanel115Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel115Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel99)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(paletizado_observacionesGenerales, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel70Layout.setVerticalGroup(
-            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel70Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel50)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel53)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cb_numero_cajas, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel104, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
-                .addComponent(lb_siguiente_llegada3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        jPanel115Layout.setVerticalGroup(
+            jPanel115Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel115Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jPanel115Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(paletizado_observacionesGenerales, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
+
+        jPanel70.add(jPanel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 790, -1));
 
         javax.swing.GroupLayout jp_opcion_PaletizadoLayout = new javax.swing.GroupLayout(jp_opcion_Paletizado);
         jp_opcion_Paletizado.setLayout(jp_opcion_PaletizadoLayout);
@@ -4101,7 +4104,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(icono_home)
+                .addComponent(boton_home)
                 .addGap(132, 132, 132)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -4124,7 +4127,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(icono_home)
+                            .addComponent(boton_home)
                             .addComponent(jLabel2))))
                 .addGap(8, 8, 8)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4147,13 +4150,13 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_ciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ciActionPerformed
+    private void datosLlegada_ciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datosLlegada_ciActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_ciActionPerformed
+    }//GEN-LAST:event_datosLlegada_ciActionPerformed
 
-    private void check_paredfro4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_paredfro4ActionPerformed
+    private void inspCont_check_paredfro4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inspCont_check_paredfro4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_check_paredfro4ActionPerformed
+    }//GEN-LAST:event_inspCont_check_paredfro4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -4168,25 +4171,87 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.ButtonGroup bg_residuos;
     public javax.swing.ButtonGroup bg_sello;
     public javax.swing.ButtonGroup bg_termografo;
-    public javax.swing.JComboBox<String> cb_numero_cajas;
-    public javax.swing.JCheckBox check_delefactor11;
-    public javax.swing.JCheckBox check_espaciadores3;
-    public javax.swing.JCheckBox check_evaporadores9;
-    public javax.swing.JCheckBox check_filtro1;
-    public javax.swing.JCheckBox check_filtro2;
-    public javax.swing.JCheckBox check_paredde5;
-    public javax.swing.JCheckBox check_paredfro4;
-    public javax.swing.JCheckBox check_parediz2;
-    public javax.swing.JCheckBox check_pisoex8;
-    public javax.swing.JCheckBox check_pisoin7;
-    public javax.swing.JCheckBox check_puertas1;
-    public javax.swing.JCheckBox check_techo6;
-    public javax.swing.JCheckBox check_termografo_18;
-    public javax.swing.JCheckBox check_termografo_19;
-    public javax.swing.JCheckBox check_termografo_no;
-    public javax.swing.JCheckBox check_tornillo10;
-    public javax.swing.JCheckBox chek_filtrono;
-    public javax.swing.JLabel icono_home;
+    public javax.swing.JLabel boton_home;
+    public Recursos_Codigo.Redondeado btn_guardar;
+    public Recursos_Codigo.Redondeado btn_siguiente_despacho;
+    public Recursos_Codigo.Redondeado btn_siguiente_higCont;
+    public Recursos_Codigo.Redondeado btn_siguiente_inspCont;
+    public Recursos_Codigo.Redondeado btn_siguiente_llegada;
+    public javax.swing.JTextField datosLlegada_candadosllegada;
+    public javax.swing.JTextField datosLlegada_chasis;
+    public javax.swing.JTextField datosLlegada_chofer;
+    public javax.swing.JTextField datosLlegada_ci;
+    public javax.swing.JTextField datosLlegada_contenedor;
+    public javax.swing.JTextField datosLlegada_cupo;
+    public com.toedter.calendar.JDateChooser datosLlegada_fechaInsp;
+    public javax.swing.JSpinner datosLlegada_horaLlegada;
+    public javax.swing.JSpinner datosLlegada_horaSalida;
+    public javax.swing.JTextField datosLlegada_nombrefinca;
+    public javax.swing.JTextField datosLlegada_placa;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_1;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_2;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_3;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_4;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_5;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_6;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_7;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_8;
+    public javax.swing.JTextField datosLlegada_sellosExtrenos_9;
+    public javax.swing.JTextField datosLlegada_sellosInternos_1;
+    public javax.swing.JTextField datosLlegada_sellosInternos_2;
+    public javax.swing.JTextField datosLlegada_sellosInternos_3;
+    public com.toedter.components.JSpinField datosLlegada_semana;
+    public javax.swing.JTextField datosLlegada_tipocaja;
+    public javax.swing.JTextField despacho_cajas_total;
+    public javax.swing.JTextField despacho_cantidad_pallets;
+    public javax.swing.JCheckBox despacho_check_filtro1;
+    public javax.swing.JCheckBox despacho_check_filtro2;
+    public javax.swing.JCheckBox despacho_check_termografo_18;
+    public javax.swing.JCheckBox despacho_check_termografo_19;
+    public javax.swing.JCheckBox despacho_check_termografo_no;
+    public javax.swing.JCheckBox despacho_chek_filtrono;
+    public javax.swing.JTextField despacho_compañia_tansportista;
+    public javax.swing.JTextField despacho_destino;
+    public com.toedter.calendar.JDateChooser despacho_fechaSalida;
+    public javax.swing.JSpinner despacho_horaSalida;
+    public javax.swing.JTextField despacho_nombre_paletizadores;
+    public javax.swing.JTextField despacho_observaciones;
+    public javax.swing.JTextField despacho_sello_adhesivo;
+    public javax.swing.JTextField despacho_sello_cable;
+    public javax.swing.JTextField despacho_sello_exportador;
+    public javax.swing.JTextField despacho_sello_naviero;
+    public javax.swing.JTextField despacho_sello_verificador;
+    public javax.swing.JTextField despacho_termografo;
+    public javax.swing.JTextField despacho_total_viajar;
+    public javax.swing.JTextField despacho_vapor;
+    public javax.swing.JTextField higCont_observaciones;
+    public javax.swing.JRadioButton higCont_rb_no_contenedor_aceptable;
+    public javax.swing.JRadioButton higCont_rb_no_drenajes;
+    public javax.swing.JRadioButton higCont_rb_no_insectos;
+    public javax.swing.JRadioButton higCont_rb_no_lavado;
+    public javax.swing.JRadioButton higCont_rb_no_moho;
+    public javax.swing.JRadioButton higCont_rb_no_olor;
+    public javax.swing.JRadioButton higCont_rb_no_residuos;
+    public javax.swing.JRadioButton higCont_rb_no_sello;
+    public javax.swing.JRadioButton higCont_rb_si_contenedor_aceptable;
+    public javax.swing.JRadioButton higCont_rb_si_drenajes;
+    public javax.swing.JRadioButton higCont_rb_si_insectos;
+    public javax.swing.JRadioButton higCont_rb_si_lavado;
+    public javax.swing.JRadioButton higCont_rb_si_moho;
+    public javax.swing.JRadioButton higCont_rb_si_olor;
+    public javax.swing.JRadioButton higCont_rb_si_residuos;
+    public javax.swing.JRadioButton higCont_rb_si_sello;
+    public javax.swing.JCheckBox inspCont_check_delefactor11;
+    public javax.swing.JCheckBox inspCont_check_espaciadores3;
+    public javax.swing.JCheckBox inspCont_check_evaporadores9;
+    public javax.swing.JCheckBox inspCont_check_paredde5;
+    public javax.swing.JCheckBox inspCont_check_paredfro4;
+    public javax.swing.JCheckBox inspCont_check_parediz2;
+    public javax.swing.JCheckBox inspCont_check_pisoex8;
+    public javax.swing.JCheckBox inspCont_check_pisoin7;
+    public javax.swing.JCheckBox inspCont_check_puertas1;
+    public javax.swing.JCheckBox inspCont_check_techo6;
+    public javax.swing.JCheckBox inspCont_check_tornillo10;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
@@ -4285,6 +4350,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jLabel96;
     public javax.swing.JLabel jLabel97;
     public javax.swing.JLabel jLabel98;
+    public javax.swing.JLabel jLabel99;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel10;
     public javax.swing.JPanel jPanel100;
@@ -4303,6 +4369,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JPanel jPanel112;
     public javax.swing.JPanel jPanel113;
     public javax.swing.JPanel jPanel114;
+    public javax.swing.JPanel jPanel115;
     public javax.swing.JPanel jPanel12;
     public javax.swing.JPanel jPanel13;
     public javax.swing.JPanel jPanel14;
@@ -4398,104 +4465,43 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JPanel jPanel99;
     public javax.swing.JSeparator jSeparator1;
     public javax.swing.JSeparator jSeparator2;
-    public javax.swing.JSpinner jSpinner1;
-    public javax.swing.JTextField jTextField10;
-    public com.toedter.calendar.JDateChooser jc_fecha_insp;
-    public com.toedter.calendar.JDateChooser jd_fechahora_salida;
-    public com.toedter.calendar.JDateChooser jd_fechahora_salida_despacho;
     public javax.swing.JTabbedPane jp_grupoOpciones_datosLlegada;
     public javax.swing.JPanel jp_opcion_DatosLlegada;
     public javax.swing.JPanel jp_opcion_Despacho;
     public javax.swing.JPanel jp_opcion_HiegieneContenedor;
     public javax.swing.JPanel jp_opcion_InspeccionContendor;
     public javax.swing.JPanel jp_opcion_Paletizado;
-    public javax.swing.JSpinner js_hora_llegada;
-    public javax.swing.JSpinner js_llegada_salida;
-    public com.toedter.components.JSpinField js_semana;
-    public Recursos_Codigo.Redondeado lb_siguiente_llegada;
-    public Recursos_Codigo.Redondeado lb_siguiente_llegada1;
-    public Recursos_Codigo.Redondeado lb_siguiente_llegada2;
-    public Recursos_Codigo.Redondeado lb_siguiente_llegada3;
-    public Recursos_Codigo.Redondeado lb_siguiente_llegada4;
+    public javax.swing.JComboBox<String> paletizado_cb_numero_cajas;
+    public javax.swing.JTextField paletizado_observacionesGenerales;
+    public javax.swing.JTextField paletizado_pallet1;
+    public javax.swing.JTextField paletizado_pallet10;
+    public javax.swing.JTextField paletizado_pallet11;
+    public javax.swing.JTextField paletizado_pallet12;
+    public javax.swing.JTextField paletizado_pallet13;
+    public javax.swing.JTextField paletizado_pallet14;
+    public javax.swing.JTextField paletizado_pallet15;
+    public javax.swing.JTextField paletizado_pallet16;
+    public javax.swing.JTextField paletizado_pallet17;
+    public javax.swing.JTextField paletizado_pallet18;
+    public javax.swing.JTextField paletizado_pallet19;
+    public javax.swing.JTextField paletizado_pallet2;
+    public javax.swing.JTextField paletizado_pallet20;
+    public javax.swing.JTextField paletizado_pallet3;
+    public javax.swing.JTextField paletizado_pallet4;
+    public javax.swing.JTextField paletizado_pallet5;
+    public javax.swing.JTextField paletizado_pallet6;
+    public javax.swing.JTextField paletizado_pallet7;
+    public javax.swing.JTextField paletizado_pallet8;
+    public javax.swing.JTextField paletizado_pallet9;
     public javax.swing.JPanel panel_inspeccion;
-    public javax.swing.JRadioButton rb_no_contenedor_aceptable;
-    public javax.swing.JRadioButton rb_no_drenajes;
-    public javax.swing.JRadioButton rb_no_insectos;
-    public javax.swing.JRadioButton rb_no_lavado;
-    public javax.swing.JRadioButton rb_no_moho;
-    public javax.swing.JRadioButton rb_no_olor;
-    public javax.swing.JRadioButton rb_no_residuos;
-    public javax.swing.JRadioButton rb_no_sello;
-    public javax.swing.JRadioButton rb_si_contenedor_aceptable;
-    public javax.swing.JRadioButton rb_si_drenajes;
-    public javax.swing.JRadioButton rb_si_insectos;
-    public javax.swing.JRadioButton rb_si_lavado;
-    public javax.swing.JRadioButton rb_si_moho;
-    public javax.swing.JRadioButton rb_si_olor;
-    public javax.swing.JRadioButton rb_si_residuos;
-    public javax.swing.JRadioButton rb_si_sello;
-    public javax.swing.JTextField txf_pallet1;
-    public javax.swing.JTextField txf_pallet11;
-    public javax.swing.JTextField txf_pallet12;
-    public javax.swing.JTextField txf_pallet13;
-    public javax.swing.JTextField txf_pallet14;
-    public javax.swing.JTextField txf_pallet15;
-    public javax.swing.JTextField txf_pallet16;
-    public javax.swing.JTextField txf_pallet17;
-    public javax.swing.JTextField txf_pallet18;
-    public javax.swing.JTextField txf_pallet19;
-    public javax.swing.JTextField txf_pallet2;
-    public javax.swing.JTextField txf_pallet20;
-    public javax.swing.JTextField txf_pallet3;
-    public javax.swing.JTextField txf_pallet4;
-    public javax.swing.JTextField txf_pallet5;
-    public javax.swing.JTextField txf_pallet6;
-    public javax.swing.JTextField txf_pallet7;
-    public javax.swing.JTextField txf_pallet8;
-    public javax.swing.JTextField txf_pallet9;
-    public javax.swing.JTextField txf_sellosExtrenos_1;
-    public javax.swing.JTextField txf_sellosExtrenos_2;
-    public javax.swing.JTextField txf_sellosExtrenos_3;
-    public javax.swing.JTextField txf_sellosExtrenos_4;
-    public javax.swing.JTextField txf_sellosExtrenos_5;
-    public javax.swing.JTextField txf_sellosExtrenos_6;
-    public javax.swing.JTextField txf_sellosExtrenos_7;
-    public javax.swing.JTextField txf_sellosExtrenos_8;
-    public javax.swing.JTextField txf_sellosExtrenos_9;
-    public javax.swing.JTextField txf_sellosInternos_1;
-    public javax.swing.JTextField txf_sellosInternos_2;
-    public javax.swing.JTextField txf_sellosInternos_3;
+    public com.toedter.calendar.JDateChooser salida_fechaHora;
     public javax.swing.JLabel txt_aceptable;
-    public javax.swing.JTextField txt_cajas_total;
-    public javax.swing.JTextField txt_candadosllegada;
-    public javax.swing.JTextField txt_cantidad_pallets;
-    public javax.swing.JTextField txt_chasis;
-    public javax.swing.JTextField txt_chofer;
-    public javax.swing.JTextField txt_ci;
-    public javax.swing.JTextField txt_compañia_tansportista;
-    public javax.swing.JTextField txt_contenedor;
     public javax.swing.JLabel txt_contenedor_aceptable;
-    public javax.swing.JTextField txt_cupo;
-    public javax.swing.JTextField txt_destino;
     public javax.swing.JLabel txt_drenajes;
     public javax.swing.JLabel txt_insectos;
     public javax.swing.JLabel txt_lavado;
     public javax.swing.JLabel txt_moho;
-    public javax.swing.JTextField txt_nombre_paletizadores;
-    public javax.swing.JTextField txt_nombrefinca;
-    public javax.swing.JTextField txt_observaciones_higiene;
-    public javax.swing.JTextField txt_observaciones_higiene1;
-    public javax.swing.JTextField txt_placa;
     public javax.swing.JLabel txt_residuos;
     public javax.swing.JLabel txt_sello;
-    public javax.swing.JTextField txt_sello_adhesivo;
-    public javax.swing.JTextField txt_sello_cable;
-    public javax.swing.JTextField txt_sello_exportador;
-    public javax.swing.JTextField txt_sello_naviero;
-    public javax.swing.JTextField txt_sello_verificador;
-    public javax.swing.JTextField txt_termografo;
-    public javax.swing.JTextField txt_tipocaja;
-    public javax.swing.JTextField txt_total_viajar;
-    public javax.swing.JTextField txt_vapor;
     // End of variables declaration//GEN-END:variables
 }

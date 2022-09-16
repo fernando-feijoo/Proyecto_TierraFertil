@@ -20,7 +20,7 @@ public class Modelo_Contenedores {
             st.close();
 
         } catch (Exception e) {
-            System.out.println("Error al tratar guardar los datos de llegada del contenedor " + e);
+            System.out.println("Error al tratar guardar los datos de contenedor en su modelo: " + e);
         }
         return true;
     }

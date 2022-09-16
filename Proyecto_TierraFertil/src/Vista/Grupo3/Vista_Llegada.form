@@ -295,7 +295,7 @@
                               <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              <Component id="salida_fechaHora" min="-2" pref="137" max="-2" attributes="0"/>
+                              <Component id="datosLlegada_fechaSalida" min="-2" pref="137" max="-2" attributes="0"/>
                               <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
                               <Component id="datosLlegada_horaSalida" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -363,7 +363,7 @@
                                   <Component id="jLabel6" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="datosLlegada_semana" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="salida_fechaHora" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosLlegada_fechaSalida" min="-2" max="-2" attributes="0"/>
                                   <Component id="datosLlegada_horaSalida" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
@@ -471,7 +471,7 @@
                         <Property name="text" type="java.lang.String" value="FECHA/HORA SALIDA PATIO:"/>
                       </Properties>
                     </Component>
-                    <Component class="com.toedter.calendar.JDateChooser" name="salida_fechaHora">
+                    <Component class="com.toedter.calendar.JDateChooser" name="datosLlegada_fechaSalida">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>

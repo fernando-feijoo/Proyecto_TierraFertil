@@ -8,6 +8,7 @@ import Controlador.Grupo3.Controlador_Higiene_Contenedor;
 import Controlador.Grupo3.Controlador_Inspeccion_Contenedor;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Controlador.Grupo3.Controlador_Paletizado;
+import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
 import Vista.Grupo2.Vis_evaluacion;
@@ -58,6 +59,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
     Controlador_Inspeccion_Contenedor controlInspeccion = new Controlador_Inspeccion_Contenedor(vistaLlegada);
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
+    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -70,7 +72,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Color colorNormalOscuro = new Color(204,204,204);
     //  Variables locales para usar en vista general de la clase.
     int xMouse, yMouse, contTemp = 0;
-
     //  Fin de variables locales de case.
     public Controlador_General(Vista_General vistaGeneral) {
         this.vistaGeneral = vistaGeneral;

@@ -394,9 +394,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         );
 
         setBorder(null);
-        setMaximumSize(new java.awt.Dimension(970, 605));
-        setMinimumSize(new java.awt.Dimension(970, 605));
-        setPreferredSize(new java.awt.Dimension(970, 605));
+        setMaximumSize(new java.awt.Dimension(965, 630));
+        setMinimumSize(new java.awt.Dimension(965, 630));
+        setPreferredSize(new java.awt.Dimension(965, 630));
 
         jPanel1.setBackground(new java.awt.Color(230, 230, 230));
         jPanel1.setForeground(new java.awt.Color(204, 204, 204));
@@ -4033,7 +4033,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel95.setText("Guardar");
         lb_siguiente_llegada3.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 6, -1, -1));
 
-        jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/iconSiguienteG2.png"))); // NOI18N
+        jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/diskette_24px.png"))); // NOI18N
         lb_siguiente_llegada3.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 5, -1, -1));
 
         javax.swing.GroupLayout jPanel70Layout = new javax.swing.GroupLayout(jPanel70);

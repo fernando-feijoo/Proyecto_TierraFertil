@@ -71,10 +71,10 @@ public class Controlador_Login implements MouseListener, KeyListener {
                     this.modeloLogin.rol = rol;
                     Vista_General vistaGeneral = new Vista_General();
                     Controlador_General controladorGeneral = new Controlador_General(vistaGeneral);
-                    vistaGeneral.show();
                     this.vistaLogin.setVisible(false);
+                    vistaGeneral.show();
                 }else{
-                    JOptionPane.showMessageDialog(vistaLogin, "Contraseña o usuario incorrecto.", "Error de Login", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(vistaLogin, "Contraseña o usuario incorrecto.", "Error de Login", JOptionPane.WARNING_MESSAGE);
                 }
 
             } catch (Exception ex) {

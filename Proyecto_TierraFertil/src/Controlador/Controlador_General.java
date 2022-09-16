@@ -1,5 +1,6 @@
 package Controlador;
 
+import Controlador.Grupo2.Controlador_Evaluacion;
 import Controlador.Grupo2.Controlador_Menu;
 import Controlador.Grupo3.Controlador_Datos_Llegada;
 import Controlador.Grupo3.Controlador_Despacho;
@@ -49,7 +50,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     
     //  GRUPO 2
     Vis_evaluacion vistaEvaluacion = new Vis_evaluacion();
-    
+    Controlador_Evaluacion controlEvaluacion = new Controlador_Evaluacion(vistaEvaluacion);
     //  GRUPO 3
     Vista_Llegada vistaLlegada = new Vista_Llegada();
     Controlador_Datos_Llegada controlDatosLlegada = new Controlador_Datos_Llegada(vistaLlegada);
@@ -88,7 +89,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
-        
+        this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
         // Grupo 3
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);

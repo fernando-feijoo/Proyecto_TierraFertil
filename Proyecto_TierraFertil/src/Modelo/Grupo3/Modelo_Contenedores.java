@@ -25,4 +25,15 @@ public class Modelo_Contenedores {
         return true;
     }
     
+    public ResultSet consultaID_contenedor() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "SELECT COALESCE(MAX(id), 0) AS id_contenedor FROM contenedores;";
+            rs = st.executeQuery(sql);
+            st.close();
+        } catch (Exception e) {
+            System.out.println("Error al tratar de obtener id entidad contenedores: " + e);
+        }
+        return rs;
+    }
 }

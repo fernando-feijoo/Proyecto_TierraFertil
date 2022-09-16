@@ -1,5 +1,6 @@
 package Controlador.Grupo3;
 
+import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Datos_Llegada;
 import Vista.Grupo3.Vista_Llegada;
 import java.awt.event.ComponentEvent;
@@ -12,6 +13,7 @@ import java.sql.SQLException;
 public class Controlador_Datos_Llegada implements MouseListener, ComponentListener{
     Vista_Llegada vistaLlegada;
     Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
+    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
     ResultSet rs;
     public static int idContenedor;
     public static int idDatosLlegada;
@@ -28,7 +30,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     
     public void idEntidadContenedores (){
         try {
-            rs = modeloDatosLlegada.consultaID_contenedor();
+            rs = modeloContenedor.consultaID_contenedor();
             while (rs.next()) {
                 idContenedor = Integer.parseInt(rs.getString("id_contenedor"));
             }
@@ -42,7 +44,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     
     public void idEntidadDatosLlegada (){
         try {
-            rs = modeloDatosLlegada.consultaID_contenedor();
+            rs = modeloContenedor.consultaID_contenedor();
             while (rs.next()) {
                 idDatosLlegada = Integer.parseInt(rs.getString("id_contenedor"));
             }

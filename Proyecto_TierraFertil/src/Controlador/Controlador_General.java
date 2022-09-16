@@ -188,14 +188,17 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaLlegada.setVisible(true);
             //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
                 this.controlDatosLlegada.idContenedor++;
-                System.out.println("Dato heredado General: " + this.controlDatosLlegada.idContenedor);
-                this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor);
+                this.controlDatosLlegada.idDatosLlegada++;
+                System.out.println("Dato heredado General: " + this.controlDatosLlegada.idContenedor + " , " + this.controlDatosLlegada.idDatosLlegada);
+                this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
                 
             //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
         }
             //  G3 Oculta el escritorio y muestra el principal, falta implementar la vista principal.
+            //  Tambien restrablece el valor 0 al opcionClick para que valide los colores.
         if (me.getSource() == this.vistaLlegada.boton_home) {
             this.vistaLlegada.dispose();
+            this.controladorMenuAcopio.opcionClick(0);
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
     }

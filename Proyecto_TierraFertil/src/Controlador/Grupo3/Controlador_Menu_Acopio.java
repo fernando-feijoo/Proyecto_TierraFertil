@@ -13,13 +13,17 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
     Color colorNormal = new Color(204, 204, 204);
     Color colorSeleccionOpcion = new Color(223,238,255);
     Color colorSeleccionIngreso = new Color(159,203,255);
-    int opcionClick;
+    public static int opcionClick;
     public Controlador_Menu_Acopio(Vista_Menu_Acopio vistaMenuAcopio) {
         this.vistaMenuAcopio = vistaMenuAcopio;
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
+    }
+    
+    public void opcionClick(int a){
+        this.opcionClick = a;
     }
 
     @Override

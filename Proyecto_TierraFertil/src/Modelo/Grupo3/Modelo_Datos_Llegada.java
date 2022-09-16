@@ -9,7 +9,8 @@ public class Modelo_Datos_Llegada {
     Modelo_Conexion conexion = new Modelo_Conexion();
     ResultSet rs;
     Statement st;
-    public String fecha_insp, semana, fecha_horaSalida, hora_llegada, caja, cupo, contenedor, placa, chasis, chofer, ci, finca, candados, sellos_internos, sellos_externos;
+    public int id, id_contenedor, semana;
+    public String fecha_insp, fecha_horaSalida, hora_llegada, caja, cupo, contenedor, placa, chasis, chofer, ci, finca, candados, sellos_internos, sellos_externos;
 
     public boolean guardar_llegada() {
         try {
@@ -45,6 +46,18 @@ public class Modelo_Datos_Llegada {
             st.close();
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad datos_llegada: " + e);
+        }
+        return rs;
+    }
+    
+    public ResultSet consultaC_contenedor() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "SELECT COALESCE(MAX(id), 0) AS id_contenedor FROM contenedores;";
+            rs = st.executeQuery(sql);
+            st.close();
+        } catch (Exception e) {
+            System.out.println("Error al tratar de obtener id entidad contenedores: " + e);
         }
         return rs;
     }

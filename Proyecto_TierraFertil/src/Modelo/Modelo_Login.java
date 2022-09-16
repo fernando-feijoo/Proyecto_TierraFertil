@@ -13,7 +13,7 @@ public class Modelo_Login {
      public ResultSet consultarUsuario() {
         try {
             Statement st = conn.conectarBD().createStatement();
-            String SQL = "SELECT  usuario, contrasena,rol  FROM  roles where usuario = '"+this.user+"' and contrasena = '"+this.pass+"' ;";
+            String SQL = "SELECT  usuario, contrasena, rol  FROM  roles where usuario = '"+this.user+"' and contrasena = '"+this.pass+"' ;";
           
             ResultSet rs =  st.executeQuery(SQL);
             

@@ -11,15 +11,16 @@ public class Modeo_Evaluacion_Calidad{
     ResultSet rs;
     Statement st;
     
-    public String fecha, calibracion, vapor, transporte, l_dedos, pedido, tipo_caja, destino, fumigacion, destino2;
-    public int semana, codigo;
-    
+    public String fecha, calibracion, vapor, transporte, l_dedos, pedido, tipo_caja, destino, fumigacion, destino2, semana,  finca, codigo;
+  
+   
     
     public boolean guardarDatos(){
         try {
             st = conexion.conectarBD().createStatement();
             String sql = "insert into evaluaciones_empacadora (id_semana, id_finca, codigo, fecha, pdo, vapor, tipo_caja, peso, destino, l_dedos, calibracion, fumigacion, transporte, observaciones) "
-                    + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                    + " values ('"+this.semana+"', '"+this.finca+"', '"+this.codigo+"', '"+this.fecha+"', '"+this.pedido+"', '"+this.vapor
+                    +"', '"+this.tipo_caja+"', ?, ?, ?, ?, ?, ?, ?);";
             
             st.executeUpdate(sql);
             st.close();

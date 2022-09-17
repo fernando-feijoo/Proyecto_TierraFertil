@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/C:/Users/chuchei/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo3/Vista_Llegada.java</file>
             <file>file:/C:/Users/chuchei/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Datos_Llegada.java</file>
 =======
@@ -11,6 +12,13 @@
             <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
             <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Contenedores.java</file>
 >>>>>>> d14daa0bf4b83239187bc70adfe610354e1f42e3
+=======
+            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo3/Controlador_Datos_Llegada.java</file>
+            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
+            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Datos_Llegada.java</file>
+            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Contenedores.java</file>
+            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Modelo_Conexion.java</file>
+>>>>>>> d73840dc493bbe6adeb0a4f1229a4b284ca88fb0
         </group>
     </open-files>
 </project-private>

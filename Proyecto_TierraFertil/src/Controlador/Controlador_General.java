@@ -18,6 +18,7 @@ import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
 import Vista.Grupo2.Vis_evaluacion;
 import Vista.Grupo2.Vista_Menu_Calidad;
+import Vista.Grupo3.Vista_Home;
 import Vista.Grupo3.Vista_Llegada;
 import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Vista_General;
@@ -59,6 +60,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Evaluacion controlEvaluacion = new Controlador_Evaluacion(vistaEvaluacion);
     //  GRUPO 3
     Vista_Llegada vistaLlegada = new Vista_Llegada();
+    Vista_Home vistaHome = new Vista_Home();
     Controlador_Datos_Llegada controlDatosLlegada = new Controlador_Datos_Llegada(vistaLlegada);
     Controlador_Despacho controlDespacho = new Controlador_Despacho(vistaLlegada);
     Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
@@ -141,10 +143,14 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaMenuCalidad.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 3")) {
+                
                 this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
+                this.vistaGeneral.jp_escritorio_general.add(vistaHome);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
+                this.vistaHome.setVisible(true);
                 this.vistaMenuCampo.setVisible(false);
                 this.vistaMenuCalidad.setVisible(false);
+                this.vistaHome.setBorder(null);
                 this.vistaMenuAcopio.setBorder(null);
                 this.vistaMenuAcopio.setVisible(true);
             }
@@ -199,6 +205,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno) {
             this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
             this.vistaLlegada.setBorder(null);
+            this.vistaHome.setVisible(false);
             this.vistaLlegada.setVisible(true);
             //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
             if (temp != 0) {

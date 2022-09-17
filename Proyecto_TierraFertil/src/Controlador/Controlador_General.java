@@ -1,5 +1,6 @@
 package Controlador;
 
+import Controlador.Grupo2.Controlador_Evaluacion;
 import Controlador.Grupo2.Controlador_Menu;
 import Controlador.Grupo3.Controlador_Datos_Llegada;
 import Controlador.Grupo3.Controlador_Despacho;
@@ -7,6 +8,12 @@ import Controlador.Grupo3.Controlador_Higiene_Contenedor;
 import Controlador.Grupo3.Controlador_Inspeccion_Contenedor;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Controlador.Grupo3.Controlador_Paletizado;
+import Modelo.Grupo3.Modelo_Contenedores;
+import Modelo.Grupo3.Modelo_Datos_Llegada;
+import Modelo.Grupo3.Modelo_Despacho;
+import Modelo.Grupo3.Modelo_Higiene_Contenedor;
+import Modelo.Grupo3.Modelo_Inspeccion_Contenedor;
+import Modelo.Grupo3.Modelo_Paletizado;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
 import Vista.Grupo2.Vis_evaluacion;
@@ -49,7 +56,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     
     //  GRUPO 2
     Vis_evaluacion vistaEvaluacion = new Vis_evaluacion();
-    
+    Controlador_Evaluacion controlEvaluacion = new Controlador_Evaluacion(vistaEvaluacion);
     //  GRUPO 3
     Vista_Llegada vistaLlegada = new Vista_Llegada();
     Controlador_Datos_Llegada controlDatosLlegada = new Controlador_Datos_Llegada(vistaLlegada);
@@ -57,6 +64,13 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
     Controlador_Inspeccion_Contenedor controlInspeccion = new Controlador_Inspeccion_Contenedor(vistaLlegada);
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
+    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
+    Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
+    Modelo_Despacho modeloDespacho = new Modelo_Despacho();
+    Modelo_Higiene_Contenedor modeloHigiCont = new Modelo_Higiene_Contenedor();
+    Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
+    Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
+    public static int temp = 1;
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -69,7 +83,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Color colorNormalOscuro = new Color(204,204,204);
     //  Variables locales para usar en vista general de la clase.
     int xMouse, yMouse, contTemp = 0;
-
     //  Fin de variables locales de case.
     public Controlador_General(Vista_General vistaGeneral) {
         this.vistaGeneral = vistaGeneral;
@@ -88,13 +101,14 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
-        
+        this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
         // Grupo 3
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
         this.vistaLlegada.boton_home.addMouseListener(this);
+        this.vistaLlegada.btn_guardar.addMouseListener(this);
         this.vistaLlegada.addComponentListener(this);
         //  Area de pruebas para los metodos a ejecutar en el constructor.
         this.menuRoles();
@@ -187,15 +201,30 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaLlegada.setBorder(null);
             this.vistaLlegada.setVisible(true);
             //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
-                this.controlDatosLlegada.idContenedor++;
-                System.out.println("Dato heredado General: " + this.controlDatosLlegada.idContenedor);
-                this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor);
+            if (temp != 0) {
+                this.controlDatosLlegada.idEntidadContenedores();
+                this.controlDatosLlegada.idEntidadDatosLlegada();
                 
+                System.out.println("General 1: " + this.controlDatosLlegada.idContenedor + " , " + this.controlDatosLlegada.idDatosLlegada);
+                this.controlDatosLlegada.idContenedor++;
+                this.controlDatosLlegada.idDatosLlegada++;
+                
+                this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
+                
+                System.out.println("General 2+: " + this.controlDatosLlegada.idContenedor + " , " + this.controlDatosLlegada.idDatosLlegada);
+                temp = 0;
+            }   
+            
             //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
         }
+        if (me.getSource() == this.vistaLlegada.btn_guardar) {
+            temp = 1;
+        }
             //  G3 Oculta el escritorio y muestra el principal, falta implementar la vista principal.
+            //  Tambien restrablece el valor 0 al opcionClick para que valide los colores.
         if (me.getSource() == this.vistaLlegada.boton_home) {
             this.vistaLlegada.dispose();
+            this.controladorMenuAcopio.opcionClick(0);
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
     }

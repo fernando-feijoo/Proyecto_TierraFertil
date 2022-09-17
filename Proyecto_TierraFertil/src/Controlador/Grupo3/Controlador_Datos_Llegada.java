@@ -26,9 +26,6 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         this.vistaLlegada.btn_siguiente_llegada.addMouseListener(this);
         //  Con este podemos hacer el guardado cuando se oculta esta ventana.
         this.vistaLlegada.jp_opcion_DatosLlegada.addComponentListener(this);
-        this.idEntidadContenedores();
-        this.idEntidadDatosLlegada();
-        System.out.println("Activado Controlador Llegada");
     }
     
     public void idEntidadContenedores (){
@@ -37,7 +34,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
             while (rs.next()) {
                 idContenedor = Integer.parseInt(rs.getString("id_contenedor"));
             }
-            System.out.println("Dato Contenedor Controlador: " + idContenedor);
+            System.out.println("id Entidad Contenedor ControladorDatosLLegada: " + idContenedor);
         } catch (SQLException ex) {
             System.out.println("Error de consulta y almacenamiento: " + ex);
         }
@@ -45,11 +42,11 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     
     public void idEntidadDatosLlegada (){
         try {
-            rs = modeloContenedor.consultaID_contenedor();
+            rs = modeloDatosLlegada.consultaID_entidadDatosLlegada();
             while (rs.next()) {
-                idDatosLlegada = Integer.parseInt(rs.getString("id_contenedor"));
+                idDatosLlegada = Integer.parseInt(rs.getString("id_tablaDatosLlegada"));
             }
-            System.out.println("DatosLlegada Controlador: " + idDatosLlegada);
+            System.out.println("id Entidad Llegada ControladorDatosLLegada: " + idDatosLlegada);
         } catch (SQLException ex) {
             System.out.println("Error de consulta y almacenamiento: " + ex);
         }
@@ -60,7 +57,9 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     public void autoIncrementarID_Entidades(int herenciaUno, int herenciaDos){
         this.idContenedor = herenciaUno;
         this.idDatosLlegada = herenciaDos;
-        System.out.println("ValorTemp: " + idContenedor);
+        System.out.println("ValorHerencia: " + idContenedor + " , " + idDatosLlegada);
+//        SimpleDateFormat formatoP = new SimpleDateFormat("dd/MM/yyyy");
+//        this.vistaLlegada.datosLlegada_fechaInsp.setDate(formatoP.format(28/09/2022).toDate);
     }
     
     public void guardarDatosLlegada(){
@@ -136,6 +135,8 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
             //  Para ejecutar guardar al cambiar de pestaña por click en siguiente o pestaña.
             System.out.println("Ingreso Opcion. HIDE");
             this.guardarDatosLlegada();
+            
+            System.out.println("ValorSiguiente: " + idContenedor + " , " + idDatosLlegada);
         }
     }
 }

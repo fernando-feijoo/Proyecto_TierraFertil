@@ -29,6 +29,7 @@ public class Modelo_Datos_Llegada {
 
     public ResultSet consultaID_entidadDatosLlegada() {
         try {
+            System.out.println("Consulta id entidad Llegada... BD Modelo, " + this.id);
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT COALESCE(MAX(id), 0) AS \"id_tablaDatosLlegada\" FROM datos_llegada;";
             rs = st.executeQuery(sql);

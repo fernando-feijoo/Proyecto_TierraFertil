@@ -27,6 +27,7 @@ public class Modelo_Contenedores {
     
     public ResultSet consultaID_contenedor() {
         try {
+            System.out.println("Consulta id contenedor... BD Modelo, " + this.id);
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT COALESCE(MAX(id), 0) AS id_contenedor FROM contenedores;";
             rs = st.executeQuery(sql);

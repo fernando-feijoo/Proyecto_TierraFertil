@@ -71,7 +71,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         this.idDatosLlegada = herenciaDos;
         System.out.println("ValorHerencia: " + idContenedor + " , " + idDatosLlegada);
     }
-
+    
     public void almacenarDatosLlegada() {
         //  Hacemos este tryCatch por si no colocan fecha en algun campo, eso genera exepciones.
         try {

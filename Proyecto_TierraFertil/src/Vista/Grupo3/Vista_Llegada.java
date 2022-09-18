@@ -1910,7 +1910,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         txt_residuos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txt_residuos.setForeground(new java.awt.Color(0, 0, 0));
         txt_residuos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt_residuos.setText("Residuios químicos");
+        txt_residuos.setText("Residuos químicos");
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);

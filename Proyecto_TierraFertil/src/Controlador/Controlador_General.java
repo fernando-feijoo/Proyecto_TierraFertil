@@ -1,6 +1,9 @@
 package Controlador;
 
 import Controlador.Grupo2.Controlador_Evaluacion_Datos;
+import Controlador.Grupo2.Controlador_Evaluacion_Defectos;
+import Controlador.Grupo2.Controlador_Evaluacion_Tabulacion;
+import Controlador.Grupo2.Controlador_Listado_Menu;
 import Controlador.Grupo2.Controlador_Menu_General;
 import Controlador.Grupo3.Controlador_Datos_Llegada;
 import Controlador.Grupo3.Controlador_Despacho;
@@ -58,6 +61,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     //  GRUPO 2
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     Controlador_Evaluacion_Datos controlEvaluacion = new Controlador_Evaluacion_Datos(vistaEvaluacion);
+    Controlador_Evaluacion_Tabulacion controlaEvaTabu = new Controlador_Evaluacion_Tabulacion(vistaEvaluacion);
+    Controlador_Evaluacion_Defectos controlEvaDefec = new Controlador_Evaluacion_Defectos(vistaEvaluacion);
+//    Controlador_Listado_Menu controladorLisMenu = new Controlador_Listado_Menu(vistaEvaluacion);
     //  GRUPO 3
     Vista_Llegada vistaLlegada = new Vista_Llegada();
     Vista_Home vistaHome = new Vista_Home();
@@ -217,7 +223,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.controlDatosLlegada.idDatosLlegada++;
                 
                 this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
-                
+                this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor);
                 System.out.println("General 2+: " + this.controlDatosLlegada.idContenedor + " , " + this.controlDatosLlegada.idDatosLlegada);
                 temp = 0;
             }   

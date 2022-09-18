@@ -6,11 +6,10 @@
         <group/>
 =======
         <group>
+            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Vista_General.java</file>
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo3/Controlador_Datos_Llegada.java</file>
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
-            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Datos_Llegada.java</file>
-            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Contenedores.java</file>
-            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Modelo_Conexion.java</file>
+            <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_Login.java</file>
         </group>
 >>>>>>> d73840dc493bbe6adeb0a4f1229a4b284ca88fb0
     </open-files>

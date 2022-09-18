@@ -1,9 +1,9 @@
 package Controlador.Grupo2;
 
 //importaciones de la vista
-import Vista.Grupo2.Vista_Listado;
+import Vista.Grupo2.Vista_Listado_Menu;
 import Vista.Grupo2.Vista_Menu_Calidad;
-import Vista.Grupo2.Vis_evaluacion;
+import Vista.Grupo2.Vista_Evaluacion_Total;
 //importaciones del controlador
 
 import java.awt.event.MouseEvent;
@@ -11,24 +11,22 @@ import java.awt.Color;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 
-public class Controlador_Menu implements MouseListener {
+public class Controlador_Menu_General implements MouseListener {
 
     Vista_Menu_Calidad vistaMenu;
-    Vis_evaluacion vistaEvaluacion = new Vis_evaluacion();
-    Vista_Listado vistaListado = new Vista_Listado();
+    Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
+    Vista_Listado_Menu vistaListado = new Vista_Listado_Menu();
     
     //Colores para eventos con el mouse
     Color colorNormal = new Color(247, 246, 246);
-    Color colorUsuarioSeleccion = new Color(223, 238, 255);
+    Color colorSeleccionMinimizar = new Color(133, 193, 233);
+    Color colorSeleccionExit = new Color(231, 76, 60);
+    Color colorUsuarioSeleccion = new Color(223,238,255);
+    Color colorNormalOscuro = new Color(204,204,204);
 
-    public Controlador_Menu(Vista_Menu_Calidad vistaMenu) {
+    public Controlador_Menu_General(Vista_Menu_Calidad vistaMenu) {
         this.vistaMenu = vistaMenu;
-        //componentes de la vistaMenu de daniel
-        
-        /*componentes de la vistaGeneral de Fernando +
-            uso de su vista mas la mia para la visualización de vistaMenu
-                en su vistageneral.
-         */
+  
     }
 
     @Override

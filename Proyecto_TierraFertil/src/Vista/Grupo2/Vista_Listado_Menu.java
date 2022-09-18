@@ -8,12 +8,12 @@ package Vista.Grupo2;
  *
  * @author Daniel Bravo
  */
-public class Vista_Listado extends javax.swing.JInternalFrame {
+public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Vista_Listado
      */
-    public Vista_Listado() {
+    public Vista_Listado_Menu() {
         initComponents();
     }
 

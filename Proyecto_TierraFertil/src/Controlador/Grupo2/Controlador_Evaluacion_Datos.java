@@ -1,8 +1,8 @@
 package Controlador.Grupo2;
 
-import Vista.Grupo2.Vis_evaluacion;
+import Vista.Grupo2.Vista_Evaluacion_Total;
 import Modelo.Modelo_Conexion;
-import Modelo.Grupo2.Modeo_Evaluacion_Calidad;
+import Modelo.Grupo2.Modelo_Evaluacion_Datos;
 import com.sun.media.sound.ModelOscillator;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,12 +14,12 @@ import javax.swing.JTextField;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 
-public class Controlador_Evaluacion implements ActionListener, AncestorListener, MouseListener {
+public class Controlador_Evaluacion_Datos implements ActionListener, AncestorListener, MouseListener {
 
-    Vis_evaluacion vistaEvaluacion = new Vis_evaluacion();
-    Modeo_Evaluacion_Calidad modeloEvaluacionCalidad = new Modeo_Evaluacion_Calidad();
+    Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
+    Modelo_Evaluacion_Datos modeloEvaluacionCalidad = new Modelo_Evaluacion_Datos();
 
-    public Controlador_Evaluacion(Vis_evaluacion vistaEvaluacion) {
+    public Controlador_Evaluacion_Datos(Vista_Evaluacion_Total vistaEvaluacion) {
         this.vistaEvaluacion = vistaEvaluacion;
 
         //Botones de datos
@@ -77,7 +77,7 @@ public class Controlador_Evaluacion implements ActionListener, AncestorListener,
                     boolean auxiliar = modeloEvaluacionCalidad.guardarDatos();
                     if (auxiliar = true) {
                         System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
-                        JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente" +e, "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
 
                     }
 

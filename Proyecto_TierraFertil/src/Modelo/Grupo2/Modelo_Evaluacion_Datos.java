@@ -1,3 +1,4 @@
+
 package Modelo.Grupo2;
 
 import Modelo.Modelo_Conexion;
@@ -5,9 +6,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-
-public class Modeo_Evaluacion_Calidad{
-    Modelo_Conexion conexion = new Modelo_Conexion();
+public class Modelo_Evaluacion_Datos {
+     Modelo_Conexion conexion = new Modelo_Conexion();
     ResultSet rs;
     Statement st;
     
@@ -30,19 +30,5 @@ public class Modeo_Evaluacion_Calidad{
         return false;
     }
     
-    public boolean guardarTabulacion(){
-        try {
-            st = conexion.conectarBD().createStatement();
-            String sql = "";
-            
-            st.execute(sql);
-            st.close();
- 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error en guardarTabulacion en Modelo_Evaluacion. "+e);
-        }
-        return false;
-        
-    }
     
 }

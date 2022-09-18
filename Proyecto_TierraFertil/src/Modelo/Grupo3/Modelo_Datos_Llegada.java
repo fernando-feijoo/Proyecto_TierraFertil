@@ -46,7 +46,7 @@ public class Modelo_Datos_Llegada {
         try {
             //  Luego se debe cambiar el id, por el de los datos a actualizar.
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT id, id_contenedor, fecha_insp, semana, fecha_hora_salida, hora_llegada, tipo_caja, "
+            String sql = "SELECT id, (SELECT codigo FROM contenedores WHERE id = id_contenedor) AS contenedor, fecha_insp, semana, fecha_hora_salida, hora_llegada, tipo_caja, "
                     + "cupo, placa, chasis, chofer_contenedor, cedula_chofer, nombre_finca, candados, sellos_internos, "
                     + "sellos_externos FROM datos_llegada WHERE id = 2;";
             rs = st.executeQuery(sql);

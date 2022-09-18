@@ -27,11 +27,11 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
     SimpleDateFormat formatoD = new SimpleDateFormat("dd/MM/yyyy");
     SimpleDateFormat formatoH = new SimpleDateFormat("HH:mm:ss");
 
-    ResultSet rs;
+    ResultSet rs, rsC;
     public static int idContenedor;
     public static int idDespacho;
     String filtro, termografo_seleccion, termografo, selloAdhesivo, selloVerificador, selloCandado, fechaSalida, horaSalida, selloCable,
-            compañiaTransportista, selloNaviero, vapor, destino, nombrePaletizadores, totalViajar, cajas, cantidadPallet;
+            compañiaTransportista, selloNaviero, vapor, destino, nombrePaletizadores, totalViajar, cajas, cantidadPallet , observacion;
 
     public Controlador_Despacho(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
@@ -120,16 +120,13 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
             totalViajar = this.vistaLlegada.despacho_total_viajar.getText();
             cajas = this.vistaLlegada.despacho_cajas_total.getText();
             cantidadPallet = this.vistaLlegada.despacho_cajas_total.getText();
+            observacion = this.vistaLlegada.despacho_observaciones.getText();
         } catch (Exception e) {
             System.out.println("Error faltan campos fecha u hora: " + e);
 
         }
 
-        System.out.println(horaSalida);
-        System.out.println(fechaSalida);
-        System.out.println(ObtenerFiltro());
-        System.out.println(ObtenerTermografo());
-
+       
     }
 
     public void enviarDatosDespacho() {
@@ -152,25 +149,36 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
         this.modeloDespacho.total_viajar = totalViajar;
         this.modeloDespacho.cajas = cajas;
         this.modeloDespacho.cantidad_pallets = cantidadPallet;
+        this.modeloDespacho.observacion = observacion;
     }
 
     public void guardarContenedor() {
         this.modeloContenedor.id = idContenedor;
     }
 
-    public void cargarDatosLlegada() {
+    public void cargarDatosDespacho() {
         //  Con este codigo solucionamos el colocar la fecha en el campo fecha de libreria jcalendar 1.4 y tambien la hora.
-        Date datoSQLFecha;
-        Date datosHora;
+       rsC = modeloDespacho.consultaID_entidadDespacho();
         try {
-            datoSQLFecha = formatoD.parse("28/09/1995");
-            this.vistaLlegada.datosLlegada_fechaInsp.setDate(datoSQLFecha);
-
-            datosHora = formatoH.parse("05:10:59");
-            this.vistaLlegada.datosLlegada_horaLlegada.setValue(datosHora);
-        } catch (ParseException ex) {
-            Logger.getLogger(Controlador_Datos_Llegada.class.getName()).log(Level.SEVERE, null, ex);
+           while (rsC.next()){
+               this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo"));
+               
+           }
+        } catch (Exception e) {
+            System.out.println("Error al cargar componentes Modelo_Datos_Despacho: " + e);
         }
+    }
+    
+    
+    public Date funcionFecha_Formato(String x) {
+        Date datoSQLFecha;
+        try {
+            datoSQLFecha = formatoD.parse(x);
+            return datoSQLFecha;
+        } catch (ParseException ex) {
+            System.out.println("Error al convertir fecha: " + ex);
+        }
+        return null;
     }
 
     @Override

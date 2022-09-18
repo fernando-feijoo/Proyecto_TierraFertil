@@ -12,8 +12,6 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Controlador_Datos_Llegada implements MouseListener, ComponentListener {
 
@@ -34,6 +32,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     public Controlador_Datos_Llegada(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_llegada.addMouseListener(this);
+        this.vistaLlegada.boton_home.addMouseListener(this);
         //  Con este podemos hacer el guardado cuando se oculta esta ventana.
         this.vistaLlegada.jp_opcion_DatosLlegada.addComponentListener(this);
 
@@ -138,30 +137,85 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     }
 
     public void cargarDatosLlegada() {
-        String sellosInternos, sellosExternos;
+        String sellosInternos = "", sellosExternos = "";
         rsC = modeloDatosLlegada.consultaDatos_entidadDatosLlegada();
         try {
             while (rsC.next()) {
-            this.vistaLlegada.datosLlegada_fechaInsp.setDate(funcionFecha_Formato(rsC.getString("fecha_insp")));
-            this.vistaLlegada.datosLlegada_semana.setValue(Integer.parseInt(rsC.getString("semana")));
-            this.vistaLlegada.datosLlegada_fechaSalida.setDate(funcionFecha_Formato(rsC.getString("fecha_hora_salida").substring(0 , 10)));
-            this.vistaLlegada.datosLlegada_horaSalida.setValue(funcionHora_Formato(rsC.getString("fecha_hora_salida").substring(11 , 19)));
-            this.vistaLlegada.datosLlegada_horaLlegada.setValue(funcionHora_Formato(rsC.getString("hora_llegada")));
-            this.vistaLlegada.datosLlegada_tipocaja.setText(rsC.getString("tipo_caja"));
-            this.vistaLlegada.datosLlegada_cupo.setText(rsC.getString("cupo"));
-//            this.vistaLlegada.datosLlegada_contenedor.setText(rsC.getString("CORERGIR SELECT JOIN"));
-            this.vistaLlegada.datosLlegada_placa.setText(rsC.getString("placa"));
-            this.vistaLlegada.datosLlegada_chasis.setText(rsC.getString("chasis"));
-            this.vistaLlegada.datosLlegada_chofer.setText(rsC.getString("chofer_contenedor"));
-            this.vistaLlegada.datosLlegada_ci.setText(rsC.getString("cedula_chofer"));
-            this.vistaLlegada.datosLlegada_nombrefinca.setText(rsC.getString("nombre_finca"));
-            this.vistaLlegada.datosLlegada_candadosllegada.setText(rsC.getString("candados"));
-            sellosInternos = rsC.getString("sellos_internos");
-            sellosExternos = rsC.getString("sellos_externos");
+                this.vistaLlegada.datosLlegada_fechaInsp.setDate(funcionFecha_Formato(rsC.getString("fecha_insp")));
+                this.vistaLlegada.datosLlegada_semana.setValue(Integer.parseInt(rsC.getString("semana")));
+                this.vistaLlegada.datosLlegada_fechaSalida.setDate(funcionFecha_Formato(rsC.getString("fecha_hora_salida").substring(0, 10)));
+                this.vistaLlegada.datosLlegada_horaSalida.setValue(funcionHora_Formato(rsC.getString("fecha_hora_salida").substring(11, 19)));
+                this.vistaLlegada.datosLlegada_horaLlegada.setValue(funcionHora_Formato(rsC.getString("hora_llegada")));
+                this.vistaLlegada.datosLlegada_tipocaja.setText(rsC.getString("tipo_caja"));
+                this.vistaLlegada.datosLlegada_cupo.setText(rsC.getString("cupo"));
+                this.vistaLlegada.datosLlegada_contenedor.setText(rsC.getString("contenedor"));
+                this.vistaLlegada.datosLlegada_placa.setText(rsC.getString("placa"));
+                this.vistaLlegada.datosLlegada_chasis.setText(rsC.getString("chasis"));
+                this.vistaLlegada.datosLlegada_chofer.setText(rsC.getString("chofer_contenedor"));
+                this.vistaLlegada.datosLlegada_ci.setText(rsC.getString("cedula_chofer"));
+                this.vistaLlegada.datosLlegada_nombrefinca.setText(rsC.getString("nombre_finca"));
+                this.vistaLlegada.datosLlegada_candadosllegada.setText(rsC.getString("candados"));
+                sellosInternos = rsC.getString("sellos_internos");
+                sellosExternos = rsC.getString("sellos_externos");
             }
-            
+            /*  
+                Con este tipo de dato lo dividimos con el .split donde damos el tipo de dato de division y cuantos 
+                hay, no es obligatorio el ultimo dato.
+             */
+            String[] dataI = sellosInternos.split(";", 3);
+            String[] dataE = sellosExternos.split(";", 9);
+            //  --> Datos Internos
+            this.vistaLlegada.datosLlegada_sellosInternos_1.setText(dataI[0]);
+            this.vistaLlegada.datosLlegada_sellosInternos_2.setText(dataI[1]);
+            this.vistaLlegada.datosLlegada_sellosInternos_3.setText(dataI[2]);
+            //  --> Datos Externos
+            this.vistaLlegada.datosLlegada_sellosExtrenos_1.setText(dataE[0]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_2.setText(dataE[1]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_3.setText(dataE[2]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_4.setText(dataE[3]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_5.setText(dataE[4]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_6.setText(dataE[5]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_7.setText(dataE[6]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_8.setText(dataE[7]);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_9.setText(dataE[8]);
+
         } catch (Exception e) {
             System.out.println("Error al cargar componentes Modelo_Datos_LLegada: " + e);
+        }
+    }
+
+    public void borrarCamposDatosLlegada() {
+        try {
+            this.vistaLlegada.datosLlegada_fechaInsp.setDate(null);
+            this.vistaLlegada.datosLlegada_semana.setValue(0);
+            this.vistaLlegada.datosLlegada_fechaSalida.setDate(null);
+            this.vistaLlegada.datosLlegada_horaSalida.setValue(funcionHora_Formato("00:00:00"));
+            this.vistaLlegada.datosLlegada_horaLlegada.setValue(funcionHora_Formato("00:00:00"));
+            this.vistaLlegada.datosLlegada_tipocaja.setText(null);
+            this.vistaLlegada.datosLlegada_cupo.setText(null);
+            this.vistaLlegada.datosLlegada_contenedor.setText(null);
+            this.vistaLlegada.datosLlegada_placa.setText(null);
+            this.vistaLlegada.datosLlegada_chasis.setText(null);
+            this.vistaLlegada.datosLlegada_chofer.setText(null);
+            this.vistaLlegada.datosLlegada_ci.setText(null);
+            this.vistaLlegada.datosLlegada_nombrefinca.setText(null);
+            this.vistaLlegada.datosLlegada_candadosllegada.setText(null);
+            //  --> Datos Internos
+            this.vistaLlegada.datosLlegada_sellosInternos_1.setText(null);
+            this.vistaLlegada.datosLlegada_sellosInternos_2.setText(null);
+            this.vistaLlegada.datosLlegada_sellosInternos_3.setText(null);
+            //  --> Datos Externos
+            this.vistaLlegada.datosLlegada_sellosExtrenos_1.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_2.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_3.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_4.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_5.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_6.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_7.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_8.setText(null);
+            this.vistaLlegada.datosLlegada_sellosExtrenos_9.setText(null);
+        } catch (Exception e) {
+            System.out.println("Error de borrado: " + e);
         }
     }
 
@@ -211,9 +265,15 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
             this.almacenarDatosLlegada();
             this.enviarDatosLLegada();
             this.guardarContenedor();
+
+            this.cargarDatosLlegada();
+
             this.modeloContenedor.guardarContenedorDatos();
             this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
 
+        }
+        if (me.getSource() == this.vistaLlegada.boton_home) {
+            this.borrarCamposDatosLlegada();
         }
     }
 
@@ -258,7 +318,6 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
             this.guardarContenedor();
             this.modeloDatosLlegada.pruebaGuardado();
             this.modeloContenedor.pruebaGuardado();
-            this.cargarDatosLlegada();
             System.out.println("ValorSiguiente: " + idContenedor + " , " + idDatosLlegada);
         }
 

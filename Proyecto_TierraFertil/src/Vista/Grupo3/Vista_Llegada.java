@@ -185,6 +185,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         btn_siguiente_inspCont = new Recursos_Codigo.Redondeado();
         jLabel91 = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
+        jPanel116 = new javax.swing.JPanel();
+        jLabel100 = new javax.swing.JLabel();
+        inspCont_obseraciones = new javax.swing.JTextField();
         jp_opcion_HiegieneContenedor = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         Table = new javax.swing.JPanel();
@@ -1822,7 +1825,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel32.add(jPanel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 111, 30));
 
         panel_inspeccion.add(jPanel32);
-        jPanel32.setBounds(24, 60, 331, 360);
+        jPanel32.setBounds(24, 50, 331, 360);
 
         btn_siguiente_inspCont.setBackground(new java.awt.Color(255, 255, 255));
         btn_siguiente_inspCont.setPreferredSize(new java.awt.Dimension(120, 32));
@@ -1842,6 +1845,23 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         panel_inspeccion.add(btn_siguiente_inspCont);
         btn_siguiente_inspCont.setBounds(808, 427, 120, 32);
+
+        jPanel116.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel116.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel100.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel100.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel100.setText("OBSERVACIONES:");
+        jPanel116.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, 30));
+
+        inspCont_obseraciones.setBackground(new java.awt.Color(255, 255, 255));
+        inspCont_obseraciones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        inspCont_obseraciones.setForeground(new java.awt.Color(0, 0, 0));
+        inspCont_obseraciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel116.add(inspCont_obseraciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 0, 645, 30));
+
+        panel_inspeccion.add(jPanel116);
+        jPanel116.setBounds(20, 427, 774, 30);
 
         javax.swing.GroupLayout jp_opcion_InspeccionContendorLayout = new javax.swing.GroupLayout(jp_opcion_InspeccionContendor);
         jp_opcion_InspeccionContendor.setLayout(jp_opcion_InspeccionContendorLayout);
@@ -4253,8 +4273,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JCheckBox inspCont_check_puertas1;
     public javax.swing.JCheckBox inspCont_check_techo6;
     public javax.swing.JCheckBox inspCont_check_tornillo10;
+    public javax.swing.JTextField inspCont_obseraciones;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
+    public javax.swing.JLabel jLabel100;
     public javax.swing.JLabel jLabel11;
     public javax.swing.JLabel jLabel12;
     public javax.swing.JLabel jLabel13;
@@ -4371,6 +4393,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JPanel jPanel113;
     public javax.swing.JPanel jPanel114;
     public javax.swing.JPanel jPanel115;
+    public javax.swing.JPanel jPanel116;
     public javax.swing.JPanel jPanel12;
     public javax.swing.JPanel jPanel13;
     public javax.swing.JPanel jPanel14;

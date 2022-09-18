@@ -8,7 +8,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 
@@ -19,7 +21,6 @@ public class Controlador_Evaluacion implements ActionListener, AncestorListener,
 
     public Controlador_Evaluacion(Vis_evaluacion vistaEvaluacion) {
         this.vistaEvaluacion = vistaEvaluacion;
-
 
         //Botones de datos
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
@@ -46,10 +47,13 @@ public class Controlador_Evaluacion implements ActionListener, AncestorListener,
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaEvaluacion.btn_siguiente) {
-            try {
 
-                System.out.println("Boton siguiente presionado");
-                
+            System.out.println("Boton siguiente presionado");
+
+            try {
+                // SimpleDateFormat formatoP = new SimpleDateFormat("dd/MM/yyyy");
+                // this.vistaLlegada.datosLlegada_fechaInsp.setDate(formatoP.format(28/09/2022).toDate);
+               
                 modeloEvaluacionCalidad.semana = (String) this.vistaEvaluacion.jcomb_semana.getSelectedItem();
                 modeloEvaluacionCalidad.finca = (String) this.vistaEvaluacion.jcom_finca.getSelectedItem();
                 modeloEvaluacionCalidad.calibracion = this.vistaEvaluacion.txt_calibracion.getText();
@@ -59,24 +63,27 @@ public class Controlador_Evaluacion implements ActionListener, AncestorListener,
                 modeloEvaluacionCalidad.pedido = this.vistaEvaluacion.txt_pedidos.getText();
                 modeloEvaluacionCalidad.tipo_caja = this.vistaEvaluacion.txt_tipoCaja.getText();
                 modeloEvaluacionCalidad.destino = this.vistaEvaluacion.txt_destino1.getText();
-                
                 modeloEvaluacionCalidad.codigo = this.vistaEvaluacion.txt_codigo.getText();
-                
-                
                 modeloEvaluacionCalidad.fumigacion = this.vistaEvaluacion.txt_fumigacion.getText();
                 modeloEvaluacionCalidad.destino2 = this.vistaEvaluacion.txt_destino2.getText();
-              int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
+                modeloEvaluacionCalidad.peso = this.vistaEvaluacion.txt_peso.getText();
+                modeloEvaluacionCalidad.observaciones = this.vistaEvaluacion.txt_observaciones.getText();
+
+                modeloEvaluacionCalidad.fecha = ((JTextField)this.vistaEvaluacion.jd_fecha.getDateEditor().getUiComponent()).getText();
+
+                int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
 
                 if (respuesta == 0) {
                     boolean auxiliar = modeloEvaluacionCalidad.guardarDatos();
                     if (auxiliar = true) {
                         System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
+                        JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
 
                     }
 
                 }
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(vistaEvaluacion, "Error al intentar guardar los DATOS. " + e);
+                JOptionPane.showMessageDialog(vistaEvaluacion, "Error al intentar guardar los DATOS. " + ex);
 
             }
 

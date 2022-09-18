@@ -57,7 +57,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         datosLlegada_semana = new com.toedter.components.JSpinField();
         jLabel7 = new javax.swing.JLabel();
-        salida_fechaHora = new com.toedter.calendar.JDateChooser();
+        datosLlegada_fechaSalida = new com.toedter.calendar.JDateChooser();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         datosLlegada_tipocaja = new javax.swing.JTextField();
@@ -471,9 +471,9 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("FECHA/HORA SALIDA PATIO:");
 
-        salida_fechaHora.setBackground(new java.awt.Color(255, 255, 255));
-        salida_fechaHora.setForeground(new java.awt.Color(0, 0, 0));
-        salida_fechaHora.setDateFormatString("dd/MM/yyyy");
+        datosLlegada_fechaSalida.setBackground(new java.awt.Color(255, 255, 255));
+        datosLlegada_fechaSalida.setForeground(new java.awt.Color(0, 0, 0));
+        datosLlegada_fechaSalida.setDateFormatString("dd/MM/yyyy");
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
@@ -581,7 +581,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addGap(60, 60, 60)
                 .addComponent(jLabel7)
                 .addGap(11, 11, 11)
-                .addComponent(salida_fechaHora, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datosLlegada_fechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addComponent(datosLlegada_horaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel8Layout.createSequentialGroup()
@@ -642,7 +642,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(datosLlegada_semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(salida_fechaHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datosLlegada_fechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(datosLlegada_horaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4184,6 +4184,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JTextField datosLlegada_contenedor;
     public javax.swing.JTextField datosLlegada_cupo;
     public com.toedter.calendar.JDateChooser datosLlegada_fechaInsp;
+    public com.toedter.calendar.JDateChooser datosLlegada_fechaSalida;
     public javax.swing.JSpinner datosLlegada_horaLlegada;
     public javax.swing.JSpinner datosLlegada_horaSalida;
     public javax.swing.JTextField datosLlegada_nombrefinca;
@@ -4494,7 +4495,6 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JTextField paletizado_pallet8;
     public javax.swing.JTextField paletizado_pallet9;
     public javax.swing.JPanel panel_inspeccion;
-    public com.toedter.calendar.JDateChooser salida_fechaHora;
     public javax.swing.JLabel txt_aceptable;
     public javax.swing.JLabel txt_contenedor_aceptable;
     public javax.swing.JLabel txt_drenajes;

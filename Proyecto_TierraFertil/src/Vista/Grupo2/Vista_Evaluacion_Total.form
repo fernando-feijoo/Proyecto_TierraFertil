@@ -68,7 +68,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" alignment="0" pref="585" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -103,25 +103,6 @@
                 <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel1">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Roboto" size="18" style="0"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Ingrese todos los datos solicitados."/>
-                  </Properties>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="100" y="32" width="-1" height="-1"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -133,11 +114,11 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Bienvenido al apartado de Evaluacion  PMCS"/>
+                    <Property name="text" type="java.lang.String" value="EVALUACION DE PCMS EN PLANTA EMPACADORA"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="18" y="4" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="260" y="30" width="-1" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -194,20 +175,6 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JSeparator" name="jSeparator1">
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="0" y="66" width="965" height="11"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator2">
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="0" y="480" width="960" height="10"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
                 <Container class="Recursos_Codigo.Redondeado" name="rd_contenedor">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -220,7 +187,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="6" y="91" width="-1" height="370"/>
+                      <AbsoluteConstraints x="40" y="70" width="880" height="420"/>
                     </Constraint>
                   </Constraints>
 
@@ -228,8 +195,8 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="71" max="32767" attributes="0"/>
-                              <Component id="jp_contenedorGrupo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jp_contenedorGrupo" min="-2" pref="811" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -258,85 +225,91 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jb_calibracion" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jb_vapor" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jb_fecha" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="txt_calibracion" max="32767" attributes="0"/>
-                                              <Component id="txt_vapor" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jd_fecha" alignment="0" pref="121" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Component id="jb_finca1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jb_transporte" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="txt_transporte" min="-2" pref="121" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace pref="25" max="32767" attributes="0"/>
-                                  <Component id="jSeparator10" min="-2" pref="15" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jb_tipoCaja" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jb_finca" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jb_pedidos" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jb_lDedos" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                                  <Component id="jcom_finca" min="-2" pref="122" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jb_calibracion" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_vapor" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_fecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txt_calibracion" max="32767" attributes="0"/>
+                                                      <Component id="txt_vapor" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jd_fecha" alignment="0" pref="121" max="32767" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="txt_pedidos" min="-2" pref="121" max="-2" attributes="0"/>
-                                                      <Component id="txt_tipoCaja" min="-2" pref="121" max="-2" attributes="0"/>
-                                                      <Component id="txt_dedos" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
-                                                      <Component id="jcomb_semana" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                                      <Component id="jb_transporte" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_finca1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="txt_peso" max="32767" attributes="0"/>
+                                                      <Component id="txt_transporte" min="-2" pref="121" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
+                                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                          <Component id="jSeparator10" min="-2" pref="15" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jb_tipoCaja" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_finca" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_pedidos" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jb_lDedos" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <EmptySpace max="32767" attributes="0"/>
+                                                          <Component id="txt_dedos" min="-2" pref="121" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                                  <Component id="txt_tipoCaja" pref="121" max="32767" attributes="0"/>
+                                                                  <Component id="js_finca" alignment="1" max="32767" attributes="0"/>
+                                                              </Group>
+                                                              <Component id="txt_pedidos" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jb_semana" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="js_semana" min="-2" pref="121" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jSeparator11" min="-2" pref="15" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jb_destino" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jb_codigo" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jb_fumigacion" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="txt_fumigacion" min="-2" pref="121" max="-2" attributes="0"/>
+                                              <Component id="txt_codigo" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
+                                              <Component id="txt_destino1" min="-2" pref="121" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Component id="jb_semana" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="jSeparator11" min="-2" pref="15" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jb_destino" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_codigo" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_fumigacion" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_destino2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txt_fumigacion" min="-2" pref="121" max="-2" attributes="0"/>
-                                      <Component id="txt_destino2" min="-2" pref="121" max="-2" attributes="0"/>
-                                      <Component id="txt_codigo" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
-                                      <Component id="txt_destino1" min="-2" pref="121" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jb_finca2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="txt_peso" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jb_finca2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txt_observaciones" min="-2" pref="694" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="txt_observaciones" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -365,11 +338,7 @@
                                                               <Component id="jb_fumigacion" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               <Component id="txt_fumigacion" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="3" attributes="0">
-                                                              <Component id="jb_destino2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="txt_destino2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
+                                                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" attributes="0">
                                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -398,7 +367,7 @@
                                                           </Group>
                                                       </Group>
                                                   </Group>
-                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <EmptySpace type="separate" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jb_finca1" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="txt_peso" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -412,27 +381,27 @@
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jb_semana" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jcomb_semana" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="js_semana" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jb_lDedos" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="txt_dedos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_lDedos" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jb_pedidos" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="txt_pedidos" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="txt_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jb_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jb_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="txt_tipoCaja" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jcom_finca" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jb_finca" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="js_finca" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -441,12 +410,12 @@
                                           <Component id="jSeparator10" min="-2" pref="265" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="34" max="32767" attributes="0"/>
+                                  <EmptySpace pref="61" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jb_finca2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txt_observaciones" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -530,23 +499,6 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="SEMANA:"/>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JComboBox" name="jcomb_semana">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="3">
-                                <StringItem index="0" value="1"/>
-                                <StringItem index="1" value="2"/>
-                                <StringItem index="2" value="3"/>
-                              </StringArray>
-                            </Property>
-                          </Properties>
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                          </AuxValues>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jb_lDedos">
                           <Properties>
@@ -646,25 +598,7 @@
                             <Property name="text" type="java.lang.String" value="FUMIGACION:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jb_destino2">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="DESTINO:"/>
-                          </Properties>
-                        </Component>
                         <Component class="javax.swing.JTextField" name="txt_fumigacion">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txt_destino2">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Roboto" size="12" style="0"/>
@@ -684,23 +618,6 @@
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JComboBox" name="jcom_finca">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="3">
-                                <StringItem index="0" value="1"/>
-                                <StringItem index="1" value="2"/>
-                                <StringItem index="2" value="3"/>
-                              </StringArray>
-                            </Property>
-                          </Properties>
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                          </AuxValues>
                         </Component>
                         <Component class="com.toedter.calendar.JDateChooser" name="jd_fecha">
                           <Properties>
@@ -761,6 +678,10 @@
                               <Font name="Roboto" size="12" style="0"/>
                             </Property>
                           </Properties>
+                        </Component>
+                        <Component class="javax.swing.JSpinner" name="js_semana">
+                        </Component>
+                        <Component class="javax.swing.JSpinner" name="js_finca">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -823,7 +744,7 @@
                                       <Component id="redondeado6" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="24" max="32767" attributes="0"/>
+                              <EmptySpace pref="22" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>

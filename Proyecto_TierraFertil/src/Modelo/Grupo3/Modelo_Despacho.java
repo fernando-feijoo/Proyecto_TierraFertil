@@ -14,11 +14,11 @@ public class Modelo_Despacho {
     public String filtro, termografo, termografo_numero, sello_adhesivo, sello_verificador, sello_candado, fecha_salidad, hora_salida, sello_cable, compañia_transportista, sello_naviero,
             vapor, destino, nombre_paletizadores, total_viajar, cajas, cantidad_pallets, observacion;
 
-    public boolean guardar_Despacho() {
+    public void guardar_Despacho() {
         try {
             st = conexion.conectarBD().createStatement();
 
-            String sql = "SELECT \"insertarDatosDespacho\"(" + id + ", " + id_contenedor + ",'" + filtro + "','" + termografo + "','" + termografo_numero + "','" + sello_adhesivo + "','" + sello_verificador + "','" + sello_candado + ",'" + (fecha_salidad + "" + hora_salida) + "','" + sello_cable + "', "
+            String sql = "SELECT \"insertarDatosDespacho\"(" + id + ", " + id_contenedor + ",'" + filtro + "','" + termografo + "','" + termografo_numero + "','" + sello_adhesivo + "','" + sello_verificador + "','" + sello_candado + "','" + (fecha_salidad + " " + hora_salida) + "','" + sello_cable + "', "
                     + "'" + compañia_transportista + "','" + sello_naviero + "','" + vapor + "','" + destino + "','" + nombre_paletizadores + "','" + total_viajar + "','" + cajas + "','" + cantidad_pallets + "','" + observacion + "')";
 
             st.executeUpdate(sql);
@@ -27,14 +27,14 @@ public class Modelo_Despacho {
         } catch (Exception e) {
             System.out.println("Error al tratar guardar los datos de llegada del contenedor " + e);
         }
-        return true;
+        
     }
 
     public ResultSet consultaID_entidadDespacho() {
         try {
 
             st = conexion.conectarBD().createStatement();
-            String sql = " String sql = \"SELECT COALESCE(MAX(id), 0) AS \\\"id_tablaDatosDespacho\\\" FROM datos_despacho;\"+ ";
+            String sql ="SELECT COALESCE(MAX(id), 0) AS \"id_tablaDatosDespacho\" FROM datos_despacho;";
             rs = st.executeQuery(sql);
             st.close();
             System.out.println("Consulta id entidad Despacho... BD Modelo, " + this.id);
@@ -50,7 +50,7 @@ public class Modelo_Despacho {
             st = conexion.conectarBD().createStatement();
             String sql = "Select id,id_contenedor,filtro,termografo,termografo_numero,sello_adhesivo,sello_verificador,sello_exp_candado,\n"
                     + "fecha_hora_salida,sello_exp_cable,compania_transportista,sello_naviero,vapor,destino,nombre_paletizadores,total_viajar,\n"
-                    + "cajas,cant_palet,observacion from datos_despacho where id = 2;";
+                    + "cajas,cant_palet,observacion from datos_despacho where id = 1;";
             rs = st.executeQuery(sql);
             st.close();
             System.out.println("Consulta id entidad despacho... BD Modelo, " + id);

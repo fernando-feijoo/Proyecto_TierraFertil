@@ -7,6 +7,8 @@ import Modelo.Grupo3.Modelo_Despacho;
 import Vista.Grupo3.Vista_Llegada;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
@@ -17,7 +19,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Controlador_Despacho implements MouseListener, ComponentListener {
+public class Controlador_Despacho implements MouseListener, ComponentListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Despacho modeloDespacho = new Modelo_Despacho();
@@ -31,13 +33,17 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
     public static int idContenedor;
     public static int idDespacho;
     String filtro, termografo_seleccion, termografo, selloAdhesivo, selloVerificador, selloCandado, fechaSalida, horaSalida, selloCable,
-            compañiaTransportista, selloNaviero, vapor, destino, nombrePaletizadores, totalViajar, cajas, cantidadPallet , observacion;
+            compañiaTransportista, selloNaviero, vapor, destino, nombrePaletizadores, totalViajar, cajas, cantidadPallet, observacion;
 
     public Controlador_Despacho(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
 
         this.vistaLlegada.btn_siguiente_despacho.addMouseListener(this);
         this.vistaLlegada.jp_opcion_Despacho.addComponentListener(this);
+        this.vistaLlegada.despacho_termografo.addKeyListener(this);
+        this.vistaLlegada.despacho_sello_adhesivo.addKeyListener(this);
+        this.vistaLlegada.despacho_sello_verificador.addKeyListener(this);
+
     }
 
     public void idEntidadContenedores() {
@@ -52,7 +58,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
         }
     }
 
-    public void idEntidadDatosLlegada() {
+    public void idEntidadDatosDespacho() {
         try {
             rs = modeloDespacho.consultaID_entidadDespacho();
             while (rs.next()) {
@@ -68,8 +74,8 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
     //  Mientras no se guarde no se suma.
 
     public void autoIncrementarID_Entidades(int herenciaUno, int herenciaDos) {
-        this.idContenedor = herenciaUno;
-        this.idDespacho = herenciaDos;
+        // this.idContenedor = herenciaUno;
+        this.idDespacho = 1;
         System.out.println("ValorHerencia: " + idContenedor + " , " + idDespacho);
 
     }
@@ -103,6 +109,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
     public void almacenarDatosDespacho() {
 
         try {
+
             filtro = ObtenerFiltro();
             termografo_seleccion = ObtenerTermografo();
             termografo = this.vistaLlegada.despacho_termografo.getText();
@@ -110,7 +117,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
             selloVerificador = this.vistaLlegada.despacho_sello_verificador.getText();
             selloCandado = this.vistaLlegada.despacho_sello_exportador.getText();
             fechaSalida = (String) formatoD.format(this.vistaLlegada.despacho_fechaSalida.getDate());
-            horaSalida = (String) formatoH.format(this.vistaLlegada.despacho_horaSalida);
+            horaSalida = (String) formatoH.format(this.vistaLlegada.despacho_horaSalida.getValue());
             selloCable = this.vistaLlegada.despacho_sello_cable.getText();
             compañiaTransportista = this.vistaLlegada.despacho_compañia_tansportista.getText();
             selloNaviero = this.vistaLlegada.despacho_sello_naviero.getText();
@@ -126,7 +133,6 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
 
         }
 
-       
     }
 
     public void enviarDatosDespacho() {
@@ -152,24 +158,62 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
         this.modeloDespacho.observacion = observacion;
     }
 
-    public void guardarContenedor() {
-        this.modeloContenedor.id = idContenedor;
-    }
-
+//     public void guardarContenedor() {
+//        this.modeloContenedor.id = idContenedor;
+//        
+//    }
     public void cargarDatosDespacho() {
         //  Con este codigo solucionamos el colocar la fecha en el campo fecha de libreria jcalendar 1.4 y tambien la hora.
-       rsC = modeloDespacho.consultaID_entidadDespacho();
+        rsC = modeloDespacho.consultaID_entidadDespacho();
         try {
-           while (rsC.next()){
-               this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo"));
-               
-           }
+            while (rsC.next()) {
+                this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo"));
+                this.vistaLlegada.despacho_sello_adhesivo.setText(rsC.getString("sello_adhesivo"));
+                this.vistaLlegada.despacho_sello_verificador.setText(rsC.getString("sello_verificador"));
+                this.vistaLlegada.despacho_sello_exportador.setText("sello_exp_candado");
+                this.vistaLlegada.despacho_fechaSalida.setDate(funcionFecha_Formato(rsC.getString("fecha_hora_salida").substring(0, 10)));
+                this.vistaLlegada.despacho_horaSalida.setValue(funcionHora_Formato(rsC.getString("hora_salida").substring(11, 19)));
+                this.vistaLlegada.despacho_sello_cable.setText(rsC.getString("sello_exp_cable"));
+                this.vistaLlegada.despacho_compañia_tansportista.setText(rsC.getString("compania_transportista"));
+                this.vistaLlegada.despacho_sello_naviero.setText(rsC.getString("sello_naviero"));
+                this.vistaLlegada.despacho_vapor.setText(rsC.getString("vapor"));
+                this.vistaLlegada.despacho_destino.setText(rsC.getString("destino"));
+                this.vistaLlegada.despacho_nombre_paletizadores.setText(rsC.getString("nombre_paletizadores"));
+                this.vistaLlegada.despacho_total_viajar.setText(rsC.getString("total_viajar"));
+                this.vistaLlegada.despacho_cajas_total.setText(rsC.getString("cajas"));
+                this.vistaLlegada.despacho_cantidad_pallets.setText(rsC.getString("cant_palet"));
+                this.vistaLlegada.despacho_observaciones.setText(rsC.getString("observacion"));
+
+            }
         } catch (Exception e) {
             System.out.println("Error al cargar componentes Modelo_Datos_Despacho: " + e);
         }
     }
-    
-    
+
+    public void borrarCamposDatosDespacho() {
+        try {
+            this.vistaLlegada.despacho_termografo.setText(null);
+            this.vistaLlegada.despacho_sello_adhesivo.setText(null);
+            this.vistaLlegada.despacho_sello_verificador.setText(null);
+            this.vistaLlegada.despacho_sello_exportador.setText(null);
+            this.vistaLlegada.despacho_fechaSalida.setDate(null);
+            this.vistaLlegada.despacho_horaSalida.setValue(funcionHora_Formato("00:00:00"));
+            this.vistaLlegada.despacho_sello_cable.setText(null);
+            this.vistaLlegada.despacho_compañia_tansportista.setText(null);
+            this.vistaLlegada.despacho_sello_naviero.setText(null);
+            this.vistaLlegada.despacho_vapor.setText(null);
+            this.vistaLlegada.despacho_destino.setText(null);
+            this.vistaLlegada.despacho_nombre_paletizadores.setText(null);
+            this.vistaLlegada.despacho_total_viajar.setText(null);
+            this.vistaLlegada.despacho_cajas_total.setText(null);
+            this.vistaLlegada.despacho_cantidad_pallets.setText(null);
+            this.vistaLlegada.despacho_observaciones.setText(null);
+
+        } catch (Exception e) {
+            System.out.println("Error de borrado: " + e);
+        }
+    }
+
     public Date funcionFecha_Formato(String x) {
         Date datoSQLFecha;
         try {
@@ -181,17 +225,32 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
         return null;
     }
 
+    public Date funcionHora_Formato(String y) {
+        Date datosHora;
+        try {
+            datosHora = formatoH.parse(y);
+            return datosHora;
+        } catch (ParseException ex) {
+            System.out.println("Error al convertir hora: " + ex);
+        }
+        return null;
+    }
+
     @Override
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
 
         if (me.getSource() == this.vistaLlegada.btn_siguiente_despacho) {
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(4);
+            autoIncrementarID_Entidades(idDespacho++, idContenedor++);
             this.almacenarDatosDespacho();
             this.enviarDatosDespacho();
-            this.guardarContenedor();
-            this.modeloContenedor.guardarContenedorDatos();
             this.modeloDespacho.guardar_Despacho();
+              System.out.println(idContenedor+ ","+this.idDespacho);
+            
+        }
+        if (me.getSource() == this.vistaLlegada.boton_home) {
+            this.borrarCamposDatosDespacho();
         }
     }
 
@@ -229,12 +288,36 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
             System.err.println("Ingreso Opcion. HIDE");
             this.almacenarDatosDespacho();
             this.enviarDatosDespacho();
-            this.guardarContenedor();
             this.modeloContenedor.pruebaGuardado();
-
             System.out.println("ValorSiguiente: " + idContenedor + " , " + idDatosLlegada);
 
         }
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        if (e.getSource() == this.vistaLlegada.despacho_termografo) {
+            char c = e.getKeyChar();
+
+            if ((c < '0' || c > '9') && (c <= 34 || c > 47)) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_sello_adhesivo) {
+            char c = e.getKeyChar();
+            if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) {
+                e.consume();
+            }
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
     }
 
 }

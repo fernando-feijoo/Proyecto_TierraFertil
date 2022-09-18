@@ -4,6 +4,7 @@ package Controlador.Grupo2;
 import Vista.Grupo2.Vista_Listado_Menu;
 import Vista.Grupo2.Vista_Menu_Calidad;
 import Vista.Grupo2.Vista_Evaluacion_Total;
+import Vista.Grupo2.Vista_Home_Calidad;
 //importaciones del controlador
 
 import java.awt.event.MouseEvent;
@@ -16,6 +17,7 @@ public class Controlador_Menu_General implements MouseListener {
     Vista_Menu_Calidad vistaMenu;
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     Vista_Listado_Menu vistaListado = new Vista_Listado_Menu();
+    Vista_Home_Calidad vistahome= new Vista_Home_Calidad();
     
     //Colores para eventos con el mouse
     Color colorNormal = new Color(247, 246, 246);

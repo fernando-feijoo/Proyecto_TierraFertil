@@ -21,10 +21,10 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
     Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
 
-    SimpleDateFormat formatoD = new SimpleDateFormat("dd/MM/yyyy");
+    SimpleDateFormat formatoD = new SimpleDateFormat("yyyy-MM-dd");
     SimpleDateFormat formatoH = new SimpleDateFormat("HH:mm:ss");
 
-    ResultSet rs;
+    ResultSet rs, rsC;
     public static int idContenedor;
     public static int idDatosLlegada;
     String fechaInsp, fechaSalida, horaSalida, horaLlegada, tipoCaja, cupo, contenedor, placa,
@@ -71,7 +71,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         this.idDatosLlegada = herenciaDos;
         System.out.println("ValorHerencia: " + idContenedor + " , " + idDatosLlegada);
     }
-    
+
     public void almacenarDatosLlegada() {
         //  Hacemos este tryCatch por si no colocan fecha en algun campo, eso genera exepciones.
         try {
@@ -138,18 +138,69 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     }
 
     public void cargarDatosLlegada() {
-        //  Con este codigo solucionamos el colocar la fecha en el campo fecha de libreria jcalendar 1.4 y tambien la hora.
+        String sellosInternos, sellosExternos;
+        rsC = modeloDatosLlegada.consultaDatos_entidadDatosLlegada();
+        try {
+            while (rsC.next()) {
+            this.vistaLlegada.datosLlegada_fechaInsp.setDate(funcionFecha_Formato(rsC.getString("fecha_insp")));
+            this.vistaLlegada.datosLlegada_semana.setValue(Integer.parseInt(rsC.getString("semana")));
+            this.vistaLlegada.datosLlegada_fechaSalida.setDate(funcionFecha_Formato(rsC.getString("fecha_hora_salida").substring(0 , 10)));
+            this.vistaLlegada.datosLlegada_horaSalida.setValue(funcionHora_Formato(rsC.getString("fecha_hora_salida").substring(11 , 19)));
+            this.vistaLlegada.datosLlegada_horaLlegada.setValue(funcionHora_Formato(rsC.getString("hora_llegada")));
+            this.vistaLlegada.datosLlegada_tipocaja.setText(rsC.getString("tipo_caja"));
+            this.vistaLlegada.datosLlegada_cupo.setText(rsC.getString("cupo"));
+//            this.vistaLlegada.datosLlegada_contenedor.setText(rsC.getString("CORERGIR SELECT JOIN"));
+            this.vistaLlegada.datosLlegada_placa.setText(rsC.getString("placa"));
+            this.vistaLlegada.datosLlegada_chasis.setText(rsC.getString("chasis"));
+            this.vistaLlegada.datosLlegada_chofer.setText(rsC.getString("chofer_contenedor"));
+            this.vistaLlegada.datosLlegada_ci.setText(rsC.getString("cedula_chofer"));
+            this.vistaLlegada.datosLlegada_nombrefinca.setText(rsC.getString("nombre_finca"));
+            this.vistaLlegada.datosLlegada_candadosllegada.setText(rsC.getString("candados"));
+            sellosInternos = rsC.getString("sellos_internos");
+            sellosExternos = rsC.getString("sellos_externos");
+            }
+            
+        } catch (Exception e) {
+            System.out.println("Error al cargar componentes Modelo_Datos_LLegada: " + e);
+        }
+    }
+
+    /**
+     * Funcion que retorna la fecha formato yyyy-MM-dd esta la usariamos para
+     * obtener la conversion a formato DATE se ingresa un dato String. Para asi
+     * poder cargar al componente de la libreria jcalendar.
+     *
+     * @param @String para el ingreso de valor a convertir.
+     * @return Date or null.
+     */
+    public Date funcionFecha_Formato(String x) {
         Date datoSQLFecha;
+        try {
+            datoSQLFecha = formatoD.parse(x);
+            return datoSQLFecha;
+        } catch (ParseException ex) {
+            System.out.println("Error al convertir fecha: " + ex);
+        }
+        return null;
+    }
+
+    /**
+     * Funcion que retorna la hora HH:mm:ss en formato 24H esta la usariamos
+     * para obtener la conversion a formato DATE se ingresa un dato String. Para
+     * asi poder cargar al componente de la libreria jcalendar.
+     *
+     * @param @String para el ingreso de valor a convertir.
+     * @return Date or null.
+     */
+    public Date funcionHora_Formato(String y) {
         Date datosHora;
         try {
-            datoSQLFecha = formatoD.parse("28/09/1995");
-            this.vistaLlegada.datosLlegada_fechaInsp.setDate(datoSQLFecha);
-
-            datosHora = formatoH.parse("05:10:59");
-            this.vistaLlegada.datosLlegada_horaLlegada.setValue(datosHora);
+            datosHora = formatoH.parse(y);
+            return datosHora;
         } catch (ParseException ex) {
-            Logger.getLogger(Controlador_Datos_Llegada.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error al convertir hora: " + ex);
         }
+        return null;
     }
 
     @Override
@@ -161,9 +212,8 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
             this.enviarDatosLLegada();
             this.guardarContenedor();
             this.modeloContenedor.guardarContenedorDatos();
-            this.modeloDatosLlegada.guardar_llegada();
-            
-            
+            this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
+
         }
     }
 
@@ -208,7 +258,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
             this.guardarContenedor();
             this.modeloDatosLlegada.pruebaGuardado();
             this.modeloContenedor.pruebaGuardado();
-
+            this.cargarDatosLlegada();
             System.out.println("ValorSiguiente: " + idContenedor + " , " + idDatosLlegada);
         }
 

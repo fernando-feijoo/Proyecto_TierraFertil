@@ -7,7 +7,6 @@ import java.sql.Statement;
 public class Modelo_Datos_Llegada {
 
     Modelo_Conexion conexion = new Modelo_Conexion();
-    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
     ResultSet rs;
     Statement st;
     public int id, id_contenedor, semana;

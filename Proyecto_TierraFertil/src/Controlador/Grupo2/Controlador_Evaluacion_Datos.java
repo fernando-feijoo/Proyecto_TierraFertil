@@ -54,8 +54,8 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
                 // SimpleDateFormat formatoP = new SimpleDateFormat("dd/MM/yyyy");
                 // this.vistaLlegada.datosLlegada_fechaInsp.setDate(formatoP.format(28/09/2022).toDate);
                
-                modeloEvaluacionCalidad.semana = (String) this.vistaEvaluacion.js_semana.getValue();
-                modeloEvaluacionCalidad.finca = (String) this.vistaEvaluacion.js_finca.getValue();
+                modeloEvaluacionCalidad.semana = (int) this.vistaEvaluacion.js_semana.getValue();
+                modeloEvaluacionCalidad.finca =  (int) this.vistaEvaluacion.js_finca.getValue();
                 modeloEvaluacionCalidad.calibracion = this.vistaEvaluacion.txt_calibracion.getText();
                 modeloEvaluacionCalidad.vapor = this.vistaEvaluacion.txt_vapor.getText();
                 modeloEvaluacionCalidad.transporte = this.vistaEvaluacion.txt_transporte.getText();
@@ -76,7 +76,7 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
                     boolean auxiliar = modeloEvaluacionCalidad.guardarDatos();
                     if (auxiliar = true) {
                         System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
-                        JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente" +e, "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
 
                     }
 

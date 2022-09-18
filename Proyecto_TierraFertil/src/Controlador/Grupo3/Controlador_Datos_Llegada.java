@@ -73,6 +73,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     public void almacenarDatosLlegada() {
         //  Hacemos este tryCatch por si no colocan fecha en algun campo, eso genera exepciones.
+        //  ## Revisar lo de fecha y hora, para que no salga error.
         try {
             fechaInsp = (String) formatoD.format(this.vistaLlegada.datosLlegada_fechaInsp.getDate());
             semana = this.vistaLlegada.datosLlegada_semana.getValue();

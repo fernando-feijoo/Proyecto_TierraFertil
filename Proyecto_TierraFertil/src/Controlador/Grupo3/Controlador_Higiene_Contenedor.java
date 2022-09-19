@@ -79,6 +79,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
         //  La idea es traer el 8 por directo y luego el id contenedor x 8, ya que tiene que se multiplo y se le resta 8 para empezar conteo. (BigInt necesario a futuro)
         maxDato = (((idContenedor * 8)) - 8);
         System.out.println("idC: " + this.modeloHeContenedor.id + " , codigoConte> " + this.modeloHeContenedor.codigo_Contenedor + " , OBSER: " + this.observacionHigCont);
+        // #PROBAR SACAANDO LOS VALORES REDUNDANTES AFERA DEL CASE.
         for (int i = 1; i < 9; i++) {
             this.modeloHigCont.id_contenedor = this.idContenedor;
             switch (i) {

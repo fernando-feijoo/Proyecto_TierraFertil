@@ -72,12 +72,12 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
     Controlador_Inspeccion_Contenedor controlInspeccion = new Controlador_Inspeccion_Contenedor(vistaLlegada);
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
-    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
-    Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
-    Modelo_Despacho modeloDespacho = new Modelo_Despacho();
-    Modelo_Higiene_Contenedor modeloHigiCont = new Modelo_Higiene_Contenedor();
-    Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
-    Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
+//    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
+//    Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
+//    Modelo_Despacho modeloDespacho = new Modelo_Despacho();
+//    Modelo_Higiene_Contenedor modeloHigiCont = new Modelo_Higiene_Contenedor();
+//    Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
+//    Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
     public static int tempClickG3 = 1;
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
@@ -216,7 +216,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             
             this.controlDatosLlegada.controlGuardado(this.tempClickG3);
             
-            this.controlHigiene.controlGuardado(tempClickG3);
+            this.controlHigiene.controlGuardado(this.tempClickG3);
         }
         
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
@@ -230,8 +230,11 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.controlDatosLlegada.idEntidadContenedores();
                 this.controlDatosLlegada.idEntidadDatosLlegada();
                 this.controlDespacho.idEntidadDatosDespacho();
+                
                 //  Esta entidad ya retorna el max id como 8 si es null al inicio de la BD.
                 this.controlHigiene.idEntidadHigCont();
+                //  --> Retornara 20 que es su maximo.
+                this.controlPaletizado.idEntidadPalet();
                 
                 System.out.println("General 1: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
                         + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont);
@@ -245,10 +248,11 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.controlDespacho.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor , this.controlDespacho.idDespacho);
                 
                 this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlHigiene.idHigCont);
+                this.controlPaletizado.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlPaletizado.idPaletizado);
                 
                 System.out.println("General 2: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
                         + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
-                        "  " +this.controlDespacho.idDespacho);
+                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPaletizado);
                 
                 
                 // Validador de click para guardar 1 sola vez y guardar al final actualizando todo.

@@ -24,7 +24,6 @@ public class Modelo_Datos_Llegada {
             st.close();
             System.out.println(id + " Datos almacenados DatosLLegada BD MODELO.");
         } catch (Exception e) {
-            System.out.println("Error al tratar de guardar datos entidad datos_llegada MODELO: " + e);
         }
     }
 

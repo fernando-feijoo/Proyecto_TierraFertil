@@ -20,7 +20,6 @@ public class Modelo_Contenedores {
             st.close();
             System.out.println(id + " Datos almacenados Contenedor BD MODELO.");
         } catch (Exception e) {
-            System.out.println("Error al tratar guardar los datos de contenedor en BD MODELO: " + e);
         }
     }
     

@@ -35,13 +35,16 @@ public class Vista_Home extends javax.swing.JInternalFrame {
         setMinimumSize(new java.awt.Dimension(965, 629));
         setPreferredSize(new java.awt.Dimension(965, 629));
 
+        jPanel1.setBackground(new java.awt.Color(230, 230, 230));
         jPanel1.setMaximumSize(new java.awt.Dimension(953, 593));
         jPanel1.setMinimumSize(new java.awt.Dimension(953, 593));
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("BIENVENIDO A");
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("ASOC. TIERRA FÉRTIL");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

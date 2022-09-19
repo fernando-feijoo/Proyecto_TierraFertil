@@ -213,10 +213,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             
             this.controlDatosLlegada.guardadoFinal();
             this.controlHigiene.guardadoFinal();
+            this.controlPaletizado.guardadoFinal();
             
-            this.controlDatosLlegada.controlGuardado(this.tempClickG3);
-            
-            this.controlHigiene.controlGuardado(this.tempClickG3);
         }
         
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
@@ -224,7 +222,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaLlegada.setBorder(null);
             this.vistaHome.setVisible(false);
             this.vistaLlegada.setVisible(true);
-            //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
+            //  #########  SOLUCIONADO LO DE ID FIJO DE CONTENDOR Y DEMAS TABLAS, FALTA DE ROJAS #########
             if (tempClickG3 != 0) {
                 //  Consultas de id de Entidades.
                 this.controlDatosLlegada.idEntidadContenedores();
@@ -236,8 +234,11 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 //  --> Retornara 20 que es su maximo.
                 this.controlPaletizado.idEntidadPalet();
                 
+                //  #Para ver datos de entrada.
                 System.out.println("General 1: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
                         + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont);
+                
+                
                 //  Autoincremento de las entidades fijas que comparten id entre entidades. ej. 1, 1, 1...
                 this.controlDatosLlegada.idContenedor++;
                 this.controlDatosLlegada.idDatosLlegada++;
@@ -245,31 +246,26 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 
                 
                 this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
+                
                 this.controlDespacho.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor , this.controlDespacho.idDespacho);
                 
                 this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlHigiene.idHigCont);
-                this.controlPaletizado.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlPaletizado.idPaletizado);
+                this.controlPaletizado.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlPaletizado.idPalet);
                 
+                //  #para ver datos de salida.
                 System.out.println("General 2: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
                         + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
-                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPaletizado);
+                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
                 
-                
-                // Validador de click para guardar 1 sola vez y guardar al final actualizando todo.
-                
-                this.controlDatosLlegada.controlGuardado(this.tempClickG3);
-                
-                this.controlHigiene.controlGuardado(tempClickG3);
+                //  Con ese valor evitamos guardar varias veces y seria un nuevo registro.
                 tempClickG3 = 0;
             }   
             
-            //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
         }
-        
-            //  G3 Oculta el escritorio y muestra el principal, falta implementar la vista principal.
-            //  Tambien restrablece el valor 0 al opcionClick para que valide los colores.
+        //  Aqui es cuando volvemos al home, se oculta ele scritorio anterior y se muestra el home.
         if (me.getSource() == this.vistaLlegada.boton_home) {
             this.vistaLlegada.dispose();
+            this.vistaHome.setVisible(true);
             this.controladorMenuAcopio.opcionClick(0);
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }

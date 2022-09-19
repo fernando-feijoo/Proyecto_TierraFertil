@@ -40,10 +40,10 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     }
 
     //  #borrar mensajes de mas en consola.
-    public void controlGuardado(int herenciaClicks) {
-        this.tempClickG3 = herenciaClicks;
-        System.out.println("HerenciaClic DLL: " + tempClickG3);
-    }
+//    public void controlGuardado(int herenciaClicks) {
+//        this.tempClickG3 = herenciaClicks;
+//        System.out.println("HerenciaClic DLL: " + tempClickG3);
+//    }
 
     public void idEntidadContenedores() {
         try {
@@ -284,10 +284,6 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         if (me.getSource() == this.vistaLlegada.btn_siguiente_llegada) {
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(1);
 
-            if (this.tempClickG3 != 0) {
-                this.guardadoFinal();
-                this.tempClickG3 = 0;
-            }
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
 //            this.borrarCamposDatosLlegada();
@@ -330,12 +326,6 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         if (ce.getSource() == this.vistaLlegada.jp_opcion_DatosLlegada) {
             //  Para ejecutar guardar al cambiar de pestaña por click en siguiente o pestaña.
             System.out.println("Ingreso Opcion. HIDE");
-
-            if (this.tempClickG3 != 0) {
-                this.guardadoFinal();
-                this.tempClickG3 = 0;
-            }
         }
-
     }
 }

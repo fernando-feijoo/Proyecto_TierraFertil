@@ -229,6 +229,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 //  Consultas de id de Entidades.
                 this.controlDatosLlegada.idEntidadContenedores();
                 this.controlDatosLlegada.idEntidadDatosLlegada();
+                this.controlDespacho.idEntidadDatosDespacho();
                 //  Esta entidad ya retorna el max id como 8 si es null al inicio de la BD.
                 this.controlHigiene.idEntidadHigCont();
                 
@@ -237,13 +238,18 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 //  Autoincremento de las entidades fijas que comparten id entre entidades. ej. 1, 1, 1...
                 this.controlDatosLlegada.idContenedor++;
                 this.controlDatosLlegada.idDatosLlegada++;
+                this.controlDespacho.idDespacho++;
+                
                 
                 this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
+                this.controlDespacho.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor , this.controlDespacho.idDespacho);
                 
                 this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlHigiene.idHigCont);
                 
                 System.out.println("General 2: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
-                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont);
+                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
+                        "  " +this.controlDespacho.idDespacho);
+                
                 
                 // Validador de click para guardar 1 sola vez y guardar al final actualizando todo.
                 

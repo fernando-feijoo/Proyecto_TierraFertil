@@ -35,13 +35,10 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jp_lienzoPrincipal = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jp_pestaña_datos = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btn_siguiente = new Recursos_Codigo.Redondeado();
         jb_btn_siguiente = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         rd_contenedor = new Recursos_Codigo.Redondeado();
         jp_contenedorGrupo = new javax.swing.JPanel();
         jb_fecha = new javax.swing.JLabel();
@@ -52,7 +49,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         txt_vapor = new javax.swing.JTextField();
         txt_transporte = new javax.swing.JTextField();
         jb_semana = new javax.swing.JLabel();
-        jcomb_semana = new javax.swing.JComboBox<>();
         jb_lDedos = new javax.swing.JLabel();
         txt_dedos = new javax.swing.JTextField();
         jb_pedidos = new javax.swing.JLabel();
@@ -63,12 +59,9 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jb_destino = new javax.swing.JLabel();
         jb_codigo = new javax.swing.JLabel();
         jb_fumigacion = new javax.swing.JLabel();
-        jb_destino2 = new javax.swing.JLabel();
         txt_fumigacion = new javax.swing.JTextField();
-        txt_destino2 = new javax.swing.JTextField();
         txt_codigo = new javax.swing.JTextField();
         txt_destino1 = new javax.swing.JTextField();
-        jcom_finca = new javax.swing.JComboBox<>();
         jd_fecha = new com.toedter.calendar.JDateChooser();
         jSeparator10 = new javax.swing.JSeparator();
         jSeparator11 = new javax.swing.JSeparator();
@@ -76,6 +69,8 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         txt_peso = new javax.swing.JTextField();
         jb_finca2 = new javax.swing.JLabel();
         txt_observaciones = new javax.swing.JTextField();
+        js_semana = new javax.swing.JSpinner();
+        js_finca = new javax.swing.JSpinner();
         jp_pestaña_reportes = new javax.swing.JPanel();
         jp_contenedor_principal = new javax.swing.JPanel();
         redondeado_contenedor_2 = new Recursos_Codigo.Redondeado();
@@ -102,8 +97,8 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         txt_embalador = new javax.swing.JTextField();
         jb_peso_neto = new javax.swing.JLabel();
         txt_peso_neto = new javax.swing.JTextField();
-        redondeado8 = new Recursos_Codigo.Redondeado();
-        jb_guardar = new javax.swing.JLabel();
+        redondo_guardar = new Recursos_Codigo.Redondeado();
+        jb_btn_guardar = new javax.swing.JLabel();
         redondeado9 = new Recursos_Codigo.Redondeado();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -123,7 +118,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jSeparator8 = new javax.swing.JSeparator();
         redondeado_contenedor_3 = new Recursos_Codigo.Redondeado();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tabla_defectos1 = new javax.swing.JTable();
+        tabla_tabulacion = new javax.swing.JTable();
         redondeado6 = new Recursos_Codigo.Redondeado();
         jb_generar_reporte = new javax.swing.JLabel();
         redondeado7 = new Recursos_Codigo.Redondeado();
@@ -143,17 +138,11 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jp_pestaña_datos.setBackground(new java.awt.Color(255, 255, 255));
         jp_pestaña_datos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Ingrese todos los datos solicitados.");
-        jp_pestaña_datos.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 32, -1, -1));
-
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Bienvenido al apartado de Evaluacion  PMCS");
-        jp_pestaña_datos.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 4, -1, -1));
+        jLabel2.setText("EVALUACION DE PCMS EN PLANTA EMPACADORA");
+        jp_pestaña_datos.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
 
         btn_siguiente.setBackground(new java.awt.Color(204, 204, 204));
         btn_siguiente.setRoundBottomLeft(25);
@@ -172,8 +161,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         btn_siguiente.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 4, -1, 30));
 
         jp_pestaña_datos.add(btn_siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 500, 145, -1));
-        jp_pestaña_datos.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 66, 965, 11));
-        jp_pestaña_datos.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 960, 10));
 
         rd_contenedor.setBackground(new java.awt.Color(204, 204, 255));
         rd_contenedor.setRoundBottomLeft(30);
@@ -215,9 +202,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jb_semana.setForeground(new java.awt.Color(0, 0, 0));
         jb_semana.setText("SEMANA:");
 
-        jcomb_semana.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jcomb_semana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
-
         jb_lDedos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jb_lDedos.setForeground(new java.awt.Color(0, 0, 0));
         jb_lDedos.setText("L. DEDOS:");
@@ -252,20 +236,11 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jb_fumigacion.setForeground(new java.awt.Color(0, 0, 0));
         jb_fumigacion.setText("FUMIGACION:");
 
-        jb_destino2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jb_destino2.setForeground(new java.awt.Color(0, 0, 0));
-        jb_destino2.setText("DESTINO:");
-
         txt_fumigacion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        txt_destino2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         txt_codigo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         txt_destino1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        jcom_finca.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jcom_finca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
 
         jd_fecha.setBackground(new java.awt.Color(255, 255, 255));
         jd_fecha.setForeground(new java.awt.Color(255, 255, 255));
@@ -301,148 +276,142 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jp_contenedorGrupoLayout.setHorizontalGroup(
             jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jb_calibracion)
-                            .addComponent(jb_vapor)
-                            .addComponent(jb_fecha))
-                        .addGap(25, 25, 25)
-                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_calibracion)
-                            .addComponent(txt_vapor)
-                            .addComponent(jd_fecha, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)))
-                    .addComponent(jb_finca1)
-                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                        .addComponent(jb_transporte)
-                        .addGap(25, 25, 25)
-                        .addComponent(txt_transporte, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jb_tipoCaja)
-                            .addComponent(jb_finca)
-                            .addComponent(jb_pedidos)
-                            .addComponent(jb_lDedos))
-                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jcom_finca, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_pedidos, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_tipoCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_dedos, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jcomb_semana, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addComponent(jb_semana))
-                .addGap(34, 34, 34)
-                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_destino)
-                    .addComponent(jb_codigo)
-                    .addComponent(jb_fumigacion)
-                    .addComponent(jb_destino2))
-                .addGap(40, 40, 40)
-                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_fumigacion, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_destino2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_destino1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jb_finca2)
-                .addGap(17, 17, 17)
                 .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                        .addComponent(txt_peso, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(txt_observaciones)))
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_calibracion)
+                                    .addComponent(jb_vapor)
+                                    .addComponent(jb_fecha))
+                                .addGap(36, 36, 36)
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_calibracion)
+                                    .addComponent(txt_vapor)
+                                    .addComponent(jd_fecha, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)))
+                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_transporte)
+                                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jb_finca1)))
+                                .addGap(36, 36, 36)
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_transporte, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                                    .addComponent(txt_peso))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_tipoCaja)
+                                    .addComponent(jb_finca)
+                                    .addComponent(jb_pedidos)
+                                    .addComponent(jb_lDedos))
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_contenedorGrupoLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txt_dedos, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(txt_tipoCaja, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                                                .addComponent(js_finca, javax.swing.GroupLayout.Alignment.TRAILING))
+                                            .addComponent(txt_pedidos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                                .addComponent(jb_semana)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(js_semana, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(35, 35, 35)
+                        .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jb_destino)
+                            .addComponent(jb_codigo)
+                            .addComponent(jb_fumigacion))
+                        .addGap(40, 40, 40)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_fumigacion, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_destino1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                        .addComponent(jb_finca2)
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jp_contenedorGrupoLayout.setVerticalGroup(
             jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jb_destino)
+                            .addComponent(txt_destino1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_codigo))
+                        .addGap(35, 35, 35)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jb_fumigacion)
+                            .addComponent(txt_fumigacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jb_destino)
-                                            .addComponent(txt_destino1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(42, 42, 42)
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jb_codigo))
-                                        .addGap(35, 35, 35)
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jb_fumigacion)
-                                            .addComponent(txt_fumigacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(35, 35, 35)
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jb_destino2)
-                                            .addComponent(txt_destino2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                                                .addComponent(jd_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(43, 43, 43))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_contenedorGrupoLayout.createSequentialGroup()
-                                                .addComponent(jb_fecha)
-                                                .addGap(42, 42, 42)))
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jb_calibracion)
-                                            .addComponent(txt_calibracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(35, 35, 35)
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(txt_vapor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jb_vapor))
-                                        .addGap(35, 35, 35)
-                                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(txt_transporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jb_transporte))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jb_finca1)
-                                    .addComponent(txt_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
-                            .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jb_semana)
-                                .addComponent(jcomb_semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(42, 42, 42)
-                            .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jb_lDedos)
-                                .addComponent(txt_dedos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(35, 35, 35)
-                            .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jb_pedidos)
-                                .addComponent(txt_pedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(35, 35, 35)
-                            .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jb_tipoCaja)
-                                .addComponent(txt_tipoCaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(32, 32, 32)
-                            .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jcom_finca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jb_finca))))
+                                .addComponent(jd_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_contenedorGrupoLayout.createSequentialGroup()
+                                .addComponent(jb_fecha)
+                                .addGap(42, 42, 42)))
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jb_calibracion)
+                            .addComponent(txt_calibracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_vapor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_vapor))
+                        .addGap(35, 35, 35)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_transporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_transporte)))
                     .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                        .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
+                                .addComponent(js_semana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jb_lDedos)
+                                    .addComponent(txt_dedos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(36, 36, 36)
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_pedidos)
+                                    .addComponent(txt_pedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(32, 32, 32)
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jb_tipoCaja)
+                                    .addComponent(txt_tipoCaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(39, 39, 39)
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jb_finca)
+                                    .addComponent(js_finca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_semana)
+                            .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txt_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jb_finca1))
+                                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_finca2)
                     .addComponent(txt_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18))
+                .addGap(41, 41, 41))
         );
 
         javax.swing.GroupLayout rd_contenedorLayout = new javax.swing.GroupLayout(rd_contenedor);
@@ -450,8 +419,8 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         rd_contenedorLayout.setHorizontalGroup(
             rd_contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rd_contenedorLayout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
-                .addComponent(jp_contenedorGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jp_contenedorGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 811, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63))
         );
         rd_contenedorLayout.setVerticalGroup(
@@ -462,7 +431,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jp_pestaña_datos.add(rd_contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 91, -1, 370));
+        jp_pestaña_datos.add(rd_contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 880, 420));
 
         jTabbedPane1.addTab("DATOS", jp_pestaña_datos);
 
@@ -527,10 +496,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
         tabla_defectos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {},
-                {},
-                {},
-                {}
+
             },
             new String [] {
 
@@ -625,17 +591,17 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jb_peso_neto.setForeground(new java.awt.Color(0, 0, 0));
         jb_peso_neto.setText("PESO NETO:");
 
-        redondeado8.setBackground(new java.awt.Color(153, 153, 153));
-        redondeado8.setRoundBottomLeft(25);
-        redondeado8.setRoundBottomRight(25);
-        redondeado8.setRoundTopLeft(25);
-        redondeado8.setRoundTopRight(25);
-        redondeado8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        redondo_guardar.setBackground(new java.awt.Color(153, 153, 153));
+        redondo_guardar.setRoundBottomLeft(25);
+        redondo_guardar.setRoundBottomRight(25);
+        redondo_guardar.setRoundTopLeft(25);
+        redondo_guardar.setRoundTopRight(25);
+        redondo_guardar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jb_guardar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jb_guardar.setForeground(new java.awt.Color(0, 0, 0));
-        jb_guardar.setText("       GUARDAR");
-        redondeado8.add(jb_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 30));
+        jb_btn_guardar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jb_btn_guardar.setForeground(new java.awt.Color(0, 0, 0));
+        jb_btn_guardar.setText("       GUARDAR");
+        redondo_guardar.add(jb_btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 30));
 
         redondeado9.setBackground(new java.awt.Color(153, 153, 153));
         redondeado9.setRoundBottomLeft(25);
@@ -643,7 +609,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         redondeado9.setRoundTopLeft(25);
         redondeado9.setRoundTopRight(25);
         redondeado9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        redondeado8.add(redondeado9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        redondo_guardar.add(redondeado9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("PAR 4:");
@@ -731,7 +697,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                         .addComponent(txt_peso_neto, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(redondeado_contenedor_1Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(redondeado8, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(redondo_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(64, 64, 64))
         );
         redondeado_contenedor_1Layout.setVerticalGroup(
@@ -771,7 +737,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                                     .addComponent(txt_inpar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(redondeado_contenedor_1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(redondeado8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(redondo_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(16, 16, 16))
         );
 
@@ -781,7 +747,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         redondeado_contenedor_3.setRoundTopLeft(30);
         redondeado_contenedor_3.setRoundTopRight(30);
 
-        tabla_defectos1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla_tabulacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -792,7 +758,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
             }
         ));
-        jScrollPane2.setViewportView(tabla_defectos1);
+        jScrollPane2.setViewportView(tabla_tabulacion);
 
         javax.swing.GroupLayout redondeado_contenedor_3Layout = new javax.swing.GroupLayout(redondeado_contenedor_3);
         redondeado_contenedor_3.setLayout(redondeado_contenedor_3Layout);
@@ -850,7 +816,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                     .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
                         .addGap(398, 398, 398)
                         .addComponent(redondeado6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jp_contenedor_principalLayout.setVerticalGroup(
             jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -889,14 +855,14 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         );
         jp_lienzoPrincipalLayout.setVerticalGroup(
             jp_lienzoPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_lienzoPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 965, Short.MAX_VALUE)
+            .addComponent(jp_lienzoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 965, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -919,7 +885,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public Recursos_Codigo.Redondeado btn_siguiente;
-    public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
     public javax.swing.JLabel jLabel2;
@@ -929,11 +894,9 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jLabel9;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JSeparator jSeparator1;
     public javax.swing.JSeparator jSeparator10;
     public javax.swing.JSeparator jSeparator11;
     public javax.swing.JSeparator jSeparator12;
-    public javax.swing.JSeparator jSeparator2;
     public javax.swing.JSeparator jSeparator3;
     public javax.swing.JSeparator jSeparator4;
     public javax.swing.JSeparator jSeparator5;
@@ -943,6 +906,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JSeparator jSeparator9;
     public javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JLabel jb_agregar_defecto;
+    public javax.swing.JLabel jb_btn_guardar;
     public javax.swing.JLabel jb_btn_siguiente;
     public javax.swing.JLabel jb_caja_insp;
     public javax.swing.JLabel jb_calibracion;
@@ -951,14 +915,12 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jb_contenedor_defecto3;
     public javax.swing.JLabel jb_defectos;
     public javax.swing.JLabel jb_destino;
-    public javax.swing.JLabel jb_destino2;
     public javax.swing.JLabel jb_fecha;
     public javax.swing.JLabel jb_finca;
     public javax.swing.JLabel jb_finca1;
     public javax.swing.JLabel jb_finca2;
     public javax.swing.JLabel jb_fumigacion;
     public javax.swing.JLabel jb_generar_reporte;
-    public javax.swing.JLabel jb_guardar;
     public javax.swing.JLabel jb_lDedos;
     public javax.swing.JLabel jb_nomb_defecto;
     public javax.swing.JLabel jb_nomb_defecto1;
@@ -970,34 +932,33 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jb_total_gajos;
     public javax.swing.JLabel jb_transporte;
     public javax.swing.JLabel jb_vapor;
-    public javax.swing.JComboBox<String> jcom_finca;
-    public javax.swing.JComboBox<String> jcomb_semana;
     public com.toedter.calendar.JDateChooser jd_fecha;
     public javax.swing.JPanel jp_contenedorGrupo;
     public javax.swing.JPanel jp_contenedor_principal;
     public javax.swing.JPanel jp_lienzoPrincipal;
     public javax.swing.JPanel jp_pestaña_datos;
     public javax.swing.JPanel jp_pestaña_reportes;
+    public javax.swing.JSpinner js_finca;
+    public javax.swing.JSpinner js_semana;
     public Recursos_Codigo.Redondeado rd_contenedor;
     public Recursos_Codigo.Redondeado redondeado1;
     public Recursos_Codigo.Redondeado redondeado4;
     public Recursos_Codigo.Redondeado redondeado5;
     public Recursos_Codigo.Redondeado redondeado6;
     public Recursos_Codigo.Redondeado redondeado7;
-    public Recursos_Codigo.Redondeado redondeado8;
     public Recursos_Codigo.Redondeado redondeado9;
     public Recursos_Codigo.Redondeado redondeado_contenedor_1;
     public Recursos_Codigo.Redondeado redondeado_contenedor_2;
     public Recursos_Codigo.Redondeado redondeado_contenedor_3;
+    public Recursos_Codigo.Redondeado redondo_guardar;
     public javax.swing.JTable tabla_defectos;
-    public javax.swing.JTable tabla_defectos1;
+    public javax.swing.JTable tabla_tabulacion;
     public javax.swing.JTextField txt_caja_insp;
     public javax.swing.JTextField txt_calibracion;
     public javax.swing.JTextField txt_codigo;
     public javax.swing.JTextField txt_contenedor;
     public javax.swing.JTextField txt_dedos;
     public javax.swing.JTextField txt_destino1;
-    public javax.swing.JTextField txt_destino2;
     public javax.swing.JTextField txt_embalador;
     public javax.swing.JTextField txt_fumigacion;
     public javax.swing.JTextField txt_id_defecto;

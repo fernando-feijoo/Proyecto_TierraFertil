@@ -61,7 +61,6 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
         jp_titulo_uno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_titutlo_acopio.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
-        lbl_titutlo_acopio.setForeground(new java.awt.Color(0, 0, 0));
         lbl_titutlo_acopio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Banana_96x96-32_37912.png"))); // NOI18N
         lbl_titutlo_acopio.setText("Acopio");
         jp_titulo_uno.add(lbl_titutlo_acopio, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 2, 247, -1));
@@ -97,8 +96,8 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
         btn_acopio_control.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Control de calidad");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_acopio_control.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_acopio_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
@@ -114,8 +113,8 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
         btn_acopio_listado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Listado de reportes");
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_acopio_listado.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_acopio_listado, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
@@ -126,7 +125,6 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
         jp_titulo_dos.setPreferredSize(new java.awt.Dimension(270, 48));
 
         lbl_titulo_reporte.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
-        lbl_titulo_reporte.setForeground(new java.awt.Color(0, 0, 0));
         lbl_titulo_reporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/playlist_32px.png"))); // NOI18N
         lbl_titulo_reporte.setText("Reportes");
 
@@ -160,8 +158,8 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
         btn_reportes_opcion_uno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Nuevo reporte");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_reportes_opcion_uno.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_reportes_opcion_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
@@ -177,8 +175,8 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
         btn_reportes_opcion_dos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Reportes generados");
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_reportes_opcion_dos.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_reportes_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));

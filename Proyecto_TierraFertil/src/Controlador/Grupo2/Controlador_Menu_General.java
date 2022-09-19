@@ -28,7 +28,12 @@ public class Controlador_Menu_General implements MouseListener {
 
     public Controlador_Menu_General(Vista_Menu_Calidad vistaMenu) {
         this.vistaMenu = vistaMenu;
-  
+        
+        this.vistaMenu.btn_acopio_control.addMouseListener(this);
+        this.vistaMenu.btn_acopio_control.addMouseListener(this);
+        this.vistaMenu.btn_reportes_opcion_uno.addMouseListener(this);
+        this.vistaMenu.btn_reportes_opcion_dos.addMouseListener(this);
+        
     }
 
     @Override

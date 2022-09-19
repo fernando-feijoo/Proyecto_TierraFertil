@@ -167,6 +167,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
         rsC = modeloDespacho.consultaID_entidadDespacho();
         try {
             while (rsC.next()) {
+                
                 this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo"));
                 this.vistaLlegada.despacho_sello_adhesivo.setText(rsC.getString("sello_adhesivo"));
                 this.vistaLlegada.despacho_sello_verificador.setText(rsC.getString("sello_verificador"));
@@ -248,11 +249,8 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
 
         if (me.getSource() == this.vistaLlegada.btn_siguiente_despacho) {
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(4);
-             if (this.tempClickG3 != 0) {
-                this.guardadoFinal();
-                this.tempClickG3 = 0;
-            }
-            
+             
+           
 
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
@@ -292,10 +290,10 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
     public void componentHidden(ComponentEvent ce) {
         if (ce.getSource() == this.vistaLlegada.jp_grupoOpciones_datosLlegada) {
             System.err.println("Ingreso Opcion. HIDE");
-             if (this.tempClickG3 != 0) {
-                this.guardadoFinal();
-                this.tempClickG3 = 0;
-            }
+//                this.almacenarDatosDespacho();
+//                this.enviarDatosDespacho();
+//                this.modeloDespacho.guardar_Despacho();
+//                this.modeloDespacho.pruebaGuardado();
 
         }
     }

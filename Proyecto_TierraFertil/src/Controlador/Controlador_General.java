@@ -214,6 +214,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.controlDatosLlegada.guardadoFinal();
             this.controlHigiene.guardadoFinal();
             this.controlPaletizado.guardadoFinal();
+            this.controlDespacho.guardadoFinal();
+            this.controlInspeccion.guardadoFinal();
             
         }
         

@@ -10,7 +10,7 @@ public class Modelo_Inspeccion_Contenedor {
     ResultSet rs;
     Statement st;
     public int id, id_contenedor, id_verificar_lugar;
-    public String verificacion;
+    public boolean verificacion;
 
     public void guardar_Inspeccion_Contenedor() {
         try {
@@ -38,6 +38,33 @@ public class Modelo_Inspeccion_Contenedor {
         }
         return rs;
     }
+    
+     public ResultSet consultaDatos_entidadInspCont() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "SELECT id_verificar_lugar, verificacion FROM inspeccion_contenedor WHERE id_contenedor = 1 ORDER BY id_verificar_lugar;";
+            rs = st.executeQuery(sql);
+            st.close();
+            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id);
+        } catch (Exception e) {
+            System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
+        }
+        return rs;
+    }
+     
+      public ResultSet consultaInspCon() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "SELECT obser_ins_cont FROM contenedores WHERE id = 1;";
+            rs = st.executeQuery(sql);
+            st.close();
+            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id);
+        } catch (Exception e) {
+            System.out.println("Error al tratar de obtener id entidad InspeccionContenedor BD MODELO: " + e);
+        }
+        return rs;
+    }
+     
     
       public void pruebaGuardado() {
         System.out.println("IC: " + id + " , " + id_contenedor + " , " + id_verificar_lugar + " , " + verificacion);

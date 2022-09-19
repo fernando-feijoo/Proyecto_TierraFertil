@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 
 public class Controlador_Higiene_Contenedor implements MouseListener, ComponentListener {
 
@@ -18,7 +19,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
     public static int idContenedor;
     String opcionUno, opcionDos, opcionTres, opcionCuatro, opcionCinco, opcionSeis,
             opcionSiete, opcionOcho, observacionHigCont;
-    ResultSet rs;
+    ResultSet rs, rsD, rsC;
     public static int idHigCont;
     public int tempClickG3;
 
@@ -133,6 +134,61 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
         this.modeloHeContenedor.guardarContenedorDatos();
         this.modeloHeContenedor.pruebaGuardado();
         enviarGuardarHigieneContenedor();
+    }
+
+    //  Tengo que cargar dos de estos el otro solo trae el comentario. Aunque podria ser en este mismo solo es una linea.
+    // ##AQUI hago la consulta de la entidad de datos y comentario de contenedor.
+    public void cargarDatosHigCont() {
+        rsD = this.modeloHigCont.consultaDatos_entidadHigCont();
+        rsC = this.modeloHigCont.consultaObsHigCon();
+        try {
+            while (rsC.next()) {
+                this.vistaLlegada.higCont_observaciones.setText(rsC.getString("obser_hig_cont"));
+            }
+            HashMap<Integer, String> datos = new HashMap<Integer, String>();
+            while (rsD.next()) {
+                datos.put(rsD.getInt("id_limpieza_contenedor"), rsD.getString("opcion"));
+            }
+            for (int i : datos.keySet()) {
+                System.out.println("id: " + i + " opcion: " + datos.get(i));
+                switch (i) {
+                    case 1:
+                        this.vistaLlegada.bg_lavado.setSelected(this.vistaLlegada.higCont_rb_si_lavado.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_lavado.setSelected(this.vistaLlegada.higCont_rb_no_lavado.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                    case 2:
+                        this.vistaLlegada.bg_drenajes.setSelected(this.vistaLlegada.higCont_rb_si_drenajes.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_drenajes.setSelected(this.vistaLlegada.higCont_rb_no_drenajes.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                    case 3:
+                        this.vistaLlegada.bg_olor.setSelected(this.vistaLlegada.higCont_rb_si_olor.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_olor.setSelected(this.vistaLlegada.higCont_rb_no_olor.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                    case 4:
+                        this.vistaLlegada.bg_residuos.setSelected(this.vistaLlegada.higCont_rb_si_residuos.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_residuos.setSelected(this.vistaLlegada.higCont_rb_no_residuos.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                    case 5:
+                        this.vistaLlegada.bg_insectos.setSelected(this.vistaLlegada.higCont_rb_si_insectos.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_insectos.setSelected(this.vistaLlegada.higCont_rb_no_insectos.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                    case 6:
+                        this.vistaLlegada.bg_sello.setSelected(this.vistaLlegada.higCont_rb_si_sello.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_sello.setSelected(this.vistaLlegada.higCont_rb_no_sello.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                    case 7:
+                        this.vistaLlegada.bg_moho.setSelected(this.vistaLlegada.higCont_rb_si_moho.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_moho.setSelected(this.vistaLlegada.higCont_rb_no_moho.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                    case 8:
+                        this.vistaLlegada.bg_contenedor_aceptable.setSelected(this.vistaLlegada.higCont_rb_si_contenedor_aceptable.getModel(), (datos.get(i).equals("SI")));
+                        this.vistaLlegada.bg_contenedor_aceptable.setSelected(this.vistaLlegada.higCont_rb_no_contenedor_aceptable.getModel(), (datos.get(i).equals("NO")));
+                        break;
+                }
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error datos HiCn Array: " + ex);
+        }
     }
 
     @Override

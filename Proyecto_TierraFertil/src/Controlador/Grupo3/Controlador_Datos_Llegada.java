@@ -17,7 +17,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     Vista_Llegada vistaLlegada;
     Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
-    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
+    Modelo_Contenedores modeloDaLleContenedor = new Modelo_Contenedores();
 
     SimpleDateFormat formatoD = new SimpleDateFormat("yyyy-MM-dd");
     SimpleDateFormat formatoH = new SimpleDateFormat("HH:mm:ss");
@@ -25,6 +25,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     ResultSet rs, rsC;
     public static int idContenedor;
     public static int idDatosLlegada;
+    public int tempClickG3;
     String fechaInsp, fechaSalida, horaSalida, horaLlegada, tipoCaja, cupo, contenedor, placa,
             chasis, choferContenedor, ci, nombreFinca, candadosLlegada, sellosInternos, sellosExternos;
     int semana;
@@ -38,9 +39,15 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     }
 
+    // #SE NECESITA PROBAR BIEN ESTO AUN.
+    public void idBusqueda(int idHerenciaContenedor){
+        this.idContenedor = idHerenciaContenedor;
+        this.modeloDatosLlegada.id_contenedor = this.idContenedor;
+    }
+
     public void idEntidadContenedores() {
         try {
-            rs = modeloContenedor.consultaID_contenedor();
+            rs = modeloDaLleContenedor.consultaID_contenedor();
             while (rs.next()) {
                 idContenedor = Integer.parseInt(rs.getString("id_contenedor"));
             }
@@ -132,11 +139,14 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     }
 
+    // #Borrar lo de consola.
     public void guardarContenedor() {
-        this.modeloContenedor.id = idContenedor;
-        this.modeloContenedor.codigo_Contenedor = contenedor;
+        this.modeloDaLleContenedor.id = idContenedor;
+        this.modeloDaLleContenedor.codigo_Contenedor = contenedor;
+        System.out.println("Guardar Conten DLL: " + idContenedor + " , " + contenedor);
     }
 
+    // #Actualizar lo de id para actualizar... Eso falta ###### En el modelo esta pre cargado 1;
     public void cargarDatosLlegada() {
         String sellosInternos = "", sellosExternos = "";
         rsC = modeloDatosLlegada.consultaDatos_entidadDatosLlegada();
@@ -258,23 +268,25 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         return null;
     }
 
+    public void guardadoFinal() {
+        this.almacenarDatosLlegada();
+        this.enviarDatosLLegada();
+        this.guardarContenedor();
+        this.modeloDaLleContenedor.pruebaGuardado();
+        this.modeloDatosLlegada.pruebaGuardado();
+        this.modeloDaLleContenedor.guardarContenedorDatos();
+        this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
+    }
+
     @Override
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
         if (me.getSource() == this.vistaLlegada.btn_siguiente_llegada) {
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(1);
-            this.almacenarDatosLlegada();
-            this.enviarDatosLLegada();
-            this.guardarContenedor();
-
-            this.cargarDatosLlegada();
-
-            this.modeloContenedor.guardarContenedorDatos();
-            this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
 
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
-            this.borrarCamposDatosLlegada();
+//            this.borrarCamposDatosLlegada();
         }
     }
 
@@ -314,13 +326,6 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         if (ce.getSource() == this.vistaLlegada.jp_opcion_DatosLlegada) {
             //  Para ejecutar guardar al cambiar de pestaña por click en siguiente o pestaña.
             System.out.println("Ingreso Opcion. HIDE");
-            this.almacenarDatosLlegada();
-            this.enviarDatosLLegada();
-            this.guardarContenedor();
-            this.modeloDatosLlegada.pruebaGuardado();
-            this.modeloContenedor.pruebaGuardado();
-            System.out.println("ValorSiguiente: " + idContenedor + " , " + idDatosLlegada);
         }
-
     }
 }

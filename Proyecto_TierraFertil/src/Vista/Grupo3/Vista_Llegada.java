@@ -91,20 +91,24 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         btn_siguiente_llegada = new Recursos_Codigo.Redondeado();
         jLabel3 = new javax.swing.JLabel();
         jLabel72 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jPanel4 = new javax.swing.JPanel();
         datosLlegada_sellosInternos_1 = new javax.swing.JTextField();
         datosLlegada_sellosInternos_2 = new javax.swing.JTextField();
         datosLlegada_sellosInternos_3 = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
         datosLlegada_sellosExtrenos_1 = new javax.swing.JTextField();
         datosLlegada_sellosExtrenos_2 = new javax.swing.JTextField();
         datosLlegada_sellosExtrenos_3 = new javax.swing.JTextField();
+        jPanel6 = new javax.swing.JPanel();
         datosLlegada_sellosExtrenos_4 = new javax.swing.JTextField();
         datosLlegada_sellosExtrenos_5 = new javax.swing.JTextField();
-        datosLlegada_sellosExtrenos_7 = new javax.swing.JTextField();
         datosLlegada_sellosExtrenos_6 = new javax.swing.JTextField();
+        jPanel117 = new javax.swing.JPanel();
+        datosLlegada_sellosExtrenos_7 = new javax.swing.JTextField();
         datosLlegada_sellosExtrenos_8 = new javax.swing.JTextField();
         datosLlegada_sellosExtrenos_9 = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         jp_opcion_InspeccionContendor = new javax.swing.JPanel();
         panel_inspeccion = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
@@ -676,14 +680,17 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         );
 
         jPanel9.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel18.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("SELLOS INTERNOS:");
+        jPanel9.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 25, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("SELLOS EXTERNOS:");
+        jPanel9.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 25, -1, -1));
 
         btn_siguiente_llegada.setBackground(new java.awt.Color(255, 255, 255));
         btn_siguiente_llegada.setPreferredSize(new java.awt.Dimension(120, 32));
@@ -718,132 +725,101 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addComponent(jLabel72))
         );
 
+        jPanel9.add(btn_siguiente_llegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(814, 242, -1, -1));
+        jPanel9.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 43, 180, 10));
+        jPanel9.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 43, 530, 10));
+
+        jPanel4.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel4.setLayout(null);
+
         datosLlegada_sellosInternos_1.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosInternos_1.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosInternos_1.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel4.add(datosLlegada_sellosInternos_1);
+        datosLlegada_sellosInternos_1.setBounds(6, 6, 160, 32);
 
         datosLlegada_sellosInternos_2.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosInternos_2.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosInternos_2.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel4.add(datosLlegada_sellosInternos_2);
+        datosLlegada_sellosInternos_2.setBounds(6, 44, 160, 32);
 
         datosLlegada_sellosInternos_3.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosInternos_3.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosInternos_3.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel4.add(datosLlegada_sellosInternos_3);
+        datosLlegada_sellosInternos_3.setBounds(6, 82, 160, 32);
+
+        jPanel9.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 170, 120));
+
+        jPanel5.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel5.setLayout(null);
 
         datosLlegada_sellosExtrenos_1.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_1.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_1.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel5.add(datosLlegada_sellosExtrenos_1);
+        datosLlegada_sellosExtrenos_1.setBounds(6, 6, 160, 32);
 
         datosLlegada_sellosExtrenos_2.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_2.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_2.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel5.add(datosLlegada_sellosExtrenos_2);
+        datosLlegada_sellosExtrenos_2.setBounds(6, 44, 160, 32);
 
         datosLlegada_sellosExtrenos_3.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_3.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_3.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel5.add(datosLlegada_sellosExtrenos_3);
+        datosLlegada_sellosExtrenos_3.setBounds(6, 82, 160, 32);
+
+        jPanel9.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 170, 120));
+
+        jPanel6.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel6.setLayout(null);
 
         datosLlegada_sellosExtrenos_4.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_4.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_4.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel6.add(datosLlegada_sellosExtrenos_4);
+        datosLlegada_sellosExtrenos_4.setBounds(6, 6, 160, 32);
 
         datosLlegada_sellosExtrenos_5.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_5.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_5.setPreferredSize(new java.awt.Dimension(160, 32));
-
-        datosLlegada_sellosExtrenos_7.setMaximumSize(new java.awt.Dimension(160, 32));
-        datosLlegada_sellosExtrenos_7.setMinimumSize(new java.awt.Dimension(160, 32));
-        datosLlegada_sellosExtrenos_7.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel6.add(datosLlegada_sellosExtrenos_5);
+        datosLlegada_sellosExtrenos_5.setBounds(6, 44, 160, 32);
 
         datosLlegada_sellosExtrenos_6.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_6.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_6.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel6.add(datosLlegada_sellosExtrenos_6);
+        datosLlegada_sellosExtrenos_6.setBounds(6, 82, 160, 32);
+
+        jPanel9.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 170, 120));
+
+        jPanel117.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel117.setLayout(null);
+
+        datosLlegada_sellosExtrenos_7.setMaximumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_7.setMinimumSize(new java.awt.Dimension(160, 32));
+        datosLlegada_sellosExtrenos_7.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel117.add(datosLlegada_sellosExtrenos_7);
+        datosLlegada_sellosExtrenos_7.setBounds(6, 6, 160, 32);
 
         datosLlegada_sellosExtrenos_8.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_8.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_8.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel117.add(datosLlegada_sellosExtrenos_8);
+        datosLlegada_sellosExtrenos_8.setBounds(6, 44, 160, 32);
 
         datosLlegada_sellosExtrenos_9.setMaximumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_9.setMinimumSize(new java.awt.Dimension(160, 32));
         datosLlegada_sellosExtrenos_9.setPreferredSize(new java.awt.Dimension(160, 32));
+        jPanel117.add(datosLlegada_sellosExtrenos_9);
+        datosLlegada_sellosExtrenos_9.setBounds(6, 82, 160, 32);
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addGap(167, 167, 167)
-                        .addComponent(jLabel19))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(datosLlegada_sellosInternos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113)
-                        .addComponent(datosLlegada_sellosExtrenos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(datosLlegada_sellosExtrenos_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(datosLlegada_sellosExtrenos_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(datosLlegada_sellosInternos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113)
-                        .addComponent(datosLlegada_sellosExtrenos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(datosLlegada_sellosExtrenos_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(datosLlegada_sellosExtrenos_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(datosLlegada_sellosInternos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113)
-                        .addComponent(datosLlegada_sellosExtrenos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(datosLlegada_sellosExtrenos_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(datosLlegada_sellosExtrenos_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(99, 99, 99))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_siguiente_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel19))
-                .addGap(3, 3, 3)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(datosLlegada_sellosInternos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(datosLlegada_sellosInternos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(datosLlegada_sellosInternos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(datosLlegada_sellosExtrenos_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(btn_siguiente_llegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jPanel9.add(jPanel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 170, 120));
 
         javax.swing.GroupLayout jp_opcion_DatosLlegadaLayout = new javax.swing.GroupLayout(jp_opcion_DatosLlegada);
         jp_opcion_DatosLlegada.setLayout(jp_opcion_DatosLlegadaLayout);
@@ -4394,6 +4370,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JPanel jPanel114;
     public javax.swing.JPanel jPanel115;
     public javax.swing.JPanel jPanel116;
+    public javax.swing.JPanel jPanel117;
     public javax.swing.JPanel jPanel12;
     public javax.swing.JPanel jPanel13;
     public javax.swing.JPanel jPanel14;
@@ -4424,6 +4401,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JPanel jPanel37;
     public javax.swing.JPanel jPanel38;
     public javax.swing.JPanel jPanel39;
+    public javax.swing.JPanel jPanel4;
     public javax.swing.JPanel jPanel40;
     public javax.swing.JPanel jPanel41;
     public javax.swing.JPanel jPanel42;
@@ -4434,6 +4412,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JPanel jPanel47;
     public javax.swing.JPanel jPanel48;
     public javax.swing.JPanel jPanel49;
+    public javax.swing.JPanel jPanel5;
     public javax.swing.JPanel jPanel50;
     public javax.swing.JPanel jPanel51;
     public javax.swing.JPanel jPanel52;
@@ -4444,6 +4423,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JPanel jPanel57;
     public javax.swing.JPanel jPanel58;
     public javax.swing.JPanel jPanel59;
+    public javax.swing.JPanel jPanel6;
     public javax.swing.JPanel jPanel60;
     public javax.swing.JPanel jPanel61;
     public javax.swing.JPanel jPanel62;

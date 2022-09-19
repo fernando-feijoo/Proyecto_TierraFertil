@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Controlador_Despacho implements MouseListener, ComponentListener, KeyListener {
+public class Controlador_Despacho implements MouseListener, ComponentListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Despacho modeloDespacho = new Modelo_Despacho();
@@ -32,6 +32,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
     ResultSet rs, rsC;
     public static int idContenedor;
     public static int idDespacho;
+    public int tempClickG3;
     String filtro, termografo_seleccion, termografo, selloAdhesivo, selloVerificador, selloCandado, fechaSalida, horaSalida, selloCable,
             compañiaTransportista, selloNaviero, vapor, destino, nombrePaletizadores, totalViajar, cajas, cantidadPallet, observacion;
 
@@ -40,9 +41,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
 
         this.vistaLlegada.btn_siguiente_despacho.addMouseListener(this);
         this.vistaLlegada.jp_opcion_Despacho.addComponentListener(this);
-        this.vistaLlegada.despacho_termografo.addKeyListener(this);
-        this.vistaLlegada.despacho_sello_adhesivo.addKeyListener(this);
-        this.vistaLlegada.despacho_sello_verificador.addKeyListener(this);
+        
 
     }
 
@@ -62,7 +61,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
         try {
             rs = modeloDespacho.consultaID_entidadDespacho();
             while (rs.next()) {
-                idDespacho = Integer.parseInt(rs.getString("id_tablaDespacho"));
+                idDespacho = Integer.parseInt(rs.getString("id_tablaDatosDespacho"));
             }
             System.out.println("id Entidad Despacho ControladorDespacho: " + idDespacho);
         } catch (SQLException ex) {
@@ -74,9 +73,9 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
     //  Mientras no se guarde no se suma.
 
     public void autoIncrementarID_Entidades(int herenciaUno, int herenciaDos) {
-        // this.idContenedor = herenciaUno;
-        this.idDespacho = 1;
-        System.out.println("ValorHerencia: " + idContenedor + " , " + idDespacho);
+        this.idContenedor = herenciaUno;
+        this.idDespacho = herenciaDos;
+        System.out.println("ValorHerencia Despacho contDespacho: " + idContenedor + " , " + idDespacho);
 
     }
 
@@ -138,6 +137,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
     public void enviarDatosDespacho() {
         this.modeloDespacho.id = idDespacho;
         this.modeloDespacho.id_contenedor = idContenedor;
+        
         this.modeloDespacho.filtro = filtro;
         this.modeloDespacho.termografo = termografo_seleccion;
         this.modeloDespacho.termografo_numero = termografo;
@@ -167,6 +167,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
         rsC = modeloDespacho.consultaID_entidadDespacho();
         try {
             while (rsC.next()) {
+                
                 this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo"));
                 this.vistaLlegada.despacho_sello_adhesivo.setText(rsC.getString("sello_adhesivo"));
                 this.vistaLlegada.despacho_sello_verificador.setText(rsC.getString("sello_verificador"));
@@ -235,19 +236,22 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
         }
         return null;
     }
-
+   
+    public void guardadoFinal(){
+        this.almacenarDatosDespacho();
+            this.enviarDatosDespacho();
+            this.modeloDespacho.guardar_Despacho();
+        
+    }
     @Override
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
 
         if (me.getSource() == this.vistaLlegada.btn_siguiente_despacho) {
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(4);
-            autoIncrementarID_Entidades(idDespacho++, idContenedor++);
-            this.almacenarDatosDespacho();
-            this.enviarDatosDespacho();
-            this.modeloDespacho.guardar_Despacho();
-              System.out.println(idContenedor+ ","+this.idDespacho);
-            
+             
+           
+
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
             this.borrarCamposDatosDespacho();
@@ -286,38 +290,15 @@ public class Controlador_Despacho implements MouseListener, ComponentListener, K
     public void componentHidden(ComponentEvent ce) {
         if (ce.getSource() == this.vistaLlegada.jp_grupoOpciones_datosLlegada) {
             System.err.println("Ingreso Opcion. HIDE");
-            this.almacenarDatosDespacho();
-            this.enviarDatosDespacho();
-            this.modeloContenedor.pruebaGuardado();
-            System.out.println("ValorSiguiente: " + idContenedor + " , " + idDatosLlegada);
+//                this.almacenarDatosDespacho();
+//                this.enviarDatosDespacho();
+//                this.modeloDespacho.guardar_Despacho();
+//                this.modeloDespacho.pruebaGuardado();
 
         }
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-        if (e.getSource() == this.vistaLlegada.despacho_termografo) {
-            char c = e.getKeyChar();
-
-            if ((c < '0' || c > '9') && (c <= 34 || c > 47)) {
-                e.consume();
-            }
-        }
-        if (e.getSource() == this.vistaLlegada.despacho_sello_adhesivo) {
-            char c = e.getKeyChar();
-            if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) {
-                e.consume();
-            }
-        }
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-
-    }
+   
+    
 
 }

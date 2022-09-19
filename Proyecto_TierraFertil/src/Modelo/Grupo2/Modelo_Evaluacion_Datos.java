@@ -11,8 +11,8 @@ public class Modelo_Evaluacion_Datos {
     ResultSet rs;
     Statement st;
     
-    public String fecha, calibracion, vapor, transporte, l_dedos, pedido, tipo_caja, peso, destino, fumigacion, destino2, semana,  finca, codigo, observaciones;
-  
+    public String fecha, calibracion, vapor, transporte, l_dedos, pedido, tipo_caja, peso, destino, fumigacion, codigo, observaciones;
+    public int semana, finca;
    
     
     public boolean guardarDatos(){

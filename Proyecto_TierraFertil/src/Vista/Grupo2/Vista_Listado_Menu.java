@@ -42,7 +42,7 @@ public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
         );
         jp_lienzo_principalLayout.setVerticalGroup(
             jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 569, Short.MAX_VALUE)
+            .addGap(0, 575, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

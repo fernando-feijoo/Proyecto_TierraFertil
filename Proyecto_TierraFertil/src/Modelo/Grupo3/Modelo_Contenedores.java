@@ -12,17 +12,15 @@ public class Modelo_Contenedores {
     public static String codigo_Contenedor, obser_Ins_Cont, obser_Hig_Cont, obser_General;
     public boolean estado;
     
-    public boolean guardarContenedorDatos() {
+    public void guardarContenedorDatos() {
         try {
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT \"insertarDatosContenedor\"("+id+", '"+codigo_Contenedor+"', '"+obser_Ins_Cont+"', '"+obser_Hig_Cont+"', '"+obser_General+"');";
             st.executeUpdate(sql);
             st.close();
-            System.out.println(id + " Datos almacenados Contenedor BD con exito.");
+            System.out.println(id + " Datos almacenados Contenedor BD MODELO.");
         } catch (Exception e) {
-            System.out.println("Error al tratar guardar los datos de contenedor en su modelo: " + e);
         }
-        return true;
     }
     
     public ResultSet consultaID_contenedor() {
@@ -31,9 +29,9 @@ public class Modelo_Contenedores {
             String sql = "SELECT COALESCE(MAX(id), 0) AS id_contenedor FROM contenedores;";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("Consulta id contenedor... BD Modelo, " + id);
+            System.out.println("Consulta id contenedor... BD MODELO, " + id);
         } catch (Exception e) {
-            System.out.println("Error al tratar de obtener id entidad contenedores: " + e);
+            System.out.println("Error al tratar de obtener id entidad contenedores en BD MODELO: " + e);
         }
         return rs;
     }

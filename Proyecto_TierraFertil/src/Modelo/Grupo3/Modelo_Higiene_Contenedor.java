@@ -9,10 +9,6 @@ public class Modelo_Higiene_Contenedor {
     Modelo_Conexion conexion = new Modelo_Conexion();
     ResultSet rs;
     Statement st;
-    /*
-        No trabajaremos con el id de la entidad aqui, ya que se actualiaria donde el ID conendor sea igual
-        al consultado. Ademas que eso debe heredar de la consulta contenedor o el dato a actualizar.
-    */
     public int id, id_contenedor, id_limpieza_contenedor;
     public String opcion;
 
@@ -20,31 +16,56 @@ public class Modelo_Higiene_Contenedor {
         try {
             st = conexion.conectarBD().createStatement();
 
-            String sql = "SELECT \"insertarDatosHigiene\"("+id+", "+id_contenedor+", "+id_limpieza_contenedor+", '"+opcion+"');";
+            String sql = "SELECT \"insertarDatosHigiene\"(" + id + ", " + id_contenedor + ", " + id_limpieza_contenedor + ", '" + opcion + "');";
             st.executeUpdate(sql);
             st.close();
-            System.out.println(id + "<--idTabla \n" + id_contenedor + " <--idCon Conenedor Datos almacenados HiegieneContenedor BD con exito.");
+            System.out.println(id + "<--idTabla \n" + id_contenedor + " <--idCon Conenedor Datos almacenados HiegieneContenedor BD MODELO.");
         } catch (Exception e) {
-            System.out.println("Error al tratar de guardar datos entidad HigieneContenedor: " + e);
+            //  No coloco el mostra exepcion porque da un mensaje siempre.
         }
     }
 
-    //  NO HARIAMOS CONSULTA DE ID EN ESTA ENTIDAD PORQUE ES TIPO LISTA, SERIA CON WHERE ID = IDCONTENEDOR (QUE ES UNICO)
-    //  ## Lo necesitamos para sacar el ultimo id y hacer el registro nuevo.
     public ResultSet consultaID_entidadHigCont() {
         try {
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT COALESCE(MAX(id), 8) AS \"id_tablaHigCont\" FROM higiene_contenedor;";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("Consulta id entidad HigCont... BD Modelo, " + id);
+            System.out.println("Consulta id entidad HigCont... BD MODELO, " + id);
         } catch (Exception e) {
-            System.out.println("Error al tratar de obtener id entidad HigieneContenedor: " + e);
+            System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
         }
         return rs;
     }
-    
-    public void pruebaGuardado(){
+
+    //  ##Se debe actualizar id para consulta.
+    public ResultSet consultaDatos_entidadHigCont() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "SELECT id_limpieza_contenedor, opcion FROM higiene_contenedor WHERE id_contenedor = "+id_contenedor+" ORDER BY id_limpieza_contenedor;";
+            rs = st.executeQuery(sql);
+            st.close();
+            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id_contenedor);
+        } catch (Exception e) {
+            System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
+        }
+        return rs;
+    }
+    // ##Actualizar ID para consulta.
+    public ResultSet consultaObsHigCon() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "SELECT obser_hig_cont FROM contenedores WHERE id =  "+id_contenedor+";";
+            rs = st.executeQuery(sql);
+            st.close();
+            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id_contenedor);
+        } catch (Exception e) {
+            System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
+        }
+        return rs;
+    }
+
+    public void pruebaGuardado() {
         System.out.println("HC: " + id + " , " + id_contenedor + " , " + id_limpieza_contenedor + " , " + opcion);
     }
 }

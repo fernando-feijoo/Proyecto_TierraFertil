@@ -22,9 +22,8 @@ public class Modelo_Datos_Llegada {
                     + "'"+tipo_caja+"', '"+cupo+"', '"+placa+"', '"+chasis+"', '"+chofer+"', '"+ci+"', '"+nombre_finca+"', '"+candados+"', '"+sellos_internos+"', '"+sellos_externos+"');";
             st.executeUpdate(sql);
             st.close();
-            System.out.println(id + " Datos almacenados DatosLLegada BD con exito.");
+            System.out.println(id + " Datos almacenados DatosLLegada BD MODELO.");
         } catch (Exception e) {
-            System.out.println("Error al tratar de guardar datos entidad datos_llegada: " + e);
         }
     }
 
@@ -34,9 +33,9 @@ public class Modelo_Datos_Llegada {
             String sql = "SELECT COALESCE(MAX(id), 0) AS \"id_tablaDatosLlegada\" FROM datos_llegada;";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("Consulta id entidad Llegada... BD Modelo, " + id);
+            System.out.println("Consulta id entidad Llegada... BD MODELO. " + id);
         } catch (Exception e) {
-            System.out.println("Error al tratar de obtener id entidad datos_llegada: " + e);
+            System.out.println("Error al tratar de obtener id entidad datos_llegada MODELO: " + e);
         }
         return rs;
     }
@@ -47,12 +46,12 @@ public class Modelo_Datos_Llegada {
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT id, (SELECT codigo FROM contenedores WHERE id = id_contenedor) AS contenedor, fecha_insp, semana, fecha_hora_salida, hora_llegada, tipo_caja, "
                     + "cupo, placa, chasis, chofer_contenedor, cedula_chofer, nombre_finca, candados, sellos_internos, "
-                    + "sellos_externos FROM datos_llegada WHERE id = 2;";
+                    + "sellos_externos FROM datos_llegada WHERE id = "+id_contenedor+";";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("Consulta id entidad Llegada... BD Modelo, " + id);
+            System.out.println("Consulta id entidad Llegada... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
-            System.out.println("Error al tratar de obtener datos entidad datos_llegada: " + e);
+            System.out.println("Error al tratar de obtener datos entidad datos_llegada MODELO: " + e);
         }
         return rs;
     }

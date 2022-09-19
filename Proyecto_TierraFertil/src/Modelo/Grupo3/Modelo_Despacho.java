@@ -11,6 +11,7 @@ public class Modelo_Despacho {
     ResultSet rs;
     Statement st;
     public int id, id_contenedor;
+     
     public String filtro, termografo, termografo_numero, sello_adhesivo, sello_verificador, sello_candado, fecha_salidad, hora_salida, sello_cable, compañia_transportista, sello_naviero,
             vapor, destino, nombre_paletizadores, total_viajar, cajas, cantidad_pallets, observacion;
 
@@ -37,7 +38,7 @@ public class Modelo_Despacho {
             String sql ="SELECT COALESCE(MAX(id), 0) AS \"id_tablaDatosDespacho\" FROM datos_despacho;";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("Consulta id entidad Despacho... BD Modelo, " + this.id);
+            System.out.println("Consulta id entidad Despacho... BD Modelo, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad datos_despacho: " + e);
         }

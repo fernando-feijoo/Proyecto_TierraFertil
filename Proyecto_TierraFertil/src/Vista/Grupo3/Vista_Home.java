@@ -30,43 +30,48 @@ public class Vista_Home extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        txf_busqueda = new javax.swing.JTextField();
+        boton_buscar = new Recursos_Codigo.Redondeado();
+        jLabel3 = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(965, 629));
         setMinimumSize(new java.awt.Dimension(965, 629));
         setPreferredSize(new java.awt.Dimension(965, 629));
 
+        jPanel1.setBackground(new java.awt.Color(230, 230, 230));
         jPanel1.setMaximumSize(new java.awt.Dimension(953, 593));
         jPanel1.setMinimumSize(new java.awt.Dimension(953, 593));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("BIENVENIDO A");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 167, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("ASOC. TIERRA FÉRTIL");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 284, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(315, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(281, 281, 281))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(343, 343, 343))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(173, 173, 173)
-                .addComponent(jLabel1)
-                .addGap(74, 74, 74)
-                .addComponent(jLabel2)
-                .addContainerGap(260, Short.MAX_VALUE))
-        );
+        txf_busqueda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txf_busquedaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txf_busqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(563, 33, 156, 30));
+
+        boton_buscar.setRoundBottomLeft(30);
+        boton_buscar.setRoundBottomRight(30);
+        boton_buscar.setRoundTopLeft(30);
+        boton_buscar.setRoundTopRight(30);
+        boton_buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("BUSCAR");
+        boton_buscar.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 0, 60, 30));
+
+        jPanel1.add(boton_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(762, 33, 150, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,10 +87,17 @@ public class Vista_Home extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txf_busquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txf_busquedaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txf_busquedaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public Recursos_Codigo.Redondeado boton_buscar;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
     public javax.swing.JPanel jPanel1;
+    public javax.swing.JTextField txf_busqueda;
     // End of variables declaration//GEN-END:variables
 }

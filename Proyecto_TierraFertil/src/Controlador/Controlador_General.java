@@ -78,7 +78,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Modelo_Higiene_Contenedor modeloHigiCont = new Modelo_Higiene_Contenedor();
     Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
     Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
-    public static int temp = 1;
+    public static int tempClickG3 = 1;
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -208,31 +208,54 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaEvaluacion.setVisible(true);
         }
         //  GRUPO 3 OPCIONES DE BOTONES
-        if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno) {
+        if (me.getSource() == this.vistaLlegada.btn_guardar) {
+            tempClickG3 = 1;
+            
+            this.controlDatosLlegada.guardadoFinal();
+            this.controlHigiene.guardadoFinal();
+            
+            this.controlDatosLlegada.controlGuardado(this.tempClickG3);
+            
+            this.controlHigiene.controlGuardado(tempClickG3);
+        }
+        
+        if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
             this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
             this.vistaLlegada.setBorder(null);
             this.vistaHome.setVisible(false);
             this.vistaLlegada.setVisible(true);
             //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
-            if (temp != 0) {
+            if (tempClickG3 != 0) {
+                //  Consultas de id de Entidades.
                 this.controlDatosLlegada.idEntidadContenedores();
                 this.controlDatosLlegada.idEntidadDatosLlegada();
+                //  Esta entidad ya retorna el max id como 8 si es null al inicio de la BD.
+                this.controlHigiene.idEntidadHigCont();
                 
-                System.out.println("General 1: " + this.controlDatosLlegada.idContenedor + " , " + this.controlDatosLlegada.idDatosLlegada);
+                System.out.println("General 1: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
+                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont);
+                //  Autoincremento de las entidades fijas que comparten id entre entidades. ej. 1, 1, 1...
                 this.controlDatosLlegada.idContenedor++;
                 this.controlDatosLlegada.idDatosLlegada++;
                 
                 this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
-                this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor);
-                System.out.println("General 2+: " + this.controlDatosLlegada.idContenedor + " , " + this.controlDatosLlegada.idDatosLlegada);
-                temp = 0;
+                
+                this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlHigiene.idHigCont);
+                
+                System.out.println("General 2: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
+                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont);
+                
+                // Validador de click para guardar 1 sola vez y guardar al final actualizando todo.
+                
+                this.controlDatosLlegada.controlGuardado(this.tempClickG3);
+                
+                this.controlHigiene.controlGuardado(tempClickG3);
+                tempClickG3 = 0;
             }   
             
             //  #########  Necesitamos validar cuando se haga guardar ejecuta consulta nuevo idContenedor y todo lo que sea fijo. #########
         }
-        if (me.getSource() == this.vistaLlegada.btn_guardar) {
-            temp = 1;
-        }
+        
             //  G3 Oculta el escritorio y muestra el principal, falta implementar la vista principal.
             //  Tambien restrablece el valor 0 al opcionClick para que valide los colores.
         if (me.getSource() == this.vistaLlegada.boton_home) {

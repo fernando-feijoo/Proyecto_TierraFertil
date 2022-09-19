@@ -25,6 +25,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     ResultSet rs, rsC;
     public static int idContenedor;
     public static int idDatosLlegada;
+    public int tempClickG3;
     String fechaInsp, fechaSalida, horaSalida, horaLlegada, tipoCaja, cupo, contenedor, placa,
             chasis, choferContenedor, ci, nombreFinca, candadosLlegada, sellosInternos, sellosExternos;
     int semana;
@@ -36,6 +37,12 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         //  Con este podemos hacer el guardado cuando se oculta esta ventana.
         this.vistaLlegada.jp_opcion_DatosLlegada.addComponentListener(this);
 
+    }
+
+    //  #borrar mensajes de mas en consola.
+    public void controlGuardado(int herenciaClicks) {
+        this.tempClickG3 = herenciaClicks;
+        System.out.println("HerenciaClic DLL: " + tempClickG3);
     }
 
     public void idEntidadContenedores() {
@@ -132,11 +139,14 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     }
 
+    // #Borrar lo de consola.
     public void guardarContenedor() {
         this.modeloContenedor.id = idContenedor;
         this.modeloContenedor.codigo_Contenedor = contenedor;
+        System.out.println("Guardar Conten DLL: " + idContenedor + " , " + contenedor);
     }
 
+    // #Actualizar lo de id para actualizar... Eso falta ###### En el modelo esta pre cargado 1;
     public void cargarDatosLlegada() {
         String sellosInternos = "", sellosExternos = "";
         rsC = modeloDatosLlegada.consultaDatos_entidadDatosLlegada();
@@ -258,23 +268,29 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         return null;
     }
 
+    public void guardadoFinal() {
+        this.almacenarDatosLlegada();
+        this.enviarDatosLLegada();
+        this.guardarContenedor();
+        this.modeloContenedor.pruebaGuardado();
+        this.modeloDatosLlegada.pruebaGuardado();
+        this.modeloContenedor.guardarContenedorDatos();
+        this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
+    }
+
     @Override
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
         if (me.getSource() == this.vistaLlegada.btn_siguiente_llegada) {
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(1);
-            this.almacenarDatosLlegada();
-            this.enviarDatosLLegada();
-            this.guardarContenedor();
 
-            this.cargarDatosLlegada();
-
-            this.modeloContenedor.guardarContenedorDatos();
-            this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
-
+            if (this.tempClickG3 != 0) {
+                this.guardadoFinal();
+                this.tempClickG3 = 0;
+            }
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
-            this.borrarCamposDatosLlegada();
+//            this.borrarCamposDatosLlegada();
         }
     }
 
@@ -314,12 +330,11 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         if (ce.getSource() == this.vistaLlegada.jp_opcion_DatosLlegada) {
             //  Para ejecutar guardar al cambiar de pestaña por click en siguiente o pestaña.
             System.out.println("Ingreso Opcion. HIDE");
-            this.almacenarDatosLlegada();
-            this.enviarDatosLLegada();
-            this.guardarContenedor();
-            this.modeloDatosLlegada.pruebaGuardado();
-            this.modeloContenedor.pruebaGuardado();
-            System.out.println("ValorSiguiente: " + idContenedor + " , " + idDatosLlegada);
+
+            if (this.tempClickG3 != 0) {
+                this.guardadoFinal();
+                this.tempClickG3 = 0;
+            }
         }
 
     }

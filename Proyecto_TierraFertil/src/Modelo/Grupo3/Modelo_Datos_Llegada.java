@@ -46,10 +46,10 @@ public class Modelo_Datos_Llegada {
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT id, (SELECT codigo FROM contenedores WHERE id = id_contenedor) AS contenedor, fecha_insp, semana, fecha_hora_salida, hora_llegada, tipo_caja, "
                     + "cupo, placa, chasis, chofer_contenedor, cedula_chofer, nombre_finca, candados, sellos_internos, "
-                    + "sellos_externos FROM datos_llegada WHERE id = 1;";
+                    + "sellos_externos FROM datos_llegada WHERE id = "+id_contenedor+";";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("Consulta id entidad Llegada... BD MODELO, " + id);
+            System.out.println("Consulta id entidad Llegada... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener datos entidad datos_llegada MODELO: " + e);
         }

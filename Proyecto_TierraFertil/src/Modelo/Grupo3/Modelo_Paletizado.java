@@ -40,10 +40,10 @@ public class Modelo_Paletizado {
     public ResultSet consultaDatos_entidadPaletizado() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT id, codigo, id_cantidad_cajas FROM control_pallet WHERE id_contenedor = 1 ORDER BY id;";
+            String sql = "SELECT id, codigo, id_cantidad_cajas FROM control_pallet WHERE id_contenedor = "+id_contenedor+" ORDER BY id;";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id);
+            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad Pallet BD MODELO: " + e);
         }
@@ -53,10 +53,10 @@ public class Modelo_Paletizado {
     public ResultSet consultaObsGeneral() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT obser_general FROM contenedores WHERE id = 1;";
+            String sql = "SELECT obser_general FROM contenedores WHERE id = "+id_contenedor+";";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id);
+            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad Pallet BD MODELO: " + e);
         }

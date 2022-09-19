@@ -42,10 +42,10 @@ public class Modelo_Higiene_Contenedor {
     public ResultSet consultaDatos_entidadHigCont() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT id_limpieza_contenedor, opcion FROM higiene_contenedor WHERE id_contenedor = 1 ORDER BY id_limpieza_contenedor;";
+            String sql = "SELECT id_limpieza_contenedor, opcion FROM higiene_contenedor WHERE id_contenedor = "+id_contenedor+" ORDER BY id_limpieza_contenedor;";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id);
+            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
         }
@@ -55,10 +55,10 @@ public class Modelo_Higiene_Contenedor {
     public ResultSet consultaObsHigCon() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT obser_hig_cont FROM contenedores WHERE id = 1;";
+            String sql = "SELECT obser_hig_cont FROM contenedores WHERE id =  "+id_contenedor+";";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id);
+            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
         }

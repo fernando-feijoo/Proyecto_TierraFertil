@@ -31,11 +31,10 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
 
     }
 
-    //  #borrar mensajes de mas en consola.
-//    public void controlGuardado(int herenciaClicks) {
-//        this.tempClickG3 = herenciaClicks;
-//        System.out.println("HerenciaClic HC: " + tempClickG3);
-//    }
+    public void idBusqueda(int idHerenciaContenedor) {
+        this.idContenedor = idHerenciaContenedor;
+        this.modeloHigCont.id_contenedor = this.idContenedor;
+    }
 
     public void guardarContenedor() {
         this.modeloHeContenedor.obser_Hig_Cont = this.observacionHigCont;
@@ -186,8 +185,8 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
             System.out.println("Error datos HiCn Array: " + ex);
         }
     }
-    
-    public void borrarCamposHigCont(){
+
+    public void borrarCamposHigCont() {
         this.vistaLlegada.bg_lavado.clearSelection();
         this.vistaLlegada.bg_drenajes.clearSelection();
         this.vistaLlegada.bg_olor.clearSelection();
@@ -198,7 +197,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
         this.vistaLlegada.bg_contenedor_aceptable.clearSelection();
         this.vistaLlegada.higCont_observaciones.setText(null);
     }
-    
+
     public void guardadoFinal() {
         this.almacenarHigieneContendor();
         this.guardarContenedor();
@@ -206,7 +205,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
         this.modeloHeContenedor.guardarContenedorDatos();
         this.modeloHeContenedor.pruebaGuardado();
     }
-    
+
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaLlegada.btn_siguiente_higCont) {
@@ -254,7 +253,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
     public void componentHidden(ComponentEvent ce) {
         if (ce.getSource() == this.vistaLlegada.jp_opcion_HiegieneContenedor) {
             System.out.println("Ingreso Opcion. HIDE");
-            
+
 //            if (this.tempClickG3 != 0) {
 //
 //                this.guardadoFinal();

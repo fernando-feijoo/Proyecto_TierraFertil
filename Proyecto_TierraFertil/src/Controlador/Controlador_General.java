@@ -11,12 +11,6 @@ import Controlador.Grupo3.Controlador_Higiene_Contenedor;
 import Controlador.Grupo3.Controlador_Inspeccion_Contenedor;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Controlador.Grupo3.Controlador_Paletizado;
-import Modelo.Grupo3.Modelo_Contenedores;
-import Modelo.Grupo3.Modelo_Datos_Llegada;
-import Modelo.Grupo3.Modelo_Despacho;
-import Modelo.Grupo3.Modelo_Higiene_Contenedor;
-import Modelo.Grupo3.Modelo_Inspeccion_Contenedor;
-import Modelo.Grupo3.Modelo_Paletizado;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
 import Vista.Grupo2.Vista_Evaluacion_Total;
@@ -72,13 +66,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
     Controlador_Inspeccion_Contenedor controlInspeccion = new Controlador_Inspeccion_Contenedor(vistaLlegada);
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
-//    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
-//    Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
-//    Modelo_Despacho modeloDespacho = new Modelo_Despacho();
-//    Modelo_Higiene_Contenedor modeloHigiCont = new Modelo_Higiene_Contenedor();
-//    Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
-//    Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
     public static int tempClickG3 = 1;
+    
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -117,6 +106,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
         this.vistaLlegada.boton_home.addMouseListener(this);
         this.vistaLlegada.btn_guardar.addMouseListener(this);
+        this.vistaHome.boton_buscar.addMouseListener(this);
         this.vistaLlegada.addComponentListener(this);
         //  Area de pruebas para los metodos a ejecutar en el constructor.
         this.menuRoles();
@@ -149,7 +139,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaMenuCalidad.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 3")) {
-                
+                this.vistaGeneral.jp_escritorio_general.add(vistaLlegada); // #Agregue esto al final a ver si funciona.
                 this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
                 this.vistaGeneral.jp_escritorio_general.add(vistaHome);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
@@ -218,7 +208,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
-            this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
+//            this.vistaGeneral.jp_escritorio_general.add(vistaLlegada); // #Toca eliminar esta linea quizas.
             this.vistaLlegada.setBorder(null);
             this.vistaHome.setVisible(false);
             this.vistaLlegada.setVisible(true);
@@ -268,6 +258,24 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaHome.setVisible(true);
             this.controladorMenuAcopio.opcionClick(0);
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
+        }
+        if (me.getSource() == this.vistaHome.boton_buscar) {
+            this.vistaHome.setVisible(false);
+            this.vistaLlegada.setBorder(null);
+            this.vistaLlegada.setVisible(true);
+            
+            int busqueda = Integer.parseInt(this.vistaHome.txf_busqueda.getText());
+            this.controlDatosLlegada.idBusqueda(busqueda);
+            this.controlHigiene.idBusqueda(busqueda);
+            this.controlPaletizado.idBusqueda(busqueda);
+            
+            this.controlDatosLlegada.cargarDatosLlegada();
+            this.controlHigiene.cargarDatosHigCont();
+            this.controlPaletizado.cargarDatosPalet();
+            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
+                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
+                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+            
         }
     }
 

@@ -464,6 +464,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         datosLlegada_fechaInsp.setBackground(new java.awt.Color(255, 255, 255));
         datosLlegada_fechaInsp.setForeground(new java.awt.Color(0, 0, 0));
+        datosLlegada_fechaInsp.setDateFormatString("dd/MM/yyyy");
         datosLlegada_fechaInsp.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));

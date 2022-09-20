@@ -75,7 +75,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Listado_Contenedores controlListadoCont = new Controlador_Listado_Contenedores(vistaListado);
     Controlador_Obtener_Reportes controlObtReport = new Controlador_Obtener_Reportes(vistaObteReport);
     public static int tempClickG3 = 1;
-
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -115,6 +114,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaLlegada.boton_home.addMouseListener(this);
         this.vistaListado.boton_home.addMouseListener(this);
         this.vistaObteReport.boton_home.addMouseListener(this);
+        this.vistaObteReport.boton_buscar.addMouseListener(this);
         this.vistaLlegada.btn_guardar.addMouseListener(this);
 //        this.vistaHome.boton_buscar.addMouseListener(this); // <-- Aqui se tiene que activar el actualizar #
         this.vistaLlegada.addComponentListener(this);
@@ -151,13 +151,10 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaMenuCalidad.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 3")) {
-                this.vistaGeneral.jp_escritorio_general.add(vistaLlegada); // #Agregue esto al final a ver si funciona.
+                this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
                 this.vistaGeneral.jp_escritorio_general.add(vistaListado);
                 this.vistaGeneral.jp_escritorio_general.add(vistaObteReport);
                 this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
-//                this.vistaLlegada.setVisible(false);
-//                this.vistaListado.setVisible(false);
-//                this.vistaObteReport.setVisible(false);
                 this.vistaGeneral.jp_escritorio_general.add(vistaHome);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaHome.setVisible(true);
@@ -170,6 +167,14 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         } catch (Exception ex) {
 
         }
+    }
+
+    public void menuUsuarioSwitchOnOFF() {
+        this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
+        this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
+        this.vistaGeneral.jp_lienzo_principal.setVisible(false);
+        this.vistaGeneral.jp_lienzo_principal.setVisible(true);
+        System.out.println("OFF - ON");
     }
 
     @Override
@@ -195,10 +200,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         //  Esta parte hay que trabajr bien aun, porque veo un error aun. Es cuando se oculta las opciones en el boton usuario.
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial && contTemp == 2) {
-            this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
-            this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
-            this.vistaGeneral.jp_lienzo_principal.setVisible(false);
-            this.vistaGeneral.jp_lienzo_principal.setVisible(true);
+            this.menuUsuarioSwitchOnOFF();
             contTemp = 0;
         }
         //  Aqui hacemos el cerrar sesion en la vista general.
@@ -219,7 +221,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             tempClickG3 = 1;
 
             this.controlDatosLlegada.guardadoFinal();
-            //this.controlInspeccion.guardadoFinal();
+            this.controlInspeccion.guardadoFinal();
             this.controlHigiene.guardadoFinal();
             this.controlDespacho.guardadoFinal();
             this.controlPaletizado.guardadoFinal();
@@ -232,6 +234,10 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaHome.dispose();
             this.vistaListado.dispose();
             this.vistaObteReport.dispose();
+            // Un solo validador de menu desplegable.
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
+            // Necesita la asignacion para leer evento a la primera.
             this.vistaLlegada.setVisible(true);
             //  #########  SOLUCIONADO LO DE ID FIJO DE CONTENDOR Y DEMAS TABLAS, FALTA DE ROJAS #########
             if (tempClickG3 != 0) {
@@ -278,6 +284,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaHome.dispose();
             this.vistaLlegada.dispose();
             this.vistaObteReport.dispose();
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
             this.vistaListado.setVisible(true);
         }
         if (me.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_uno) {
@@ -285,11 +293,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaHome.dispose();
             this.vistaLlegada.dispose();
             this.vistaListado.dispose();
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
             this.vistaObteReport.setVisible(true);
         }
         //  Aqui es cuando volvemos al home, se oculta ele scritorio anterior y se muestra el home.
         if (me.getSource() == this.vistaLlegada.boton_home) {
             this.vistaLlegada.dispose();
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
             this.vistaHome.setVisible(true);
             this.controladorMenuAcopio.opcionClick(0);
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
@@ -297,32 +309,40 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaListado.boton_home) {
             this.vistaListado.dispose();
             this.vistaHome.setVisible(true);
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
         if (me.getSource() == this.vistaObteReport.boton_home) {
             this.vistaObteReport.dispose();
             this.vistaHome.setVisible(true);
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
         //  Boton actualizar, lo que hace es buscar la informacion en la BD y mostrar en el formulario principal.
-//        if (me.getSource() == this.vistaHome.boton_buscar) {
-//            this.vistaHome.setVisible(false);
-//            this.vistaLlegada.setBorder(null);
-//            this.vistaLlegada.setVisible(true);
-//            
-//            int busqueda = Integer.parseInt(this.vistaHome.txf_busqueda.getText());
-//            this.controlDatosLlegada.idBusqueda(busqueda);
-//            this.controlHigiene.idBusqueda(busqueda);
-//            this.controlPaletizado.idBusqueda(busqueda);
-//            
-//            this.controlDatosLlegada.cargarDatosLlegada();
-//            this.controlHigiene.cargarDatosHigCont();
-//            this.controlPaletizado.cargarDatosPalet();
-//            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
-//                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
-//                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
-//            
-//        }
+        if (me.getSource() == this.vistaObteReport.boton_buscar) {
+            this.vistaObteReport.dispose();
+            this.vistaLlegada.setBorder(null);
+            this.vistaLlegada.setVisible(true);
+            
+            int busqueda = Integer.parseInt(this.vistaObteReport.txf_busqueda.getText());
+            this.controlDatosLlegada.idBusqueda(busqueda);
+            this.controlInspeccion.idBusqueda(busqueda);
+            this.controlHigiene.idBusqueda(busqueda);
+            this.controlDespacho.idBusqueda(busqueda);
+            this.controlPaletizado.idBusqueda(busqueda);
+            
+            this.controlDatosLlegada.cargarDatosLlegada();
+            this.controlInspeccion.cargarDatosInspCont();
+            this.controlHigiene.cargarDatosHigCont();
+            this.controlDespacho.cargarDatosDespacho();
+            this.controlPaletizado.cargarDatosPalet();
+            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
+                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
+                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+            
+        }
     }
 
     @Override

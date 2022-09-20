@@ -18,7 +18,6 @@ public class Modelo_Despacho {
     public void guardar_Despacho() {
         try {
             st = conexion.conectarBD().createStatement();
-
             String sql = "SELECT \"insertarDatosDespacho\"(" + id + ", " + id_contenedor + ",'" + filtro + "','" + termografo + "','" + termografo_numero + "','" + sello_adhesivo + "','" + sello_verificador + "','" + sello_candado + "','" + (fecha_salidad + " " + hora_salida) + "','" + sello_cable + "', "
                     + "'" + compañia_transportista + "','" + sello_naviero + "','" + vapor + "','" + destino + "','" + nombre_paletizadores + "','" + total_viajar + "','" + cajas + "','" + cantidad_pallets + "','" + observacion + "')";
 
@@ -27,7 +26,6 @@ public class Modelo_Despacho {
             conexion.conectarBD().close();
             System.out.println(id + " Datos almacenados Despacho BD con exito.");
         } catch (Exception e) {
-            System.out.println("Error al tratar guardar los datos de llegada del contenedor " + e);
         }
         
     }
@@ -53,7 +51,7 @@ public class Modelo_Despacho {
             st = conexion.conectarBD().createStatement();
             String sql = "Select id,id_contenedor,filtro,termografo,termografo_numero,sello_adhesivo,sello_verificador,sello_exp_candado,\n"
                     + "fecha_hora_salida,sello_exp_cable,compania_transportista,sello_naviero,vapor,destino,nombre_paletizadores,total_viajar,\n"
-                    + "cajas,cant_palet,observacion from datos_despacho where id = 1;";
+                    + "cajas,cant_palet,observacion from datos_despacho where id = "+ id_contenedor +";";
             rs = st.executeQuery(sql);
             st.close();
             conexion.conectarBD().close();
@@ -66,6 +64,8 @@ public class Modelo_Despacho {
 
     public void pruebaGuardado() {
         // para validar si esta enviando bien la informacion.
-        System.out.println(id + "," + id_contenedor + "," + termografo + "," + filtro);
+        System.out.println(id + " , " +  id_contenedor + " , " + filtro + " , " + termografo + " , " + termografo_numero + " , " + sello_adhesivo + " , " + sello_verificador + " , \n" + 
+                sello_candado + " , " + fecha_salidad + " , " + hora_salida + " , " + sello_cable + " , " + compañia_transportista + " , " + sello_naviero + " , \n" + 
+                vapor + " , " +  destino + " , " +  nombre_paletizadores + " , " + total_viajar + " , " +  cajas + " , " +  cantidad_pallets + " , " +  observacion);
     }
 }

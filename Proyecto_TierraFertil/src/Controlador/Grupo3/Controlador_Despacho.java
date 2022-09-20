@@ -1,14 +1,8 @@
 package Controlador.Grupo3;
 
-import static Controlador.Grupo3.Controlador_Datos_Llegada.idContenedor;
-import static Controlador.Grupo3.Controlador_Datos_Llegada.idDatosLlegada;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Despacho;
 import Vista.Grupo3.Vista_Llegada;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
@@ -16,17 +10,13 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-public class Controlador_Despacho implements MouseListener, ComponentListener {
+public class Controlador_Despacho implements MouseListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Despacho modeloDespacho = new Modelo_Despacho();
     Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
-    // SimpleDateFormat formatoP = new SimpleDateFormat("dd/MM/yyyy");
-// this.vistaLlegada.datosLlegada_fechaInsp.setDate(formatoP.format(28/09/2022).toDate);
-    SimpleDateFormat formatoD = new SimpleDateFormat("dd/MM/yyyy");
+    SimpleDateFormat formatoD = new SimpleDateFormat("yyyy-MM-dd");
     SimpleDateFormat formatoH = new SimpleDateFormat("HH:mm:ss");
 
     ResultSet rs, rsC;
@@ -38,23 +28,13 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
 
     public Controlador_Despacho(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
-
         this.vistaLlegada.btn_siguiente_despacho.addMouseListener(this);
-        this.vistaLlegada.jp_opcion_Despacho.addComponentListener(this);
-        
-
     }
-
-    public void idEntidadContenedores() {
-        try {
-            rs = modeloContenedor.consultaID_contenedor();
-            while (rs.next()) {
-                idContenedor = Integer.parseInt(rs.getString("id_contenedor"));
-            }
-            System.out.println("id Entidad Contenedor ControladorDespacho: " + idContenedor);
-        } catch (SQLException ex) {
-            System.out.println("Error de consulta y almacenamiento: " + ex);
-        }
+    
+    // #SE NECESITA PROBAR BIEN ESTO AUN.
+    public void idBusqueda(int idHerenciaContenedor){
+        this.idContenedor = idHerenciaContenedor;
+        this.modeloDespacho.id_contenedor = this.idContenedor;
     }
 
     public void idEntidadDatosDespacho() {
@@ -137,7 +117,7 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
     public void enviarDatosDespacho() {
         this.modeloDespacho.id = idDespacho;
         this.modeloDespacho.id_contenedor = idContenedor;
-        
+
         this.modeloDespacho.filtro = filtro;
         this.modeloDespacho.termografo = termografo_seleccion;
         this.modeloDespacho.termografo_numero = termografo;
@@ -158,17 +138,13 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
         this.modeloDespacho.observacion = observacion;
     }
 
-//     public void guardarContenedor() {
-//        this.modeloContenedor.id = idContenedor;
-//        
-//    }
     public void cargarDatosDespacho() {
-        //  Con este codigo solucionamos el colocar la fecha en el campo fecha de libreria jcalendar 1.4 y tambien la hora.
+        //  ## Esta mal no carga la informacion. ##
         rsC = modeloDespacho.consultaID_entidadDespacho();
         try {
             while (rsC.next()) {
-                
-                this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo"));
+
+                this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo")); // esta mal esto es el seleccionado del checkbox
                 this.vistaLlegada.despacho_sello_adhesivo.setText(rsC.getString("sello_adhesivo"));
                 this.vistaLlegada.despacho_sello_verificador.setText(rsC.getString("sello_verificador"));
                 this.vistaLlegada.despacho_sello_exportador.setText("sello_exp_candado");
@@ -236,25 +212,23 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
         }
         return null;
     }
-   
-    public void guardadoFinal(){
+
+    public void guardadoFinal() {
         this.almacenarDatosDespacho();
-            this.enviarDatosDespacho();
-            this.modeloDespacho.guardar_Despacho();
-        
+        this.enviarDatosDespacho();
+        this.modeloDespacho.guardar_Despacho();
+        this.modeloDespacho.pruebaGuardado();
+
     }
+
     @Override
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
-
         if (me.getSource() == this.vistaLlegada.btn_siguiente_despacho) {
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(4);
-             
-           
-
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
-            this.borrarCamposDatosDespacho();
+//            this.borrarCamposDatosDespacho();
         }
     }
 
@@ -273,32 +247,4 @@ public class Controlador_Despacho implements MouseListener, ComponentListener {
     @Override
     public void mouseExited(MouseEvent me) {
     }
-
-    @Override
-    public void componentResized(ComponentEvent me) {
-    }
-
-    @Override
-    public void componentMoved(ComponentEvent me) {
-    }
-
-    @Override
-    public void componentShown(ComponentEvent me) {
-    }
-
-    @Override
-    public void componentHidden(ComponentEvent ce) {
-        if (ce.getSource() == this.vistaLlegada.jp_grupoOpciones_datosLlegada) {
-            System.err.println("Ingreso Opcion. HIDE");
-//                this.almacenarDatosDespacho();
-//                this.enviarDatosDespacho();
-//                this.modeloDespacho.guardar_Despacho();
-//                this.modeloDespacho.pruebaGuardado();
-
-        }
-    }
-
-   
-    
-
 }

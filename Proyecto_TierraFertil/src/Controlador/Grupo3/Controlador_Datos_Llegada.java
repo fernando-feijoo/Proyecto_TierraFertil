@@ -3,8 +3,6 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Datos_Llegada;
 import Vista.Grupo3.Vista_Llegada;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
@@ -13,7 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Controlador_Datos_Llegada implements MouseListener, ComponentListener {
+public class Controlador_Datos_Llegada implements MouseListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
@@ -34,9 +32,6 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_llegada.addMouseListener(this);
         this.vistaLlegada.boton_home.addMouseListener(this);
-        //  Con este podemos hacer el guardado cuando se oculta esta ventana.
-        this.vistaLlegada.jp_opcion_DatosLlegada.addComponentListener(this);
-
     }
 
     // #SE NECESITA PROBAR BIEN ESTO AUN.
@@ -285,9 +280,6 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(1);
 
         }
-        if (me.getSource() == this.vistaLlegada.boton_home) {
-//            this.borrarCamposDatosLlegada();
-        }
     }
 
     @Override
@@ -304,28 +296,5 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     @Override
     public void mouseExited(MouseEvent me) {
-    }
-
-    @Override
-    public void componentResized(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentMoved(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentShown(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentHidden(ComponentEvent ce) {
-        if (ce.getSource() == this.vistaLlegada.jp_opcion_DatosLlegada) {
-            //  Para ejecutar guardar al cambiar de pestaña por click en siguiente o pestaña.
-            System.out.println("Ingreso Opcion. HIDE");
-        }
     }
 }

@@ -3,15 +3,13 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Higiene_Contenedor;
 import Vista.Grupo3.Vista_Llegada;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-public class Controlador_Higiene_Contenedor implements MouseListener, ComponentListener {
+public class Controlador_Higiene_Contenedor implements MouseListener{
 
     Vista_Llegada vistaLlegada;
     Modelo_Higiene_Contenedor modeloHigCont = new Modelo_Higiene_Contenedor();
@@ -26,9 +24,6 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
     public Controlador_Higiene_Contenedor(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_higCont.addMouseListener(this);
-        //  Con este podemos hacer el guardado cuando se oculta esta ventana.
-        this.vistaLlegada.jp_opcion_HiegieneContenedor.addComponentListener(this);
-
     }
 
     public void idBusqueda(int idHerenciaContenedor) {
@@ -215,28 +210,5 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
     @Override
     public void mouseExited(MouseEvent e) {
 
-    }
-
-    @Override
-    public void componentResized(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentMoved(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentShown(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentHidden(ComponentEvent ce) {
-        if (ce.getSource() == this.vistaLlegada.jp_opcion_HiegieneContenedor) {
-            System.out.println("Ingreso Opcion. HIDE");
-
-        }
     }
 }

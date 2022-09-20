@@ -21,7 +21,6 @@ public class Modelo_Inspeccion_Contenedor {
             st.close();
             conexion.conectarBD().close();
         } catch (Exception e) {
-            System.out.println("Error al tratar guardar los datos de llegada del contenedor " + e);
         }
     }
 
@@ -46,7 +45,7 @@ public class Modelo_Inspeccion_Contenedor {
             rs = st.executeQuery(sql);
             st.close();
             conexion.conectarBD().close();
-            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id);
+            System.out.println("ConsultaDatos id entidad InspConte... BD MODELO, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
         }
@@ -60,7 +59,7 @@ public class Modelo_Inspeccion_Contenedor {
             rs = st.executeQuery(sql);
             st.close();
             conexion.conectarBD().close();
-            System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id);
+            System.out.println("ConsultaDatos id entidad InspConte... BD MODELO, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad InspeccionContenedor BD MODELO: " + e);
         }

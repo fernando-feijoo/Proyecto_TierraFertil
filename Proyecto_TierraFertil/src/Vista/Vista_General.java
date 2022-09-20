@@ -22,11 +22,13 @@ public class Vista_General extends javax.swing.JFrame {
         jp_contenedor_opciones = new javax.swing.JPanel();
         jp_opcionModoOscuro = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        boton_off = new javax.swing.JLabel();
         jp_opcionInicial = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         lbl_nombre_usuario = new javax.swing.JLabel();
         jp_opcionCerrarSesion = new Recursos_Codigo.Redondeado();
         lbl_cerrarSesion = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jp_banner = new javax.swing.JPanel();
         lbl_icono_logo = new javax.swing.JLabel();
         btn_cerrar = new Recursos_Codigo.Redondeado();
@@ -58,6 +60,7 @@ public class Vista_General extends javax.swing.JFrame {
         jp_contenedor_opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jp_opcionModoOscuro.setBackground(new java.awt.Color(204, 204, 204));
+        jp_opcionModoOscuro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jp_opcionModoOscuro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jp_opcionModoOscuro.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionModoOscuro.setMinimumSize(new java.awt.Dimension(220, 40));
@@ -70,6 +73,9 @@ public class Vista_General extends javax.swing.JFrame {
         jLabel1.setText("Modo Oscuro");
         jp_opcionModoOscuro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
+        boton_off.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/switch_OFF_24px.png"))); // NOI18N
+        jp_opcionModoOscuro.add(boton_off, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 10, -1, -1));
+
         jp_contenedor_opciones.add(jp_opcionModoOscuro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 220, 40));
 
         jp_opcionInicial.setBackground(new java.awt.Color(247, 246, 246));
@@ -79,7 +85,7 @@ public class Vista_General extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/flechaMenu_24px.png"))); // NOI18N
         jp_opcionInicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
 
-        lbl_nombre_usuario.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        lbl_nombre_usuario.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         lbl_nombre_usuario.setForeground(new java.awt.Color(0, 0, 0));
         lbl_nombre_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/ProfileUser_32px.png"))); // NOI18N
         lbl_nombre_usuario.setText("NombreUsuario");
@@ -89,17 +95,19 @@ public class Vista_General extends javax.swing.JFrame {
         jp_contenedor_opciones.add(jp_opcionInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
         jp_opcionCerrarSesion.setBackground(new java.awt.Color(204, 204, 204));
+        jp_opcionCerrarSesion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jp_opcionCerrarSesion.setMaximumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setMinimumSize(new java.awt.Dimension(220, 40));
         jp_opcionCerrarSesion.setPreferredSize(new java.awt.Dimension(220, 40));
-        jp_opcionCerrarSesion.setRoundBottomLeft(35);
-        jp_opcionCerrarSesion.setRoundBottomRight(35);
         jp_opcionCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_cerrarSesion.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         lbl_cerrarSesion.setForeground(new java.awt.Color(0, 0, 0));
         lbl_cerrarSesion.setText("Cerrar Sesion");
         jp_opcionCerrarSesion.add(lbl_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/log_out_24px.png"))); // NOI18N
+        jp_opcionCerrarSesion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 7, -1, -1));
 
         jp_contenedor_opciones.add(jp_opcionCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 220, 40));
 
@@ -277,12 +285,14 @@ public class Vista_General extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel boton_off;
     public Recursos_Codigo.Redondeado btn_cerrar;
     public Recursos_Codigo.Redondeado btn_minimizar;
     public javax.swing.JLabel icono_cerrar;
     public javax.swing.JLabel icono_minimizar;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
     public javax.swing.JPanel jp_banner;
     public javax.swing.JPanel jp_contenedor_menu;
     public javax.swing.JPanel jp_contenedor_opciones;

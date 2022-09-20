@@ -22,6 +22,7 @@ public class Modelo_Datos_Llegada {
                     + "'"+tipo_caja+"', '"+cupo+"', '"+placa+"', '"+chasis+"', '"+chofer+"', '"+ci+"', '"+nombre_finca+"', '"+candados+"', '"+sellos_internos+"', '"+sellos_externos+"');";
             st.executeUpdate(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println(id + " Datos almacenados DatosLLegada BD MODELO.");
         } catch (Exception e) {
         }
@@ -33,6 +34,7 @@ public class Modelo_Datos_Llegada {
             String sql = "SELECT COALESCE(MAX(id), 0) AS \"id_tablaDatosLlegada\" FROM datos_llegada;";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("Consulta id entidad Llegada... BD MODELO. " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad datos_llegada MODELO: " + e);
@@ -49,6 +51,7 @@ public class Modelo_Datos_Llegada {
                     + "sellos_externos FROM datos_llegada WHERE id = "+id_contenedor+";";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("Consulta id entidad Llegada... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener datos entidad datos_llegada MODELO: " + e);

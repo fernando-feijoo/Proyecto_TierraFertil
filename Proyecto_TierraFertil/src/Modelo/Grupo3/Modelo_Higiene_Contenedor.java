@@ -19,6 +19,7 @@ public class Modelo_Higiene_Contenedor {
             String sql = "SELECT \"insertarDatosHigiene\"(" + id + ", " + id_contenedor + ", " + id_limpieza_contenedor + ", '" + opcion + "');";
             st.executeUpdate(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println(id + "<--idTabla \n" + id_contenedor + " <--idCon Conenedor Datos almacenados HiegieneContenedor BD MODELO.");
         } catch (Exception e) {
             //  No coloco el mostra exepcion porque da un mensaje siempre.
@@ -31,6 +32,7 @@ public class Modelo_Higiene_Contenedor {
             String sql = "SELECT COALESCE(MAX(id), 8) AS \"id_tablaHigCont\" FROM higiene_contenedor;";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("Consulta id entidad HigCont... BD MODELO, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
@@ -45,6 +47,7 @@ public class Modelo_Higiene_Contenedor {
             String sql = "SELECT id_limpieza_contenedor, opcion FROM higiene_contenedor WHERE id_contenedor = "+id_contenedor+" ORDER BY id_limpieza_contenedor;";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
@@ -58,6 +61,7 @@ public class Modelo_Higiene_Contenedor {
             String sql = "SELECT obser_hig_cont FROM contenedores WHERE id =  "+id_contenedor+";";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("ConsultaDatos id entidad HigCont... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);

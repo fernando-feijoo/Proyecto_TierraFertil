@@ -19,7 +19,6 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
-        this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
     }
     
     public void opcionClick(int a){
@@ -40,10 +39,6 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
         if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_uno) {
             this.vistaMenuAcopio.btn_reportes_opcion_uno.setBackground(colorSeleccionIngreso);
             opcionClick = 3;
-        }
-        if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_dos) {
-            this.vistaMenuAcopio.btn_reportes_opcion_dos.setBackground(colorSeleccionIngreso);
-            opcionClick = 4;
         }
     }
 
@@ -67,8 +62,6 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
             this.vistaMenuAcopio.btn_acopio_opcion_dos.setBackground(colorSeleccionOpcion);
         } else if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_uno && (opcionClick != 3)) {
             this.vistaMenuAcopio.btn_reportes_opcion_uno.setBackground(colorSeleccionOpcion);
-        } else if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_dos && (opcionClick != 4)) {
-            this.vistaMenuAcopio.btn_reportes_opcion_dos.setBackground(colorSeleccionOpcion);
         }
     }
 
@@ -81,8 +74,6 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
             this.vistaMenuAcopio.btn_acopio_opcion_dos.setBackground(colorNormal);
         } else if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_uno && (opcionClick != 3)) {
             this.vistaMenuAcopio.btn_reportes_opcion_uno.setBackground(colorNormal);
-        } else if (e.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_dos && (opcionClick != 4)) {
-            this.vistaMenuAcopio.btn_reportes_opcion_dos.setBackground(colorNormal);
         }
     }
 

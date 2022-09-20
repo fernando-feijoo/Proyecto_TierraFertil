@@ -39,8 +39,6 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
         lbl_titulo_reporte = new javax.swing.JLabel();
         btn_reportes_opcion_uno = new Recursos_Codigo.Redondeado();
         jLabel5 = new javax.swing.JLabel();
-        btn_reportes_opcion_dos = new Recursos_Codigo.Redondeado();
-        jLabel6 = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(300, 511));
         setMinimumSize(new java.awt.Dimension(300, 511));
@@ -159,27 +157,10 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
 
         jLabel5.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Nuevo reporte");
+        jLabel5.setText("Obtener reportes");
         btn_reportes_opcion_uno.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_reportes_opcion_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
-
-        btn_reportes_opcion_dos.setBackground(new java.awt.Color(204, 204, 204));
-        btn_reportes_opcion_dos.setMaximumSize(new java.awt.Dimension(218, 38));
-        btn_reportes_opcion_dos.setMinimumSize(new java.awt.Dimension(218, 38));
-        btn_reportes_opcion_dos.setPreferredSize(new java.awt.Dimension(218, 38));
-        btn_reportes_opcion_dos.setRoundBottomLeft(30);
-        btn_reportes_opcion_dos.setRoundBottomRight(30);
-        btn_reportes_opcion_dos.setRoundTopLeft(30);
-        btn_reportes_opcion_dos.setRoundTopRight(30);
-        btn_reportes_opcion_dos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Reportes generados");
-        btn_reportes_opcion_dos.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
-
-        jp_contenedor_menu_acopio.add(btn_reportes_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,12 +180,10 @@ public class Vista_Menu_Acopio extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public Recursos_Codigo.Redondeado btn_acopio_opcion_dos;
     public Recursos_Codigo.Redondeado btn_acopio_opcion_uno;
-    public Recursos_Codigo.Redondeado btn_reportes_opcion_dos;
     public Recursos_Codigo.Redondeado btn_reportes_opcion_uno;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
     public javax.swing.JLabel jLabel5;
-    public javax.swing.JLabel jLabel6;
     public javax.swing.JPanel jPanel2;
     public javax.swing.JPanel jp_contenedor_menu_acopio;
     public javax.swing.JPanel jp_titulo_dos;

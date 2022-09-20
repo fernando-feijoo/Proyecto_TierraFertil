@@ -103,10 +103,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
-        this.vistaMenuAcopio.btn_reportes_opcion_dos.addMouseListener(this);
         this.vistaLlegada.boton_home.addMouseListener(this);
         this.vistaLlegada.btn_guardar.addMouseListener(this);
-        this.vistaHome.boton_buscar.addMouseListener(this);
+//        this.vistaHome.boton_buscar.addMouseListener(this); // <-- Aqui se tiene que activar el actualizar #
         this.vistaLlegada.addComponentListener(this);
         //  Area de pruebas para los metodos a ejecutar en el constructor.
         this.menuRoles();
@@ -262,24 +261,25 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.controladorMenuAcopio.opcionClick(0);
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
-        if (me.getSource() == this.vistaHome.boton_buscar) {
-            this.vistaHome.setVisible(false);
-            this.vistaLlegada.setBorder(null);
-            this.vistaLlegada.setVisible(true);
-            
-            int busqueda = Integer.parseInt(this.vistaHome.txf_busqueda.getText());
-            this.controlDatosLlegada.idBusqueda(busqueda);
-            this.controlHigiene.idBusqueda(busqueda);
-            this.controlPaletizado.idBusqueda(busqueda);
-            
-            this.controlDatosLlegada.cargarDatosLlegada();
-            this.controlHigiene.cargarDatosHigCont();
-            this.controlPaletizado.cargarDatosPalet();
-            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
-                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
-                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
-            
-        }
+        //  Boton actualizar, lo que hace es buscar la informacion en la BD y mostrar en el formulario principal.
+//        if (me.getSource() == this.vistaHome.boton_buscar) {
+//            this.vistaHome.setVisible(false);
+//            this.vistaLlegada.setBorder(null);
+//            this.vistaLlegada.setVisible(true);
+//            
+//            int busqueda = Integer.parseInt(this.vistaHome.txf_busqueda.getText());
+//            this.controlDatosLlegada.idBusqueda(busqueda);
+//            this.controlHigiene.idBusqueda(busqueda);
+//            this.controlPaletizado.idBusqueda(busqueda);
+//            
+//            this.controlDatosLlegada.cargarDatosLlegada();
+//            this.controlHigiene.cargarDatosHigCont();
+//            this.controlPaletizado.cargarDatosPalet();
+//            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
+//                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
+//                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+//            
+//        }
     }
 
     @Override

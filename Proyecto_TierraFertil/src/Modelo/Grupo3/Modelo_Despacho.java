@@ -24,6 +24,7 @@ public class Modelo_Despacho {
 
             st.executeUpdate(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println(id + " Datos almacenados Despacho BD con exito.");
         } catch (Exception e) {
             System.out.println("Error al tratar guardar los datos de llegada del contenedor " + e);
@@ -38,6 +39,7 @@ public class Modelo_Despacho {
             String sql ="SELECT COALESCE(MAX(id), 0) AS \"id_tablaDatosDespacho\" FROM datos_despacho;";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("Consulta id entidad Despacho... BD Modelo, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad datos_despacho: " + e);
@@ -54,6 +56,7 @@ public class Modelo_Despacho {
                     + "cajas,cant_palet,observacion from datos_despacho where id = 1;";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("Consulta id entidad despacho... BD Modelo, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener datos entidad datos_despacho: " + e);

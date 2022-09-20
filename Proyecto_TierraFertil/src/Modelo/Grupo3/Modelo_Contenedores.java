@@ -29,6 +29,7 @@ public class Modelo_Contenedores {
             String sql = "SELECT COALESCE(MAX(id), 0) AS id_contenedor FROM contenedores;";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("Consulta id contenedor... BD MODELO, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad contenedores en BD MODELO: " + e);

@@ -16,7 +16,7 @@ public class Modelo_Login {
             String SQL = "SELECT  usuario, contrasena, rol  FROM  roles where usuario = '"+this.user+"' and contrasena = '"+this.pass+"' ;";
           
             ResultSet rs =  st.executeQuery(SQL);
-            
+            st.close();
             return rs;
             
         } catch (Exception e) {

@@ -164,7 +164,7 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
 
     // ##AQUI hago la consulta de la entidad de datos y comentario de contenedor.
     public void cargarDatosPalet() {
-        int aux = 0, auxDos = 0, cont = 1;
+        int cont = 0;
         rs = this.modeloPaletizado.consultaDatos_entidadPaletizado();
         rsC = this.modeloPaletizado.consultaObsGeneral();
         try {
@@ -178,23 +178,9 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
                 this.vistaLlegada.paletizado_cb_numero_cajas.setSelectedIndex(rs.getInt("id_cantidad_cajas") - 1);
             }
             for (int i : datos.keySet()) {
-                // #Error de algortimo de busqueda o seteo de id.
-                
-                aux = (i % 10);
-                
-                if ((i % 10) == 0) {
-                    if (cont == 1) {
-                        aux = 10;
-                    } else {
-                        aux = 20;
-                    }
-                    cont++;
-                }else{
-                    aux = i;
-                }
-                
-                System.out.println("id: " + aux + " opcion: " + datos.get(i));
-                switch (aux) {
+                cont++;
+                System.out.println("id: " + cont + " opcion: " + datos.get(i));
+                switch (cont) {
                     case 1:
                         this.vistaLlegada.paletizado_pallet1.setText(datos.get(i));
                         break;

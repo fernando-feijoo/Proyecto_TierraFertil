@@ -55,7 +55,7 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, Compone
     }
 
     public void autoIncrementarID_Entidades(int herenciaTres, int herenciaCuatro) {
-        this.idContenedor = 1;
+        this.idContenedor = herenciaTres;
         this.idInspCont = herenciaCuatro;
         System.out.println("ValorHerencia InspeccionConendor ContIC: " + this.idContenedor + 1 + " , idHC: " + this.idInspCont);
     }

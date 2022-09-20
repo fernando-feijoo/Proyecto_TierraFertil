@@ -86,43 +86,27 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
             this.modeloHigCont.id_limpieza_contenedor = i;
             switch (i) {
                 case 1:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionUno;
                     break;
                 case 2:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionDos;
                     break;
                 case 3:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionTres;
                     break;
                 case 4:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionCuatro;
                     break;
                 case 5:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionCinco;
                     break;
                 case 6:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionSeis;
                     break;
                 case 7:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionSiete;
                     break;
                 case 8:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionOcho;
                     break;
             }
@@ -254,12 +238,6 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
         if (ce.getSource() == this.vistaLlegada.jp_opcion_HiegieneContenedor) {
             System.out.println("Ingreso Opcion. HIDE");
 
-//            if (this.tempClickG3 != 0) {
-//
-//                this.guardadoFinal();
-//
-//                this.tempClickG3 = 0;
-//            }
         }
     }
 }

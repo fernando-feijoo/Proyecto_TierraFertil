@@ -202,10 +202,10 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             tempClickG3 = 1;
             
             this.controlDatosLlegada.guardadoFinal();
+            //this.controlInspeccion.guardadoFinal();
             this.controlHigiene.guardadoFinal();
-            this.controlPaletizado.guardadoFinal();
             this.controlDespacho.guardadoFinal();
-            this.controlInspeccion.guardadoFinal();
+            this.controlPaletizado.guardadoFinal();
             
         }
         
@@ -239,9 +239,10 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 
                 this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
                 
-                this.controlDespacho.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor , this.controlDespacho.idDespacho);
+                this.controlInspeccion.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, 0);
                 
                 this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlHigiene.idHigCont);
+                this.controlDespacho.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor , this.controlDespacho.idDespacho);
                 this.controlPaletizado.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlPaletizado.idPalet);
                 
                 //  #para ver datos de salida.

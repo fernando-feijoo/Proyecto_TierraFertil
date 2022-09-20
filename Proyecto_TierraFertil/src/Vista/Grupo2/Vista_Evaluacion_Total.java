@@ -78,7 +78,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jb_nomb_defecto = new javax.swing.JLabel();
         txt_nombre_defectos = new javax.swing.JTextField();
         jb_contenedor_defecto = new javax.swing.JLabel();
-        txt_contenedor = new javax.swing.JTextField();
+        txt_total_defectos = new javax.swing.JTextField();
         redondeado1 = new Recursos_Codigo.Redondeado();
         jb_agregar_defecto = new javax.swing.JLabel();
         redondeado4 = new Recursos_Codigo.Redondeado();
@@ -455,7 +455,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
         jb_contenedor_defecto.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jb_contenedor_defecto.setForeground(new java.awt.Color(0, 0, 0));
-        jb_contenedor_defecto.setText("CONTENEDOR:");
+        jb_contenedor_defecto.setText("TOTAL DE DEFECTOS:");
 
         redondeado1.setBackground(new java.awt.Color(153, 153, 153));
         redondeado1.setRoundBottomLeft(25);
@@ -518,28 +518,27 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                 .addGap(17, 17, 17)
                 .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(redondeado_contenedor_2Layout.createSequentialGroup()
-                        .addComponent(jb_defectos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jb_nomb_defecto1)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_id_defecto, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(redondeado_contenedor_2Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(redondeado1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(redondeado4, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(redondeado_contenedor_2Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(redondeado_contenedor_2Layout.createSequentialGroup()
                                 .addComponent(jb_contenedor_defecto)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txt_contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(34, 34, 34)
+                                .addComponent(txt_total_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(redondeado_contenedor_2Layout.createSequentialGroup()
                                 .addComponent(jb_nomb_defecto)
-                                .addGap(57, 57, 57)
-                                .addComponent(txt_nombre_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(18, 18, 18)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_nombre_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_nomb_defecto1)
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_id_defecto, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jb_defectos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -548,19 +547,18 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         redondeado_contenedor_2Layout.setVerticalGroup(
             redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, redondeado_contenedor_2Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_defectos)
-                    .addComponent(jb_nomb_defecto1)
-                    .addComponent(txt_id_defecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
+                .addGap(14, 14, 14)
+                .addComponent(jb_defectos)
+                .addGap(14, 14, 14)
                 .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_nombre_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_nomb_defecto))
+                    .addComponent(jb_nomb_defecto)
+                    .addComponent(jb_nomb_defecto1)
+                    .addComponent(txt_id_defecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_contenedor_defecto)
-                    .addComponent(txt_contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_total_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(redondeado1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -956,7 +954,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_caja_insp;
     public javax.swing.JTextField txt_calibracion;
     public javax.swing.JTextField txt_codigo;
-    public javax.swing.JTextField txt_contenedor;
     public javax.swing.JTextField txt_dedos;
     public javax.swing.JTextField txt_destino1;
     public javax.swing.JTextField txt_embalador;
@@ -973,6 +970,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_peso;
     public javax.swing.JTextField txt_peso_neto;
     public javax.swing.JTextField txt_tipoCaja;
+    public javax.swing.JTextField txt_total_defectos;
     public javax.swing.JTextField txt_transporte;
     public javax.swing.JTextField txt_vapor;
     // End of variables declaration//GEN-END:variables

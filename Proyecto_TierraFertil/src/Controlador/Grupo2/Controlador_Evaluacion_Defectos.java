@@ -28,11 +28,13 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
             try {
                 modeloEvaluacionDefectos.id_detalle = Integer.parseInt(this.vistaEvaluacion.txt_id_defecto.getText());
                 modeloEvaluacionDefectos.nombre = this.vistaEvaluacion.txt_nombre_defectos.getText();
-                modeloEvaluacionDefectos.pcmd = this.vistaEvaluacion.txt_contenedor.getText();
+                modeloEvaluacionDefectos.total_defectos = this.vistaEvaluacion.txt_total_defectos.getText();
+                modeloEvaluacionDefectos.pcmd = this.vistaEvaluacion.txt_total_defectos.getText();
                 boolean aux = modeloEvaluacionDefectos.guardarDefectos();
                 if (aux = true) {
                     System.out.println("SEGUIMIENTO: Campos de tabulacion almacenados corretamente. ");
                     JOptionPane.showMessageDialog(vistaEvaluacion, "Datos almacenados correctamente. ", "REGISTROS", JOptionPane.INFORMATION_MESSAGE);
+                    mostrarDefectos();
 
                 }
             } catch (Exception ex) {

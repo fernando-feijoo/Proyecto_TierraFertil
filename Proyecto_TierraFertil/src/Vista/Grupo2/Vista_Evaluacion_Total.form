@@ -775,13 +775,6 @@
                                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jb_defectos" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jb_nomb_defecto1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txt_id_defecto" min="-2" pref="47" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                           <Component id="redondeado1" min="-2" pref="153" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -789,21 +782,26 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jb_contenedor_defecto" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="txt_contenedor" min="-2" pref="121" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                  <Component id="txt_total_defectos" min="-2" pref="76" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="102" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jb_nomb_defecto" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                                  <Component id="txt_nombre_defectos" min="-2" pref="121" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txt_nombre_defectos" min="-2" pref="182" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jb_nomb_defecto1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txt_id_defecto" min="-2" pref="47" max="-2" attributes="0"/>
                                       </Group>
+                                      <Component id="jb_defectos" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jSeparator9" min="-2" pref="20" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="431" max="-2" attributes="0"/>
@@ -814,21 +812,19 @@
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jb_defectos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_nomb_defecto1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_id_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Component id="jb_defectos" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="txt_nombre_defectos" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jb_nomb_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_nomb_defecto1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_id_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jb_contenedor_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_contenedor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_total_defectos" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -879,10 +875,10 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="CONTENEDOR:"/>
+                            <Property name="text" type="java.lang.String" value="TOTAL DE DEFECTOS:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="txt_contenedor">
+                        <Component class="javax.swing.JTextField" name="txt_total_defectos">
                         </Component>
                         <Container class="Recursos_Codigo.Redondeado" name="redondeado1">
                           <Properties>

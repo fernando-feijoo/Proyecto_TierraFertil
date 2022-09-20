@@ -43,10 +43,10 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
 
                 int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para continuar presione SI. ", "ATENCION", JOptionPane.YES_OPTION);
                 if (respuesta == 0) {
-                    mostrarTabulacion();
                     modeloEvaluacionTabulacion.guardarTabulacion();
                     System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente");
                     JOptionPane.showMessageDialog(vistaEvaluacion, "Datos guardados correctamente ", "Registros", JOptionPane.INFORMATION_MESSAGE);
+                    mostrarTabulacion();
 
                 }
                 if (respuesta == 1) {
@@ -85,7 +85,7 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
             String[] tabulacion = new String[12];
 
             while (rs.next()) {
-                
+
                 tabulacion[0] = rs.getString("id");
                 tabulacion[1] = rs.getString("caja_inspeccionada");
                 tabulacion[2] = rs.getString("embalador");
@@ -102,7 +102,7 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
             }
 
         } catch (Exception e) {
-            System.out.println("Error en mostrarTabulacion. "+e);
+            System.out.println("Error en mostrarTabulacion. " + e);
         }
     }
 

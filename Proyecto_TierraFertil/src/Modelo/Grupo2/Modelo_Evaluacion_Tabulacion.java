@@ -8,18 +8,27 @@ import javax.swing.JOptionPane;
 public class Modelo_Evaluacion_Tabulacion {
 
     Modelo_Conexion conexion = new Modelo_Conexion();
+    Modelo_Evaluacion_Defectos modeloDefectos;
     ResultSet rs;
     Statement st;
 
     public Double peso_neto;
-    public int caja_inspeccionada, embalador, par4, par6, par8, impar5, impar7;
-
+    public int caja_inspeccionada, embalador, par4, par6, par8, impar5, impar7, total_gajos;
+    public double pcmd_total;
     public boolean guardarTabulacion() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "insert into detalle_evaluacion_emp(id_evaluacion,caja_inspeccionada,embalador,peso_neto,par4,par6,par8,impar5,impar7)"
+            
+            total_gajos  =par4 + par6 + par8 + impar5 + impar7;
+//            String total_defectos = this.modeloDefectos.total_defectos;
+//            double pcmd_total = (Double.parseDouble(total_defectos) * 100 / total_gajos) - 100;
+            
+           // (total defecto x 100) / total gajos  después 100-respuesta calculo anterior
+            String sql = "insert into detalle_evaluacion_emp(id_evaluacion,caja_inspeccionada,embalador,peso_neto,par4,par6,par8,impar5,impar7, total_gajos, pcmd_final)"
                     + "values((select max(id)from evaluaciones_empacadora), '" + this.caja_inspeccionada + "', '" + this.embalador + "', '" + this.peso_neto
-                    + "', '" + this.par4 + "', '" + this.par6 + "', '" + this.par8 + "', '" + this.impar5 + "','" + this.impar7 + "');";
+                    + "', '" + this.par4 + "', '" + this.par6 + "', '" + this.par8 + "', '" + this.impar5 + "','" + this.impar7 + "', '"+this.total_gajos+"', '"+this.pcmd_total+"');";
+            
+            
             st.executeUpdate(sql);
             st.close();
         } catch (Exception e) {

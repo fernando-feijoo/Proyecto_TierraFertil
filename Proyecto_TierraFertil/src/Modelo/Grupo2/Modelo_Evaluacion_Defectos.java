@@ -18,6 +18,9 @@ public class Modelo_Evaluacion_Defectos {
     public boolean guardarDefectos(){
         try {
             st = conexion.conectarBD().createStatement();
+            
+            
+            
             String sql = "insert into defectos_detalle_eva(id_detalle_ev, nombre, total_defectos) values ('"+this.id_detalle+"', '"+this.nombre+"', "
                 + "'"+this.total_defectos+"');";
             st.executeUpdate(sql);
@@ -45,6 +48,7 @@ public class Modelo_Evaluacion_Defectos {
         return null;
         
     }
+   
     
 
     

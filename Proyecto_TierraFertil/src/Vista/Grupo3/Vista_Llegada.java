@@ -413,15 +413,18 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(965, 605));
         jPanel1.setMinimumSize(new java.awt.Dimension(965, 605));
         jPanel1.setPreferredSize(new java.awt.Dimension(965, 605));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(35, 35, 35));
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(35, 35, 35));
         jLabel1.setText("BITACORA PARA SEGUIMIENTO DE CONTENEDORES  ");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 22, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(35, 35, 35));
         jLabel2.setText("DE EXPORTACIÓN EN  ACOPIOS   ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(112, 39, 1));
         jPanel2.setForeground(new java.awt.Color(112, 39, 1));
@@ -438,7 +441,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 3));
+
         boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
+        jPanel1.add(boton_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
         jp_grupoOpciones_datosLlegada.setBackground(new java.awt.Color(230, 230, 230));
         jp_grupoOpciones_datosLlegada.setForeground(new java.awt.Color(0, 0, 0));
@@ -726,7 +732,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
                 .addComponent(jLabel72))
         );
 
-        jPanel9.add(btn_siguiente_llegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(814, 242, -1, -1));
+        jPanel9.add(btn_siguiente_llegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(808, 242, -1, -1));
         jPanel9.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 43, 180, 10));
         jPanel9.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 43, 530, 10));
 
@@ -4095,43 +4101,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         jp_grupoOpciones_datosLlegada.addTab("         Paletizado         ", jp_opcion_Paletizado);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(boton_home)
-                .addGap(132, 132, 132)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(jLabel2))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jp_grupoOpciones_datosLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(boton_home)
-                            .addComponent(jLabel2))))
-                .addGap(8, 8, 8)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(jp_grupoOpciones_datosLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jPanel1.add(jp_grupoOpciones_datosLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 100, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -28,7 +28,7 @@ public class Modelo_Inspeccion_Contenedor {
     public ResultSet consultaID_entidadInspeccionContenedor() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT COALESCE(MAX(id), 11 ) AS \"id_tablaInspeccionContenedor\" FROM inspeccion_contenedor;";
+            String sql = "SELECT COALESCE(MAX(id), 11) AS \"id_tablaInspeccionContenedor\" FROM inspeccion_contenedor;";
             rs = st.executeQuery(sql);
             st.close();
             conexion.conectarBD().close();
@@ -38,7 +38,7 @@ public class Modelo_Inspeccion_Contenedor {
         }
         return rs;
     }
-    
+    // #ACTUALIZAR ID DE CONTENEDORES A CONSULTAR.
      public ResultSet consultaDatos_entidadInspCont() {
         try {
             st = conexion.conectarBD().createStatement();

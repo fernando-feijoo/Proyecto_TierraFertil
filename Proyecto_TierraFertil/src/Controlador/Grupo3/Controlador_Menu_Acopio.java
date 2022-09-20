@@ -91,6 +91,7 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
 
     @Override
     public void componentHidden(ComponentEvent e) {
+        
     }
 
 }

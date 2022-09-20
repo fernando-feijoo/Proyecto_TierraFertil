@@ -27,19 +27,57 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        boton_home = new javax.swing.JLabel();
+        lbl_titulo = new javax.swing.JLabel();
+
         setMaximumSize(new java.awt.Dimension(965, 629));
         setMinimumSize(new java.awt.Dimension(965, 629));
         setPreferredSize(new java.awt.Dimension(965, 629));
+
+        jPanel1.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel1.setMaximumSize(new java.awt.Dimension(965, 605));
+        jPanel1.setMinimumSize(new java.awt.Dimension(965, 605));
+        jPanel1.setPreferredSize(new java.awt.Dimension(965, 605));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setBackground(new java.awt.Color(112, 39, 1));
+        jPanel3.setForeground(new java.awt.Color(112, 39, 1));
+        jPanel3.setPreferredSize(new java.awt.Dimension(950, 5));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 950, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 3, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 3));
+
+        boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
+        jPanel1.add(boton_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        lbl_titulo.setBackground(new java.awt.Color(35, 35, 35));
+        lbl_titulo.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        lbl_titulo.setForeground(new java.awt.Color(35, 35, 35));
+        lbl_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_titulo.setText("OBTENER REPORTES");
+        jPanel1.add(lbl_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 22, 960, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -47,5 +85,9 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel boton_home;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JLabel lbl_titulo;
     // End of variables declaration//GEN-END:variables
 }

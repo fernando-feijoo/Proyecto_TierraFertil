@@ -1,7 +1,5 @@
 package Controlador.Grupo3;
 
-import static Controlador.Grupo3.Controlador_Higiene_Contenedor.idContenedor;
-import static Controlador.Grupo3.Controlador_Higiene_Contenedor.idHigCont;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Inspeccion_Contenedor;
 import Vista.Grupo3.Vista_Llegada;
@@ -17,7 +15,7 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, Compone
 
     Vista_Llegada vistaLlegada;
     Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
-    Modelo_Contenedores modeloHeContenedor = new Modelo_Contenedores();
+    Modelo_Contenedores modeloInsContenedor = new Modelo_Contenedores();
     ResultSet rs, rsD, rsC;
     ;
     public static int idContenedor;
@@ -37,7 +35,7 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, Compone
     }
 
     public void guardarContenedor() {
-        this.modeloHeContenedor.obser_Ins_Cont = this.observacionInspCont;
+        this.modeloInsContenedor.obser_Ins_Cont = this.observacionInspCont;
         System.out.println("Guardar Conten IC" + idContenedor + " ," + observacionInspCont);
     }
 
@@ -79,70 +77,50 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, Compone
 
     public void enviarGuardarInspeccionContenedor() {
         int maxDato;
-        maxDato = (((idContenedor * 11)));
-        System.out.println("iI: " + this.modeloHeContenedor.id + " , codigoConte> " + this.modeloHeContenedor.codigo_Contenedor + " , OBSER: " + this.observacionInspCont);
+        maxDato = ((idContenedor * 11) - 11);
+        System.out.println("iI: " + this.modeloInsContenedor.id + " , codigoConte> " + this.modeloInsContenedor.codigo_Contenedor + " , OBSER: " + this.observacionInspCont);
         for (int i = 1; i < 12; i++) {
             this.modeloInspCont.id_contenedor = this.idContenedor;
+            this.modeloInspCont.id = maxDato + i;
+            this.modeloInspCont.id_verificar_lugar = i;
             switch (i) {
                 case 1:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionUno;
                     break;
                 case 2:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionDos;
                     break;
                 case 3:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionTres;
                     break;
                 case 4:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionCuatro;
                     break;
                 case 5:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionCinco;
                     break;
                 case 6:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionSeis;
                     break;
                 case 7:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionSiete;
                     break;
                 case 8:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionOcho;
                     break;
                 case 9:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opcionnueve;
                     break;
                 case 10:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opciondiez;
                     break;
                 case 11:
-                    this.modeloInspCont.id = maxDato + i;
-                    this.modeloInspCont.id_verificar_lugar = i;
                     this.modeloInspCont.verificacion = this.opciononce;
                     break;
 
             }
-            this.modeloInspCont.guardar_Inspeccion_Contenedor();
             this.modeloInspCont.pruebaGuardado();
+//            this.modeloInspCont.guardar_Inspeccion_Contenedor();
 
         }
 
@@ -154,18 +132,48 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, Compone
         try {
             while (rsC.next()) {
                 this.vistaLlegada.inspCont_obseraciones.setText(rsC.getString("obser_ins_cont"));
-
             }
-            HashMap<Integer, String> datos = new HashMap<Integer, String>();
+            HashMap<Integer, Boolean> datos = new HashMap<Integer, Boolean>();
             while (rsD.next()) {
-                datos.put(rsD.getInt("id_verificar_lugar"), rsD.getString("verificacion"));
+                datos.put(rsD.getInt("id_verificar_lugar"), rsD.getBoolean("verificacion"));
             }
             for (int i : datos.keySet()) {
                 System.out.println("id: " + i + " verificacion: " + datos.get(i));
                 switch (i) {
                     case 1:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 2:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 3:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 4:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 5:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 6:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 7:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 8:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 9:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 10:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
+                    case 11:
+                        this.vistaLlegada.inspCont_check_puertas1.setSelected(rsD.getBoolean(i));
+                        break;
                 }
-
             }
 
         } catch (Exception e) {
@@ -174,16 +182,26 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, Compone
 
     public void borrarCamposInspCont() {
         this.vistaLlegada.inspCont_obseraciones.setText(null);
-
+        this.vistaLlegada.inspCont_check_puertas1.setSelected(false);
+        this.vistaLlegada.inspCont_check_parediz2.setSelected(false);
+        this.vistaLlegada.inspCont_check_espaciadores3.setSelected(false);
+        this.vistaLlegada.inspCont_check_paredfro4.setSelected(false);
+        this.vistaLlegada.inspCont_check_paredde5.setSelected(false);
+        this.vistaLlegada.inspCont_check_techo6.setSelected(false);
+        this.vistaLlegada.inspCont_check_pisoin7.setSelected(false);
+        this.vistaLlegada.inspCont_check_pisoex8.setSelected(false);
+        this.vistaLlegada.inspCont_check_evaporadores9.setSelected(false);
+        this.vistaLlegada.inspCont_check_tornillo10.setSelected(false);
+        this.vistaLlegada.inspCont_check_delefactor11.setSelected(false);
     }
 
     public void guardadoFinal() {
         this.almacenarInspeccionContendor();
         this.guardarContenedor();
         this.enviarGuardarInspeccionContenedor();
-        this.modeloHeContenedor.guardarContenedorDatos();
+        this.modeloInsContenedor.guardarContenedorDatos();
         this.modeloInspCont.pruebaGuardado();
-        this.modeloHeContenedor.pruebaGuardado();
+        this.modeloInsContenedor.pruebaGuardado();
 
     }
 

@@ -75,7 +75,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
     public void autoIncrementarID_Entidades(int herenciaUno, int herenciaDos) {
         this.idContenedor = herenciaUno;
         this.idDatosLlegada = herenciaDos;
-        System.out.println("ValorHerencia: " + idContenedor + " , " + idDatosLlegada);
+        System.out.println("ValorHerencia DatosLLegada DLL **: " + idContenedor + " , " + idDatosLlegada);
     }
 
     public void almacenarDatosLlegada() {

@@ -3,7 +3,6 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Paletizado;
 import Vista.Grupo3.Vista_Llegada;
-import java.awt.event.ComponentEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
@@ -29,8 +28,8 @@ public class Controlador_Paletizado implements MouseListener {
         this.vistaLlegada.btn_guardar.addMouseListener(this);
     }
 
-    public void idBusqueda(int idHerenciaContenedor) {
-        this.idContenedor = idHerenciaContenedor;
+    public void idBusqueda(int idBusquedaUno) {
+        this.idContenedor = idBusquedaUno;
         this.modeloPaletizado.id_contenedor = this.idContenedor;
     }
 

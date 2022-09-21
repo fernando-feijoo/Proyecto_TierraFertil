@@ -34,9 +34,10 @@ public class Controlador_Datos_Llegada implements MouseListener {
         this.vistaLlegada.boton_home.addMouseListener(this);
     }
 
-    // #SE NECESITA PROBAR BIEN ESTO AUN.
-    public void idBusqueda(int idHerenciaContenedor){
-        this.idContenedor = idHerenciaContenedor;
+    // #SE NECESITA PROBAR BIEN ESTO AUN. // Esto es porque ambas tablas tienen el mismo id de tupla, por ser unica.
+    public void idBusqueda(int idBusquedaUno){
+        this.idContenedor = idBusquedaUno;
+        this.idDatosLlegada = this.idContenedor;
         this.modeloDatosLlegada.id_contenedor = this.idContenedor;
     }
 

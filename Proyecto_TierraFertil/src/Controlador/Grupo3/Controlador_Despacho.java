@@ -32,8 +32,9 @@ public class Controlador_Despacho implements MouseListener {
     }
     
     // #SE NECESITA PROBAR BIEN ESTO AUN.
-    public void idBusqueda(int idHerenciaContenedor){
-        this.idContenedor = idHerenciaContenedor;
+    public void idBusqueda(int idBusquedaUno){
+        this.idContenedor = idBusquedaUno;
+        this.idDespacho = idBusquedaUno;
         this.modeloDespacho.id_contenedor = this.idContenedor;
     }
 
@@ -67,7 +68,7 @@ public class Controlador_Despacho implements MouseListener {
         } else if (vistaLlegada.despacho_check_filtro2.isSelected()) {
             return vistaLlegada.despacho_check_filtro2.getText();
         } else {
-            return vistaLlegada.despacho_chek_filtrono.getText();
+            return vistaLlegada.despacho_check_filtrono.getText();
         }
 
     }
@@ -140,16 +141,32 @@ public class Controlador_Despacho implements MouseListener {
 
     public void cargarDatosDespacho() {
         //  ## Esta mal no carga la informacion. ##
-        rsC = modeloDespacho.consultaID_entidadDespacho();
+        rsC = modeloDespacho.consultaDatos_entidadDatosDespacho();
         try {
             while (rsC.next()) {
-
-                this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo")); // esta mal esto es el seleccionado del checkbox
+                
+                if (rsC.getString("termografo").equalsIgnoreCase("P:19")) {
+                    this.vistaLlegada.despacho_check_termografo_19.setSelected(true);
+                }else if(rsC.getString("termografo").equalsIgnoreCase("P:18")){
+                    this.vistaLlegada.despacho_check_termografo_18.setSelected(true);
+                }else{
+                    this.vistaLlegada.despacho_check_termografo_no.setSelected(true);
+                }
+                
+                if (rsC.getString("filtro").equalsIgnoreCase("1")) {
+                    this.vistaLlegada.despacho_check_filtro1.setSelected(true);
+                } else if (rsC.getString("filtro").equalsIgnoreCase("2")){
+                    this.vistaLlegada.despacho_check_filtro2.setSelected(true);
+                } else{
+                    this.vistaLlegada.despacho_check_filtrono.setSelected(true);
+                }
+                
+                this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo_numero"));
                 this.vistaLlegada.despacho_sello_adhesivo.setText(rsC.getString("sello_adhesivo"));
                 this.vistaLlegada.despacho_sello_verificador.setText(rsC.getString("sello_verificador"));
-                this.vistaLlegada.despacho_sello_exportador.setText("sello_exp_candado");
+                this.vistaLlegada.despacho_sello_exportador.setText(rsC.getString("sello_exp_candado"));
                 this.vistaLlegada.despacho_fechaSalida.setDate(funcionFecha_Formato(rsC.getString("fecha_hora_salida").substring(0, 10)));
-                this.vistaLlegada.despacho_horaSalida.setValue(funcionHora_Formato(rsC.getString("hora_salida").substring(11, 19)));
+                this.vistaLlegada.despacho_horaSalida.setValue(funcionHora_Formato(rsC.getString("fecha_hora_salida").substring(11, 19)));
                 this.vistaLlegada.despacho_sello_cable.setText(rsC.getString("sello_exp_cable"));
                 this.vistaLlegada.despacho_compañia_tansportista.setText(rsC.getString("compania_transportista"));
                 this.vistaLlegada.despacho_sello_naviero.setText(rsC.getString("sello_naviero"));

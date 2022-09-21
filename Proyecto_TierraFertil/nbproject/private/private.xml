@@ -3,9 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo3/Controlador_Despacho.java</file>
             <file>file:/C:/Users/User/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Despacho.java</file>
+=======
+            <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo3/Vista_Llegada.java</file>
+            <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo3/Controlador_Despacho.java</file>
+            <file>file:/C:/Users/USUARIO%20PC/Documents/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo3/Modelo_Despacho.java</file>
+>>>>>>> f72ac8d394130b94aec50bce686e8abc291b915f
         </group>
     </open-files>
 </project-private>

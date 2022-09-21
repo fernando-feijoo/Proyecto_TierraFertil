@@ -25,9 +25,9 @@ public class Controlador_Higiene_Contenedor implements MouseListener{
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_higCont.addMouseListener(this);
     }
-
-    public void idBusqueda(int idHerenciaContenedor) {
-        this.idContenedor = idHerenciaContenedor;
+    
+    public void idBusqueda(int idBusquedaUno) {
+        this.idContenedor = idBusquedaUno;
         this.modeloHigCont.id_contenedor = this.idContenedor;
     }
 

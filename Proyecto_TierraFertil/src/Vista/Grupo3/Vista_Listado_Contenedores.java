@@ -31,6 +31,8 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
         jPanel3 = new javax.swing.JPanel();
         boton_home = new javax.swing.JLabel();
         lbl_titulo = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_listado_contenedores = new javax.swing.JTable();
 
         setMaximumSize(new java.awt.Dimension(965, 629));
         setMinimumSize(new java.awt.Dimension(965, 629));
@@ -69,6 +71,24 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
         lbl_titulo.setText("LISTADO CONTENEDORES");
         jPanel1.add(lbl_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 22, 960, -1));
 
+        tabla_listado_contenedores.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        tabla_listado_contenedores.setFocusable(false);
+        tabla_listado_contenedores = new javax.swing.JTable(){
+            public boolean isCellEditable (int rowIndex, int colIndex){
+                return false;
+            }
+        };
+        jScrollPane1.setViewportView(tabla_listado_contenedores);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,6 +108,8 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
     public javax.swing.JLabel boton_home;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel3;
+    public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JLabel lbl_titulo;
+    public javax.swing.JTable tabla_listado_contenedores;
     // End of variables declaration//GEN-END:variables
 }

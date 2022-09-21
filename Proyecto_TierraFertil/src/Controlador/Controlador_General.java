@@ -333,14 +333,16 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.controlDespacho.idBusqueda(busqueda);
             this.controlPaletizado.idBusqueda(busqueda);
             
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
+            
             this.controlDatosLlegada.cargarDatosLlegada();
             this.controlInspeccion.cargarDatosInspCont();
             this.controlHigiene.cargarDatosHigCont();
             this.controlDespacho.cargarDatosDespacho();
             this.controlPaletizado.cargarDatosPalet();
-            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
-                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
-                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle> " + this.controlDatosLlegada.idDatosLlegada  
+                               + " , idInsCo> " + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont    
+                               + " , idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
             
         }
     }

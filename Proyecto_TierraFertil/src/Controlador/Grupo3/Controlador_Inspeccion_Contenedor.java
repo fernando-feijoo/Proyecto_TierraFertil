@@ -30,8 +30,8 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener {
     }
     
     // #SE NECESITA PROBAR BIEN ESTO AUN.
-    public void idBusqueda(int idHerenciaContenedor){
-        this.idContenedor = idHerenciaContenedor;
+    public void idBusqueda(int idBusquedaUno){
+        this.idContenedor = idBusquedaUno;
         this.modeloInspCont.id_contenedor = this.idContenedor;
     }
 
@@ -135,12 +135,8 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener {
                 this.vistaLlegada.inspCont_obseraciones.setText(rsC.getString("obser_ins_cont"));
             }
             HashMap<Integer, Boolean> datos = new HashMap<>();
-            int f = 0;
             while (rsD.next()) {
-                f++;
                 datos.put(rsD.getInt("id_verificar_lugar"), rsD.getBoolean("verificacion"));
-                System.out.println("id: " + f + " verificacion: " + datos.get(f));
-                
             }
             for (int i : datos.keySet()) {
                 System.out.println("id: " + i + " verificacion: " + datos.get(i));

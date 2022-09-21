@@ -79,6 +79,9 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
 
             }
         ));
+        tabla_listado_contenedores.setRowHeight(40);
+        tabla_listado_contenedores.getTableHeader().setResizingAllowed(false);
+        tabla_listado_contenedores.getTableHeader().setReorderingAllowed(false);
         tabla_listado_contenedores.setFocusable(false);
         tabla_listado_contenedores = new javax.swing.JTable(){
             public boolean isCellEditable (int rowIndex, int colIndex){
@@ -87,7 +90,7 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
         };
         jScrollPane1.setViewportView(tabla_listado_contenedores);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 850, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

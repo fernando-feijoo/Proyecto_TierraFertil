@@ -253,7 +253,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jLabel55 = new javax.swing.JLabel();
         despacho_check_filtro1 = new javax.swing.JCheckBox();
         despacho_check_filtro2 = new javax.swing.JCheckBox();
-        despacho_chek_filtrono = new javax.swing.JCheckBox();
+        despacho_check_filtrono = new javax.swing.JCheckBox();
         jLabel56 = new javax.swing.JLabel();
         despacho_check_termografo_19 = new javax.swing.JCheckBox();
         despacho_check_termografo_18 = new javax.swing.JCheckBox();
@@ -2607,14 +2607,14 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         despacho_check_filtro2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jp_opcion_Despacho.add(despacho_check_filtro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
 
-        despacho_chek_filtrono.setBackground(new java.awt.Color(230, 230, 230));
-        bg_filtro.add(despacho_chek_filtrono);
-        despacho_chek_filtrono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        despacho_chek_filtrono.setForeground(new java.awt.Color(0, 0, 0));
-        despacho_chek_filtrono.setText("Ninguno");
-        despacho_chek_filtrono.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        despacho_chek_filtrono.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jp_opcion_Despacho.add(despacho_chek_filtrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, -1, -1));
+        despacho_check_filtrono.setBackground(new java.awt.Color(230, 230, 230));
+        bg_filtro.add(despacho_check_filtrono);
+        despacho_check_filtrono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        despacho_check_filtrono.setForeground(new java.awt.Color(0, 0, 0));
+        despacho_check_filtrono.setText("Ninguno");
+        despacho_check_filtrono.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        despacho_check_filtrono.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jp_opcion_Despacho.add(despacho_check_filtrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, -1, -1));
 
         jLabel56.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel56.setForeground(new java.awt.Color(0, 0, 0));
@@ -4174,10 +4174,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JTextField despacho_cantidad_pallets;
     public javax.swing.JCheckBox despacho_check_filtro1;
     public javax.swing.JCheckBox despacho_check_filtro2;
+    public javax.swing.JCheckBox despacho_check_filtrono;
     public javax.swing.JCheckBox despacho_check_termografo_18;
     public javax.swing.JCheckBox despacho_check_termografo_19;
     public javax.swing.JCheckBox despacho_check_termografo_no;
-    public javax.swing.JCheckBox despacho_chek_filtrono;
     public javax.swing.JTextField despacho_compañia_tansportista;
     public javax.swing.JTextField despacho_destino;
     public com.toedter.calendar.JDateChooser despacho_fechaSalida;

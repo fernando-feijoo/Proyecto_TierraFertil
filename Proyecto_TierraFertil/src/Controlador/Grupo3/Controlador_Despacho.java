@@ -67,7 +67,7 @@ public class Controlador_Despacho implements MouseListener {
         } else if (vistaLlegada.despacho_check_filtro2.isSelected()) {
             return vistaLlegada.despacho_check_filtro2.getText();
         } else {
-            return vistaLlegada.despacho_chek_filtrono.getText();
+            return vistaLlegada.despacho_check_filtrono.getText();
         }
 
     }
@@ -143,8 +143,24 @@ public class Controlador_Despacho implements MouseListener {
         rsC = modeloDespacho.consultaID_entidadDespacho();
         try {
             while (rsC.next()) {
-
-                this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo")); // esta mal esto es el seleccionado del checkbox
+                
+                if (rsC.getString("termografo").equalsIgnoreCase("P:19")) {
+                    this.vistaLlegada.despacho_check_termografo_19.setSelected(true);
+                }else if(rsC.getString("termografo").equalsIgnoreCase("P:18")){
+                    this.vistaLlegada.despacho_check_termografo_18.setSelected(true);
+                }else{
+                    this.vistaLlegada.despacho_check_termografo_no.setSelected(true);
+                }
+                
+                if (rsC.getString("filtro").equalsIgnoreCase("1")) {
+                    this.vistaLlegada.despacho_check_filtro1.setSelected(true);
+                } else if (rsC.getString("filtro").equalsIgnoreCase("2")){
+                    this.vistaLlegada.despacho_check_filtro2.setSelected(true);
+                } else{
+                    this.vistaLlegada.despacho_check_filtrono.setSelected(true);
+                }
+                
+                this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo_numero")); 
                 this.vistaLlegada.despacho_sello_adhesivo.setText(rsC.getString("sello_adhesivo"));
                 this.vistaLlegada.despacho_sello_verificador.setText(rsC.getString("sello_verificador"));
                 this.vistaLlegada.despacho_sello_exportador.setText("sello_exp_candado");

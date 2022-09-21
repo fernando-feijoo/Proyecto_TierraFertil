@@ -15,6 +15,7 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
     Vista_Evaluacion_Total vistaEvaluacion;
     Modelo_Evaluacion_Tabulacion modeloEvaluacionTabulacion = new Modelo_Evaluacion_Tabulacion();
     ResultSet rs;
+    
     //Constructor
 
     public Controlador_Evaluacion_Tabulacion(Vista_Evaluacion_Total vistaEvaluacion) {
@@ -79,7 +80,6 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
         tabla.addColumn("Pcmd");
         tabla.setRowCount(0);
 //        tabla.setRowCount(0);
-
         try {
             rs = modeloEvaluacionTabulacion.consultarTabulacion();
             String[] tabulacion = new String[12];

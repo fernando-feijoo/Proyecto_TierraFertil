@@ -31,11 +31,10 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
         this.vistaLlegada.jp_opcion_Paletizado.addComponentListener(this);
     }
 
-//    //  #borrar mensajes de mas en consola.
-//    public void controlGuardado(int herenciaClicks) {
-//        this.tempClickG3 = herenciaClicks;
-//        System.out.println("HerenciaClic PA: " + tempClickG3);
-//    }
+    public void idBusqueda(int idHerenciaContenedor) {
+        this.idContenedor = idHerenciaContenedor;
+        this.modeloPaletizado.id_contenedor = this.idContenedor;
+    }
 
     public void guardarContenedor() {
         this.modeloPaContenedor.obser_General = this.observacionGeneralPale;
@@ -165,7 +164,7 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
 
     // ##AQUI hago la consulta de la entidad de datos y comentario de contenedor.
     public void cargarDatosPalet() {
-        int aux = 0, cont = 1;
+        int cont = 0;
         rs = this.modeloPaletizado.consultaDatos_entidadPaletizado();
         rsC = this.modeloPaletizado.consultaObsGeneral();
         try {
@@ -179,15 +178,9 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
                 this.vistaLlegada.paletizado_cb_numero_cajas.setSelectedIndex(rs.getInt("id_cantidad_cajas") - 1);
             }
             for (int i : datos.keySet()) {
-                System.out.println("id: " + i + " opcion: " + datos.get(i));
-
-                if ((i % 10) == 0) {
-                    aux = cont++ * 10;
-                } else {
-                    aux = i;
-                }
-
-                switch (aux) {
+                cont++;
+                System.out.println("id: " + cont + " opcion: " + datos.get(i));
+                switch (cont) {
                     case 1:
                         this.vistaLlegada.paletizado_pallet1.setText(datos.get(i));
                         break;
@@ -282,7 +275,7 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
         this.almacenarPalet();
         this.guardarContenedor();
         this.enviarGuardarPalet();
-        
+
         this.modeloPaContenedor.guardarContenedorDatos();
         this.modeloPaContenedor.pruebaGuardado();
     }

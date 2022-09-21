@@ -30,5 +30,26 @@ public class Modelo_Evaluacion_Datos {
         return false;
     }
     
+
+     
+     public ResultSet obtenerIdEvaluaciones(){
+         try {
+             st = conexion.conectarBD().createStatement();
+             String sql = "select max(id) as id_ev from evaluaciones_empacadora";
+             rs = st.executeQuery(sql);
+             
+             return rs;
+             
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "Error en obtenerIdEvaluacion. "+e);
+         }
+         return null;
+     }
+    
+     
+ 
+   
+     
+    
     
 }

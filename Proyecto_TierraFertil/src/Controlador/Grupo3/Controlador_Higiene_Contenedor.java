@@ -31,11 +31,10 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
 
     }
 
-    //  #borrar mensajes de mas en consola.
-//    public void controlGuardado(int herenciaClicks) {
-//        this.tempClickG3 = herenciaClicks;
-//        System.out.println("HerenciaClic HC: " + tempClickG3);
-//    }
+    public void idBusqueda(int idHerenciaContenedor) {
+        this.idContenedor = idHerenciaContenedor;
+        this.modeloHigCont.id_contenedor = this.idContenedor;
+    }
 
     public void guardarContenedor() {
         this.modeloHeContenedor.obser_Hig_Cont = this.observacionHigCont;
@@ -87,43 +86,27 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
             this.modeloHigCont.id_limpieza_contenedor = i;
             switch (i) {
                 case 1:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionUno;
                     break;
                 case 2:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionDos;
                     break;
                 case 3:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionTres;
                     break;
                 case 4:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionCuatro;
                     break;
                 case 5:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionCinco;
                     break;
                 case 6:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionSeis;
                     break;
                 case 7:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionSiete;
                     break;
                 case 8:
-//                    this.modeloHigCont.id = maxDato + i;
-//                    this.modeloHigCont.id_limpieza_contenedor = i;
                     this.modeloHigCont.opcion = this.opcionOcho;
                     break;
             }
@@ -186,8 +169,8 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
             System.out.println("Error datos HiCn Array: " + ex);
         }
     }
-    
-    public void borrarCamposHigCont(){
+
+    public void borrarCamposHigCont() {
         this.vistaLlegada.bg_lavado.clearSelection();
         this.vistaLlegada.bg_drenajes.clearSelection();
         this.vistaLlegada.bg_olor.clearSelection();
@@ -198,7 +181,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
         this.vistaLlegada.bg_contenedor_aceptable.clearSelection();
         this.vistaLlegada.higCont_observaciones.setText(null);
     }
-    
+
     public void guardadoFinal() {
         this.almacenarHigieneContendor();
         this.guardarContenedor();
@@ -206,7 +189,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
         this.modeloHeContenedor.guardarContenedorDatos();
         this.modeloHeContenedor.pruebaGuardado();
     }
-    
+
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaLlegada.btn_siguiente_higCont) {
@@ -254,13 +237,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, ComponentL
     public void componentHidden(ComponentEvent ce) {
         if (ce.getSource() == this.vistaLlegada.jp_opcion_HiegieneContenedor) {
             System.out.println("Ingreso Opcion. HIDE");
-            
-//            if (this.tempClickG3 != 0) {
-//
-//                this.guardadoFinal();
-//
-//                this.tempClickG3 = 0;
-//            }
+
         }
     }
 }

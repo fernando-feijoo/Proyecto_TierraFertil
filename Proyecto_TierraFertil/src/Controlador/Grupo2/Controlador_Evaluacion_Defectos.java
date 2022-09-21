@@ -13,13 +13,14 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
     ResultSet rs;
     Vista_Evaluacion_Total vistaEvaluacion;
     Modelo_Evaluacion_Defectos modeloEvaluacionDefectos = new Modelo_Evaluacion_Defectos();
+    
 
     public Controlador_Evaluacion_Defectos(Vista_Evaluacion_Total vistaEvaluacion) {
         this.vistaEvaluacion = vistaEvaluacion;
 
         this.vistaEvaluacion.jb_agregar_defecto.addMouseListener(this);
         this.vistaEvaluacion.jb_nuevos_datos.addMouseListener(this);
-
+        mostrarDefectos();
     }
 
     @Override
@@ -28,8 +29,17 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
             try {
                 modeloEvaluacionDefectos.id_detalle = Integer.parseInt(this.vistaEvaluacion.txt_id_defecto.getText());
                 modeloEvaluacionDefectos.nombre = this.vistaEvaluacion.txt_nombre_defectos.getText();
-                modeloEvaluacionDefectos.total_defectos = this.vistaEvaluacion.txt_total_defectos.getText();
-                modeloEvaluacionDefectos.pcmd = this.vistaEvaluacion.txt_total_defectos.getText();
+                modeloEvaluacionDefectos.total_defectos = Integer.parseInt(this.vistaEvaluacion.txt_total_defectos.getText());
+
+                int total_defec, total_gajos, total_final;
+
+                total_final = Integer.parseInt(this.vistaEvaluacion.txt_total_defectos.getText());
+                String pcmd_total = "";
+
+                modeloEvaluacionDefectos.pcmd = pcmd_total;
+
+//                 String total_defectos = this.modeloEvaluacionDefectos.total_defectos;
+//                 double pcmd_total = (Double.parseDouble(total_defectos) * 100 / total_gajos) - 100;
                 boolean aux = modeloEvaluacionDefectos.guardarDefectos();
                 if (aux = true) {
                     System.out.println("SEGUIMIENTO: Campos de tabulacion almacenados corretamente. ");
@@ -74,6 +84,23 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
             System.out.println("Error al llenar los datos de defectos. " + e);
         }
 
+    }
+
+    public void mostrarTotalGajos() {
+        try {
+            
+           
+            modeloEvaluacionDefectos.id_calculo = Integer.parseInt(this.vistaEvaluacion.lb_id_evaluacion.getName());
+            rs = modeloEvaluacionDefectos.obtenerTotalGajos();
+            
+            while (rs.next()) {
+                String variableTemp = rs.getString(rs.getString("total_gajos"));
+
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Error en mostrarIdEvaluacion. " + e);
+        }
     }
 
     @Override

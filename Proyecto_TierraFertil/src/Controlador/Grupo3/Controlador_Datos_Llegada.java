@@ -17,7 +17,7 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     Vista_Llegada vistaLlegada;
     Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
-    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
+    Modelo_Contenedores modeloDaLleContenedor = new Modelo_Contenedores();
 
     SimpleDateFormat formatoD = new SimpleDateFormat("yyyy-MM-dd");
     SimpleDateFormat formatoH = new SimpleDateFormat("HH:mm:ss");
@@ -39,15 +39,15 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     }
 
-    //  #borrar mensajes de mas en consola.
-//    public void controlGuardado(int herenciaClicks) {
-//        this.tempClickG3 = herenciaClicks;
-//        System.out.println("HerenciaClic DLL: " + tempClickG3);
-//    }
+    // #SE NECESITA PROBAR BIEN ESTO AUN.
+    public void idBusqueda(int idHerenciaContenedor){
+        this.idContenedor = idHerenciaContenedor;
+        this.modeloDatosLlegada.id_contenedor = this.idContenedor;
+    }
 
     public void idEntidadContenedores() {
         try {
-            rs = modeloContenedor.consultaID_contenedor();
+            rs = modeloDaLleContenedor.consultaID_contenedor();
             while (rs.next()) {
                 idContenedor = Integer.parseInt(rs.getString("id_contenedor"));
             }
@@ -141,8 +141,8 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
 
     // #Borrar lo de consola.
     public void guardarContenedor() {
-        this.modeloContenedor.id = idContenedor;
-        this.modeloContenedor.codigo_Contenedor = contenedor;
+        this.modeloDaLleContenedor.id = idContenedor;
+        this.modeloDaLleContenedor.codigo_Contenedor = contenedor;
         System.out.println("Guardar Conten DLL: " + idContenedor + " , " + contenedor);
     }
 
@@ -272,9 +272,9 @@ public class Controlador_Datos_Llegada implements MouseListener, ComponentListen
         this.almacenarDatosLlegada();
         this.enviarDatosLLegada();
         this.guardarContenedor();
-        this.modeloContenedor.pruebaGuardado();
+        this.modeloDaLleContenedor.pruebaGuardado();
         this.modeloDatosLlegada.pruebaGuardado();
-        this.modeloContenedor.guardarContenedorDatos();
+        this.modeloDaLleContenedor.guardarContenedorDatos();
         this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
     }
 

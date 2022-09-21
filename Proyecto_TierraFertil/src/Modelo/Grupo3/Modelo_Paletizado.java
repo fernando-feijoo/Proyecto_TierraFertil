@@ -18,6 +18,7 @@ public class Modelo_Paletizado {
             String sql = "SELECT \"insertarDatosPalet\"("+id+", "+id_contenedor+", "+codigo+", "+id_cantidad_cajas+");";
             st.executeUpdate(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println(id + "<--idTabla \n" + id_contenedor + " <--idCon Conenedor Datos almacenados Paletizado BD MODELO.");
         } catch (Exception e) {
         }
@@ -30,6 +31,7 @@ public class Modelo_Paletizado {
             String sql = "SELECT COALESCE(MAX(id), 20) AS \"id_tablaPallet\" FROM control_pallet;";
             rs = st.executeQuery(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println("Consulta id entidad Pallet... BD MODELO, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad Pallet BD MODELO: " + e);
@@ -40,10 +42,11 @@ public class Modelo_Paletizado {
     public ResultSet consultaDatos_entidadPaletizado() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT id, codigo, id_cantidad_cajas FROM control_pallet WHERE id_contenedor = 1 ORDER BY id;";
+            String sql = "SELECT id, codigo, id_cantidad_cajas FROM control_pallet WHERE id_contenedor = "+id_contenedor+" ORDER BY id;";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id);
+            conexion.conectarBD().close();
+            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad Pallet BD MODELO: " + e);
         }
@@ -53,10 +56,11 @@ public class Modelo_Paletizado {
     public ResultSet consultaObsGeneral() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT obser_general FROM contenedores WHERE id = 1;";
+            String sql = "SELECT obser_general FROM contenedores WHERE id = "+id_contenedor+";";
             rs = st.executeQuery(sql);
             st.close();
-            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id);
+            conexion.conectarBD().close();
+            System.out.println("ConsultaDatos id entidad Pallet... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad Pallet BD MODELO: " + e);
         }

@@ -28,48 +28,126 @@ public class Vista_Home extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        redondeado2 = new Recursos_Codigo.Redondeado();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        redondeado3 = new Recursos_Codigo.Redondeado();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        redondeado1 = new Recursos_Codigo.Redondeado();
         jLabel2 = new javax.swing.JLabel();
+        imagen_fondo = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(965, 629));
-        setMinimumSize(new java.awt.Dimension(965, 629));
-        setPreferredSize(new java.awt.Dimension(965, 629));
+        setMaximumSize(new java.awt.Dimension(975, 634));
+        setMinimumSize(new java.awt.Dimension(975, 634));
+        setPreferredSize(new java.awt.Dimension(975, 634));
 
         jPanel1.setBackground(new java.awt.Color(230, 230, 230));
-        jPanel1.setMaximumSize(new java.awt.Dimension(953, 593));
-        jPanel1.setMinimumSize(new java.awt.Dimension(953, 593));
+        jPanel1.setMaximumSize(new java.awt.Dimension(965, 605));
+        jPanel1.setMinimumSize(new java.awt.Dimension(965, 605));
+        jPanel1.setPreferredSize(new java.awt.Dimension(965, 605));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("BIENVENIDO A");
+        jLabel3.setFont(new java.awt.Font("Roboto", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Nuestra Visión");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("ASOC. TIERRA FÉRTIL");
+        jLabel1.setFont(new java.awt.Font("Roboto", 1, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Nuestra Misión");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(315, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(281, 281, 281))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(343, 343, 343))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(173, 173, 173)
-                .addComponent(jLabel1)
-                .addGap(74, 74, 74)
-                .addComponent(jLabel2)
-                .addContainerGap(260, Short.MAX_VALUE))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Platanera_219px_155px.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 130, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/bananohex_245px.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, -1, -1));
+
+        redondeado2.setBackground(new java.awt.Color(223, 237, 214, 195));
+        redondeado2.setMaximumSize(new java.awt.Dimension(445, 98));
+        redondeado2.setMinimumSize(new java.awt.Dimension(445, 98));
+        redondeado2.setPreferredSize(new java.awt.Dimension(445, 98));
+        redondeado2.setRoundBottomLeft(25);
+        redondeado2.setRoundBottomRight(25);
+        redondeado2.setRoundTopLeft(25);
+        redondeado2.setRoundTopRight(25);
+        redondeado2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Roboto", 3, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel6.setText("Crear una granja orgánica que promueva la abundancia, la ");
+        redondeado2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 10, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Roboto", 3, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel8.setText("salud, la nutrición, la educación, la inclusión y las relaciones  ");
+        redondeado2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 30, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Roboto", 3, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel9.setText(" justas y equitativas entre el medio ambiente y nuestra ");
+        redondeado2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 50, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Roboto", 3, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel10.setText("comunidad.");
+        redondeado2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 70, -1, -1));
+
+        jPanel1.add(redondeado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        redondeado3.setBackground(new java.awt.Color(223, 237, 214, 195));
+        redondeado3.setPreferredSize(new java.awt.Dimension(463, 78));
+        redondeado3.setRoundBottomLeft(25);
+        redondeado3.setRoundBottomRight(25);
+        redondeado3.setRoundTopLeft(25);
+        redondeado3.setRoundTopRight(25);
+        redondeado3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Roboto", 3, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel7.setText("Producir vegetales, frutas, flores, hierbas y otros productos");
+        redondeado3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 10, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Roboto", 3, 16)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel11.setText("orgánicos de grado orgánico de una manera sostenible que");
+        redondeado3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 30, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Roboto", 3, 16)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel12.setText("honre el medio ambiente y nuestra comunidad.");
+        redondeado3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 50, -1, -1));
+
+        jPanel1.add(redondeado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, -1, -1));
+
+        redondeado1.setBackground(new java.awt.Color(223, 237, 214, 195));
+        redondeado1.setMaximumSize(new java.awt.Dimension(585, 53));
+        redondeado1.setMinimumSize(new java.awt.Dimension(585, 53));
+        redondeado1.setPreferredSize(new java.awt.Dimension(585, 53));
+        redondeado1.setRoundBottomLeft(25);
+        redondeado1.setRoundBottomRight(25);
+        redondeado1.setRoundTopLeft(25);
+        redondeado1.setRoundTopRight(25);
+        redondeado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("BIENVENIDO A LA ASO. TIERRA FÉRTIL");
+        redondeado1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 573, 41));
+
+        jPanel1.add(redondeado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
+
+        imagen_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/PhotoShop FondoHome 954px_598px.png"))); // NOI18N
+        jPanel1.add(imagen_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,8 +165,22 @@ public class Vista_Home extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel imagen_fondo;
     public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel10;
+    public javax.swing.JLabel jLabel11;
+    public javax.swing.JLabel jLabel12;
     public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabel6;
+    public javax.swing.JLabel jLabel7;
+    public javax.swing.JLabel jLabel8;
+    public javax.swing.JLabel jLabel9;
     public javax.swing.JPanel jPanel1;
+    public Recursos_Codigo.Redondeado redondeado1;
+    public Recursos_Codigo.Redondeado redondeado2;
+    public Recursos_Codigo.Redondeado redondeado3;
     // End of variables declaration//GEN-END:variables
 }

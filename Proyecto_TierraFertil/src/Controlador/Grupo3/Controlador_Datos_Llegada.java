@@ -35,7 +35,7 @@ public class Controlador_Datos_Llegada implements MouseListener {
     }
 
     // #SE NECESITA PROBAR BIEN ESTO AUN. // Esto es porque ambas tablas tienen el mismo id de tupla, por ser unica.
-    public void idBusqueda(int idBusquedaUno){
+    public void idBusqueda(int idBusquedaUno) {
         this.idContenedor = idBusquedaUno;
         this.idDatosLlegada = this.idContenedor;
         this.modeloDatosLlegada.id_contenedor = this.idContenedor;

@@ -114,7 +114,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaLlegada.boton_home.addMouseListener(this);
         this.vistaListado.boton_home.addMouseListener(this);
         this.vistaObteReport.boton_home.addMouseListener(this);
-        this.vistaObteReport.boton_buscar.addMouseListener(this);
+        this.vistaListado.tabla_listado_contenedores.addMouseListener(this); ////////////#############
         this.vistaLlegada.btn_guardar.addMouseListener(this);
 //        this.vistaHome.boton_buscar.addMouseListener(this); // <-- Aqui se tiene que activar el actualizar #
         this.vistaLlegada.addComponentListener(this);
@@ -321,12 +321,14 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
         //  Boton actualizar, lo que hace es buscar la informacion en la BD y mostrar en el formulario principal.
-        if (me.getSource() == this.vistaObteReport.boton_buscar) {
-            this.vistaObteReport.dispose();
+        if (me.getSource() == this.vistaListado.tabla_listado_contenedores && this.vistaListado.tabla_listado_contenedores.getSelectedColumn() == 9) {
+            
+            this.vistaListado.dispose();
             this.vistaLlegada.setBorder(null);
             this.vistaLlegada.setVisible(true);
             
-            int busqueda = Integer.parseInt(this.vistaObteReport.txf_busqueda.getText());
+            int busqueda = this.controlListadoCont.idContenedor;
+            
             this.controlDatosLlegada.idBusqueda(busqueda);
             this.controlInspeccion.idBusqueda(busqueda);
             this.controlHigiene.idBusqueda(busqueda);

@@ -61,7 +61,8 @@ public class Controlador_Listado_Contenedores implements MouseListener {
 
         DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoCont.tabla_listado_contenedores.getModel();
         this.vistaListadoCont.tabla_listado_contenedores.setDefaultRenderer(Object.class, new Render());
-
+        tabla.setColumnCount(0);
+        tabla.setRowCount(0);
         tabla.addColumn("CODIGO");
         tabla.addColumn("SEMANA");
         tabla.addColumn("INSPECCIÓN");

@@ -3,15 +3,19 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Despacho;
 import Vista.Grupo3.Vista_Llegada;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
+import javax.swing.JOptionPane;
 
-public class Controlador_Despacho implements MouseListener {
+public class Controlador_Despacho implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Despacho modeloDespacho = new Modelo_Despacho();
@@ -29,10 +33,27 @@ public class Controlador_Despacho implements MouseListener {
     public Controlador_Despacho(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_despacho.addMouseListener(this);
+
+        this.vistaLlegada.despacho_termografo.addKeyListener(this);
+        this.vistaLlegada.despacho_sello_adhesivo.addKeyListener(this);
+        this.vistaLlegada.despacho_sello_verificador.addKeyListener(this);
+        this.vistaLlegada.despacho_sello_exportador.addKeyListener(this);
+        this.vistaLlegada.despacho_sello_cable.addKeyListener(this);
+        this.vistaLlegada.despacho_compañia_tansportista.addKeyListener(this);
+        this.vistaLlegada.despacho_sello_naviero.addKeyListener(this);
+        this.vistaLlegada.despacho_vapor.addKeyListener(this);
+        this.vistaLlegada.despacho_destino.addKeyListener(this);
+        this.vistaLlegada.despacho_nombre_paletizadores.addKeyListener(this);
+        this.vistaLlegada.despacho_total_viajar.addKeyListener(this);
+        this.vistaLlegada.despacho_cajas_total.addKeyListener(this);
+        this.vistaLlegada.despacho_cantidad_pallets.addKeyListener(this);
+        
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, false);
+        cargaDefault();
     }
-    
+
     // #SE NECESITA PROBAR BIEN ESTO AUN.
-    public void idBusqueda(int idBusquedaUno){
+    public void idBusqueda(int idBusquedaUno) {
         this.idContenedor = idBusquedaUno;
         this.idDespacho = idBusquedaUno;
         this.modeloDespacho.id_contenedor = this.idContenedor;
@@ -144,23 +165,23 @@ public class Controlador_Despacho implements MouseListener {
         rsC = modeloDespacho.consultaDatos_entidadDatosDespacho();
         try {
             while (rsC.next()) {
-                
+
                 if (rsC.getString("termografo").equalsIgnoreCase("P:19")) {
                     this.vistaLlegada.despacho_check_termografo_19.setSelected(true);
-                }else if(rsC.getString("termografo").equalsIgnoreCase("P:18")){
+                } else if (rsC.getString("termografo").equalsIgnoreCase("P:18")) {
                     this.vistaLlegada.despacho_check_termografo_18.setSelected(true);
-                }else{
+                } else {
                     this.vistaLlegada.despacho_check_termografo_no.setSelected(true);
                 }
-                
+
                 if (rsC.getString("filtro").equalsIgnoreCase("1")) {
                     this.vistaLlegada.despacho_check_filtro1.setSelected(true);
-                } else if (rsC.getString("filtro").equalsIgnoreCase("2")){
+                } else if (rsC.getString("filtro").equalsIgnoreCase("2")) {
                     this.vistaLlegada.despacho_check_filtro2.setSelected(true);
-                } else{
+                } else {
                     this.vistaLlegada.despacho_check_filtrono.setSelected(true);
                 }
-                
+
                 this.vistaLlegada.despacho_termografo.setText(rsC.getString("termografo_numero"));
                 this.vistaLlegada.despacho_sello_adhesivo.setText(rsC.getString("sello_adhesivo"));
                 this.vistaLlegada.despacho_sello_verificador.setText(rsC.getString("sello_verificador"));
@@ -238,11 +259,32 @@ public class Controlador_Despacho implements MouseListener {
 
     }
 
+    public void cargaDefault() {
+        LocalDate actualDate = LocalDate.now();
+        this.vistaLlegada.despacho_fechaSalida.setDate(funcionFecha_Formato(actualDate.toString()));
+    }
+
+    public void completo() {
+        if (vistaLlegada.despacho_termografo.getText().isEmpty() || vistaLlegada.despacho_sello_adhesivo.getText().isEmpty() || vistaLlegada.despacho_sello_verificador.getText().isEmpty()
+                || vistaLlegada.despacho_sello_exportador.getText().isEmpty() || vistaLlegada.despacho_sello_cable.getText().isEmpty() || vistaLlegada.despacho_compañia_tansportista.getText().isEmpty()
+                || vistaLlegada.despacho_sello_naviero.getText().isEmpty() || vistaLlegada.despacho_vapor.getText().isEmpty() || vistaLlegada.despacho_destino.getText().isEmpty()
+                || vistaLlegada.despacho_nombre_paletizadores.getText().isEmpty() || vistaLlegada.despacho_total_viajar.getText().isEmpty() || vistaLlegada.despacho_cajas_total.getText().isEmpty()
+                || vistaLlegada.despacho_cantidad_pallets.getText().isEmpty() || vistaLlegada.despacho_observaciones.getText().isEmpty()) {
+
+            JOptionPane.showMessageDialog(vistaLlegada, "Porfavor no dejar campos vacios ");
+        } else {
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(4);
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, true);
+        }
+
+    }
+
     @Override
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
         if (me.getSource() == this.vistaLlegada.btn_siguiente_despacho) {
-            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(4);
+            completo();
+
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
 //            this.borrarCamposDatosDespacho();
@@ -263,5 +305,107 @@ public class Controlador_Despacho implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent me) {
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+        if (e.getSource() == this.vistaLlegada.despacho_termografo) {
+            if (this.vistaLlegada.despacho_termografo.getText().length() >= 25) {
+                e.consume();
+            }
+
+        }
+
+        if (e.getSource() == this.vistaLlegada.despacho_sello_adhesivo) {
+            if (this.vistaLlegada.despacho_sello_adhesivo.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_sello_verificador) {
+            if (this.vistaLlegada.despacho_sello_verificador.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == this.vistaLlegada.despacho_sello_exportador) {
+            if (this.vistaLlegada.despacho_sello_exportador.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == this.vistaLlegada.despacho_sello_cable) {
+            if (this.vistaLlegada.despacho_sello_cable.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_compañia_tansportista) {
+            if (this.vistaLlegada.despacho_compañia_tansportista.getText().length() >= 100) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_sello_naviero) {
+            if (this.vistaLlegada.despacho_sello_naviero.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_vapor) {
+            if (this.vistaLlegada.despacho_vapor.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_destino) {
+            if (this.vistaLlegada.despacho_destino.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_nombre_paletizadores) {
+            if (this.vistaLlegada.despacho_nombre_paletizadores.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == this.vistaLlegada.despacho_total_viajar) {
+            char c = e.getKeyChar();
+            if (c < '0' || c > '9') {
+                e.consume();}
+                if (this.vistaLlegada.despacho_total_viajar.getText().length() >= 5) {
+                    e.consume();
+                }
+            }
+        
+
+        if (e.getSource() == this.vistaLlegada.despacho_cajas_total) {
+            char c = e.getKeyChar();
+            if (c < '0' || c > '9') {
+                e.consume();
+            }
+                if (this.vistaLlegada.despacho_cajas_total.getText().length() >= 5) {
+                    e.consume();
+                }
+            }
+        
+        if (e.getSource() == this.vistaLlegada.despacho_cantidad_pallets) {
+            char c = e.getKeyChar();
+            if (c < '0' || c > '9') {
+                e.consume();
+            }
+                if (this.vistaLlegada.despacho_cantidad_pallets.getText().length() >= 5) {
+                    e.consume();
+                }
+            }
+        
+        if (e.getSource() == this.vistaLlegada.despacho_observaciones) {
+            if (this.vistaLlegada.despacho_observaciones.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
     }
 }

@@ -3,13 +3,16 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Inspeccion_Contenedor;
 import Vista.Grupo3.Vista_Llegada;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import javax.swing.JOptionPane;
 
-public class Controlador_Inspeccion_Contenedor implements MouseListener {
+public class Controlador_Inspeccion_Contenedor implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
@@ -27,6 +30,12 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener {
     public Controlador_Inspeccion_Contenedor(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_inspCont.addMouseListener(this);
+        
+        this.vistaLlegada.inspCont_obseraciones.addKeyListener(this);
+        
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(2, false);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, false);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, false);
     }
     
     // #SE NECESITA PROBAR BIEN ESTO AUN.
@@ -204,12 +213,26 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener {
         this.modeloInsContenedor.guardarContenedorDatos();
         this.modeloInsContenedor.pruebaGuardado();
     }
+    
+    public void Completo() {
+        if (vistaLlegada.inspCont_obseraciones.getText().isEmpty()){
+            
+            JOptionPane.showMessageDialog(vistaLlegada, "Porfavor no dejar campos vacios ");
+        }else {
+             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(2);
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(2, true);
+        }
+        
+    }
+    
+    
 
     @Override
     public void mouseClicked(MouseEvent e
     ) {
         if (e.getSource() == this.vistaLlegada.btn_siguiente_inspCont) {
-            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(2);
+            
+            Completo();
         }
     }
 
@@ -231,5 +254,22 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener {
     @Override
     public void mouseExited(MouseEvent e
     ) {
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        if (e.getSource() == this.vistaLlegada.inspCont_obseraciones){
+             if(vistaLlegada.inspCont_obseraciones.getText().length()>=250){
+                e.consume();
+        }
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
     }
 }

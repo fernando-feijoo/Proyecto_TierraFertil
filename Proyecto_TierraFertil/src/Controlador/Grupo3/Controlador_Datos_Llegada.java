@@ -3,15 +3,19 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Datos_Llegada;
 import Vista.Grupo3.Vista_Llegada;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
+import javax.swing.JOptionPane;
 
-public class Controlador_Datos_Llegada implements MouseListener {
+public class Controlador_Datos_Llegada implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
@@ -32,6 +36,22 @@ public class Controlador_Datos_Llegada implements MouseListener {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_llegada.addMouseListener(this);
         this.vistaLlegada.boton_home.addMouseListener(this);
+
+        this.vistaLlegada.datosLlegada_tipocaja.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_cupo.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_contenedor.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_placa.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_chasis.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_chofer.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_ci.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_nombrefinca.addKeyListener(this);
+        this.vistaLlegada.datosLlegada_candadosllegada.addKeyListener(this);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(1, false);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(2, false);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, false);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, false);
+
+        cargaDefault();
     }
 
     // #SE NECESITA PROBAR BIEN ESTO AUN. // Esto es porque ambas tablas tienen el mismo id de tupla, por ser unica.
@@ -39,6 +59,7 @@ public class Controlador_Datos_Llegada implements MouseListener {
         this.idContenedor = idBusquedaUno;
         this.idDatosLlegada = this.idContenedor;
         this.modeloDatosLlegada.id_contenedor = this.idContenedor;
+
     }
 
     public void idEntidadContenedores() {
@@ -274,12 +295,34 @@ public class Controlador_Datos_Llegada implements MouseListener {
         this.modeloDatosLlegada.guardarActualizar_DatosLlegada();
     }
 
+    public void cargaDefault() {
+        LocalDate actualDate = LocalDate.now();
+        this.vistaLlegada.datosLlegada_fechaInsp.setDate(funcionFecha_Formato(actualDate.toString()));
+        this.vistaLlegada.datosLlegada_fechaSalida.setDate(funcionFecha_Formato(actualDate.toString()));
+    }
+
+    public void Completo() {
+
+        if (vistaLlegada.datosLlegada_tipocaja.getText().isEmpty() || vistaLlegada.datosLlegada_cupo.getText().isEmpty() || vistaLlegada.datosLlegada_contenedor.getText().isEmpty()
+                || vistaLlegada.datosLlegada_placa.getText().isEmpty() || vistaLlegada.datosLlegada_chasis.getText().isEmpty() || vistaLlegada.datosLlegada_chofer.getText().isEmpty()
+                || vistaLlegada.datosLlegada_ci.getText().isEmpty() || vistaLlegada.datosLlegada_nombrefinca.getText().isEmpty()
+                || vistaLlegada.datosLlegada_candadosllegada.getText().isEmpty() || vistaLlegada.datosLlegada_sellosExtrenos_1.getText().isEmpty()
+                || vistaLlegada.datosLlegada_sellosInternos_1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(vistaLlegada, "Porfavor no dejar campos vacios ");
+
+        } else {
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(1);
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(1, true);
+
+        }
+
+    }
+
     @Override
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
         if (me.getSource() == this.vistaLlegada.btn_siguiente_llegada) {
-            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(1);
-
+            Completo();
         }
     }
 
@@ -297,5 +340,90 @@ public class Controlador_Datos_Llegada implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent me) {
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        if (e.getSource() == vistaLlegada.datosLlegada_tipocaja) {
+            if (vistaLlegada.datosLlegada_tipocaja.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == vistaLlegada.datosLlegada_cupo) {
+            if (vistaLlegada.datosLlegada_cupo.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == vistaLlegada.datosLlegada_contenedor) {
+            if (vistaLlegada.datosLlegada_contenedor.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == vistaLlegada.datosLlegada_placa) {
+            if (vistaLlegada.datosLlegada_placa.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == vistaLlegada.datosLlegada_chasis) {
+            if (vistaLlegada.datosLlegada_chasis.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == vistaLlegada.datosLlegada_chofer) {
+            char c = e.getKeyChar();
+            if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) {
+                e.consume();
+            }
+            if (vistaLlegada.datosLlegada_chofer.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+
+        if (e.getSource() == vistaLlegada.datosLlegada_ci) {
+
+            char c = e.getKeyChar();
+            if (c < '0' || c > '9') {
+                e.consume();
+            }
+            if (vistaLlegada.datosLlegada_ci.getText().length() >= 13) {
+                e.consume();
+
+            }
+        }
+
+        if (e.getSource() == vistaLlegada.datosLlegada_nombrefinca) {
+            if (vistaLlegada.datosLlegada_nombrefinca.getText().length() >= 50) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == vistaLlegada.datosLlegada_candadosllegada) {
+            if (vistaLlegada.datosLlegada_candadosllegada.getText().length() >= 30) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == vistaLlegada.datosLlegada_sellosExtrenos_1) {
+            if (vistaLlegada.datosLlegada_sellosExtrenos_1.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+        if (e.getSource() == vistaLlegada.datosLlegada_sellosInternos_1) {
+            if (vistaLlegada.datosLlegada_sellosInternos_1.getText().length() >= 250) {
+                e.consume();
+            }
+        }
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
     }
 }

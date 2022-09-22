@@ -130,15 +130,6 @@ public class Controlador_Obtener_Reportes implements MouseListener{
     public void mouseExited(MouseEvent e) {
     }
 }
-class Render extends DefaultTableCellRenderer {
 
-    @Override
-    public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
 
-        if (value instanceof JLabel) {
-            JLabel btn = (JLabel) value;
-            return btn;
-        }
-        return super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-    }
-}
+

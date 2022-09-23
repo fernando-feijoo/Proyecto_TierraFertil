@@ -19,6 +19,7 @@ public class Modelo_Conexion {
             System.out.println("Conexion exitosa.");
             return conexion;
         } catch (Exception e) {
+            System.out.println("Error de conexion: " + e);
             if (conTemp == 0) {
                 JOptionPane.showMessageDialog(null, "Error al conectar la BD");
                 conTemp++;

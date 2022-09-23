@@ -1,9 +1,7 @@
 package Controlador.Grupo3;
 
-import static Controlador.Grupo3.Controlador_Listado_Contenedores.idContenedor;
 import Modelo.Grupo3.Modelo_Obtener_Reportes;
 import Vista.Grupo3.Vista_Obtener_Reportes;
-import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
@@ -11,8 +9,6 @@ import java.sql.SQLException;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class Controlador_Obtener_Reportes implements MouseListener{
@@ -33,7 +29,6 @@ public class Controlador_Obtener_Reportes implements MouseListener{
     }
     
      public void busquedaDatos() {
-        
         this.busqueda = this.vistaObtReport.ListadoContenedor_txf_Busqueda.getText();
         this.modeloObtenerReportes.busquedaGeneral = this.busqueda;
         this.modeloObtenerReportes.consultarDatos();
@@ -49,6 +44,7 @@ public class Controlador_Obtener_Reportes implements MouseListener{
             while (rs.next()) {
                 idContenedor = Integer.parseInt(rs.getString("id"));
             }
+            rs.close();
             System.out.println("id Entidad Contenedor LC: " + idContenedor);
         } catch (SQLException ex) {
             System.out.println("Error de consulta ID_Contenedor LC: " + ex);
@@ -95,6 +91,7 @@ public class Controlador_Obtener_Reportes implements MouseListener{
 
                 tabla.addRow(registros);
             }
+            rs.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(vistaObtReport, " al llenar datos" + e);
         }

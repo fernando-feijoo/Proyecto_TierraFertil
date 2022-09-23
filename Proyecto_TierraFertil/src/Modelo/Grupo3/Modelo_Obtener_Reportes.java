@@ -24,6 +24,7 @@ public class Modelo_Obtener_Reportes {
                     + "ORDER BY\n"
                     + "semana DESC;";
             rs = st.executeQuery(sql);
+            st.close();
             conexion.conectarBD().close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error al ejecutar la consulta.." + e);
@@ -36,6 +37,7 @@ public class Modelo_Obtener_Reportes {
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT DISTINCT id FROM contenedores WHERE codigo = '"+ busquedaID_Contenedor +"';";
             rs = st.executeQuery(sql);
+            st.close();
             conexion.conectarBD().close();
             System.out.println("CODIGO CONTENEDOR MODELO LC: " + busquedaID_Contenedor);
         } catch (Exception e) {

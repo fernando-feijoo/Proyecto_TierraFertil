@@ -27,19 +27,77 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        boton_home = new javax.swing.JLabel();
+        lbl_titulo = new javax.swing.JLabel();
+        boton_buscar = new Recursos_Codigo.Redondeado();
+        jLabel1 = new javax.swing.JLabel();
+        txf_busqueda = new javax.swing.JTextField();
+
         setMaximumSize(new java.awt.Dimension(965, 629));
         setMinimumSize(new java.awt.Dimension(965, 629));
         setPreferredSize(new java.awt.Dimension(965, 629));
+
+        jPanel1.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel1.setMaximumSize(new java.awt.Dimension(965, 605));
+        jPanel1.setMinimumSize(new java.awt.Dimension(965, 605));
+        jPanel1.setPreferredSize(new java.awt.Dimension(965, 605));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setBackground(new java.awt.Color(112, 39, 1));
+        jPanel3.setForeground(new java.awt.Color(112, 39, 1));
+        jPanel3.setPreferredSize(new java.awt.Dimension(950, 5));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 950, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 3, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 3));
+
+        boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
+        jPanel1.add(boton_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        lbl_titulo.setBackground(new java.awt.Color(35, 35, 35));
+        lbl_titulo.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        lbl_titulo.setForeground(new java.awt.Color(35, 35, 35));
+        lbl_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_titulo.setText("OBTENER REPORTES");
+        jPanel1.add(lbl_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 22, 960, -1));
+
+        boton_buscar.setBackground(new java.awt.Color(255, 255, 102));
+        boton_buscar.setRoundBottomLeft(25);
+        boton_buscar.setRoundBottomRight(25);
+        boton_buscar.setRoundTopLeft(25);
+        boton_buscar.setRoundTopRight(25);
+        boton_buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Roboto", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("BUSCAR");
+        boton_buscar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 6, 80, 20));
+
+        jPanel1.add(boton_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 100, 30));
+        jPanel1.add(txf_busqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 110, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -47,5 +105,12 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public Recursos_Codigo.Redondeado boton_buscar;
+    public javax.swing.JLabel boton_home;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JLabel lbl_titulo;
+    public javax.swing.JTextField txf_busqueda;
     // End of variables declaration//GEN-END:variables
 }

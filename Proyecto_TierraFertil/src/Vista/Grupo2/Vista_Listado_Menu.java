@@ -27,22 +27,66 @@ public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jp_lienzo_principal = new javax.swing.JPanel();
+        redondeado1 = new Recursos_Codigo.Redondeado();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_listado = new javax.swing.JTable();
 
-        setMaximumSize(new java.awt.Dimension(965, 605));
-        setMinimumSize(new java.awt.Dimension(965, 605));
-        setPreferredSize(new java.awt.Dimension(965, 605));
+        setMaximumSize(new java.awt.Dimension(965, 629));
+        setMinimumSize(new java.awt.Dimension(965, 629));
+        setPreferredSize(new java.awt.Dimension(965, 629));
 
         jp_lienzo_principal.setBackground(new java.awt.Color(255, 255, 255));
+
+        redondeado1.setRoundBottomLeft(30);
+        redondeado1.setRoundBottomRight(30);
+        redondeado1.setRoundTopLeft(30);
+        redondeado1.setRoundTopRight(30);
+
+        javax.swing.GroupLayout redondeado1Layout = new javax.swing.GroupLayout(redondeado1);
+        redondeado1.setLayout(redondeado1Layout);
+        redondeado1Layout.setHorizontalGroup(
+            redondeado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 520, Short.MAX_VALUE)
+        );
+        redondeado1Layout.setVerticalGroup(
+            redondeado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        tabla_listado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tabla_listado);
 
         javax.swing.GroupLayout jp_lienzo_principalLayout = new javax.swing.GroupLayout(jp_lienzo_principal);
         jp_lienzo_principal.setLayout(jp_lienzo_principalLayout);
         jp_lienzo_principalLayout.setHorizontalGroup(
             jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 953, Short.MAX_VALUE)
+            .addGroup(jp_lienzo_principalLayout.createSequentialGroup()
+                .addGap(208, 208, 208)
+                .addComponent(redondeado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_lienzo_principalLayout.createSequentialGroup()
+                .addContainerGap(97, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 777, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89))
         );
         jp_lienzo_principalLayout.setVerticalGroup(
             jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 575, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_lienzo_principalLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(redondeado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -61,6 +105,9 @@ public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jp_lienzo_principal;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JPanel jp_lienzo_principal;
+    public Recursos_Codigo.Redondeado redondeado1;
+    public javax.swing.JTable tabla_listado;
     // End of variables declaration//GEN-END:variables
 }

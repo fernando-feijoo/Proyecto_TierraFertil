@@ -5,6 +5,8 @@ import Vista.Grupo2.Vista_Evaluacion_Total;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,7 +15,6 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
     ResultSet rs;
     Vista_Evaluacion_Total vistaEvaluacion;
     Modelo_Evaluacion_Defectos modeloEvaluacionDefectos = new Modelo_Evaluacion_Defectos();
-    
 
     public Controlador_Evaluacion_Defectos(Vista_Evaluacion_Total vistaEvaluacion) {
         this.vistaEvaluacion = vistaEvaluacion;
@@ -55,11 +56,14 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
             mostrarDefectos();
 
         }
-
     }
 
     public void mostrarDefectos() {
+       /* this.vistaEvaluacion.tabla_defectos.setDefaultRenderer(Object.class, new Render());
+        JLabel btn_eliminar = new JLabel(new ImageIcon(getClass().getResource("/Icon/user.png")));
+        */
         DefaultTableModel tabla = (DefaultTableModel) this.vistaEvaluacion.tabla_defectos.getModel();
+
         tabla.setColumnCount(0);
         tabla.addColumn("Id");
         tabla.addColumn("Nombre");
@@ -76,7 +80,13 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
                 defectos[1] = rs.getString("nombre");
                 defectos[2] = rs.getString("total_defectos");
                 defectos[3] = rs.getString("pcmd");
-                tabla.addRow(defectos);
+               
+                /*tabla.addRow(defectos);
+                tabla.addRow(new Object[]{
+                    btn_eliminar
+                });*/
+                
+//                this.vistaEvaluacion.tabla_defectos.setRowHeight(40);
 
             }
 
@@ -88,11 +98,10 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
 
     public void mostrarTotalGajos() {
         try {
-            
-           
+
             modeloEvaluacionDefectos.id_calculo = Integer.parseInt(this.vistaEvaluacion.lb_id_evaluacion.getName());
             rs = modeloEvaluacionDefectos.obtenerTotalGajos();
-            
+
             while (rs.next()) {
                 String variableTemp = rs.getString(rs.getString("total_gajos"));
 

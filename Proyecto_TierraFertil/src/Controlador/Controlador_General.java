@@ -9,15 +9,19 @@ import Controlador.Grupo3.Controlador_Datos_Llegada;
 import Controlador.Grupo3.Controlador_Despacho;
 import Controlador.Grupo3.Controlador_Higiene_Contenedor;
 import Controlador.Grupo3.Controlador_Inspeccion_Contenedor;
+import Controlador.Grupo3.Controlador_Listado_Contenedores;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
+import Controlador.Grupo3.Controlador_Obtener_Reportes;
 import Controlador.Grupo3.Controlador_Paletizado;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
 import Vista.Grupo2.Vista_Evaluacion_Total;
 import Vista.Grupo2.Vista_Menu_Calidad;
 import Vista.Grupo3.Vista_Home;
+import Vista.Grupo3.Vista_Listado_Contenedores;
 import Vista.Grupo3.Vista_Llegada;
 import Vista.Grupo3.Vista_Menu_Acopio;
+import Vista.Grupo3.Vista_Obtener_Reportes;
 import Vista.Vista_General;
 import Vista.Vista_Login;
 import java.awt.Color;
@@ -36,7 +40,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     /*  
         Se instancia el login para poder volver al login cuando se inicia sesion
         ademas del controlador del login para poder "escuchar" sus acciones en la vista login.
-    */
+     */
     Vista_Login vistaLogin = new Vista_Login();
     Controlador_Login controladorLogin = new Controlador_Login(vistaLogin);
     //  Aqui vamos a instanciar todas las vistas de cada grupo para trabajar los menus y sus escritorios.
@@ -51,7 +55,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Menu_Acopio controladorMenuAcopio = new Controlador_Menu_Acopio(vistaMenuAcopio);
     //  -> Importacion de Vistas Escritorios y sus controladores.
     //  GRUPO 1
-    
+
     //  GRUPO 2
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     Controlador_Evaluacion_Datos controlEvaluacion = new Controlador_Evaluacion_Datos(vistaEvaluacion);
@@ -59,15 +63,18 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Evaluacion_Defectos controlEvaDefec = new Controlador_Evaluacion_Defectos(vistaEvaluacion);
 //    Controlador_Listado_Menu controladorLisMenu = new Controlador_Listado_Menu(vistaEvaluacion);
     //  GRUPO 3
-    Vista_Llegada vistaLlegada = new Vista_Llegada();
     Vista_Home vistaHome = new Vista_Home();
+    Vista_Llegada vistaLlegada = new Vista_Llegada();
+    Vista_Listado_Contenedores vistaListado = new Vista_Listado_Contenedores();
+    Vista_Obtener_Reportes vistaObteReport = new Vista_Obtener_Reportes();
     Controlador_Datos_Llegada controlDatosLlegada = new Controlador_Datos_Llegada(vistaLlegada);
     Controlador_Despacho controlDespacho = new Controlador_Despacho(vistaLlegada);
     Controlador_Higiene_Contenedor controlHigiene = new Controlador_Higiene_Contenedor(vistaLlegada);
     Controlador_Inspeccion_Contenedor controlInspeccion = new Controlador_Inspeccion_Contenedor(vistaLlegada);
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
+    Controlador_Listado_Contenedores controlListadoCont = new Controlador_Listado_Contenedores(vistaListado);
+    Controlador_Obtener_Reportes controlObtReport = new Controlador_Obtener_Reportes(vistaObteReport);
     public static int tempClickG3 = 1;
-    
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -76,10 +83,11 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Color colorNormal = new Color(247, 246, 246);
     Color colorSeleccionMinimizar = new Color(133, 193, 233);
     Color colorSeleccionExit = new Color(231, 76, 60);
-    Color colorUsuarioSeleccion = new Color(223,238,255);
-    Color colorNormalOscuro = new Color(204,204,204);
+    Color colorUsuarioSeleccion = new Color(223, 238, 255);
+    Color colorNormalOscuro = new Color(204, 204, 204);
     //  Variables locales para usar en vista general de la clase.
     int xMouse, yMouse, contTemp = 0;
+
     //  Fin de variables locales de case.
     public Controlador_General(Vista_General vistaGeneral) {
         this.vistaGeneral = vistaGeneral;
@@ -95,7 +103,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.jp_opcionModoOscuro.addMouseListener(this);
         this.vistaGeneral.jp_opcionCerrarSesion.addMouseListener(this);
         // Grupo 1
-        
+
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
@@ -104,9 +112,14 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
         this.vistaMenuAcopio.btn_reportes_opcion_uno.addMouseListener(this);
         this.vistaLlegada.boton_home.addMouseListener(this);
+        this.vistaListado.boton_home.addMouseListener(this);
+        this.vistaObteReport.boton_home.addMouseListener(this);
+        this.vistaObteReport.boton_buscar.addMouseListener(this);
         this.vistaLlegada.btn_guardar.addMouseListener(this);
 //        this.vistaHome.boton_buscar.addMouseListener(this); // <-- Aqui se tiene que activar el actualizar #
         this.vistaLlegada.addComponentListener(this);
+        this.vistaListado.addComponentListener(this);
+        this.vistaObteReport.addComponentListener(this);
         //  Area de pruebas para los metodos a ejecutar en el constructor.
         this.menuRoles();
         //  MouseMotionListener de los distintos elementos.
@@ -138,7 +151,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaMenuCalidad.setVisible(true);
             }
             if (this.modeloLogin.rol.equals("Grupo 3")) {
-                this.vistaGeneral.jp_escritorio_general.add(vistaLlegada); // #Agregue esto al final a ver si funciona.
+                this.vistaGeneral.jp_escritorio_general.add(vistaLlegada);
+                this.vistaGeneral.jp_escritorio_general.add(vistaListado);
+                this.vistaGeneral.jp_escritorio_general.add(vistaObteReport);
                 this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
                 this.vistaGeneral.jp_escritorio_general.add(vistaHome);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
@@ -150,8 +165,16 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaMenuAcopio.setVisible(true);
             }
         } catch (Exception ex) {
-            
+
         }
+    }
+
+    public void menuUsuarioSwitchOnOFF() {
+        this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
+        this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
+        this.vistaGeneral.jp_lienzo_principal.setVisible(false);
+        this.vistaGeneral.jp_lienzo_principal.setVisible(true);
+        System.out.println("OFF - ON");
     }
 
     @Override
@@ -177,10 +200,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         //  Esta parte hay que trabajr bien aun, porque veo un error aun. Es cuando se oculta las opciones en el boton usuario.
         if (me.getSource() == this.vistaGeneral.jp_opcionInicial && contTemp == 2) {
-            this.vistaGeneral.jp_opcionModoOscuro.setVisible(false);
-            this.vistaGeneral.jp_opcionCerrarSesion.setVisible(false);
-            this.vistaGeneral.jp_lienzo_principal.setVisible(false);
-            this.vistaGeneral.jp_lienzo_principal.setVisible(true);
+            this.menuUsuarioSwitchOnOFF();
             contTemp = 0;
         }
         //  Aqui hacemos el cerrar sesion en la vista general.
@@ -189,7 +209,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaLogin.setVisible(true);
         }
         //  GRUPO 1 OPCIONES DE BOTONES
-        
+
         //  GRUPO 2 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaMenuCalidad.btn_acopio_control) {
             this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
@@ -199,19 +219,25 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         //  GRUPO 3 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaLlegada.btn_guardar) {
             tempClickG3 = 1;
-            
+
             this.controlDatosLlegada.guardadoFinal();
-            //this.controlInspeccion.guardadoFinal();
+            this.controlInspeccion.guardadoFinal();
             this.controlHigiene.guardadoFinal();
             this.controlDespacho.guardadoFinal();
             this.controlPaletizado.guardadoFinal();
-            
+
         }
-        
+
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
 //            this.vistaGeneral.jp_escritorio_general.add(vistaLlegada); // #Toca eliminar esta linea quizas.
             this.vistaLlegada.setBorder(null);
-            this.vistaHome.setVisible(false);
+            this.vistaHome.dispose();
+            this.vistaListado.dispose();
+            this.vistaObteReport.dispose();
+            // Un solo validador de menu desplegable.
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
+            // Necesita la asignacion para leer evento a la primera.
             this.vistaLlegada.setVisible(true);
             //  #########  SOLUCIONADO LO DE ID FIJO DE CONTENDOR Y DEMAS TABLAS, FALTA DE ROJAS #########
             if (tempClickG3 != 0) {
@@ -219,67 +245,106 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.controlDatosLlegada.idEntidadContenedores();
                 this.controlDatosLlegada.idEntidadDatosLlegada();
                 this.controlDespacho.idEntidadDatosDespacho();
-                
+
+                // --> Retorna 11 que es su maximo.
+                this.controlInspeccion.idEntidadHigCont();
                 //  Esta entidad ya retorna el max id como 8 si es null al inicio de la BD.
                 this.controlHigiene.idEntidadHigCont();
                 //  --> Retornara 20 que es su maximo.
                 this.controlPaletizado.idEntidadPalet();
-                
+
                 //  #Para ver datos de entrada.
-                System.out.println("General 1: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
-                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont);
-                
-                
+                System.out.println("General 1 Entrada: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>"
+                        + this.controlDatosLlegada.idDatosLlegada + " , idInsCont>" + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont
+                        + "  idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+
                 //  Autoincremento de las entidades fijas que comparten id entre entidades. ej. 1, 1, 1...
                 this.controlDatosLlegada.idContenedor++;
                 this.controlDatosLlegada.idDatosLlegada++;
                 this.controlDespacho.idDespacho++;
-                
-                
+
                 this.controlDatosLlegada.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDatosLlegada.idDatosLlegada);
-                
-                this.controlInspeccion.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, 0);
-                
+                this.controlInspeccion.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlInspeccion.idInspCont);
                 this.controlHigiene.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlHigiene.idHigCont);
-                this.controlDespacho.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor , this.controlDespacho.idDespacho);
+                this.controlDespacho.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlDespacho.idDespacho);
                 this.controlPaletizado.autoIncrementarID_Entidades(this.controlDatosLlegada.idContenedor, this.controlPaletizado.idPalet);
-                
+
                 //  #para ver datos de salida.
-                System.out.println("General 2: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
-                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
-                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
-                
+                System.out.println("General 2 Salida: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>"
+                        + this.controlDatosLlegada.idDatosLlegada + " , idInsCont>" + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont
+                        + "  idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+
                 //  Con ese valor evitamos guardar varias veces y seria un nuevo registro.
                 tempClickG3 = 0;
-            }   
-            
+            }
+
+        }
+        if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_dos) {
+            this.vistaListado.setBorder(null);
+            this.vistaHome.dispose();
+            this.vistaLlegada.dispose();
+            this.vistaObteReport.dispose();
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
+            this.vistaListado.setVisible(true);
+        }
+        if (me.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_uno) {
+            this.vistaObteReport.setBorder(null);
+            this.vistaHome.dispose();
+            this.vistaLlegada.dispose();
+            this.vistaListado.dispose();
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
+            this.vistaObteReport.setVisible(true);
         }
         //  Aqui es cuando volvemos al home, se oculta ele scritorio anterior y se muestra el home.
         if (me.getSource() == this.vistaLlegada.boton_home) {
             this.vistaLlegada.dispose();
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
             this.vistaHome.setVisible(true);
             this.controladorMenuAcopio.opcionClick(0);
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
+        if (me.getSource() == this.vistaListado.boton_home) {
+            this.vistaListado.dispose();
+            this.vistaHome.setVisible(true);
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
+        }
+        if (me.getSource() == this.vistaObteReport.boton_home) {
+            this.vistaObteReport.dispose();
+            this.vistaHome.setVisible(true);
+            this.menuUsuarioSwitchOnOFF();
+            contTemp = 0;
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
+        }
         //  Boton actualizar, lo que hace es buscar la informacion en la BD y mostrar en el formulario principal.
-//        if (me.getSource() == this.vistaHome.boton_buscar) {
-//            this.vistaHome.setVisible(false);
-//            this.vistaLlegada.setBorder(null);
-//            this.vistaLlegada.setVisible(true);
-//            
-//            int busqueda = Integer.parseInt(this.vistaHome.txf_busqueda.getText());
-//            this.controlDatosLlegada.idBusqueda(busqueda);
-//            this.controlHigiene.idBusqueda(busqueda);
-//            this.controlPaletizado.idBusqueda(busqueda);
-//            
-//            this.controlDatosLlegada.cargarDatosLlegada();
-//            this.controlHigiene.cargarDatosHigCont();
-//            this.controlPaletizado.cargarDatosPalet();
-//            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>" 
-//                        + this.controlDatosLlegada.idDatosLlegada + " , idHigCont>" + this.controlHigiene.idHigCont + 
-//                        "  idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
-//            
-//        }
+        if (me.getSource() == this.vistaObteReport.boton_buscar) {
+            this.vistaObteReport.dispose();
+            this.vistaLlegada.setBorder(null);
+            this.vistaLlegada.setVisible(true);
+            
+            int busqueda = Integer.parseInt(this.vistaObteReport.txf_busqueda.getText());
+            this.controlDatosLlegada.idBusqueda(busqueda);
+            this.controlInspeccion.idBusqueda(busqueda);
+            this.controlHigiene.idBusqueda(busqueda);
+            this.controlDespacho.idBusqueda(busqueda);
+            this.controlPaletizado.idBusqueda(busqueda);
+            
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
+            
+            this.controlDatosLlegada.cargarDatosLlegada();
+            this.controlInspeccion.cargarDatosInspCont();
+            this.controlHigiene.cargarDatosHigCont();
+            this.controlDespacho.cargarDatosDespacho();
+            this.controlPaletizado.cargarDatosPalet();
+            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle> " + this.controlDatosLlegada.idDatosLlegada  
+                               + " , idInsCo> " + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont    
+                               + " , idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+            
+        }
     }
 
     @Override
@@ -388,10 +453,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     public void componentHidden(ComponentEvent ce) {
         //  Coloca el color base del boton del menu del se se sale "vista".
         //  GRUPO 3
-        if (ce.getSource() == this.vistaLlegada)
-        {
+        if (ce.getSource() == this.vistaLlegada) {
             this.vistaMenuAcopio.btn_acopio_opcion_uno.setBackground(colorNormalOscuro);
         }
-        
+        if (ce.getSource() == this.vistaListado) {
+            this.vistaMenuAcopio.btn_acopio_opcion_dos.setBackground(colorNormalOscuro);
+        }
+        if (ce.getSource() == this.vistaObteReport) {
+            this.vistaMenuAcopio.btn_reportes_opcion_uno.setBackground(colorNormalOscuro);
+        }
+
     }
 }

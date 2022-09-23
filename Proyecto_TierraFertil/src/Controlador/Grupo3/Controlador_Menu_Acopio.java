@@ -2,12 +2,10 @@ package Controlador.Grupo3;
 
 import Vista.Grupo3.Vista_Menu_Acopio;
 import java.awt.Color;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Controlador_Menu_Acopio implements MouseListener, ComponentListener {
+public class Controlador_Menu_Acopio implements MouseListener{
 
     Vista_Menu_Acopio vistaMenuAcopio;
     Color colorNormal = new Color(204, 204, 204);
@@ -76,21 +74,4 @@ public class Controlador_Menu_Acopio implements MouseListener, ComponentListener
             this.vistaMenuAcopio.btn_reportes_opcion_uno.setBackground(colorNormal);
         }
     }
-
-    @Override
-    public void componentResized(ComponentEvent e) {
-    }
-
-    @Override
-    public void componentMoved(ComponentEvent e) {
-    }
-
-    @Override
-    public void componentShown(ComponentEvent e) {
-    }
-
-    @Override
-    public void componentHidden(ComponentEvent e) {
-    }
-
 }

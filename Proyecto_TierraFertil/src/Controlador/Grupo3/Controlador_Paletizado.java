@@ -3,15 +3,13 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Paletizado;
 import Vista.Grupo3.Vista_Llegada;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-public class Controlador_Paletizado implements MouseListener, ComponentListener {
+public class Controlador_Paletizado implements MouseListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
@@ -28,11 +26,10 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
     public Controlador_Paletizado(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_guardar.addMouseListener(this);
-        this.vistaLlegada.jp_opcion_Paletizado.addComponentListener(this);
     }
 
-    public void idBusqueda(int idHerenciaContenedor) {
-        this.idContenedor = idHerenciaContenedor;
+    public void idBusqueda(int idBusquedaUno) {
+        this.idContenedor = idBusquedaUno;
         this.modeloPaletizado.id_contenedor = this.idContenedor;
     }
 
@@ -305,24 +302,5 @@ public class Controlador_Paletizado implements MouseListener, ComponentListener 
     @Override
     public void mouseExited(MouseEvent me) {
 
-    }
-
-    @Override
-    public void componentResized(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentMoved(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentShown(ComponentEvent ce) {
-
-    }
-
-    @Override
-    public void componentHidden(ComponentEvent ce) {
     }
 }

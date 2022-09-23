@@ -1,3 +1,6 @@
+# Librerias necesarias agregadas
+Proyecto_TierraFertil/Librerias
+
 # Compiled class file
 *.class
 
@@ -25,4 +28,3 @@ hs_err_pid*
 /Proyecto_TierraFertil/dist/
 /Proyecto_TierraFertil/build
 /Proyecto_TierraFertil/nbproject/private/
-/Proyecto_TierraFertil_copia/nbproject/private/

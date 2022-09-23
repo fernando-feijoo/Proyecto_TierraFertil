@@ -49,7 +49,7 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, KeyList
         System.out.println("Guardar Conten IC" + idContenedor + " ," + observacionInspCont);
     }
 
-    public void idEntidadHigCont() {
+    public void idEntidadInspCont() {
         try {
             rs = modeloInspCont.consultaID_entidadInspeccionContenedor();
             while (rs.next()) {

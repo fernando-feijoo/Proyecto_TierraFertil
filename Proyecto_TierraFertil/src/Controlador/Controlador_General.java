@@ -13,6 +13,7 @@ import Controlador.Grupo3.Controlador_Listado_Contenedores;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Controlador.Grupo3.Controlador_Obtener_Reportes;
 import Controlador.Grupo3.Controlador_Paletizado;
+import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Modelo_Login;
 import Vista.Grupo1.Vista_Menu_Solucion_Campo;
 import Vista.Grupo2.Vista_Evaluacion_Total;
@@ -74,6 +75,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
     Controlador_Listado_Contenedores controlListadoCont = new Controlador_Listado_Contenedores(vistaListado);
     Controlador_Obtener_Reportes controlObtReport = new Controlador_Obtener_Reportes(vistaObteReport);
+    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
     public static int tempClickG3 = 1;
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
@@ -205,7 +207,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         //  Aqui hacemos el cerrar sesion en la vista general.
         if (me.getSource() == this.vistaGeneral.jp_opcionCerrarSesion || me.getSource() == this.vistaGeneral.lbl_cerrarSesion) {
-            this.vistaGeneral.setVisible(false);
+            this.vistaGeneral.dispose();
             this.vistaLogin.setVisible(true);
         }
         //  GRUPO 1 OPCIONES DE BOTONES
@@ -247,7 +249,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.controlDespacho.idEntidadDatosDespacho();
 
                 // --> Retorna 11 que es su maximo.
-                this.controlInspeccion.idEntidadHigCont();
+                this.controlInspeccion.idEntidadInspCont();
                 //  Esta entidad ya retorna el max id como 8 si es null al inicio de la BD.
                 this.controlHigiene.idEntidadHigCont();
                 //  --> Retornara 20 que es su maximo.
@@ -257,6 +259,19 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 System.out.println("General 1 Entrada: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>"
                         + this.controlDatosLlegada.idDatosLlegada + " , idInsCont>" + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont
                         + "  idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+                tempClickG3 = 0;
+                //  Validacion en caso de datos erroneos en la BD. BORRADO DE EMERGENCIA.
+                if ((this.controlInspeccion.idInspCont % 11 != 0) || (this.controlHigiene.idHigCont % 8 != 0) || (this.controlPaletizado.idPalet % 20 != 0)) {
+                    this.modeloContenedor.id = this.controlDatosLlegada.idContenedor;
+                    this.modeloContenedor.eliminadoEmergencia_Contenedor();
+                    this.controlDatosLlegada.idEntidadContenedores();
+                    this.controlDatosLlegada.idEntidadDatosLlegada();
+                    this.controlInspeccion.idEntidadInspCont();
+                    this.controlHigiene.idEntidadHigCont();
+                    this.controlDespacho.idEntidadDatosDespacho();
+                    this.controlPaletizado.idEntidadPalet();
+                    tempClickG3 = 1;
+                }
 
                 //  Autoincremento de las entidades fijas que comparten id entre entidades. ej. 1, 1, 1...
                 this.controlDatosLlegada.idContenedor++;
@@ -275,7 +290,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                         + "  idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
 
                 //  Con ese valor evitamos guardar varias veces y seria un nuevo registro.
-                tempClickG3 = 0;
             }
 
         }
@@ -322,30 +336,30 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         //  Boton actualizar, lo que hace es buscar la informacion en la BD y mostrar en el formulario principal.
         if (me.getSource() == this.vistaListado.tabla_listado_contenedores && this.vistaListado.tabla_listado_contenedores.getSelectedColumn() == 9) {
-            
+
             this.vistaListado.dispose();
             this.vistaLlegada.setBorder(null);
             this.vistaLlegada.setVisible(true);
-            
+
             int busqueda = this.controlListadoCont.idContenedor;
-            
+
             this.controlDatosLlegada.idBusqueda(busqueda);
             this.controlInspeccion.idBusqueda(busqueda);
             this.controlHigiene.idBusqueda(busqueda);
             this.controlDespacho.idBusqueda(busqueda);
             this.controlPaletizado.idBusqueda(busqueda);
-            
+
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
-            
+
             this.controlDatosLlegada.cargarDatosLlegada();
             this.controlInspeccion.cargarDatosInspCont();
             this.controlHigiene.cargarDatosHigCont();
             this.controlDespacho.cargarDatosDespacho();
             this.controlPaletizado.cargarDatosPalet();
-            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle> " + this.controlDatosLlegada.idDatosLlegada  
-                               + " , idInsCo> " + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont    
-                               + " , idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
-            
+            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle> " + this.controlDatosLlegada.idDatosLlegada
+                    + " , idInsCo> " + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont
+                    + " , idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+
         }
     }
 

@@ -22,7 +22,7 @@ public class Modelo_Obtener_Reportes {
                     + "WHERE\n"
                     + "contenedores.codigo ILIKE '"+ busquedaGeneral +"%'\n"
                     + "ORDER BY\n"
-                    + "codigo;";
+                    + "semana DESC;";
             rs = st.executeQuery(sql);
             conexion.conectarBD().close();
         } catch (Exception e) {

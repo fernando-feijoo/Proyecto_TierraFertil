@@ -33,16 +33,14 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        redondeado1 = new Recursos_Codigo.Redondeado();
+        boton_campo_uno = new Recursos_Codigo.Redondeado();
         jLabel2 = new javax.swing.JLabel();
-        redondeado2 = new Recursos_Codigo.Redondeado();
+        boton_campo_dos = new Recursos_Codigo.Redondeado();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        redondeado3 = new Recursos_Codigo.Redondeado();
+        boton_listar_uno = new Recursos_Codigo.Redondeado();
         jLabel7 = new javax.swing.JLabel();
-        redondeado4 = new Recursos_Codigo.Redondeado();
-        jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setMaximumSize(new java.awt.Dimension(300, 516));
@@ -59,30 +57,15 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setMaximumSize(new java.awt.Dimension(270, 48));
         jPanel1.setMinimumSize(new java.awt.Dimension(270, 48));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 204));
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 22)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/control1.png"))); // NOI18N
         jLabel1.setText("Control");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 6, 248, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-
-        jp_contenedor_menu_acopio.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, -1));
+        jp_contenedor_menu_acopio.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 40));
 
         jPanel2.setBackground(new java.awt.Color(112, 39, 1));
         jPanel2.setMaximumSize(new java.awt.Dimension(267, 3));
@@ -102,39 +85,39 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
 
         jp_contenedor_menu_acopio.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 6, -1, -1));
 
-        redondeado1.setBackground(new java.awt.Color(204, 204, 204));
-        redondeado1.setMaximumSize(new java.awt.Dimension(218, 38));
-        redondeado1.setMinimumSize(new java.awt.Dimension(218, 38));
-        redondeado1.setPreferredSize(new java.awt.Dimension(218, 38));
-        redondeado1.setRoundBottomLeft(30);
-        redondeado1.setRoundBottomRight(30);
-        redondeado1.setRoundTopLeft(30);
-        redondeado1.setRoundTopRight(30);
-        redondeado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        boton_campo_uno.setBackground(new java.awt.Color(204, 204, 204));
+        boton_campo_uno.setMaximumSize(new java.awt.Dimension(218, 38));
+        boton_campo_uno.setMinimumSize(new java.awt.Dimension(218, 38));
+        boton_campo_uno.setPreferredSize(new java.awt.Dimension(218, 38));
+        boton_campo_uno.setRoundBottomLeft(30);
+        boton_campo_uno.setRoundBottomRight(30);
+        boton_campo_uno.setRoundTopLeft(30);
+        boton_campo_uno.setRoundTopRight(30);
+        boton_campo_uno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel2.setText("Registro bandejas");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        redondeado1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boton_campo_uno.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(redondeado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        jp_contenedor_menu_acopio.add(boton_campo_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
-        redondeado2.setBackground(new java.awt.Color(204, 204, 204));
-        redondeado2.setMaximumSize(new java.awt.Dimension(218, 38));
-        redondeado2.setMinimumSize(new java.awt.Dimension(218, 38));
-        redondeado2.setPreferredSize(new java.awt.Dimension(218, 38));
-        redondeado2.setRoundBottomLeft(30);
-        redondeado2.setRoundBottomRight(30);
-        redondeado2.setRoundTopLeft(30);
-        redondeado2.setRoundTopRight(30);
-        redondeado2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        boton_campo_dos.setBackground(new java.awt.Color(204, 204, 204));
+        boton_campo_dos.setMaximumSize(new java.awt.Dimension(218, 38));
+        boton_campo_dos.setMinimumSize(new java.awt.Dimension(218, 38));
+        boton_campo_dos.setPreferredSize(new java.awt.Dimension(218, 38));
+        boton_campo_dos.setRoundBottomLeft(30);
+        boton_campo_dos.setRoundBottomRight(30);
+        boton_campo_dos.setRoundTopLeft(30);
+        boton_campo_dos.setRoundTopRight(30);
+        boton_campo_dos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel3.setText("Listado bandejas");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        redondeado2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boton_campo_dos.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(redondeado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+        jp_contenedor_menu_acopio.add(boton_campo_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setMaximumSize(new java.awt.Dimension(270, 48));
@@ -165,39 +148,22 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
 
         jp_contenedor_menu_acopio.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 198, -1, 40));
 
-        redondeado3.setBackground(new java.awt.Color(204, 204, 204));
-        redondeado3.setMaximumSize(new java.awt.Dimension(218, 38));
-        redondeado3.setMinimumSize(new java.awt.Dimension(218, 38));
-        redondeado3.setPreferredSize(new java.awt.Dimension(218, 38));
-        redondeado3.setRoundBottomLeft(30);
-        redondeado3.setRoundBottomRight(30);
-        redondeado3.setRoundTopLeft(30);
-        redondeado3.setRoundTopRight(30);
-        redondeado3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        boton_listar_uno.setBackground(new java.awt.Color(204, 204, 204));
+        boton_listar_uno.setMaximumSize(new java.awt.Dimension(218, 38));
+        boton_listar_uno.setMinimumSize(new java.awt.Dimension(218, 38));
+        boton_listar_uno.setPreferredSize(new java.awt.Dimension(218, 38));
+        boton_listar_uno.setRoundBottomLeft(30);
+        boton_listar_uno.setRoundBottomRight(30);
+        boton_listar_uno.setRoundTopLeft(30);
+        boton_listar_uno.setRoundTopRight(30);
+        boton_listar_uno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel7.setText("Nuevo reporte");
-        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        redondeado3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boton_listar_uno.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(redondeado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
-
-        redondeado4.setBackground(new java.awt.Color(204, 204, 204));
-        redondeado4.setMaximumSize(new java.awt.Dimension(218, 38));
-        redondeado4.setMinimumSize(new java.awt.Dimension(218, 38));
-        redondeado4.setPreferredSize(new java.awt.Dimension(218, 38));
-        redondeado4.setRoundBottomLeft(30);
-        redondeado4.setRoundBottomRight(30);
-        redondeado4.setRoundTopLeft(30);
-        redondeado4.setRoundTopRight(30);
-        redondeado4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel6.setText("Reportes generados");
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        redondeado4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
-
-        jp_contenedor_menu_acopio.add(redondeado4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        jp_contenedor_menu_acopio.add(boton_listar_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,19 +181,17 @@ public class Menu_Campo extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jp_contenedor_menu_acopio;
-    private Recursos_Codigo.Redondeado redondeado1;
-    private Recursos_Codigo.Redondeado redondeado2;
-    private Recursos_Codigo.Redondeado redondeado3;
-    private Recursos_Codigo.Redondeado redondeado4;
+    public Recursos_Codigo.Redondeado boton_campo_dos;
+    public Recursos_Codigo.Redondeado boton_campo_uno;
+    public Recursos_Codigo.Redondeado boton_listar_uno;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel7;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JPanel jp_contenedor_menu_acopio;
     // End of variables declaration//GEN-END:variables
 }

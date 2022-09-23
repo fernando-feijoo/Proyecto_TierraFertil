@@ -31,12 +31,9 @@ public class Controlador_Listado_Contenedores implements MouseListener {
 
     // Hay que probar si funciona.
     public void busquedaDatos() {
-        
         this.busqueda = this.vistaListadoCont.ListadoContenedor_txf_Busqueda.getText();
         this.modeloListadoContenedore.busquedaGeneral = this.busqueda;
         this.modeloListadoContenedore.consultarDatos();
-        this.vistaListadoCont.tabla_listado_contenedores.revalidate();
-        this.vistaListadoCont.tabla_listado_contenedores.repaint();
         this.mostrarDatos();
     }
 
@@ -47,6 +44,7 @@ public class Controlador_Listado_Contenedores implements MouseListener {
             while (rs.next()) {
                 idContenedor = Integer.parseInt(rs.getString("id"));
             }
+            rs.close();
             System.out.println("id Entidad Contenedor LC: " + idContenedor);
         } catch (SQLException ex) {
             System.out.println("Error de consulta ID_Contenedor LC: " + ex);

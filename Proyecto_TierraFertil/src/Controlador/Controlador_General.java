@@ -1,5 +1,12 @@
 package Controlador;
 
+import Controlador.Grupo1.Ctrl_asepcias;
+import Controlador.Grupo1.Ctrl_detalles_gen;
+import Controlador.Grupo1.Ctrl_gc_ld;
+import Controlador.Grupo1.Ctrl_largo_dedo;
+import Controlador.Grupo1.Ctrl_listar_campo;
+import Controlador.Grupo1.Ctrl_menu;
+import Controlador.Grupo1.Ctrl_sel_emp;
 import Controlador.Grupo2.Controlador_Evaluacion_Datos;
 import Controlador.Grupo2.Controlador_Evaluacion_Defectos;
 import Controlador.Grupo2.Controlador_Evaluacion_Tabulacion;
@@ -15,7 +22,9 @@ import Controlador.Grupo3.Controlador_Obtener_Reportes;
 import Controlador.Grupo3.Controlador_Paletizado;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Modelo_Login;
-import Vista.Grupo1.Vista_Menu_Solucion_Campo;
+import Vista.Grupo1.Listar_campo;
+import Vista.Grupo1.Menu_Campo;
+import Vista.Grupo1.Vista_campo_respaldo;
 import Vista.Grupo2.Vista_Evaluacion_Total;
 import Vista.Grupo2.Vista_Menu_Calidad;
 import Vista.Grupo3.Vista_Home;
@@ -47,7 +56,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     //  Aqui vamos a instanciar todas las vistas de cada grupo para trabajar los menus y sus escritorios.
     //  -> Importacion de Vistas Menus y sus controladores.
     //  GRUPO 1
-    Vista_Menu_Solucion_Campo vistaMenuCampo = new Vista_Menu_Solucion_Campo();
+    Menu_Campo vistaMenuCampo = new Menu_Campo();
+    Ctrl_menu ctrlMenu = new Ctrl_menu(vistaMenuCampo);
     //  GRUPO 2
     Vista_Menu_Calidad vistaMenuCalidad = new Vista_Menu_Calidad();
     Controlador_Menu_General controladorMenuCalidad = new Controlador_Menu_General(vistaMenuCalidad);
@@ -56,7 +66,14 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Menu_Acopio controladorMenuAcopio = new Controlador_Menu_Acopio(vistaMenuAcopio);
     //  -> Importacion de Vistas Escritorios y sus controladores.
     //  GRUPO 1
-
+    Vista_campo_respaldo vistaCampo = new Vista_campo_respaldo();
+    Listar_campo vistaListaCampo = new Listar_campo();
+    Ctrl_detalles_gen ctrlDetGene = new Ctrl_detalles_gen(vistaCampo);
+    Ctrl_asepcias ctrlAcepcias = new Ctrl_asepcias(vistaCampo);
+    Ctrl_gc_ld ctrlGradoCalib = new Ctrl_gc_ld(vistaCampo);
+    Ctrl_largo_dedo ctrlLargoDe = new Ctrl_largo_dedo(vistaCampo);
+    Ctrl_sel_emp ctrlSeleEmp = new Ctrl_sel_emp(vistaCampo);
+    Ctrl_listar_campo ctrlListarCamp = new Ctrl_listar_campo(vistaListaCampo);
     //  GRUPO 2
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     Controlador_Evaluacion_Datos controlEvaluacion = new Controlador_Evaluacion_Datos(vistaEvaluacion);
@@ -105,7 +122,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.jp_opcionModoOscuro.addMouseListener(this);
         this.vistaGeneral.jp_opcionCerrarSesion.addMouseListener(this);
         // Grupo 1
-
+        this.vistaMenuCampo.boton_campo_uno.addMouseListener(this);
+        this.vistaMenuCampo.boton_campo_dos.addMouseListener(this);
+        this.vistaMenuCampo.boton_listar_uno.addMouseListener(this);
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
@@ -211,7 +230,12 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaLogin.setVisible(true);
         }
         //  GRUPO 1 OPCIONES DE BOTONES
-
+        if (me.getSource() == this.vistaMenuCampo.boton_campo_uno) {
+            this.vistaGeneral.jp_escritorio_general.add(vistaCampo);
+            this.menuUsuarioSwitchOnOFF();
+            this.vistaCampo.setBorder(null);
+            this.vistaCampo.setVisible(true);
+        }
         //  GRUPO 2 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaMenuCalidad.btn_acopio_control) {
             this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
@@ -227,7 +251,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.controlHigiene.guardadoFinal();
             this.controlDespacho.guardadoFinal();
             this.controlPaletizado.guardadoFinal();
-
         }
 
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
@@ -336,7 +359,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         //  Boton actualizar, lo que hace es buscar la informacion en la BD y mostrar en el formulario principal.
         if (me.getSource() == this.vistaListado.tabla_listado_contenedores && this.vistaListado.tabla_listado_contenedores.getSelectedColumn() == 9) {
-
             this.vistaListado.dispose();
             this.vistaLlegada.setBorder(null);
             this.vistaLlegada.setVisible(true);

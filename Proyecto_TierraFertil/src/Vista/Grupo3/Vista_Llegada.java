@@ -442,7 +442,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 3));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 88, -1, 3));
 
         boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
         jPanel1.add(boton_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));

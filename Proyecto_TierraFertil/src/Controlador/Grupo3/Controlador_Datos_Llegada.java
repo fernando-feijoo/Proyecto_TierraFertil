@@ -51,7 +51,7 @@ public class Controlador_Datos_Llegada implements MouseListener, KeyListener {
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, false);
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, false);
 
-        cargaDefault();
+        this.cargaDefault();
     }
 
     // #SE NECESITA PROBAR BIEN ESTO AUN. // Esto es porque ambas tablas tienen el mismo id de tupla, por ser unica.
@@ -59,7 +59,6 @@ public class Controlador_Datos_Llegada implements MouseListener, KeyListener {
         this.idContenedor = idBusquedaUno;
         this.idDatosLlegada = this.idContenedor;
         this.modeloDatosLlegada.id_contenedor = this.idContenedor;
-
     }
 
     public void idEntidadContenedores() {

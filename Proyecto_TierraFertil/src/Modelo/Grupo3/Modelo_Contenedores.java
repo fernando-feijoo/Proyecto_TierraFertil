@@ -18,6 +18,7 @@ public class Modelo_Contenedores {
             String sql = "SELECT \"insertarDatosContenedor\"("+id+", '"+codigo_Contenedor+"', '"+obser_Ins_Cont+"', '"+obser_Hig_Cont+"', '"+obser_General+"');";
             st.executeUpdate(sql);
             st.close();
+            conexion.conectarBD().close();
             System.out.println(id + " Datos almacenados Contenedor BD MODELO.");
         } catch (Exception e) {
         }
@@ -35,6 +36,18 @@ public class Modelo_Contenedores {
             System.out.println("Error al tratar de obtener id entidad contenedores en BD MODELO: " + e);
         }
         return rs;
+    }
+    
+    public void eliminadoEmergencia_Contenedor(){
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "DELETE FROM contenedores WHERE id = "+id+";";
+            st.executeUpdate(sql);
+            st.close();
+            conexion.conectarBD().close();
+            System.out.println(id + "<-ID Datos ELIMINADOS Contenedor BD MODELO \n ************EMERGENCIA************ \n ************EMERGENCIA************");
+        } catch (Exception e) {
+        }
     }
     
     public void pruebaGuardado(){

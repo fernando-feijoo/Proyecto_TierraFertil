@@ -17,9 +17,9 @@ public class Mod_lardo_dedo {
     public boolean ld_can () throws SQLException {
         st=con.conectarBD().createStatement();
         st.executeUpdate("INSERT INTO public.largo_dedo(\n" +
-"	cant_ld6, cant_ld7, cant_ld8, cant_ld9, cant_ld10,\n" +
+"	id, cant_ld6, cant_ld7, cant_ld8, cant_ld9, cant_ld10,\n" +
 "	cant_ld11, total_cant_ld, id_evaluacion)\n" +
-"	VALUES ("+this.can6+", "+this.can7+", "+this.can8+", "+this.can9+", "+this.can10+", "+this.can11+", "+this.cantot+", "+this.id_eva+");");
+"	VALUES ("+id_max_ld+","+this.can6+", "+this.can7+", "+this.can8+", "+this.can9+", "+this.can10+", "+this.can11+", "+this.cantot+", "+this.id_eva+");");
         return true;
     }
     

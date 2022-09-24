@@ -5,24 +5,30 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Mod_listado_campo {
 
     Modelo_Conexion con = new Modelo_Conexion();
     Connection conexion;
+    
+    public String buscar;
 
-    public ResultSet consultas() throws SQLException {
-        Statement st = con.conectarBD().createStatement();
-        String sql = "SELECT \n"
-                + "prod.nombre, fin.nombre as finca, eva.tipo_caja, eva.vapor, \n"
-                + "eva.fecha_eva, eva.placa_vehivulo, \n"
-                + "sem.id as semana, eva.cod_evaluacion, eva.hora_eva\n"
-                + "FROM semanas sem inner join evaluaciones eva ON\n"
-                + "sem.id = eva.id_semana inner join productores prod ON \n"
-                + "prod.codigo = eva.codigo_productor inner join finca fin ON\n"
-                + "prod.codigo = fin.codigo_productor;";
-        ResultSet rs = st.executeQuery(sql);
-        return rs;
-
-    }
+    public ResultSet consultas()  {
+        try {
+            Statement st = con.conectarBD().createStatement();
+            String sql = "SELECT DISTINCT \n"
+                    + "eva.id, eva.cod_evaluacion, prod.nombre as Nombre_Productor, prod.apellido AS Apellido_Productor, prod.finca AS Finca\n"
+                    + "FROM productores prod inner join evaluaciones eva ON\n"
+                    + "prod.codigo=eva.codigo_productor WHERE eva.cod_evaluacion like '"+this.buscar+"%'ORDER BY eva.id DESC;";
+            ResultSet rs = st.executeQuery(sql);
+            st.close();
+            con.conectarBD().close();
+            return rs;
+        } catch (SQLException ex) {
+            Logger.getLogger(Mod_listado_campo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            return null;
+}
 }

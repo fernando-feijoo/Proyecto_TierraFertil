@@ -159,6 +159,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaGeneral.jp_menu_general.add(vistaMenuCampo);
                 this.vistaGeneral.jp_escritorio_general.add(vistaCampo);
                 this.vistaGeneral.jp_escritorio_general.add(vistaHome);
+                this.vistaGeneral.jp_escritorio_general.add(vistaListaCampo);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaHome.setVisible(true);
                 this.vistaHome.setBorder(null);
@@ -237,7 +238,16 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (me.getSource() == this.vistaMenuCampo.boton_campo_uno) {
             this.menuUsuarioSwitchOnOFF();
             this.vistaCampo.setBorder(null);
+            this.vistaHome.dispose();
+            this.vistaListaCampo.dispose();
             this.vistaCampo.setVisible(true);
+        } 
+        if (me.getSource() == this.vistaMenuCampo.boton_campo_dos) {
+            this.menuUsuarioSwitchOnOFF();
+            this.vistaListaCampo.setBorder(null);
+            this.vistaHome.dispose();
+            this.vistaCampo.dispose();
+            this.vistaListaCampo.setVisible(true);
         }
         //  GRUPO 2 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaMenuCalidad.btn_acopio_control) {
@@ -503,6 +513,5 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         if (ce.getSource() == this.vistaObteReport) {
             this.vistaMenuAcopio.btn_reportes_opcion_uno.setBackground(colorNormalOscuro);
         }
-
     }
 }

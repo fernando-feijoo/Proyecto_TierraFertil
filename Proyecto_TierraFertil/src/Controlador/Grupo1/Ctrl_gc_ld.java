@@ -22,18 +22,6 @@ public class Ctrl_gc_ld implements ActionListener{
         this.nn.btn_ok_gc.addActionListener(this);
         this.nn.btn_guardar_c_gc.addActionListener(this);
         datos();
-        try {
-            id_gc=mgl.id_gc();
-        
-        id_gc=id_gc;
-        System.out.println("El id actual de grado calibre es: "+id_gc);
-        
-        id_evalu=dg.id_evaluacion();
-        id_evalu=id_evalu;
-        System.out.println("El id actual de evaluacion en la vista gc: "+id_evalu);
-        } catch (SQLException ex) {
-            Logger.getLogger(Ctrl_gc_ld.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
     int c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47, c48, c49, c50, c51, c52, total; int id_gc, id_evalu;
     int n36, n37, n38, n39, n40, n41, n42, n43, n44, n45, n46, n47, n48, n49, n50, n51, n52;
@@ -169,9 +157,11 @@ public class Ctrl_gc_ld implements ActionListener{
         mgl.total_l=Double.parseDouble(this.nn.n_gc_total.getText());
         mgl.promedio_l=Double.parseDouble(this.nn.n_gc_totalN.getText());
         
-        id_evalu=id_evalu+1;
+        id_evalu=dg.id_evaluacion();
+        id_evalu=id_evalu;
         mgl.id_evaluacion=id_evalu;
         System.out.println("El id de evaluacion incrementable en la vista grado calibre es: "+id_evalu);
+        id_gc=mgl.id_gc();
         id_gc=id_gc+1;
         mgl.id_max=id_gc;
         System.out.println("El id incrementable de grado calibre es: "+id_gc);

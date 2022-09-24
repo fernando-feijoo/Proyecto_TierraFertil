@@ -17,8 +17,8 @@ public class Mod_gc_ld {
     public boolean gc_cantidad () throws SQLException{
         st=con.conectarBD().createStatement();
         st.executeUpdate("INSERT INTO public.grado_calibre("
-       + "cant_menos36, cant_g37, cant_g38, cant_g39, cant_g40, cant_g41, cant_g42, cant_g43, cant_g44, cant_g45, cant_g46, cant_g47, cant_g48, cant_g49, cant_g50, cant_g51, cant_mas52, total_cant_gc, id_evaluacion)\n" +
-        " VALUES ("+this.cant36+", "+this.cant37+", "+this.cant38+", "+this.cant39+", "+this.cant40+", "+this.cant41+","
+       + "id, cant_menos36, cant_g37, cant_g38, cant_g39, cant_g40, cant_g41, cant_g42, cant_g43, cant_g44, cant_g45, cant_g46, cant_g47, cant_g48, cant_g49, cant_g50, cant_g51, cant_mas52, total_cant_gc, id_evaluacion)\n" +
+        " VALUES ("+id_max+","+this.cant36+", "+this.cant37+", "+this.cant38+", "+this.cant39+", "+this.cant40+", "+this.cant41+","
         + " "+this.cant42+", "+this.cant43+", "+this.cant44+", "+this.cant45+", "+this.cant46+", "+this.cant47+","
         + " "+this.cant48+", "+this.cant49+", "+this.cant50+", "+this.cant51+", "+this.cant52+", "+this.cantTotal+", "+this.id_evaluacion+");");
         return true;

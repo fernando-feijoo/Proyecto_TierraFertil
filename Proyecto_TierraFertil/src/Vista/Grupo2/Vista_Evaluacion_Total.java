@@ -90,8 +90,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_defectos = new javax.swing.JTable();
         jSeparator9 = new javax.swing.JSeparator();
-        txt_id_defecto = new javax.swing.JTextField();
-        jb_nomb_defecto1 = new javax.swing.JLabel();
         redondeado_contenedor_1 = new Recursos_Codigo.Redondeado();
         jb_caja_insp = new javax.swing.JLabel();
         txt_caja_insp = new javax.swing.JTextField();
@@ -118,6 +116,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
         redondeado_contenedor_3 = new Recursos_Codigo.Redondeado();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabla_tabulacion = new javax.swing.JTable();
@@ -207,7 +206,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
         jb_pedidos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jb_pedidos.setForeground(new java.awt.Color(0, 0, 0));
-        jb_pedidos.setText("PEDIDO:");
+        jb_pedidos.setText("PDO:");
 
         txt_pedidos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
@@ -525,10 +524,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
         jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jb_nomb_defecto1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jb_nomb_defecto1.setForeground(new java.awt.Color(0, 0, 0));
-        jb_nomb_defecto1.setText("ID");
-
         javax.swing.GroupLayout redondeado_contenedor_2Layout = new javax.swing.GroupLayout(redondeado_contenedor_2);
         redondeado_contenedor_2.setLayout(redondeado_contenedor_2Layout);
         redondeado_contenedor_2Layout.setHorizontalGroup(
@@ -551,13 +546,9 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                             .addGroup(redondeado_contenedor_2Layout.createSequentialGroup()
                                 .addComponent(jb_nomb_defecto)
                                 .addGap(18, 18, 18)
-                                .addComponent(txt_nombre_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jb_nomb_defecto1)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_id_defecto, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt_nombre_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jb_defectos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -571,9 +562,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                 .addGap(14, 14, 14)
                 .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_nombre_defectos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_nomb_defecto)
-                    .addComponent(jb_nomb_defecto1)
-                    .addComponent(txt_id_defecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jb_nomb_defecto))
                 .addGap(18, 18, 18)
                 .addGroup(redondeado_contenedor_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_contenedor_defecto)
@@ -655,14 +644,15 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
         jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout redondeado_contenedor_1Layout = new javax.swing.GroupLayout(redondeado_contenedor_1);
         redondeado_contenedor_1.setLayout(redondeado_contenedor_1Layout);
         redondeado_contenedor_1Layout.setHorizontalGroup(
             redondeado_contenedor_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(redondeado_contenedor_1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(14, 14, 14)
                 .addGroup(redondeado_contenedor_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jb_caja_insp)
                     .addGroup(redondeado_contenedor_1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -670,7 +660,11 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8)))
+                        .addComponent(jLabel8))
+                    .addGroup(redondeado_contenedor_1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_caja_insp)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(redondeado_contenedor_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(redondeado_contenedor_1Layout.createSequentialGroup()
@@ -730,7 +724,8 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                             .addComponent(jb_total_gajos)
                             .addComponent(txt_embalador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jb_peso_neto)
-                            .addComponent(txt_peso_neto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txt_peso_neto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)))
                     .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(redondeado_contenedor_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(redondeado_contenedor_1Layout.createSequentialGroup()
@@ -811,16 +806,17 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jp_contenedor_principalLayout.setHorizontalGroup(
             jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
                 .addGroup(jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(redondeado_contenedor_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(redondeado_contenedor_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(redondeado_contenedor_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(redondeado_contenedor_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(redondeado_contenedor_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(redondeado_contenedor_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jp_contenedor_principalLayout.createSequentialGroup()
+                        .addGap(396, 396, 396)
+                        .addComponent(redondeado6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(18, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_contenedor_principalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(redondeado6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(392, 392, 392))
         );
         jp_contenedor_principalLayout.setVerticalGroup(
             jp_contenedor_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -831,9 +827,9 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                 .addComponent(redondeado_contenedor_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(redondeado_contenedor_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
                 .addComponent(redondeado6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jp_pestaña_reportesLayout = new javax.swing.GroupLayout(jp_pestaña_reportes);
@@ -891,6 +887,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public Recursos_Codigo.Redondeado btn_siguiente;
+    public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
     public javax.swing.JLabel jLabel2;
@@ -929,7 +926,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jb_generar_reporte;
     public javax.swing.JLabel jb_lDedos;
     public javax.swing.JLabel jb_nomb_defecto;
-    public javax.swing.JLabel jb_nomb_defecto1;
     public javax.swing.JLabel jb_nuevos_datos;
     public javax.swing.JLabel jb_pedidos;
     public javax.swing.JLabel jb_peso_neto;
@@ -967,7 +963,6 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_destino1;
     public javax.swing.JTextField txt_embalador;
     public javax.swing.JTextField txt_fumigacion;
-    public javax.swing.JTextField txt_id_defecto;
     public javax.swing.JTextField txt_inpar5;
     public javax.swing.JTextField txt_inpar7;
     public javax.swing.JTextField txt_nombre_defectos;

@@ -28,7 +28,6 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaEvaluacion.jb_agregar_defecto) {
             try {
-                modeloEvaluacionDefectos.id_detalle = Integer.parseInt(this.vistaEvaluacion.txt_id_defecto.getText());
                 modeloEvaluacionDefectos.nombre = this.vistaEvaluacion.txt_nombre_defectos.getText();
                 modeloEvaluacionDefectos.total_defectos = Integer.parseInt(this.vistaEvaluacion.txt_total_defectos.getText());
                 
@@ -66,7 +65,7 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
         tabla.addColumn("Pcmd");
         tabla.setRowCount(0);
         try {
-            modeloEvaluacionDefectos.id_detalle = Integer.parseInt(this.vistaEvaluacion.txt_id_defecto.getText());
+//            modeloEvaluacionDefectos.id_detalle = Integer.parseInt(this.vistaEvaluacion.txt_id_defecto.getText());
             rs = modeloEvaluacionDefectos.consultarDefectos();
             String[] defectos = new String[4];
 

@@ -26,6 +26,8 @@ import Vista.Grupo1.Listar_campo;
 import Vista.Grupo1.Menu_Campo;
 import Vista.Grupo1.Vista_campo_respaldo;
 import Vista.Grupo2.Vista_Evaluacion_Total;
+import Vista.Grupo2.Vista_Listado_Menu;
+import Vista.Grupo2.Vista_Home_Calidad;
 import Vista.Grupo2.Vista_Menu_Calidad;
 import Vista.Grupo3.Vista_Home;
 import Vista.Grupo3.Vista_Listado_Contenedores;
@@ -76,9 +78,13 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Ctrl_listar_campo ctrlListarCamp = new Ctrl_listar_campo(vistaListaCampo);
     //  GRUPO 2
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
+    Vista_Listado_Menu vistaEvaluacionListado = new Vista_Listado_Menu();
+    Vista_Home_Calidad vistaHomeCalidad = new Vista_Home_Calidad();
+    Controlador_Listado_Menu controlaListado = new Controlador_Listado_Menu(vistaEvaluacionListado);
     Controlador_Evaluacion_Datos controlEvaluacion = new Controlador_Evaluacion_Datos(vistaEvaluacion);
     Controlador_Evaluacion_Tabulacion controlaEvaTabu = new Controlador_Evaluacion_Tabulacion(vistaEvaluacion);
     Controlador_Evaluacion_Defectos controlEvaDefec = new Controlador_Evaluacion_Defectos(vistaEvaluacion);
+
 //    Controlador_Listado_Menu controladorLisMenu = new Controlador_Listado_Menu(vistaEvaluacion);
     //  GRUPO 3
     Vista_Home vistaHome = new Vista_Home();
@@ -128,6 +134,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
+        this.vistaMenuCalidad.btn_acopio_listado.addMouseListener(this);
         // Grupo 3
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
@@ -170,6 +177,10 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             if (this.modeloLogin.rol.equals("Grupo 2")) {
                 this.vistaGeneral.jp_menu_general.add(vistaMenuCalidad);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
+                this.vistaGeneral.jp_escritorio_general.add(vistaHomeCalidad);
+                this.vistaHomeCalidad.setVisible(true);
+                this.vistaHomeCalidad.setBorder(null);
+
                 this.vistaMenuAcopio.setVisible(false);
                 this.vistaMenuCampo.setVisible(false);
                 this.vistaMenuCalidad.setBorder(null);
@@ -244,6 +255,17 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
             this.vistaEvaluacion.setBorder(null);
             this.vistaEvaluacion.setVisible(true);
+            this.vistaEvaluacionListado.dispose();
+            this.vistaHomeCalidad.dispose();
+
+        }
+        if (me.getSource() == this.vistaMenuCalidad.btn_acopio_listado) {
+            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacionListado);
+            this.vistaEvaluacionListado.setBorder(null);
+            this.vistaEvaluacionListado.setVisible(true);
+            this.vistaEvaluacion.dispose();
+            this.vistaHomeCalidad.dispose();
+
         }
         //  GRUPO 3 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaLlegada.btn_guardar) {

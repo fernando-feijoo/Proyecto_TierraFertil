@@ -39,8 +39,6 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jp_titulo_dos = new javax.swing.JPanel();
         lbl_titulo_reporte = new javax.swing.JLabel();
-        btn_reportes_opcion_uno = new Recursos_Codigo.Redondeado();
-        jLabel5 = new javax.swing.JLabel();
         btn_reportes_opcion_dos = new Recursos_Codigo.Redondeado();
         jLabel6 = new javax.swing.JLabel();
 
@@ -97,7 +95,7 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel2.setText("Control de calidad");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_acopio_control.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_acopio_control, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
@@ -114,7 +112,7 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel3.setText("Listado de reportes");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_acopio_listado.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
         jp_contenedor_menu_acopio.add(btn_acopio_listado, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
@@ -147,23 +145,6 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
 
         jp_contenedor_menu_acopio.add(jp_titulo_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 48));
 
-        btn_reportes_opcion_uno.setBackground(new java.awt.Color(204, 204, 204));
-        btn_reportes_opcion_uno.setMaximumSize(new java.awt.Dimension(218, 38));
-        btn_reportes_opcion_uno.setMinimumSize(new java.awt.Dimension(218, 38));
-        btn_reportes_opcion_uno.setPreferredSize(new java.awt.Dimension(218, 38));
-        btn_reportes_opcion_uno.setRoundBottomLeft(30);
-        btn_reportes_opcion_uno.setRoundBottomRight(30);
-        btn_reportes_opcion_uno.setRoundTopLeft(30);
-        btn_reportes_opcion_uno.setRoundTopRight(30);
-        btn_reportes_opcion_uno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel5.setText("Nuevo reporte");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_reportes_opcion_uno.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
-
-        jp_contenedor_menu_acopio.add(btn_reportes_opcion_uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
-
         btn_reportes_opcion_dos.setBackground(new java.awt.Color(204, 204, 204));
         btn_reportes_opcion_dos.setMaximumSize(new java.awt.Dimension(218, 38));
         btn_reportes_opcion_dos.setMinimumSize(new java.awt.Dimension(218, 38));
@@ -176,10 +157,10 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
 
         jLabel6.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         jLabel6.setText("Reportes generados");
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_reportes_opcion_dos.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, -1, -1));
 
-        jp_contenedor_menu_acopio.add(btn_reportes_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
+        jp_contenedor_menu_acopio.add(btn_reportes_opcion_dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -200,10 +181,8 @@ public class Vista_Menu_Calidad extends javax.swing.JInternalFrame {
     public Recursos_Codigo.Redondeado btn_acopio_control;
     public Recursos_Codigo.Redondeado btn_acopio_listado;
     public Recursos_Codigo.Redondeado btn_reportes_opcion_dos;
-    public Recursos_Codigo.Redondeado btn_reportes_opcion_uno;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
-    public javax.swing.JLabel jLabel5;
     public javax.swing.JLabel jLabel6;
     public javax.swing.JPanel jPanel2;
     public javax.swing.JPanel jp_contenedor_menu_acopio;

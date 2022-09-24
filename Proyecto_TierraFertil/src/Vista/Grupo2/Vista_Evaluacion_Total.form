@@ -525,7 +525,7 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="PEDIDO:"/>
+                            <Property name="text" type="java.lang.String" value="PDO:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_pedidos">
@@ -753,18 +753,21 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="redondeado_contenedor_2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="redondeado_contenedor_3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="redondeado_contenedor_1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="redondeado_contenedor_2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="redondeado_contenedor_3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="redondeado_contenedor_1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="396" max="-2" attributes="0"/>
+                                      <Component id="redondeado6" min="-2" pref="161" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace pref="18" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="redondeado6" min="-2" pref="161" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="392" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -777,9 +780,9 @@
                               <Component id="redondeado_contenedor_2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="redondeado_contenedor_3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                               <Component id="redondeado6" min="-2" pref="34" max="-2" attributes="0"/>
-                              <EmptySpace pref="67" max="32767" attributes="0"/>
+                              <EmptySpace pref="48" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -822,14 +825,10 @@
                                                   <Component id="txt_nombre_defectos" min="-2" pref="182" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jb_nomb_defecto1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txt_id_defecto" min="-2" pref="47" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jb_defectos" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                                  <EmptySpace pref="41" max="32767" attributes="0"/>
                                   <Component id="jSeparator9" min="-2" pref="20" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="431" max="-2" attributes="0"/>
@@ -846,8 +845,6 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="txt_nombre_defectos" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jb_nomb_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jb_nomb_defecto1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_id_defecto" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1036,19 +1033,6 @@
                             <Property name="orientation" type="int" value="1"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="txt_id_defecto">
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jb_nomb_defecto1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Roboto" size="12" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="ID"/>
-                          </Properties>
-                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="Recursos_Codigo.Redondeado" name="redondeado_contenedor_1">
@@ -1066,9 +1050,8 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jb_caja_insp" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1077,6 +1060,11 @@
                                           <Component id="jSeparator5" min="-2" pref="21" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jb_caja_insp" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1149,6 +1137,7 @@
                                               <Component id="txt_embalador" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jb_peso_neto" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="txt_peso_neto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Component id="jSeparator4" alignment="1" min="-2" pref="18" max="-2" attributes="0"/>
@@ -1358,6 +1347,11 @@
                         <Component class="javax.swing.JSeparator" name="jSeparator8">
                           <Properties>
                             <Property name="orientation" type="int" value="1"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="jLabel1"/>
                           </Properties>
                         </Component>
                       </SubComponents>

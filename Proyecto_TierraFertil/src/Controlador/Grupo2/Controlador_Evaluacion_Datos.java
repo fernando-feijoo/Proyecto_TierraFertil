@@ -74,15 +74,16 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
                     modeloEvaluacionCalidad.peso = this.vistaEvaluacion.txt_peso.getText();
                     modeloEvaluacionCalidad.observaciones = this.vistaEvaluacion.txt_observaciones.getText();
                     modeloEvaluacionCalidad.fecha = ((JTextField) this.vistaEvaluacion.jd_fecha.getDateEditor().getUiComponent()).getText();
+//
+//                    if (this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_calibracion.getText().isEmpty() || this.vistaEvaluacion.txt_vapor.getText().isEmpty()
+//                            || this.vistaEvaluacion.txt_transporte.getText().isEmpty() || this.vistaEvaluacion.txt_peso.getText().isEmpty() || this.vistaEvaluacion.txt_dedos.getText().isEmpty()
+//                            || this.vistaEvaluacion.txt_pedidos.getText().isEmpty() || this.vistaEvaluacion.txt_caja_insp.getText().isEmpty() || this.vistaEvaluacion.txt_destino.getText().isEmpty()
+//                            || this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_fumigacion.getText().isEmpty()) {
+//
+//                        JOptionPane.showMessageDialog(visÇtaEvaluacion, "No deje ningun campo vacio. ");
 
-                    if (this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_calibracion.getText().isEmpty() || this.vistaEvaluacion.txt_vapor.getText().isEmpty()
-                            || this.vistaEvaluacion.txt_transporte.getText().isEmpty() || this.vistaEvaluacion.txt_peso.getText().isEmpty() || this.vistaEvaluacion.txt_dedos.getText().isEmpty()
-                            || this.vistaEvaluacion.txt_pedidos.getText().isEmpty() || this.vistaEvaluacion.txt_caja_insp.getText().isEmpty() || this.vistaEvaluacion.txt_destino.getText().isEmpty()
-                            || this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_fumigacion.getText().isEmpty()) {
-
-                        JOptionPane.showMessageDialog(vistaEvaluacion, "No deje ningun campo vacio. ");
-                    } else {
-                        System.out.println("Validacion Correcta");
+//                    } else {
+//                        System.out.println("Validacion Correcta");
                         int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
                        
                         if (respuesta == 0) {
@@ -98,7 +99,7 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
 
                         }
 
-                    }
+//                    }
 
                 }
 

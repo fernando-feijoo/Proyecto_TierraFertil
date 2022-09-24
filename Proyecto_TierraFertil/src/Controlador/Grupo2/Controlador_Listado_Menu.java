@@ -99,6 +99,7 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
                 if (respuesta == 0) {
                     modeloEvaluacionListado.eliminarRegistro();
                     mostrarDatos();
+                    JOptionPane.showMessageDialog(vistaListadoMenu, "Registro eliminado correctamente");
                 }
                 DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
 

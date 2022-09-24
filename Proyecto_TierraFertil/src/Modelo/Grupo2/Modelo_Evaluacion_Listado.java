@@ -13,6 +13,7 @@ public class Modelo_Evaluacion_Listado {
     Statement st;
     PreparedStatement ps;
     public String fecha, codigo;
+    public String estado;
 
     public ResultSet mostrarListado() {
         try {
@@ -33,19 +34,23 @@ public class Modelo_Evaluacion_Listado {
 
     }
 
-    public void eliminarRegistro() {
+    public ResultSet eliminarRegistro() {
         try {
             //CAMBIAR POR UPDATE
-            String sql = "DELETE FROM evaluaciones_empacadora WHERE codigo = '" + this.codigo + "'";
-
-            ps = Conexion.conectarBD().prepareStatement(sql);
-            ps.executeUpdate();
+            int resultado = 0;
+            st = Conexion.conectarBD().createStatement();
+            String sql = "update evaluaciones_empacadora set estado_act_inac='INACTIVO' where codigo ='"+this.codigo+"'";
+            st.executeUpdate(sql);
+            
             st.close();
-
+            
+            return rs;
+            
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error en mostrarListado en ModeloListado" + e);
+            JOptionPane.showMessageDialog(null, "Error en eliminarRegistro en ModeloListado" + e);
         }
-
+        return null;
+        
     }
 
 }

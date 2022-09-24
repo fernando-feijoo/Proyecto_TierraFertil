@@ -68,25 +68,35 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
                     modeloEvaluacionCalidad.l_dedos = this.vistaEvaluacion.txt_dedos.getText();
                     modeloEvaluacionCalidad.pedido = this.vistaEvaluacion.txt_pedidos.getText();
                     modeloEvaluacionCalidad.tipo_caja = this.vistaEvaluacion.txt_tipoCaja.getText();
-                    modeloEvaluacionCalidad.destino = this.vistaEvaluacion.txt_destino1.getText();
+                    modeloEvaluacionCalidad.destino = this.vistaEvaluacion.txt_destino.getText();
                     modeloEvaluacionCalidad.codigo = this.vistaEvaluacion.txt_codigo.getText();
                     modeloEvaluacionCalidad.fumigacion = this.vistaEvaluacion.txt_fumigacion.getText();
                     modeloEvaluacionCalidad.peso = this.vistaEvaluacion.txt_peso.getText();
                     modeloEvaluacionCalidad.observaciones = this.vistaEvaluacion.txt_observaciones.getText();
                     modeloEvaluacionCalidad.fecha = ((JTextField) this.vistaEvaluacion.jd_fecha.getDateEditor().getUiComponent()).getText();
 
-                    int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
+                    if (this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_calibracion.getText().isEmpty() || this.vistaEvaluacion.txt_vapor.getText().isEmpty()
+                            || this.vistaEvaluacion.txt_transporte.getText().isEmpty() || this.vistaEvaluacion.txt_peso.getText().isEmpty() || this.vistaEvaluacion.txt_dedos.getText().isEmpty()
+                            || this.vistaEvaluacion.txt_pedidos.getText().isEmpty() || this.vistaEvaluacion.txt_caja_insp.getText().isEmpty() || this.vistaEvaluacion.txt_destino.getText().isEmpty()
+                            || this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_fumigacion.getText().isEmpty()) {
 
-                    if (respuesta == 0) {
+                        JOptionPane.showMessageDialog(vistaEvaluacion, "No deje ningun campo vacio. ");
+                    } else {
+                        System.out.println("Validacion Correcta");
+                        int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
+                       
+                        if (respuesta == 0) {
 
-                        modeloEvaluacionCalidad.guardarDatos();
-                        motrarIdEvaluacion();
-                        System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
-                        JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
+                            modeloEvaluacionCalidad.guardarDatos();
+                            motrarIdEvaluacion();
+                            System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
+                            JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
 
-                        //da acceso a la pestaña tabulacion 
-                        this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(1);
-                        this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
+                            //da acceso a la pestaña tabulacion 
+                            this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(1);
+                            this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
+
+                        }
 
                     }
 

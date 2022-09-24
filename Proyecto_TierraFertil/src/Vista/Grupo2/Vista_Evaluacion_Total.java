@@ -60,7 +60,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
         jb_fumigacion = new javax.swing.JLabel();
         txt_fumigacion = new javax.swing.JTextField();
         txt_codigo = new javax.swing.JTextField();
-        txt_destino1 = new javax.swing.JTextField();
+        txt_destino = new javax.swing.JTextField();
         jd_fecha = new com.toedter.calendar.JDateChooser();
         jSeparator10 = new javax.swing.JSeparator();
         jSeparator11 = new javax.swing.JSeparator();
@@ -236,7 +236,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
         txt_codigo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
-        txt_destino1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        txt_destino.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
         jd_fecha.setBackground(new java.awt.Color(255, 255, 255));
         jd_fecha.setForeground(new java.awt.Color(255, 255, 255));
@@ -335,7 +335,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                         .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_fumigacion, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_destino1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txt_destino, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 40, Short.MAX_VALUE))
         );
         jp_contenedorGrupoLayout.setVerticalGroup(
@@ -370,7 +370,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
                     .addGroup(jp_contenedorGrupoLayout.createSequentialGroup()
                         .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jb_destino)
-                            .addComponent(txt_destino1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_destino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(42, 42, 42)
                         .addGroup(jp_contenedorGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -960,7 +960,7 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_calibracion;
     public javax.swing.JTextField txt_codigo;
     public javax.swing.JTextField txt_dedos;
-    public javax.swing.JTextField txt_destino1;
+    public javax.swing.JTextField txt_destino;
     public javax.swing.JTextField txt_embalador;
     public javax.swing.JTextField txt_fumigacion;
     public javax.swing.JTextField txt_inpar5;

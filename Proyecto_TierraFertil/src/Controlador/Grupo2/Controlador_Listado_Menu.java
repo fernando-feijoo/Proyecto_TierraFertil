@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javax.swing.ButtonModel;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -24,6 +25,7 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
     Vista_Listado_Menu vistaListadoMenu = new Vista_Listado_Menu();
     Modelo_Evaluacion_Listado modeloEvaluacionListado = new Modelo_Evaluacion_Listado();
     ResultSet rs;
+    public String estado;
 
     public Controlador_Listado_Menu(Vista_Listado_Menu vistaListadoMenu) {
         this.vistaListadoMenu = vistaListadoMenu;
@@ -31,11 +33,14 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
         this.vistaListadoMenu.txt_buscar.addMouseListener(this);
         this.vistaListadoMenu.jb_buscar.addMouseListener(this);
         this.vistaListadoMenu.jb_eliminar.addMouseListener(this);
+        
+     
+
         mostrarDatos();
 
     }
 
-    public void mostrarDatos() {
+    public void mostrarDatos() {    
         DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
         tabla.setColumnCount(0);
         tabla.addColumn("Codigo");
@@ -76,8 +81,6 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
 
     }
 
-    
-
     //        this.vistaListadoMenu.tabla_listado.setDefaultRenderer(Object.class, new Render());
 //        JLabel btn_eliminar = new JLabel(new ImageIcon(getClass().getResource("/Icon/user.png")));
 
@@ -86,17 +89,21 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
         });  */
     @Override
     public void mouseClicked(MouseEvent e) {
+        
         if (e.getSource() == this.vistaListadoMenu.jb_eliminar) {
             try {
-                DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
-
                 int fila = this.vistaListadoMenu.tabla_listado.getSelectedRow();
                 this.modeloEvaluacionListado.codigo = (String) this.vistaListadoMenu.tabla_listado.getValueAt(fila, 0);
-                    this.modeloEvaluacionListado.eliminarRegistro();
-                    this.modeloEvaluacionListado.mostrarListado();
-                
-                
+
+                int respuesta = JOptionPane.showConfirmDialog(vistaListadoMenu, "¿Desea eliminar el registro?", "ATENCION", JOptionPane.YES_OPTION);
+                if (respuesta == 0) {
+                    modeloEvaluacionListado.eliminarRegistro();
+                    mostrarDatos();
+                }
+                DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
+
                 System.out.println("Eliminado ejecutado");
+
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(vistaListadoMenu, "Error :/" + ex);
             }
@@ -146,6 +153,7 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    
 
     }
 }

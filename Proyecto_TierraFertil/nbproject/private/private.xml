@@ -4,8 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo1/Listar_campo.java</file>
-            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo1/Vista_campo_respaldo.java</file>
-            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo1/Ctrl_listar_campo.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo1/Mod_listado_campo.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo3/Controlador_Listado_Contenedores.java</file>
         </group>
     </open-files>
 </project-private>

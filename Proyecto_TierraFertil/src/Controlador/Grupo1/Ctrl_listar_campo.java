@@ -95,7 +95,17 @@ public class Ctrl_listar_campo implements ActionListener, MouseListener, KeyList
     }
     
     public void eliminar_campo (){
-        
+        int fila = this.nn.tabla_campo.getSelectedRow();
+
+//        if (me.getSource() == this.vistaListadoCont.boton_Buscar) {
+//            this.busquedaDatos();
+//        }
+//        if (this.vistaListadoCont.tabla_listado_contenedores.getSelectedColumn() == 9) {
+//            this.modeloListadoContenedore.busquedaID_Contenedor = this.vistaListadoCont.tabla_listado_contenedores.getValueAt(filaSeleccionada, 0).toString();
+//            this.busquedaID_Contenedor();
+//            System.out.println(this.vistaListadoCont.tabla_listado_contenedores.getValueAt(filaSeleccionada, 0).toString());
+//
+//        }
     }
 
     @Override

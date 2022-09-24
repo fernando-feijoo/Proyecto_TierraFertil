@@ -15,6 +15,7 @@ public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
      */
     public Vista_Listado_Menu() {
         initComponents();
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
 
     /**
@@ -26,23 +27,165 @@ public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        group_button = new javax.swing.ButtonGroup();
         jp_lienzo_principal = new javax.swing.JPanel();
+        rdn_buscar = new Recursos_Codigo.Redondeado();
+        txt_buscar = new javax.swing.JTextField();
+        jb_buscar = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_listado = new javax.swing.JTable();
+        texto_inicio = new javax.swing.JLabel();
+        rdn_actualizar = new Recursos_Codigo.Redondeado();
+        jb_actualizar = new javax.swing.JLabel();
+        rdn_eliminar = new Recursos_Codigo.Redondeado();
+        jb_eliminar = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(965, 605));
-        setMinimumSize(new java.awt.Dimension(965, 605));
-        setPreferredSize(new java.awt.Dimension(965, 605));
+        setMaximumSize(new java.awt.Dimension(965, 629));
+        setMinimumSize(new java.awt.Dimension(965, 629));
+        setPreferredSize(new java.awt.Dimension(965, 629));
 
-        jp_lienzo_principal.setBackground(new java.awt.Color(255, 255, 255));
+        jp_lienzo_principal.setBackground(new java.awt.Color(204, 204, 204));
+
+        rdn_buscar.setBackground(new java.awt.Color(255, 255, 255));
+        rdn_buscar.setForeground(new java.awt.Color(255, 255, 255));
+        rdn_buscar.setRoundBottomLeft(30);
+        rdn_buscar.setRoundBottomRight(30);
+        rdn_buscar.setRoundTopLeft(30);
+        rdn_buscar.setRoundTopRight(30);
+
+        txt_buscar.setBackground(new java.awt.Color(255, 255, 255));
+        txt_buscar.setText("Buscar");
+        txt_buscar.setBorder(null);
+        txt_buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jb_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/icons8-búsqueda-28.png"))); // NOI18N
+        jb_buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout rdn_buscarLayout = new javax.swing.GroupLayout(rdn_buscar);
+        rdn_buscar.setLayout(rdn_buscarLayout);
+        rdn_buscarLayout.setHorizontalGroup(
+            rdn_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rdn_buscarLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(txt_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jb_buscar)
+                .addGap(15, 15, 15))
+        );
+        rdn_buscarLayout.setVerticalGroup(
+            rdn_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_buscar)
+            .addComponent(jb_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        tabla_listado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tabla_listado);
+
+        texto_inicio.setFont(new java.awt.Font("Roboto Black", 1, 34)); // NOI18N
+        texto_inicio.setForeground(new java.awt.Color(0, 0, 0));
+        texto_inicio.setText("LISTADO DE REGISTROS CONTROL DE CALIDAD");
+
+        rdn_actualizar.setBackground(new java.awt.Color(0, 102, 255));
+        rdn_actualizar.setRoundBottomLeft(20);
+        rdn_actualizar.setRoundBottomRight(20);
+        rdn_actualizar.setRoundTopLeft(20);
+        rdn_actualizar.setRoundTopRight(20);
+
+        jb_actualizar.setBackground(new java.awt.Color(255, 255, 255));
+        jb_actualizar.setForeground(new java.awt.Color(255, 255, 255));
+        jb_actualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/icons8-actualizar-archivo-28.png"))); // NOI18N
+        jb_actualizar.setText("ACTUALIZAR");
+        jb_actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout rdn_actualizarLayout = new javax.swing.GroupLayout(rdn_actualizar);
+        rdn_actualizar.setLayout(rdn_actualizarLayout);
+        rdn_actualizarLayout.setHorizontalGroup(
+            rdn_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rdn_actualizarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jb_actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        rdn_actualizarLayout.setVerticalGroup(
+            rdn_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rdn_actualizarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jb_actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        rdn_eliminar.setBackground(new java.awt.Color(204, 0, 0));
+        rdn_eliminar.setRoundBottomLeft(20);
+        rdn_eliminar.setRoundBottomRight(20);
+        rdn_eliminar.setRoundTopLeft(20);
+        rdn_eliminar.setRoundTopRight(20);
+
+        jb_eliminar.setForeground(new java.awt.Color(255, 255, 255));
+        jb_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/icons8-eliminar-28.png"))); // NOI18N
+        jb_eliminar.setText("ELIMINAR");
+        jb_eliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout rdn_eliminarLayout = new javax.swing.GroupLayout(rdn_eliminar);
+        rdn_eliminar.setLayout(rdn_eliminarLayout);
+        rdn_eliminarLayout.setHorizontalGroup(
+            rdn_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rdn_eliminarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jb_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        rdn_eliminarLayout.setVerticalGroup(
+            rdn_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jb_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jp_lienzo_principalLayout = new javax.swing.GroupLayout(jp_lienzo_principal);
         jp_lienzo_principal.setLayout(jp_lienzo_principalLayout);
         jp_lienzo_principalLayout.setHorizontalGroup(
             jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 953, Short.MAX_VALUE)
+            .addGroup(jp_lienzo_principalLayout.createSequentialGroup()
+                .addContainerGap(33, Short.MAX_VALUE)
+                .addGroup(jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_lienzo_principalLayout.createSequentialGroup()
+                        .addComponent(texto_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_lienzo_principalLayout.createSequentialGroup()
+                        .addComponent(rdn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(233, 233, 233))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_lienzo_principalLayout.createSequentialGroup()
+                        .addGroup(jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jp_lienzo_principalLayout.createSequentialGroup()
+                                .addComponent(rdn_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(38, 38, 38)
+                                .addComponent(rdn_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(287, 287, 287))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 895, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35))))
         );
         jp_lienzo_principalLayout.setVerticalGroup(
             jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 575, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_lienzo_principalLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(texto_inicio)
+                .addGap(17, 17, 17)
+                .addComponent(rdn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(jp_lienzo_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(rdn_actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rdn_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -61,6 +204,17 @@ public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jp_lienzo_principal;
+    public javax.swing.ButtonGroup group_button;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel jb_actualizar;
+    public javax.swing.JLabel jb_buscar;
+    public javax.swing.JLabel jb_eliminar;
+    public javax.swing.JPanel jp_lienzo_principal;
+    public Recursos_Codigo.Redondeado rdn_actualizar;
+    public Recursos_Codigo.Redondeado rdn_buscar;
+    public Recursos_Codigo.Redondeado rdn_eliminar;
+    public javax.swing.JTable tabla_listado;
+    public javax.swing.JLabel texto_inicio;
+    public javax.swing.JTextField txt_buscar;
     // End of variables declaration//GEN-END:variables
 }

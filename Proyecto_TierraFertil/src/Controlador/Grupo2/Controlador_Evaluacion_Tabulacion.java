@@ -15,6 +15,7 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
     Vista_Evaluacion_Total vistaEvaluacion;
     Modelo_Evaluacion_Tabulacion modeloEvaluacionTabulacion = new Modelo_Evaluacion_Tabulacion();
     ResultSet rs;
+    
     //Constructor
 
     public Controlador_Evaluacion_Tabulacion(Vista_Evaluacion_Total vistaEvaluacion) {
@@ -43,10 +44,10 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
 
                 int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para continuar presione SI. ", "ATENCION", JOptionPane.YES_OPTION);
                 if (respuesta == 0) {
-                    mostrarTabulacion();
                     modeloEvaluacionTabulacion.guardarTabulacion();
                     System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente");
                     JOptionPane.showMessageDialog(vistaEvaluacion, "Datos guardados correctamente ", "Registros", JOptionPane.INFORMATION_MESSAGE);
+                    mostrarTabulacion();
 
                 }
                 if (respuesta == 1) {
@@ -79,13 +80,12 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
         tabla.addColumn("Pcmd");
         tabla.setRowCount(0);
 //        tabla.setRowCount(0);
-
         try {
             rs = modeloEvaluacionTabulacion.consultarTabulacion();
             String[] tabulacion = new String[12];
 
             while (rs.next()) {
-                
+
                 tabulacion[0] = rs.getString("id");
                 tabulacion[1] = rs.getString("caja_inspeccionada");
                 tabulacion[2] = rs.getString("embalador");
@@ -102,7 +102,7 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
             }
 
         } catch (Exception e) {
-            System.out.println("Error en mostrarTabulacion. "+e);
+            System.out.println("Error en mostrarTabulacion. " + e);
         }
     }
 

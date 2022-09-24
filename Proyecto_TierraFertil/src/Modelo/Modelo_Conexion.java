@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Modelo_Conexion {
 
-    int conTemp = 0;
+    private static int conTemp = 0;
     Connection conexion;
 
     public Connection conectarBD() {

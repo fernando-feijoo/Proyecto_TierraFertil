@@ -39,7 +39,7 @@ public class Modelo_Evaluacion_Tabulacion {
     public ResultSet consultarTabulacion() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "select id , caja_inspeccionada ,embalador, peso_neto, par4, par6, par8, impar5, impar7, total_gajos, pcmd_final from  detalle_evaluacion_emp\n"
+            String sql = "select id , caja_inspeccionada ,embalador, peso_neto, par4, par6, par8, impar5, impar7, total_gajos, pcmd_final from  detalle_evaluacion_emp"
                     + "where id_evaluacion =(select max(id)from evaluaciones_empacadora) order by id asc;";
 
             rs = st.executeQuery(sql);

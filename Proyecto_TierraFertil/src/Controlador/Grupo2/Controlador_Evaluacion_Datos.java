@@ -1,9 +1,7 @@
 package Controlador.Grupo2;
 
 import Vista.Grupo2.Vista_Evaluacion_Total;
-import Modelo.Modelo_Conexion;
 import Modelo.Grupo2.Modelo_Evaluacion_Datos;
-import com.sun.media.sound.ModelOscillator;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;

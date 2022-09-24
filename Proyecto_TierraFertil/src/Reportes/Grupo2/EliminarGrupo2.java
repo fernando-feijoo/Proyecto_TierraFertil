@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Controlador.Grupo1;
+package Reportes.Grupo2;
 
 /**
  *
- * @author Brayan Carmona
+ * @author ANONYMOUS
  */
-public class NewClass {
-    
+public class EliminarGrupo2 {
+    //  ##Eliminar o modificar##
 }

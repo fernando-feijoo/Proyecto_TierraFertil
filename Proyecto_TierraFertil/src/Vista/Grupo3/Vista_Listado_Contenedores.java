@@ -28,6 +28,10 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        redondeado1 = new Recursos_Codigo.Redondeado();
+        ListadoContenedor_txf_Busqueda = new javax.swing.JTextField();
+        boton_Buscar = new Recursos_Codigo.Redondeado();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         boton_home = new javax.swing.JLabel();
         lbl_titulo = new javax.swing.JLabel();
@@ -44,6 +48,40 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(965, 605));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        redondeado1.setBackground(new java.awt.Color(255, 255, 255));
+        redondeado1.setMaximumSize(new java.awt.Dimension(410, 32));
+        redondeado1.setMinimumSize(new java.awt.Dimension(410, 32));
+        redondeado1.setPreferredSize(new java.awt.Dimension(410, 32));
+        redondeado1.setRoundBottomLeft(25);
+        redondeado1.setRoundBottomRight(25);
+        redondeado1.setRoundTopLeft(25);
+        redondeado1.setRoundTopRight(25);
+        redondeado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ListadoContenedor_txf_Busqueda.setBackground(new java.awt.Color(255, 255, 255));
+        ListadoContenedor_txf_Busqueda.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ListadoContenedor_txf_Busqueda.setForeground(new java.awt.Color(0, 0, 0));
+        ListadoContenedor_txf_Busqueda.setBorder(null);
+        redondeado1.add(ListadoContenedor_txf_Busqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 1, 380, 30));
+
+        jPanel1.add(redondeado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+
+        boton_Buscar.setBackground(new java.awt.Color(75, 174, 0, 140));
+        boton_Buscar.setRoundBottomLeft(25);
+        boton_Buscar.setRoundBottomRight(25);
+        boton_Buscar.setRoundTopLeft(25);
+        boton_Buscar.setRoundTopRight(25);
+        boton_Buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("BUSCAR");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_Buscar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 120, 40));
+
+        jPanel1.add(boton_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 120, 32));
+
         jPanel3.setBackground(new java.awt.Color(112, 39, 1));
         jPanel3.setForeground(new java.awt.Color(112, 39, 1));
         jPanel3.setPreferredSize(new java.awt.Dimension(950, 5));
@@ -59,7 +97,7 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 3));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 88, -1, 3));
 
         boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
         jPanel1.add(boton_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
@@ -71,6 +109,8 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
         lbl_titulo.setText("LISTADO CONTENEDORES");
         jPanel1.add(lbl_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 22, 960, -1));
 
+        tabla_listado_contenedores.setFont(new java.awt.Font("Roboto", 0, 10)); // NOI18N
+        tabla_listado_contenedores.setForeground(new java.awt.Color(0, 0, 0));
         tabla_listado_contenedores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -79,7 +119,6 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
 
             }
         ));
-        tabla_listado_contenedores.setRowHeight(40);
         tabla_listado_contenedores.getTableHeader().setResizingAllowed(false);
         tabla_listado_contenedores.getTableHeader().setReorderingAllowed(false);
         tabla_listado_contenedores.setFocusable(false);
@@ -90,7 +129,7 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
         };
         jScrollPane1.setViewportView(tabla_listado_contenedores);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 850, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 190, 920, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,11 +147,15 @@ public class Vista_Listado_Contenedores extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextField ListadoContenedor_txf_Busqueda;
+    public Recursos_Codigo.Redondeado boton_Buscar;
     public javax.swing.JLabel boton_home;
+    public javax.swing.JLabel jLabel1;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel3;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JLabel lbl_titulo;
+    public Recursos_Codigo.Redondeado redondeado1;
     public javax.swing.JTable tabla_listado_contenedores;
     // End of variables declaration//GEN-END:variables
 }

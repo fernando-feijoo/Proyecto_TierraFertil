@@ -192,6 +192,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
         jPanel116 = new javax.swing.JPanel();
         jLabel100 = new javax.swing.JLabel();
         inspCont_obseraciones = new javax.swing.JTextField();
+        jLabel101 = new javax.swing.JLabel();
         jp_opcion_HiegieneContenedor = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         Table = new javax.swing.JPanel();
@@ -441,7 +442,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 3));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 88, -1, 3));
 
         boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
         jPanel1.add(boton_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
@@ -1845,6 +1846,10 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
 
         panel_inspeccion.add(jPanel116);
         jPanel116.setBounds(20, 427, 774, 30);
+
+        jLabel101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/contenedores530x60.png"))); // NOI18N
+        panel_inspeccion.add(jLabel101);
+        jLabel101.setBounds(370, 50, 560, 360);
 
         javax.swing.GroupLayout jp_opcion_InspeccionContendorLayout = new javax.swing.GroupLayout(jp_opcion_InspeccionContendor);
         jp_opcion_InspeccionContendor.setLayout(jp_opcion_InspeccionContendorLayout);
@@ -4224,6 +4229,7 @@ public class Vista_Llegada extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel100;
+    public javax.swing.JLabel jLabel101;
     public javax.swing.JLabel jLabel11;
     public javax.swing.JLabel jLabel12;
     public javax.swing.JLabel jLabel13;

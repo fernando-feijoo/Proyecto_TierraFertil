@@ -3,13 +3,16 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Paletizado;
 import Vista.Grupo3.Vista_Llegada;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import javax.swing.JOptionPane;
 
-public class Controlador_Paletizado implements MouseListener {
+public class Controlador_Paletizado implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
@@ -26,6 +29,19 @@ public class Controlador_Paletizado implements MouseListener {
     public Controlador_Paletizado(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_guardar.addMouseListener(this);
+
+        this.vistaLlegada.paletizado_pallet1.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet2.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet3.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet4.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet5.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet6.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet7.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet8.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet9.addKeyListener(this);
+        this.vistaLlegada.paletizado_pallet10.addKeyListener(this);
+        this.vistaLlegada.paletizado_observacionesGenerales.addKeyListener(this);
+
     }
 
     public void idBusqueda(int idBusquedaUno) {
@@ -277,11 +293,26 @@ public class Controlador_Paletizado implements MouseListener {
         this.modeloPaContenedor.pruebaGuardado();
     }
 
+    public void completo() {
+        if (vistaLlegada.paletizado_pallet1.getText().isEmpty() || vistaLlegada.paletizado_pallet2.getText().isEmpty() || vistaLlegada.paletizado_pallet3.getText().isEmpty()
+                || vistaLlegada.paletizado_pallet4.getText().isEmpty() || vistaLlegada.paletizado_pallet5.getText().isEmpty() || vistaLlegada.paletizado_pallet6.getText().isEmpty()
+                || vistaLlegada.paletizado_pallet7.getText().isEmpty() || vistaLlegada.paletizado_pallet8.getText().isEmpty() || vistaLlegada.paletizado_pallet9.getText().isEmpty()
+                || vistaLlegada.paletizado_pallet10.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(vistaLlegada, "Porfavor no dejar campos vacios ");
+        } else {
+           
+            
+
+        }
+    }
+
     @Override
     public void mouseClicked(MouseEvent me) {
         if (me.getSource() == this.vistaLlegada.btn_guardar) {
-            System.out.println("Gruadado Final, guarda todo?");
+            completo();
+            JOptionPane.showConfirmDialog(vistaLlegada, "¿Estas seguro de guardar?");
         }
+        
     }
 
     @Override
@@ -301,6 +332,21 @@ public class Controlador_Paletizado implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent me) {
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
 
     }
 }

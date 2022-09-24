@@ -3,13 +3,16 @@ package Controlador.Grupo3;
 import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Grupo3.Modelo_Higiene_Contenedor;
 import Vista.Grupo3.Vista_Llegada;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import javax.swing.JOptionPane;
 
-public class Controlador_Higiene_Contenedor implements MouseListener{
+public class Controlador_Higiene_Contenedor implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
     Modelo_Higiene_Contenedor modeloHigCont = new Modelo_Higiene_Contenedor();
@@ -24,8 +27,13 @@ public class Controlador_Higiene_Contenedor implements MouseListener{
     public Controlador_Higiene_Contenedor(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_higCont.addMouseListener(this);
+
+        this.vistaLlegada.higCont_observaciones.addKeyListener(this);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, false);
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, false);
+
     }
-    
+
     public void idBusqueda(int idBusquedaUno) {
         this.idContenedor = idBusquedaUno;
         this.modeloHigCont.id_contenedor = this.idContenedor;
@@ -184,11 +192,19 @@ public class Controlador_Higiene_Contenedor implements MouseListener{
         this.modeloHeContenedor.pruebaGuardado();
     }
 
+    public void Completo() {
+        if (this.vistaLlegada.higCont_observaciones.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(vistaLlegada, "Porfavor no dejar campos vacios ");
+        } else {
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(3);
+            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, true);
+        }
+    }
+
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaLlegada.btn_siguiente_higCont) {
-            this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(3);
-
+            Completo();
         }
     }
 
@@ -210,5 +226,24 @@ public class Controlador_Higiene_Contenedor implements MouseListener{
     @Override
     public void mouseExited(MouseEvent e) {
 
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+        if (e.getSource() == this.vistaLlegada.higCont_observaciones) {
+            if (vistaLlegada.higCont_observaciones.getText().length() >= 250) {
+                e.consume();
+            }
+
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
     }
 }

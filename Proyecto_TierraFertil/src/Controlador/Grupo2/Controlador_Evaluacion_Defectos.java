@@ -31,14 +31,9 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
                 modeloEvaluacionDefectos.id_detalle = Integer.parseInt(this.vistaEvaluacion.txt_id_defecto.getText());
                 modeloEvaluacionDefectos.nombre = this.vistaEvaluacion.txt_nombre_defectos.getText();
                 modeloEvaluacionDefectos.total_defectos = Integer.parseInt(this.vistaEvaluacion.txt_total_defectos.getText());
+                
 
-                int total_defec, total_gajos, total_final;
-
-                total_final = Integer.parseInt(this.vistaEvaluacion.txt_total_defectos.getText());
-                String pcmd_total = "";
-
-                modeloEvaluacionDefectos.pcmd = pcmd_total;
-
+     
 //                 String total_defectos = this.modeloEvaluacionDefectos.total_defectos;
 //                 double pcmd_total = (Double.parseDouble(total_defectos) * 100 / total_gajos) - 100;
                 boolean aux = modeloEvaluacionDefectos.guardarDefectos();

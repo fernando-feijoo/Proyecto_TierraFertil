@@ -1,5 +1,12 @@
 package Controlador;
 
+import Controlador.Grupo1.Ctrl_asepcias;
+import Controlador.Grupo1.Ctrl_detalles_gen;
+import Controlador.Grupo1.Ctrl_gc_ld;
+import Controlador.Grupo1.Ctrl_largo_dedo;
+import Controlador.Grupo1.Ctrl_listar_campo;
+import Controlador.Grupo1.Ctrl_menu;
+import Controlador.Grupo1.Ctrl_sel_emp;
 import Controlador.Grupo2.Controlador_Evaluacion_Datos;
 import Controlador.Grupo2.Controlador_Evaluacion_Defectos;
 import Controlador.Grupo2.Controlador_Evaluacion_Tabulacion;
@@ -13,8 +20,11 @@ import Controlador.Grupo3.Controlador_Listado_Contenedores;
 import Controlador.Grupo3.Controlador_Menu_Acopio;
 import Controlador.Grupo3.Controlador_Obtener_Reportes;
 import Controlador.Grupo3.Controlador_Paletizado;
+import Modelo.Grupo3.Modelo_Contenedores;
 import Modelo.Modelo_Login;
-import Vista.Grupo1.Vista_Menu_Solucion_Campo;
+import Vista.Grupo1.Listar_campo;
+import Vista.Grupo1.Menu_Campo;
+import Vista.Grupo1.Vista_campo_respaldo;
 import Vista.Grupo2.Vista_Evaluacion_Total;
 import Vista.Grupo2.Vista_Menu_Calidad;
 import Vista.Grupo3.Vista_Home;
@@ -46,7 +56,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     //  Aqui vamos a instanciar todas las vistas de cada grupo para trabajar los menus y sus escritorios.
     //  -> Importacion de Vistas Menus y sus controladores.
     //  GRUPO 1
-    Vista_Menu_Solucion_Campo vistaMenuCampo = new Vista_Menu_Solucion_Campo();
+    Menu_Campo vistaMenuCampo = new Menu_Campo();
+    Ctrl_menu ctrlMenu = new Ctrl_menu(vistaMenuCampo);
     //  GRUPO 2
     Vista_Menu_Calidad vistaMenuCalidad = new Vista_Menu_Calidad();
     Controlador_Menu_General controladorMenuCalidad = new Controlador_Menu_General(vistaMenuCalidad);
@@ -55,7 +66,14 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Menu_Acopio controladorMenuAcopio = new Controlador_Menu_Acopio(vistaMenuAcopio);
     //  -> Importacion de Vistas Escritorios y sus controladores.
     //  GRUPO 1
-
+    Vista_campo_respaldo vistaCampo = new Vista_campo_respaldo();
+    Listar_campo vistaListaCampo = new Listar_campo();
+    Ctrl_detalles_gen ctrlDetGene = new Ctrl_detalles_gen(vistaCampo);
+    Ctrl_asepcias ctrlAcepcias = new Ctrl_asepcias(vistaCampo);
+    Ctrl_gc_ld ctrlGradoCalib = new Ctrl_gc_ld(vistaCampo);
+    Ctrl_largo_dedo ctrlLargoDe = new Ctrl_largo_dedo(vistaCampo);
+    Ctrl_sel_emp ctrlSeleEmp = new Ctrl_sel_emp(vistaCampo);
+    Ctrl_listar_campo ctrlListarCamp = new Ctrl_listar_campo(vistaListaCampo);
     //  GRUPO 2
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     Controlador_Evaluacion_Datos controlEvaluacion = new Controlador_Evaluacion_Datos(vistaEvaluacion);
@@ -74,6 +92,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
     Controlador_Listado_Contenedores controlListadoCont = new Controlador_Listado_Contenedores(vistaListado);
     Controlador_Obtener_Reportes controlObtReport = new Controlador_Obtener_Reportes(vistaObteReport);
+    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
     public static int tempClickG3 = 1;
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
@@ -103,7 +122,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.jp_opcionModoOscuro.addMouseListener(this);
         this.vistaGeneral.jp_opcionCerrarSesion.addMouseListener(this);
         // Grupo 1
-
+        this.vistaMenuCampo.boton_campo_uno.addMouseListener(this);
+        this.vistaMenuCampo.boton_campo_dos.addMouseListener(this);
+        this.vistaMenuCampo.boton_listar_uno.addMouseListener(this);
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
@@ -114,7 +135,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaLlegada.boton_home.addMouseListener(this);
         this.vistaListado.boton_home.addMouseListener(this);
         this.vistaObteReport.boton_home.addMouseListener(this);
-        this.vistaObteReport.boton_buscar.addMouseListener(this);
+        this.vistaListado.tabla_listado_contenedores.addMouseListener(this); ////////////#############
         this.vistaLlegada.btn_guardar.addMouseListener(this);
 //        this.vistaHome.boton_buscar.addMouseListener(this); // <-- Aqui se tiene que activar el actualizar #
         this.vistaLlegada.addComponentListener(this);
@@ -136,7 +157,11 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         try {
             if (this.modeloLogin.rol.equals("Grupo 1")) {
                 this.vistaGeneral.jp_menu_general.add(vistaMenuCampo);
+                this.vistaGeneral.jp_escritorio_general.add(vistaCampo);
+                this.vistaGeneral.jp_escritorio_general.add(vistaHome);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
+                this.vistaHome.setVisible(true);
+                this.vistaHome.setBorder(null);
                 this.vistaMenuAcopio.setVisible(false);
                 this.vistaMenuCalidad.setVisible(false);
                 this.vistaMenuCampo.setBorder(null);
@@ -158,9 +183,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaGeneral.jp_escritorio_general.add(vistaHome);
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaHome.setVisible(true);
+                this.vistaHome.setBorder(null);
                 this.vistaMenuCampo.setVisible(false);
                 this.vistaMenuCalidad.setVisible(false);
-                this.vistaHome.setBorder(null);
                 this.vistaMenuAcopio.setBorder(null);
                 this.vistaMenuAcopio.setVisible(true);
             }
@@ -205,11 +230,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         //  Aqui hacemos el cerrar sesion en la vista general.
         if (me.getSource() == this.vistaGeneral.jp_opcionCerrarSesion || me.getSource() == this.vistaGeneral.lbl_cerrarSesion) {
-            this.vistaGeneral.setVisible(false);
+            this.vistaGeneral.dispose();
             this.vistaLogin.setVisible(true);
         }
         //  GRUPO 1 OPCIONES DE BOTONES
-
+        if (me.getSource() == this.vistaMenuCampo.boton_campo_uno) {
+            this.menuUsuarioSwitchOnOFF();
+            this.vistaCampo.setBorder(null);
+            this.vistaCampo.setVisible(true);
+        }
         //  GRUPO 2 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaMenuCalidad.btn_acopio_control) {
             this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
@@ -225,7 +254,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.controlHigiene.guardadoFinal();
             this.controlDespacho.guardadoFinal();
             this.controlPaletizado.guardadoFinal();
-
         }
 
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
@@ -247,7 +275,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.controlDespacho.idEntidadDatosDespacho();
 
                 // --> Retorna 11 que es su maximo.
-                this.controlInspeccion.idEntidadHigCont();
+                this.controlInspeccion.idEntidadInspCont();
                 //  Esta entidad ya retorna el max id como 8 si es null al inicio de la BD.
                 this.controlHigiene.idEntidadHigCont();
                 //  --> Retornara 20 que es su maximo.
@@ -257,6 +285,19 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 System.out.println("General 1 Entrada: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle>"
                         + this.controlDatosLlegada.idDatosLlegada + " , idInsCont>" + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont
                         + "  idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+                tempClickG3 = 0;
+                //  Validacion en caso de datos erroneos en la BD. BORRADO DE EMERGENCIA.
+                if ((this.controlInspeccion.idInspCont % 11 != 0) || (this.controlHigiene.idHigCont % 8 != 0) || (this.controlPaletizado.idPalet % 20 != 0)) {
+                    this.modeloContenedor.id = this.controlDatosLlegada.idContenedor;
+                    this.modeloContenedor.eliminadoEmergencia_Contenedor();
+                    this.controlDatosLlegada.idEntidadContenedores();
+                    this.controlDatosLlegada.idEntidadDatosLlegada();
+                    this.controlInspeccion.idEntidadInspCont();
+                    this.controlHigiene.idEntidadHigCont();
+                    this.controlDespacho.idEntidadDatosDespacho();
+                    this.controlPaletizado.idEntidadPalet();
+                    tempClickG3 = 1;
+                }
 
                 //  Autoincremento de las entidades fijas que comparten id entre entidades. ej. 1, 1, 1...
                 this.controlDatosLlegada.idContenedor++;
@@ -275,7 +316,6 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                         + "  idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
 
                 //  Con ese valor evitamos guardar varias veces y seria un nuevo registro.
-                tempClickG3 = 0;
             }
 
         }
@@ -321,29 +361,30 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
         }
         //  Boton actualizar, lo que hace es buscar la informacion en la BD y mostrar en el formulario principal.
-        if (me.getSource() == this.vistaObteReport.boton_buscar) {
-            this.vistaObteReport.dispose();
+        if (me.getSource() == this.vistaListado.tabla_listado_contenedores && this.vistaListado.tabla_listado_contenedores.getSelectedColumn() == 9) {
+            this.vistaListado.dispose();
             this.vistaLlegada.setBorder(null);
             this.vistaLlegada.setVisible(true);
-            
-            int busqueda = Integer.parseInt(this.vistaObteReport.txf_busqueda.getText());
+
+            int busqueda = this.controlListadoCont.idContenedor;
+
             this.controlDatosLlegada.idBusqueda(busqueda);
             this.controlInspeccion.idBusqueda(busqueda);
             this.controlHigiene.idBusqueda(busqueda);
             this.controlDespacho.idBusqueda(busqueda);
             this.controlPaletizado.idBusqueda(busqueda);
-            
+
             this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
-            
+
             this.controlDatosLlegada.cargarDatosLlegada();
             this.controlInspeccion.cargarDatosInspCont();
             this.controlHigiene.cargarDatosHigCont();
             this.controlDespacho.cargarDatosDespacho();
             this.controlPaletizado.cargarDatosPalet();
-            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle> " + this.controlDatosLlegada.idDatosLlegada  
-                               + " , idInsCo> " + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont    
-                               + " , idDes> " +this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
-            
+            System.out.println("General Busqueda: idCon>" + this.controlDatosLlegada.idContenedor + " , idDaLle> " + this.controlDatosLlegada.idDatosLlegada
+                    + " , idInsCo> " + this.controlInspeccion.idInspCont + " , idHigCont>" + this.controlHigiene.idHigCont
+                    + " , idDes> " + this.controlDespacho.idDespacho + " idPal> " + this.controlPaletizado.idPalet);
+
         }
     }
 

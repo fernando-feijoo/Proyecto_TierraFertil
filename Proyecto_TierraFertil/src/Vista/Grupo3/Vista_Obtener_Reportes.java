@@ -31,9 +31,12 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
         jPanel3 = new javax.swing.JPanel();
         boton_home = new javax.swing.JLabel();
         lbl_titulo = new javax.swing.JLabel();
-        boton_buscar = new Recursos_Codigo.Redondeado();
-        jLabel1 = new javax.swing.JLabel();
-        txf_busqueda = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_reporte_contenedores = new javax.swing.JTable();
+        redondeado1 = new Recursos_Codigo.Redondeado();
+        ListadoContenedor_txf_Busqueda = new javax.swing.JTextField();
+        boton_Buscar = new Recursos_Codigo.Redondeado();
+        jLabel2 = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(965, 629));
         setMinimumSize(new java.awt.Dimension(965, 629));
@@ -60,7 +63,7 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 3));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 88, -1, 3));
 
         boton_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/home 32x32.png"))); // NOI18N
         jPanel1.add(boton_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
@@ -72,22 +75,61 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
         lbl_titulo.setText("OBTENER REPORTES");
         jPanel1.add(lbl_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 22, 960, -1));
 
-        boton_buscar.setBackground(new java.awt.Color(255, 255, 102));
-        boton_buscar.setRoundBottomLeft(25);
-        boton_buscar.setRoundBottomRight(25);
-        boton_buscar.setRoundTopLeft(25);
-        boton_buscar.setRoundTopRight(25);
-        boton_buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabla_reporte_contenedores.setFont(new java.awt.Font("Roboto", 0, 10)); // NOI18N
+        tabla_reporte_contenedores.setForeground(new java.awt.Color(0, 0, 0));
+        tabla_reporte_contenedores.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Roboto", 3, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("BUSCAR");
-        boton_buscar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 6, 80, 20));
+            },
+            new String [] {
 
-        jPanel1.add(boton_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 100, 30));
-        jPanel1.add(txf_busqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 110, 30));
+            }
+        ));
+        tabla_reporte_contenedores.getTableHeader().setResizingAllowed(false);
+        tabla_reporte_contenedores.getTableHeader().setReorderingAllowed(false);
+        tabla_reporte_contenedores.setFocusable(false);
+        tabla_reporte_contenedores = new javax.swing.JTable(){
+            public boolean isCellEditable (int rowIndex, int colIndex){
+                return false;
+            }
+        };
+        jScrollPane1.setViewportView(tabla_reporte_contenedores);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 190, 920, 400));
+
+        redondeado1.setBackground(new java.awt.Color(255, 255, 255));
+        redondeado1.setMaximumSize(new java.awt.Dimension(410, 32));
+        redondeado1.setMinimumSize(new java.awt.Dimension(410, 32));
+        redondeado1.setPreferredSize(new java.awt.Dimension(410, 32));
+        redondeado1.setRoundBottomLeft(25);
+        redondeado1.setRoundBottomRight(25);
+        redondeado1.setRoundTopLeft(25);
+        redondeado1.setRoundTopRight(25);
+        redondeado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ListadoContenedor_txf_Busqueda.setBackground(new java.awt.Color(255, 255, 255));
+        ListadoContenedor_txf_Busqueda.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ListadoContenedor_txf_Busqueda.setForeground(new java.awt.Color(0, 0, 0));
+        ListadoContenedor_txf_Busqueda.setBorder(null);
+        redondeado1.add(ListadoContenedor_txf_Busqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 1, 380, 30));
+
+        jPanel1.add(redondeado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+
+        boton_Buscar.setBackground(new java.awt.Color(75, 174, 0, 140));
+        boton_Buscar.setRoundBottomLeft(25);
+        boton_Buscar.setRoundBottomRight(25);
+        boton_Buscar.setRoundTopLeft(25);
+        boton_Buscar.setRoundTopRight(25);
+        boton_Buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("BUSCAR");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boton_Buscar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 30));
+
+        jPanel1.add(boton_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 120, 32));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,12 +147,15 @@ public class Vista_Obtener_Reportes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public Recursos_Codigo.Redondeado boton_buscar;
+    public javax.swing.JTextField ListadoContenedor_txf_Busqueda;
+    public Recursos_Codigo.Redondeado boton_Buscar;
     public javax.swing.JLabel boton_home;
-    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel3;
+    public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JLabel lbl_titulo;
-    public javax.swing.JTextField txf_busqueda;
+    public Recursos_Codigo.Redondeado redondeado1;
+    public javax.swing.JTable tabla_reporte_contenedores;
     // End of variables declaration//GEN-END:variables
 }

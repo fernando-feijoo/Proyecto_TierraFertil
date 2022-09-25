@@ -6,7 +6,22 @@ import java.sql.Statement;
 
 public class Modelo_Inspeccion_Contenedor {
 
-    Modelo_Conexion conexion = new Modelo_Conexion();
+    public static Modelo_Inspeccion_Contenedor instancia;
+
+    private Modelo_Inspeccion_Contenedor() {
+
+    }
+
+    public static Modelo_Inspeccion_Contenedor getInstancia() {
+        if (instancia == null) {
+            instancia = new Modelo_Inspeccion_Contenedor();
+        } else {
+            System.out.println("No se puede crear el objeto " + instancia + " porque ya existe un objeto de la clase.");
+        }
+        return instancia;
+    }
+
+    Modelo_Conexion conexion = Modelo_Conexion.getInstancia();
     ResultSet rs;
     Statement st;
     public int id, id_contenedor, id_verificar_lugar;
@@ -17,9 +32,9 @@ public class Modelo_Inspeccion_Contenedor {
             st = conexion.conectarBD().createStatement();
 
             String sql = "SELECT \"insertarDatosInspeccion\" (" + id + "," + id_contenedor + " , " + id_verificar_lugar + " , '" + verificacion + "')";
-            st.executeUpdate(sql);
+            st.execute(sql);
             st.close();
-            conexion.conectarBD().close();
+            conexion.cerrarBD();
         } catch (Exception e) {
         }
     }
@@ -30,44 +45,43 @@ public class Modelo_Inspeccion_Contenedor {
             String sql = "SELECT COALESCE(MAX(id), 11) AS \"id_tablaInspeccionContenedor\" FROM inspeccion_contenedor;";
             rs = st.executeQuery(sql);
             st.close();
-            conexion.conectarBD().close();
+            conexion.cerrarBD();
             System.out.println("Consulta id entidad InspConte... BD MODELO, " + id);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener  id entidad InspeccionContenedor BD MODELO: " + e);
-        }
+        } 
         return rs;
     }
-    // #ACTUALIZAR ID DE CONTENEDORES A CONSULTAR.
-     public ResultSet consultaDatos_entidadInspCont() {
+
+    public ResultSet consultaDatos_entidadInspCont() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT id_verificar_lugar, verificacion FROM inspeccion_contenedor WHERE id_contenedor = "+ id_contenedor +" ORDER BY id_verificar_lugar;";
+            String sql = "SELECT id_verificar_lugar, verificacion FROM inspeccion_contenedor WHERE id_contenedor = " + id_contenedor + " ORDER BY id_verificar_lugar;";
             rs = st.executeQuery(sql);
             st.close();
-            conexion.conectarBD().close();
+            conexion.cerrarBD();
             System.out.println("ConsultaDatos id entidad InspConte... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad HigieneContenedor BD MODELO: " + e);
-        }
+        } 
         return rs;
     }
-     
-      public ResultSet consultaInspCon() {
+
+    public ResultSet consultaInspCon() {
         try {
             st = conexion.conectarBD().createStatement();
-            String sql = "SELECT obser_ins_cont FROM contenedores WHERE id = "+ id_contenedor +";";
+            String sql = "SELECT obser_ins_cont FROM contenedores WHERE id = " + id_contenedor + ";";
             rs = st.executeQuery(sql);
             st.close();
-            conexion.conectarBD().close();
+            conexion.cerrarBD();
             System.out.println("ConsultaDatos id entidad InspConte... BD MODELO, " + id_contenedor);
         } catch (Exception e) {
             System.out.println("Error al tratar de obtener id entidad InspeccionContenedor BD MODELO: " + e);
-        }
+        } 
         return rs;
     }
-     
-    
-      public void pruebaGuardado() {
+
+    public void pruebaGuardado() {
         System.out.println("IC: " + id + " , " + id_contenedor + " , " + id_verificar_lugar + " , " + verificacion);
     }
 

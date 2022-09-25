@@ -5,7 +5,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class Modelo_Login {
-    Modelo_Conexion conexion = new Modelo_Conexion();
+    Modelo_Conexion conexion = Modelo_Conexion.getInstancia();
     public static String user;
     public String pass;
     public static String rol;
@@ -17,7 +17,7 @@ public class Modelo_Login {
           
             ResultSet rs =  st.executeQuery(SQL);
             st.close();
-            conexion.conectarBD().close();
+            conexion.cerrarBD();
             return rs;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en la consulta");

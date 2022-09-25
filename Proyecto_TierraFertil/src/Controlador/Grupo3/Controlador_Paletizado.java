@@ -11,20 +11,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
+import jdk.nashorn.internal.runtime.JSType;
 
 public class Controlador_Paletizado implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
-    Modelo_Paletizado modeloPaletizado = new Modelo_Paletizado();
-    Modelo_Contenedores modeloPaContenedor = new Modelo_Contenedores();
+    Modelo_Paletizado modeloPaletizado = Modelo_Paletizado.getInstancia();
+    Modelo_Contenedores modeloPaContenedor = Modelo_Contenedores.getInstancia();
 
     public static int idContenedor;
     public static int idPalet;
     String observacionGeneralPale;
-    int idCajas, codigoUno, codigoDos, codigoTres, codigoCuatro, codigoCinco, codigoSeis, codigoSiete, codigoOcho, codigoNueve, codigoDiez,
+    int pallet, idCajas, codigoUno, codigoDos, codigoTres, codigoCuatro, codigoCinco, codigoSeis, codigoSiete, codigoOcho, codigoNueve, codigoDiez,
             codigoOnce, codigoDoce, codigoTrece, codigoCatorce, codigoQuince, codigoDiezSeis, codigoDiezSiete, codigoDiezOcho, codigoDiezNueve, codigoVeinte;
     ResultSet rs, rsC;
-    public int tempClickG3;
+    public static int tempClickG3;
 
     public Controlador_Paletizado(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
@@ -41,6 +42,7 @@ public class Controlador_Paletizado implements MouseListener, KeyListener {
         this.vistaLlegada.paletizado_pallet9.addKeyListener(this);
         this.vistaLlegada.paletizado_pallet10.addKeyListener(this);
         this.vistaLlegada.paletizado_observacionesGenerales.addKeyListener(this);
+        this.vistaLlegada.boton_home.addMouseListener(this);
 
     }
 
@@ -106,11 +108,16 @@ public class Controlador_Paletizado implements MouseListener, KeyListener {
         maxDato = (((idContenedor * 20)) - 20);
         for (int i = 1; i < 21; i++) {
             this.modeloPaletizado.id_contenedor = this.idContenedor;
+            this.modeloPaletizado.pallet = i;
             this.modeloPaletizado.id = maxDato + i;
             this.modeloPaletizado.id_cantidad_cajas = this.vistaLlegada.paletizado_cb_numero_cajas.getSelectedIndex() + 1;
             switch (i) {
                 case 1:
-                    this.modeloPaletizado.codigo = this.codigoUno;
+                    if (JSType.isNumber(codigoUno)){
+                        this.modeloPaletizado.codigo = this.codigoUno;
+                    }else{
+                        this.modeloPaletizado.codigo = 0;
+                    }
                     break;
                 case 2:
                     this.modeloPaletizado.codigo = this.codigoDos;
@@ -300,8 +307,6 @@ public class Controlador_Paletizado implements MouseListener, KeyListener {
                 || vistaLlegada.paletizado_pallet10.getText().isEmpty()) {
             JOptionPane.showMessageDialog(vistaLlegada, "Porfavor no dejar campos vacios ");
         } else {
-           
-            
 
         }
     }
@@ -309,10 +314,20 @@ public class Controlador_Paletizado implements MouseListener, KeyListener {
     @Override
     public void mouseClicked(MouseEvent me) {
         if (me.getSource() == this.vistaLlegada.btn_guardar) {
-            completo();
-            JOptionPane.showConfirmDialog(vistaLlegada, "¿Estas seguro de guardar?");
+            this.completo();
+            int opcion = JOptionPane.showConfirmDialog(vistaLlegada, "¿Desea Guardar?", "Confirmación", JOptionPane.YES_NO_OPTION);
+            System.out.println("I> " + opcion);
+            if (opcion == 0) {
+                this.tempClickG3 = 2;
+            }else{
+                this.tempClickG3 = 1;
+                JOptionPane.showMessageDialog(vistaLlegada, "Registro no guardado", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            }
         }
-        
+        if (me.getSource() == this.vistaLlegada.boton_home) {
+            this.borrarCamposPalet();
+        }
+
     }
 
     @Override

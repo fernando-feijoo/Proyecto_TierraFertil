@@ -7,7 +7,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class Modelo_Evaluacion_Datos {
-     Modelo_Conexion conexion = new Modelo_Conexion();
+     Modelo_Conexion conexion = Modelo_Conexion.getInstancia();
     ResultSet rs;
     Statement st;
     
@@ -25,6 +25,7 @@ public class Modelo_Evaluacion_Datos {
             
             st.executeUpdate(sql);
             st.close();
+            conexion.cerrarBD();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en guardarDatos de Modelo_Evaluacion. "+e);
         }

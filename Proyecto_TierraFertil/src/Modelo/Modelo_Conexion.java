@@ -2,12 +2,27 @@ package Modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Modelo_Conexion {
 
-    int conTemp = 0;
-    Connection conexion;
+    private static Modelo_Conexion instancia;
+    private static int conTemp = 0;
+    private Connection conexion = null;
+
+    private Modelo_Conexion() {
+
+    }
+
+    public static Modelo_Conexion getInstancia() {
+        if (instancia == null) {
+            instancia = new Modelo_Conexion();
+        } else {
+            System.out.println("No se puede crear el objeto " + instancia + " porque ya existe un objeto de la clase.");
+        }
+        return instancia;
+    }
 
     public Connection conectarBD() {
         try {
@@ -26,5 +41,15 @@ public class Modelo_Conexion {
             }
         }
         return null;
+    }
+
+    public void cerrarBD() {
+        if (conexion != null) {
+            try {
+                conexion.close();
+                System.out.println("BD Cerrada nice.");
+            } catch (SQLException ex) {
+            }
+        }
     }
 }

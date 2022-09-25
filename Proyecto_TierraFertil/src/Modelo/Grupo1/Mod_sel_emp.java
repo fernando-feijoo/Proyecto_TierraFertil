@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class Mod_sel_emp {
 
-    Modelo_Conexion con = new Modelo_Conexion();
+    Modelo_Conexion con = Modelo_Conexion.getInstancia();
     ResultSet rs;
     Statement st;
 
@@ -34,6 +34,7 @@ public class Mod_sel_emp {
                 + " " + this.f3_6 + ", " + this.f3_7 + ", " + this.f3_8 + ", " + this.f3_9 + ", " + this.f3_10 + ", " + this.f3_11 + ", " + this.f3_12 + ","
                 + " " + this.f3_13 + ", " + this.f3_14 + ", " + this.f3_15 + ", " + this.f3_16 + ", " + this.f3_17 + ", " + this.f3_18 + "," + this.tot_f3 + ", " + this.id_eva + ");";
         st.executeUpdate(sql);
+        con.cerrarBD();
         return true;
     }
 
@@ -43,6 +44,7 @@ public class Mod_sel_emp {
                 + "	total_cluster, total_ph, total_defectos, promedio_tot, observacion, id_evaluacion)\n"
                 + "	VALUES ("+this.total_cluster+", "+this.ph2+", "+this.total_filas+", "+this.promedio+",'"+this.observacion+"', "+this.id_eva+");";
         st.executeUpdate(sql);
+        con.cerrarBD();
         return true;
     }
 

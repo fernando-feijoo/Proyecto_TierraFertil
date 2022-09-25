@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Modelo_Evaluacion_Listado {
 
-    Modelo_Conexion Conexion = new Modelo_Conexion();
+    Modelo_Conexion Conexion = Modelo_Conexion.getInstancia();
     ResultSet rs;
     Statement st;
     PreparedStatement ps;

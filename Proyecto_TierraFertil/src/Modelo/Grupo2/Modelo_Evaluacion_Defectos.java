@@ -6,9 +6,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 public class Modelo_Evaluacion_Defectos {
-
-   
-    Modelo_Conexion conexion = new Modelo_Conexion();
+    Modelo_Conexion conexion = Modelo_Conexion.getInstancia();
     ResultSet rs;
     Statement st;
 
@@ -25,6 +23,7 @@ public class Modelo_Evaluacion_Defectos {
                     + "'" + this.total_defectos + "', '" + this.pcmd + "');";
             st.executeUpdate(sql);
             st.close();
+            conexion.cerrarBD();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en guardarDefectos en modeloEvaluacionDefectos. " + e);
         }
@@ -39,7 +38,7 @@ public class Modelo_Evaluacion_Defectos {
             //OJO VA ID_DEFECTO.
             String sql = "select id,nombre,total_defectos,pcmd from defectos_detalle_eva where id_detalle_ev = '" + this.id_detalle + "' ;";
             rs = st.executeQuery(sql);
-
+            conexion.cerrarBD();
             return rs;
         } catch (Exception e) {
             System.out.println("Error al consultarDefectos. " + e);

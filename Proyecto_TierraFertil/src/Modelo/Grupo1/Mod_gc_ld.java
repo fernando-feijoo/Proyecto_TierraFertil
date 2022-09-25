@@ -11,7 +11,7 @@ public class Mod_gc_ld {
     public double promedio_l, total_l;
     public int id_max, id_evaluacion;
     
-    Modelo_Conexion con = new Modelo_Conexion();
+    Modelo_Conexion con = Modelo_Conexion.getInstancia();
     Statement st; ResultSet rs;
     
     public boolean gc_cantidad () throws SQLException{
@@ -21,6 +21,7 @@ public class Mod_gc_ld {
         " VALUES ("+id_max+","+this.cant36+", "+this.cant37+", "+this.cant38+", "+this.cant39+", "+this.cant40+", "+this.cant41+","
         + " "+this.cant42+", "+this.cant43+", "+this.cant44+", "+this.cant45+", "+this.cant46+", "+this.cant47+","
         + " "+this.cant48+", "+this.cant49+", "+this.cant50+", "+this.cant51+", "+this.cant52+", "+this.cantTotal+", "+this.id_evaluacion+");");
+        con.cerrarBD();
         return true;
     }
     
@@ -33,6 +34,7 @@ public class Mod_gc_ld {
 "	VALUES ("+this.num36+", "+this.num37+", "+this.num38+", "+this.num39+", "+this.num40+", "+this.num41+", "+this.num42+", "+this.num43+",\n" +
 "	"+this.num44+", "+this.num45+", "+this.num46+", "+this.num47+", "+this.num48+", "+this.num49+", "+this.num50+", "+this.num51+", "+this.num52+",\n" +
 "	"+this.total_l+", "+this.promedio_l+", "+this.id_max+");");
+        con.cerrarBD();
         return true;
     }
     
@@ -43,6 +45,7 @@ public class Mod_gc_ld {
         while (rs.next()) {            
             id=rs.getInt(1);
         }
+        con.cerrarBD();
         return id;
     }
 }

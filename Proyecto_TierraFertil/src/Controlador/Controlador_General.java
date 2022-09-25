@@ -45,6 +45,7 @@ import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import javax.swing.JOptionPane;
 
 public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener, ComponentListener {
 
@@ -98,8 +99,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Controlador_Paletizado controlPaletizado = new Controlador_Paletizado(vistaLlegada);
     Controlador_Listado_Contenedores controlListadoCont = new Controlador_Listado_Contenedores(vistaListado);
     Controlador_Obtener_Reportes controlObtReport = new Controlador_Obtener_Reportes(vistaObteReport);
-    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
+    Modelo_Contenedores modeloContenedor = Modelo_Contenedores.getInstancia();
     public static int tempClickG3 = 1;
+    public static int tempActualizar = 0;
     //  Fin de instanciaciones Vistas y Controladores de MENUS y VISTAS INTERNAS.
     // -------------------------------------------------------------------------------------------------
     // Con esta parate validamos el rol y usuario, para posteriormente asignarlo segun su rol al menu principal.
@@ -193,6 +195,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
                 this.vistaGeneral.jp_escritorio_general.add(vistaObteReport);
                 this.vistaGeneral.jp_menu_general.add(vistaMenuAcopio);
                 this.vistaGeneral.jp_escritorio_general.add(vistaHome);
+                this.preCargadoGrup3();
                 this.vistaGeneral.lbl_nombre_usuario.setText(this.modeloLogin.user);
                 this.vistaHome.setVisible(true);
                 this.vistaHome.setBorder(null);
@@ -212,6 +215,24 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaGeneral.jp_lienzo_principal.setVisible(false);
         this.vistaGeneral.jp_lienzo_principal.setVisible(true);
         System.out.println("OFF - ON");
+    }
+
+    //  GRUPO 3
+    public void borradoCampos() {
+        this.controlDatosLlegada.borrarCamposDatosLlegada();
+        this.controlInspeccion.borrarCamposInspCont();
+        this.controlHigiene.borrarCamposHigCont();
+        this.controlDespacho.borrarCamposDatosDespacho();
+        this.controlPaletizado.borrarCamposPalet();
+        this.preCargadoGrup3();
+        this.vistaLlegada.jp_grupoOpciones_datosLlegada.setSelectedIndex(0);
+    }
+
+    public void preCargadoGrup3() {
+        this.controlDatosLlegada.cargaDatosInicial();
+        this.controlDespacho.cargaDatosInicial();
+        this.controlListadoCont.cargaDatosInicial();
+        this.controlObtReport.cargaDatosInicial();
     }
 
     @Override
@@ -252,7 +273,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaHome.dispose();
             this.vistaListaCampo.dispose();
             this.vistaCampo.setVisible(true);
-        } 
+        }
         if (me.getSource() == this.vistaMenuCampo.boton_campo_dos) {
             this.menuUsuarioSwitchOnOFF();
             this.vistaListaCampo.setBorder(null);
@@ -279,13 +300,39 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         }
         //  GRUPO 3 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaLlegada.btn_guardar) {
-            tempClickG3 = 1;
-
-            this.controlDatosLlegada.guardadoFinal();
-            this.controlInspeccion.guardadoFinal();
-            this.controlHigiene.guardadoFinal();
-            this.controlDespacho.guardadoFinal();
-            this.controlPaletizado.guardadoFinal();
+            System.out.println("Temp> " + tempActualizar);
+            tempActualizar = controlListadoCont.tempClickG3;
+            tempClickG3 = this.controlPaletizado.tempClickG3;
+            this.modeloContenedor.codigo_Contenedor = this.vistaLlegada.datosLlegada_contenedor.getText();
+            if (this.modeloContenedor.errorID_Contenedor()) {
+                if (tempClickG3 == 2) {
+                    tempClickG3 = 1;
+                    JOptionPane.showMessageDialog(vistaLlegada, "Guardado completo", "Guardado", JOptionPane.INFORMATION_MESSAGE);
+                    this.controlDatosLlegada.guardadoFinal();
+                    this.controlInspeccion.guardadoFinal();
+                    this.controlHigiene.guardadoFinal();
+                    this.controlDespacho.guardadoFinal();
+                    this.controlPaletizado.guardadoFinal();
+                    this.controlListadoCont.tempClickG3 = 0;
+                    this.borradoCampos();
+                }
+            } else {
+                if (tempActualizar != 3) {
+                    JOptionPane.showMessageDialog(vistaLlegada, "CODIGO CONTENEDOR NO UNICO", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    if (tempClickG3 == 2) {
+                        tempClickG3 = 1;
+                        JOptionPane.showMessageDialog(vistaLlegada, "Guardado completo", "Guardado", JOptionPane.INFORMATION_MESSAGE);
+                        this.controlDatosLlegada.guardadoFinal();
+                        this.controlInspeccion.guardadoFinal();
+                        this.controlHigiene.guardadoFinal();
+                        this.controlDespacho.guardadoFinal();
+                        this.controlPaletizado.guardadoFinal();
+                        this.controlListadoCont.tempClickG3 = 0;
+                        this.borradoCampos();
+                    }
+                }
+            }
         }
 
         if (me.getSource() == this.vistaMenuAcopio.btn_acopio_opcion_uno || me.getSource() == this.vistaLlegada.btn_guardar) {
@@ -297,7 +344,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             // Un solo validador de menu desplegable.
             this.menuUsuarioSwitchOnOFF();
             contTemp = 0;
-            // Necesita la asignacion para leer evento a la primera.
+            //  Termina menu complementos desplegable.
+            //  Necesita la asignacion para leer evento a la primera.
             this.vistaLlegada.setVisible(true);
             //  #########  SOLUCIONADO LO DE ID FIJO DE CONTENDOR Y DEMAS TABLAS, FALTA DE ROJAS #########
             if (tempClickG3 != 0) {
@@ -361,6 +409,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaListado.setVisible(true);
         }
         if (me.getSource() == this.vistaMenuAcopio.btn_reportes_opcion_uno) {
+            this.controlObtReport.busquedaDatos();
             this.vistaObteReport.setBorder(null);
             this.vistaHome.dispose();
             this.vistaLlegada.dispose();

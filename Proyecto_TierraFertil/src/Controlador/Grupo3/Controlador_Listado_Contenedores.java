@@ -21,11 +21,16 @@ public class Controlador_Listado_Contenedores implements MouseListener {
     ResultSet rs;
     public static String busqueda;
     public static int idContenedor;
+    public int tempClickG3 = 0;
 
     public Controlador_Listado_Contenedores(Vista_Listado_Contenedores vistaListadoCont) {
         this.vistaListadoCont = vistaListadoCont;
         this.vistaListadoCont.boton_Buscar.addMouseListener(this);
         this.vistaListadoCont.tabla_listado_contenedores.addMouseListener(this);
+
+    }
+
+    public void cargaDatosInicial() {
         this.busquedaDatos();
     }
 
@@ -78,8 +83,19 @@ public class Controlador_Listado_Contenedores implements MouseListener {
             while (rs.next()) {
                 this.vistaListadoCont.tabla_listado_contenedores.setRowHeight(37);
 
-                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(9).setPreferredWidth((37));
-                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(10).setPreferredWidth((37));
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(0).setPreferredWidth(100);
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(1).setPreferredWidth(25);
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(2).setPreferredWidth((50));
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(3).setPreferredWidth((50));
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(4).setPreferredWidth((50));
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(5).setPreferredWidth((50));
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(6).setPreferredWidth((50));
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(7).setPreferredWidth((50));
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(8).setPreferredWidth((50));
+
+                //  Dos ultimos botones.
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(9).setPreferredWidth(27);
+                this.vistaListadoCont.tabla_listado_contenedores.getColumnModel().getColumn(10).setPreferredWidth(27);
 
                 registros[0] = rs.getString("codigo");
                 registros[1] = rs.getString("semana");
@@ -108,8 +124,22 @@ public class Controlador_Listado_Contenedores implements MouseListener {
         }
         if (this.vistaListadoCont.tabla_listado_contenedores.getSelectedColumn() == 9) {
             this.modeloListadoContenedore.busquedaID_Contenedor = this.vistaListadoCont.tabla_listado_contenedores.getValueAt(filaSeleccionada, 0).toString();
+            this.modeloListadoContenedore.consultaID_Contenedor();
             this.busquedaID_Contenedor();
-            System.out.println(this.vistaListadoCont.tabla_listado_contenedores.getValueAt(filaSeleccionada, 0).toString());
+            this.tempClickG3 = 3;
+            System.out.println("CARGADO LISTA: " + this.vistaListadoCont.tabla_listado_contenedores.getValueAt(filaSeleccionada, 0).toString());
+        }
+        if (this.vistaListadoCont.tabla_listado_contenedores.getSelectedColumn() == 10) {
+            int opcion = JOptionPane.showConfirmDialog(vistaListadoCont, "¿Esta seguro de eliminar, este registro?", "Confirmación", JOptionPane.YES_NO_OPTION);
+            if (opcion == 0) {
+                this.modeloListadoContenedore.elimando_Contenedor = this.vistaListadoCont.tabla_listado_contenedores.getValueAt(filaSeleccionada, 0).toString();
+                this.modeloListadoContenedore.eliminadoLogico_Contenedor();
+                JOptionPane.showMessageDialog(vistaListadoCont, "Dato Eliminado Correctamente", "Confirmacion de Eliminado", JOptionPane.INFORMATION_MESSAGE);
+                System.out.println("ELIMINADO LISTA: " + this.vistaListadoCont.tabla_listado_contenedores.getValueAt(filaSeleccionada, 0).toString());
+                this.cargaDatosInicial();
+            } else {
+                JOptionPane.showMessageDialog(vistaListadoCont, "Registro no eliminado", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            }
 
         }
     }

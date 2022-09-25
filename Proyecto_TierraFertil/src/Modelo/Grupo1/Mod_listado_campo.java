@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class Mod_listado_campo {
 
-    Modelo_Conexion con = new Modelo_Conexion();
+    Modelo_Conexion con = Modelo_Conexion.getInstancia();
     Connection conexion;
     
     public String buscar;
@@ -24,7 +24,7 @@ public class Mod_listado_campo {
                     + "prod.codigo=eva.codigo_productor WHERE eva.cod_evaluacion like '"+this.buscar+"%'ORDER BY eva.id DESC;";
             ResultSet rs = st.executeQuery(sql);
             st.close();
-            con.conectarBD().close();
+            con.cerrarBD();
             return rs;
         } catch (SQLException ex) {
             Logger.getLogger(Mod_listado_campo.class.getName()).log(Level.SEVERE, null, ex);

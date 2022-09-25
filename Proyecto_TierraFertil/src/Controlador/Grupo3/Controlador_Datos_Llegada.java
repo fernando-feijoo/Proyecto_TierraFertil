@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 public class Controlador_Datos_Llegada implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
-    Modelo_Datos_Llegada modeloDatosLlegada = new Modelo_Datos_Llegada();
-    Modelo_Contenedores modeloDaLleContenedor = new Modelo_Contenedores();
+    Modelo_Datos_Llegada modeloDatosLlegada = Modelo_Datos_Llegada.getInstancia();
+    Modelo_Contenedores modeloDaLleContenedor = Modelo_Contenedores.getInstancia();
 
     SimpleDateFormat formatoD = new SimpleDateFormat("yyyy-MM-dd");
     SimpleDateFormat formatoH = new SimpleDateFormat("HH:mm:ss");
@@ -27,7 +27,6 @@ public class Controlador_Datos_Llegada implements MouseListener, KeyListener {
     ResultSet rs, rsC;
     public static int idContenedor;
     public static int idDatosLlegada;
-    public int tempClickG3;
     String fechaInsp, fechaSalida, horaSalida, horaLlegada, tipoCaja, cupo, contenedor, placa,
             chasis, choferContenedor, ci, nombreFinca, candadosLlegada, sellosInternos, sellosExternos;
     int semana;
@@ -50,10 +49,11 @@ public class Controlador_Datos_Llegada implements MouseListener, KeyListener {
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(2, false);
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, false);
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, false);
-
+    }
+    
+    public void cargaDatosInicial(){
         this.cargaDefault();
     }
-
     // #SE NECESITA PROBAR BIEN ESTO AUN. // Esto es porque ambas tablas tienen el mismo id de tupla, por ser unica.
     public void idBusqueda(int idBusquedaUno) {
         this.idContenedor = idBusquedaUno;
@@ -321,7 +321,11 @@ public class Controlador_Datos_Llegada implements MouseListener, KeyListener {
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
         if (me.getSource() == this.vistaLlegada.btn_siguiente_llegada) {
-            Completo();
+            this.Completo();
+        }
+        if (me.getSource() == this.vistaLlegada.boton_home) {
+            this.borrarCamposDatosLlegada();
+            this.cargaDefault();
         }
     }
 

@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class Mod_asepcias {
     
-    Modelo_Conexion con = new Modelo_Conexion();
+    Modelo_Conexion con = Modelo_Conexion.getInstancia();
     public String men1,men2,men3,men4,men5,men6,men7,men8,men9,men10,men11;
     public String men12,men13,men14,men15,men16,men17,men18,men19,men20,men21,men22;
     public String men23,men24,men25,men26,men27,men28,men29,men30,men31,men32,men33;
@@ -46,6 +46,7 @@ public class Mod_asepcias {
                     + "('"+men64+"', '"+men65+"', '"+men66+"', "+id_evaluacion+", "+22+");";
             
             st.executeUpdate(sql);
+            con.cerrarBD();
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(Mod_asepcias.class.getName()).log(Level.SEVERE, null, ex);

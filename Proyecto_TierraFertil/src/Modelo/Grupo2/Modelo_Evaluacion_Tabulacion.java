@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Modelo_Evaluacion_Tabulacion {
 
-    Modelo_Conexion conexion = new Modelo_Conexion();
+    Modelo_Conexion conexion = Modelo_Conexion.getInstancia();
     ResultSet rs;
     Statement st;
 
@@ -28,6 +28,7 @@ public class Modelo_Evaluacion_Tabulacion {
             
             st.executeUpdate(sql);
             st.close();
+            conexion.cerrarBD();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en guardarTabulacion en modeloTabulacion. " + e);
         }
@@ -43,7 +44,7 @@ public class Modelo_Evaluacion_Tabulacion {
                     + "where id_evaluacion =(select max(id)from evaluaciones_empacadora) order by id asc;";
 
             rs = st.executeQuery(sql);
-            
+            conexion.cerrarBD();
             return rs;
 
         } catch (Exception e) {

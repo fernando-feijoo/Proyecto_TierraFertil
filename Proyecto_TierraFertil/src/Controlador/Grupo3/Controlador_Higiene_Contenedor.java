@@ -15,8 +15,8 @@ import javax.swing.JOptionPane;
 public class Controlador_Higiene_Contenedor implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
-    Modelo_Higiene_Contenedor modeloHigCont = new Modelo_Higiene_Contenedor();
-    Modelo_Contenedores modeloHeContenedor = new Modelo_Contenedores();
+    Modelo_Higiene_Contenedor modeloHigCont = Modelo_Higiene_Contenedor.getInstancia();
+    Modelo_Contenedores modeloHeContenedor = Modelo_Contenedores.getInstancia();
     public static int idContenedor;
     String opcionUno, opcionDos, opcionTres, opcionCuatro, opcionCinco, opcionSeis,
             opcionSiete, opcionOcho, observacionHigCont;
@@ -27,6 +27,7 @@ public class Controlador_Higiene_Contenedor implements MouseListener, KeyListene
     public Controlador_Higiene_Contenedor(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_higCont.addMouseListener(this);
+        this.vistaLlegada.boton_home.addMouseListener(this);
 
         this.vistaLlegada.higCont_observaciones.addKeyListener(this);
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, false);
@@ -204,7 +205,10 @@ public class Controlador_Higiene_Contenedor implements MouseListener, KeyListene
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaLlegada.btn_siguiente_higCont) {
-            Completo();
+            this.Completo();
+        }
+        if (e.getSource() == this.vistaLlegada.boton_home) {
+            this.borrarCamposHigCont();
         }
     }
 

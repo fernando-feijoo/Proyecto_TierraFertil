@@ -18,8 +18,8 @@ import javax.swing.JOptionPane;
 public class Controlador_Despacho implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
-    Modelo_Despacho modeloDespacho = new Modelo_Despacho();
-    Modelo_Contenedores modeloContenedor = new Modelo_Contenedores();
+    Modelo_Despacho modeloDespacho = Modelo_Despacho.getInstancia();
+    Modelo_Contenedores modeloContenedor = Modelo_Contenedores.getInstancia();
     SimpleDateFormat formatoD = new SimpleDateFormat("yyyy-MM-dd");
     SimpleDateFormat formatoH = new SimpleDateFormat("HH:mm:ss");
 
@@ -47,9 +47,13 @@ public class Controlador_Despacho implements MouseListener, KeyListener {
         this.vistaLlegada.despacho_total_viajar.addKeyListener(this);
         this.vistaLlegada.despacho_cajas_total.addKeyListener(this);
         this.vistaLlegada.despacho_cantidad_pallets.addKeyListener(this);
+        this.vistaLlegada.boton_home.addMouseListener(this);
         
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(4, false);
-        cargaDefault();
+        
+    }
+    public void cargaDatosInicial(){
+        this.cargaDefault();
     }
 
     // #SE NECESITA PROBAR BIEN ESTO AUN.
@@ -283,11 +287,12 @@ public class Controlador_Despacho implements MouseListener, KeyListener {
     public void mouseClicked(MouseEvent me) {
         // usamos para hacer el cambio de formulario en boton siguiente
         if (me.getSource() == this.vistaLlegada.btn_siguiente_despacho) {
-            completo();
+            this.completo();
 
         }
         if (me.getSource() == this.vistaLlegada.boton_home) {
-//            this.borrarCamposDatosDespacho();
+            this.borrarCamposDatosDespacho();
+            this.cargaDefault();
         }
     }
 

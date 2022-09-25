@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Modelo_Obtener_Reportes {
     
-    Modelo_Conexion conexion = new Modelo_Conexion();
+    Modelo_Conexion conexion = Modelo_Conexion.getInstancia();
     ResultSet rs;
     Statement st;
     public static String busquedaGeneral, busquedaID_Contenedor;
@@ -20,29 +20,29 @@ public class Modelo_Obtener_Reportes {
                     + "contenedores INNER JOIN datos_llegada  ON (contenedores.id = datos_llegada.id_contenedor) INNER JOIN\n"
                     + "datos_despacho  ON (contenedores.id = datos_despacho.id_contenedor)\n"
                     + "WHERE\n"
-                    + "contenedores.codigo ILIKE '"+ busquedaGeneral +"%'\n"
+                    + "contenedores.codigo ILIKE '"+ busquedaGeneral +"%' AND contenedores.estado = 'true' \n"
                     + "ORDER BY\n"
                     + "semana DESC;";
             rs = st.executeQuery(sql);
             st.close();
-            conexion.conectarBD().close();
+            conexion.cerrarBD();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error al ejecutar la consulta.." + e);
-        }
+        } 
         return rs;
     }
-    // Hay que cambiar el dato de busquedaGeneral, debe de ser donde se selecciona.
+
     public ResultSet consultaID_Contenedor(){
         try {
             st = conexion.conectarBD().createStatement();
             String sql = "SELECT DISTINCT id FROM contenedores WHERE codigo = '"+ busquedaID_Contenedor +"';";
             rs = st.executeQuery(sql);
             st.close();
-            conexion.conectarBD().close();
+            conexion.cerrarBD();
             System.out.println("CODIGO CONTENEDOR MODELO LC: " + busquedaID_Contenedor);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error ID Contenedor MODELO LIS-CONT.. " + e);
-        }
+        } 
         return rs;
     }
 }

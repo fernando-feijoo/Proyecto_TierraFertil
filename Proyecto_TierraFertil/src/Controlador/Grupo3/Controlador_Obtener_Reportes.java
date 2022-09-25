@@ -24,8 +24,10 @@ public class Controlador_Obtener_Reportes implements MouseListener{
         this.vistaObtReport = vistaObtReport;
         this.vistaObtReport.boton_Buscar.addMouseListener(this);
         this.vistaObtReport.tabla_reporte_contenedores.addMouseListener(this);
+    }
+    
+    public void cargaDatosInicial(){
         this.busquedaDatos();
-
     }
     
      public void busquedaDatos() {
@@ -105,12 +107,10 @@ public class Controlador_Obtener_Reportes implements MouseListener{
             this.busquedaDatos();
         }
         if (this.vistaObtReport.tabla_reporte_contenedores.getSelectedColumn() == 9) {
-            
 
         }
     }
     
-
     @Override
     public void mousePressed(MouseEvent e) {
     }

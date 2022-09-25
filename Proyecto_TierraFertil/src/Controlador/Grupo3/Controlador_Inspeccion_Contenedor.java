@@ -15,8 +15,8 @@ import javax.swing.JOptionPane;
 public class Controlador_Inspeccion_Contenedor implements MouseListener, KeyListener {
 
     Vista_Llegada vistaLlegada;
-    Modelo_Inspeccion_Contenedor modeloInspCont = new Modelo_Inspeccion_Contenedor();
-    Modelo_Contenedores modeloInsContenedor = new Modelo_Contenedores();
+    Modelo_Inspeccion_Contenedor modeloInspCont = Modelo_Inspeccion_Contenedor.getInstancia();
+    Modelo_Contenedores modeloInsContenedor = Modelo_Contenedores.getInstancia();
     ResultSet rs, rsD, rsC;
     ;
     public static int idContenedor;
@@ -30,8 +30,8 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, KeyList
     public Controlador_Inspeccion_Contenedor(Vista_Llegada vistaLlegada) {
         this.vistaLlegada = vistaLlegada;
         this.vistaLlegada.btn_siguiente_inspCont.addMouseListener(this);
-        
         this.vistaLlegada.inspCont_obseraciones.addKeyListener(this);
+        this.vistaLlegada.boton_home.addMouseListener(this);
         
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(2, false);
         this.vistaLlegada.jp_grupoOpciones_datosLlegada.setEnabledAt(3, false);
@@ -224,15 +224,15 @@ public class Controlador_Inspeccion_Contenedor implements MouseListener, KeyList
         }
         
     }
-    
-    
 
     @Override
     public void mouseClicked(MouseEvent e
     ) {
         if (e.getSource() == this.vistaLlegada.btn_siguiente_inspCont) {
-            
-            Completo();
+            this.Completo();
+        }
+        if (e.getSource() == this.vistaLlegada.boton_home) {
+            this.borrarCamposInspCont();
         }
     }
 

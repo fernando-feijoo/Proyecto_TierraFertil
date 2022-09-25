@@ -20,7 +20,7 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
     Modelo_Evaluacion_Datos modeloEvaluacionCalidad = new Modelo_Evaluacion_Datos();
 
     ResultSet rs;
-
+    ResultSet rsCargado;
     public Controlador_Evaluacion_Datos(Vista_Evaluacion_Total vistaEvaluacion) {
         this.vistaEvaluacion = vistaEvaluacion;
 
@@ -84,23 +84,22 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
 
 //                    } else {
 //                        System.out.println("Validacion Correcta");
-                        int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
-                       
-                        if (respuesta == 0) {
+                    int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
 
-                            modeloEvaluacionCalidad.guardarDatos();
-                            motrarIdEvaluacion();
-                            System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
-                            JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
+                    if (respuesta == 0) {
 
-                            //da acceso a la pestaña tabulacion 
-                            this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(1);
-                            this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
+                        modeloEvaluacionCalidad.guardarDatos();
+                        motrarIdEvaluacion();
+                        System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
+                        JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
 
-                        }
+                        //da acceso a la pestaña tabulacion 
+                        this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(1);
+                        this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
+
+                    }
 
 //                    }
-
                 }
 
             } catch (Exception ex) {
@@ -125,6 +124,9 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
             JOptionPane.showMessageDialog(vistaEvaluacion, "Error en mostrarIdEvaluacion. " + e);
         }
     }
+
+    
+
 
     @Override
     public void mousePressed(MouseEvent e) {

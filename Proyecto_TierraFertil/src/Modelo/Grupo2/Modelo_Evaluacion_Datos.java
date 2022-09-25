@@ -46,6 +46,17 @@ public class Modelo_Evaluacion_Datos {
          }
          return null;
      }
+     
+     public ResultSet mostrarDatos(){
+         try {
+             st = conexion.conectarBD().createStatement();
+             String sql = "";
+             rs = st.executeQuery(sql);
+         } catch (Exception e) {
+         }
+         return null;
+         
+     }
     
      
  

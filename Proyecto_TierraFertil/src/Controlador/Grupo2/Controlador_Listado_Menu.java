@@ -19,6 +19,7 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import sun.tools.jar.resources.jar;
+import Controlador.Grupo2.Controlador_Evaluacion_Tabulacion;
 
 public class Controlador_Listado_Menu implements MouseListener, KeyListener, ActionListener {
 
@@ -33,9 +34,6 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
         this.vistaListadoMenu.txt_buscar.addMouseListener(this);
         this.vistaListadoMenu.jb_buscar.addMouseListener(this);
         this.vistaListadoMenu.jb_eliminar.addMouseListener(this);
-        
-     
-
         mostrarDatos();
 
     }

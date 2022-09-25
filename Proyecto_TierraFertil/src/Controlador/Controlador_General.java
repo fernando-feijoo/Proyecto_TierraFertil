@@ -48,6 +48,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener, ComponentListener {
 
@@ -116,6 +117,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     //  Variables locales para usar en vista general de la clase.
     int xMouse, yMouse, contTemp = 0;
 
+    public static String id_evaluacion;
     //  Fin de variables locales de case.
     public Controlador_General(Vista_General vistaGeneral) {
         this.vistaGeneral = vistaGeneral;
@@ -135,6 +137,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuCampo.boton_campo_dos.addMouseListener(this);
         this.vistaMenuCampo.boton_listar_uno.addMouseListener(this);
         this.vistaCampo.btn_guardar_total.addActionListener(this);
+        this.vistaListaCampo.btn_actualizar.addActionListener(this);
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
@@ -517,6 +520,27 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.ctrlLargoDe.guardar_datos();
             this.ctrlAcepcias.guardar_asepcias();
             this.ctrlSeleEmp.guardar_datos();
+        }
+        if (ae.getSource()==this.vistaListaCampo.btn_actualizar) {
+             int fila = this.vistaListaCampo.tabla_campo.getSelectedRow();
+                this.id_evaluacion =(String) this.vistaListaCampo.tabla_campo.getValueAt(fila, 0);
+                
+                JOptionPane.showMessageDialog(this.vistaListaCampo, "El id de eva a actualizar es: "+this.id_evaluacion);
+                
+                int respuesta = JOptionPane.showConfirmDialog(this.vistaListaCampo, "¿Desea Actualizar el registro?", "ATENCION", JOptionPane.YES_OPTION);
+                if (respuesta == 0) {
+                    this.vistaListaCampo.dispose();
+                    this.vistaCampo.setBorder(null);
+                    this.vistaCampo.setVisible(true);
+                    
+                    this.ctrlSeleEmp.CargarDatosSE(id_evaluacion);
+                    this.ctrlLargoDe.CargarDatosGradoCalibre(id_evaluacion);
+                    this.ctrlGradoCalib.CargarDatosGradoCalibre(id_evaluacion);
+                    this.ctrlDetGene.CargarDatosDetallesGenerales(id_evaluacion);
+
+                    this.ctrlListarCamp.tabla_listado_campo();
+                }
+                DefaultTableModel tabla = (DefaultTableModel) this.vistaListaCampo.tabla_campo.getModel();
         }
     }
 

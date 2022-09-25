@@ -110,10 +110,10 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txt_fecha_eva = new com.toedter.calendar.JDateChooser();
-        txt_semana_eva = new com.toedter.components.JSpinField();
         Date date = new Date();
         SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         txt_hora_eva = new javax.swing.JSpinner(sm);
+        txt_semana_eva = new javax.swing.JSpinner();
         g1_grado_calibre = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -893,8 +893,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                     .addComponent(jLabel7))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_semana_eva, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                    .addComponent(txt_hora_eva))
+                    .addComponent(txt_hora_eva, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                    .addComponent(txt_semana_eva))
                 .addGap(75, 75, 75))
         );
         jPanel5Layout.setVerticalGroup(
@@ -914,7 +914,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
-                        .addComponent(txt_tipo_caja_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_tipo_caja_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_semana_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -924,8 +925,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                         .addGap(19, 19, 19)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txt_fecha_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)))
-                    .addComponent(txt_semana_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel5))))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
 
@@ -12064,7 +12064,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_seleccion_ct1;
     public javax.swing.JTextField txt_seleccion_ct2;
     public javax.swing.JTextField txt_seleccion_ct3;
-    public com.toedter.components.JSpinField txt_semana_eva;
+    public javax.swing.JSpinner txt_semana_eva;
     public javax.swing.JTextField txt_tipo_caja_eva;
     public javax.swing.JTextField txt_total_defectos;
     public javax.swing.JTextField txt_total_defectos1;

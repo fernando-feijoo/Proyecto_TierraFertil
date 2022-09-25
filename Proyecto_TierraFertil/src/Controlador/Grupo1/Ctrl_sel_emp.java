@@ -5,6 +5,7 @@ import Modelo.Grupo1.Mod_sel_emp;
 import Vista.Grupo1.Vista_campo_respaldo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -119,9 +120,29 @@ public class Ctrl_sel_emp implements ActionListener{
         } catch (SQLException ex) {
             Logger.getLogger(Ctrl_sel_emp.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
         
-        
+        public void CargarDatosSE (String dato_eva){
+//        mse.id_cargar=dato_eva;
+        JOptionPane.showMessageDialog(nn, "ID en largo_dedo es: "+dato_eva);
+//        try {
+////            ResultSet rs = mse.cargar_largo_dedo();
+//            while (rs.next()) {
+//
+////                this.id_ld_actualizable=rs.getInt(1);
+////                JOptionPane.showMessageDialog(nn, "ID local es: "+this.id_ld_actualizable);
+//                this.nn.txt_gc_f1_total.setText(rs.getString(2));
+//            }
+//            
+//            mla.id_ld_actualizable=id_ld_actualizable;
+//            ResultSet rsL = mla.cargar_datos_largo_dedo();
+//            while (rsL.next()) {                
+//                this.nn.txt_gc_f2_total.setText(rsL.getString(1));
+//                this.nn.txt_gc_f2_promedio.setText(rsL.getString(2));
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Ctrl_detalles_gen.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    }
         
     }
-
-}

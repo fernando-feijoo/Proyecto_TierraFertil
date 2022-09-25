@@ -172,8 +172,9 @@ public class Ctrl_gc_ld implements ActionListener{
         }
     }
     
-    public void CargarDatosDetallesGenerales (String dato_eva){
+    public void CargarDatosGradoCalibre (String dato_eva){
         mgl.id_cargar=dato_eva;
+        JOptionPane.showMessageDialog(nn, "ID en grado calibre es: "+dato_eva);
         try {
             ResultSet rs = mgl.cargar_grado_calibre();
             while (rs.next()) {

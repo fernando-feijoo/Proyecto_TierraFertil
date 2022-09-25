@@ -45,7 +45,7 @@ public class Ctrl_detalles_gen implements ActionListener {
         tipo_caja = this.nn.txt_tipo_caja_eva.getText();
         fecha_eva = fecha.format(this.nn.txt_fecha_eva.getDate()).toString();
         hora_eva = hora.format(this.nn.txt_hora_eva.getValue()).toString();
-        semana = this.nn.txt_semana_eva.getValue();
+        semana = (int) this.nn.txt_semana_eva.getValue();
     }
 
     public void guradar_datos_evaluacion() {
@@ -83,6 +83,7 @@ public class Ctrl_detalles_gen implements ActionListener {
     
     public void CargarDatosDetallesGenerales (String dato_eva){
         dg.id_cargar=dato_eva;
+        JOptionPane.showMessageDialog(nn, "ID en detalles generales es: "+dato_eva );
         try {
             ResultSet rs = dg.cargar_dg();
             while (rs.next()) {

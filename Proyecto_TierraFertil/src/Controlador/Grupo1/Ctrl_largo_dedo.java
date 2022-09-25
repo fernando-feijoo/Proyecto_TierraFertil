@@ -24,18 +24,6 @@ public class Ctrl_largo_dedo implements ActionListener {
         this.nn.btn_guardar_lardo_dedo.addActionListener(this);
         
         datos();
-        try {
-            id_ld=mla.id_ld();
-        
-        id_ld=id_ld;
-        System.out.println("El id actual de largo dedo es: "+id_ld);
-        
-        id_evalu=dg.id_evaluacion();
-        id_evalu=id_evalu;
-        System.out.println("El id actual de evaluacion en la vista ld: "+id_evalu);
-        } catch (SQLException ex) {
-            Logger.getLogger(Ctrl_largo_dedo.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     int c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,ctot,can6,can7,can8,can9,can10,can11;
@@ -51,11 +39,7 @@ public class Ctrl_largo_dedo implements ActionListener {
             this.nn.txt_gc_f2_total.setText(String.valueOf(ntot));
             this.nn.txt_gc_f2_promedio.setText(Double.toString(nprom));
         }else if (e.getSource()==this.nn.btn_guardar_lardo_dedo) {
-            try {
                 guardar_datos();
-            } catch (SQLException ex) {
-                Logger.getLogger(Ctrl_largo_dedo.class.getName()).log(Level.SEVERE, null, ex);
-            }
         }
     }
     
@@ -135,30 +119,35 @@ public class Ctrl_largo_dedo implements ActionListener {
                 ntot=(num6+num7+num8+num9+num10+num11); nprom=(ntot/ctot);    
         }
     
-    public void guardar_datos() throws SQLException{
-        mla.can6=can6; mla.can7=can7;
-        mla.can8=can8;mla.can9=can9;
-        mla.can10=can10; mla.can11=can11;
-        mla.cantot=ctot;
-        
-        mla.num6=num6; mla.num7=num7;
-        mla.num8=num8; mla.num9=num9;
-        mla.num10=num10; mla.num11=num11;
-        mla.numtot=ntot; mla.numprom=nprom;
-        
-        id_evalu=id_evalu+1;
-        mla.id_eva=id_evalu;
-        System.out.println("El id incrementable de evaluacion en la vista ld: "+id_evalu);
-        
-        id_ld=id_ld+1;
-        mla.id_max_ld=id_ld;
-        System.out.println("El id incrementable de largo dedo es: "+id_ld);
-        
-        boolean dat = mla.ld_can();
-        boolean dato = mla.ld_num();
-        
-        if (dat==true && dato==true) {
-            JOptionPane.showMessageDialog(nn, "Guardado");
+    public void guardar_datos() {
+        try {
+            mla.can6=can6; mla.can7=can7;
+            mla.can8=can8;mla.can9=can9;
+            mla.can10=can10; mla.can11=can11;
+            mla.cantot=ctot;
+            
+            mla.num6=num6; mla.num7=num7;
+            mla.num8=num8; mla.num9=num9;
+            mla.num10=num10; mla.num11=num11;
+            mla.numtot=ntot; mla.numprom=nprom;
+            
+            id_evalu=dg.id_evaluacion();
+            id_evalu=id_evalu;
+            mla.id_eva=id_evalu;
+            System.out.println("El id incrementable de evaluacion en la vista ld: "+id_evalu);
+            id_ld=mla.id_ld();
+            id_ld=id_ld+1;
+            mla.id_max_ld=id_ld;
+            System.out.println("El id incrementable de largo dedo es: "+id_ld);
+            
+            boolean dat = mla.ld_can();
+            boolean dato = mla.ld_num();
+            
+            if (dat==true && dato==true) {
+                JOptionPane.showMessageDialog(nn, "Guardado");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ctrl_largo_dedo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

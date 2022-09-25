@@ -22,18 +22,6 @@ public class Ctrl_gc_ld implements ActionListener{
         this.nn.btn_ok_gc.addActionListener(this);
         this.nn.btn_guardar_c_gc.addActionListener(this);
         datos();
-        try {
-            id_gc=mgl.id_gc();
-        
-        id_gc=id_gc;
-        System.out.println("El id actual de grado calibre es: "+id_gc);
-        
-        id_evalu=dg.id_evaluacion();
-        id_evalu=id_evalu;
-        System.out.println("El id actual de evaluacion en la vista gc: "+id_evalu);
-        } catch (SQLException ex) {
-            Logger.getLogger(Ctrl_gc_ld.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
     int c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47, c48, c49, c50, c51, c52, total; int id_gc, id_evalu;
     int n36, n37, n38, n39, n40, n41, n42, n43, n44, n45, n46, n47, n48, n49, n50, n51, n52;
@@ -70,11 +58,7 @@ public class Ctrl_gc_ld implements ActionListener{
             this.nn.n_gc_totalN.setText(Double.toString(nprom)); 
             
         }else if (e.getSource()==this.nn.btn_guardar_c_gc) {
-            try {
-                guardar_cantidad_gc ();
-            } catch (SQLException ex) {
-                Logger.getLogger(Ctrl_gc_ld.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                guardar_cantidad_gc ();     
         }
 }
     public void datos(){
@@ -128,59 +112,65 @@ public class Ctrl_gc_ld implements ActionListener{
             nprom=(ntotal/total);
         }      
     
-    public void guardar_cantidad_gc () throws SQLException{
+    public void guardar_cantidad_gc () {
         
-        mgl.cant36=Integer.parseInt(this.nn.c_gc_36.getText());
-        mgl.cant37=Integer.parseInt(this.nn.c_gc_37.getText());
-        mgl.cant38=Integer.parseInt(this.nn.c_gc_38.getText());
-        mgl.cant39=Integer.parseInt(this.nn.c_gc_39.getText());
-        mgl.cant40=Integer.parseInt(this.nn.c_gc_40.getText());
-        mgl.cant41=Integer.parseInt(this.nn.c_gc_41.getText());
-        mgl.cant42=Integer.parseInt(this.nn.c_gc_42.getText());
-        mgl.cant43=Integer.parseInt(this.nn.c_gc_43.getText());
-        mgl.cant44=Integer.parseInt(this.nn.c_gc_44.getText());
-        mgl.cant45=Integer.parseInt(this.nn.c_gc_45.getText());
-        mgl.cant46=Integer.parseInt(this.nn.c_gc_46.getText());
-        mgl.cant47=Integer.parseInt(this.nn.c_gc_47.getText());
-        mgl.cant48=Integer.parseInt(this.nn.c_gc_48.getText());
-        mgl.cant49=Integer.parseInt(this.nn.c_gc_49.getText());
-        mgl.cant50=Integer.parseInt(this.nn.c_gc_50.getText());
-        mgl.cant51=Integer.parseInt(this.nn.c_gc_51.getText());
-        mgl.cant52=Integer.parseInt(this.nn.c_gc_52.getText());
-        mgl.cantTotal=Integer.parseInt(this.nn.c_gc_total.getText());
-        
-        mgl.num36=Integer.parseInt(this.nn.n_gc_36.getText());
-        mgl.num37=Integer.parseInt(this.nn.n_gc_37.getText());
-        mgl.num38=Integer.parseInt(this.nn.n_gc_38.getText());
-        mgl.num39=Integer.parseInt(this.nn.n_gc_39.getText());
-        mgl.num40=Integer.parseInt(this.nn.n_gc_40.getText());
-        mgl.num41=Integer.parseInt(this.nn.n_gc_41.getText());
-        mgl.num42=Integer.parseInt(this.nn.n_gc_42.getText());
-        mgl.num43=Integer.parseInt(this.nn.n_gc_43.getText());
-        mgl.num44=Integer.parseInt(this.nn.n_gc_44.getText());
-        mgl.num45=Integer.parseInt(this.nn.n_gc_45.getText());
-        mgl.num46=Integer.parseInt(this.nn.n_gc_46.getText());
-        mgl.num47=Integer.parseInt(this.nn.n_gc_47.getText());
-        mgl.num48=Integer.parseInt(this.nn.n_gc_48.getText());
-        mgl.num49=Integer.parseInt(this.nn.n_gc_49.getText());
-        mgl.num50=Integer.parseInt(this.nn.n_gc_50.getText());
-        mgl.num51=Integer.parseInt(this.nn.n_gc_51.getText());
-        mgl.num52=Integer.parseInt(this.nn.n_gc_52.getText());
-        mgl.total_l=Double.parseDouble(this.nn.n_gc_total.getText());
-        mgl.promedio_l=Double.parseDouble(this.nn.n_gc_totalN.getText());
-        
-        id_evalu=id_evalu+1;
-        mgl.id_evaluacion=id_evalu;
-        System.out.println("El id de evaluacion incrementable en la vista grado calibre es: "+id_evalu);
-        id_gc=id_gc+1;
-        mgl.id_max=id_gc;
-        System.out.println("El id incrementable de grado calibre es: "+id_gc);
-        
-        boolean dat = mgl.gc_cantidad();
-        boolean dato = mgl.gc_numeros();
-        
-        if (dat==true && dato==true) {
-            JOptionPane.showMessageDialog(nn, "Guardado");
+        try {
+            mgl.cant36=Integer.parseInt(this.nn.c_gc_36.getText());
+            mgl.cant37=Integer.parseInt(this.nn.c_gc_37.getText());
+            mgl.cant38=Integer.parseInt(this.nn.c_gc_38.getText());
+            mgl.cant39=Integer.parseInt(this.nn.c_gc_39.getText());
+            mgl.cant40=Integer.parseInt(this.nn.c_gc_40.getText());
+            mgl.cant41=Integer.parseInt(this.nn.c_gc_41.getText());
+            mgl.cant42=Integer.parseInt(this.nn.c_gc_42.getText());
+            mgl.cant43=Integer.parseInt(this.nn.c_gc_43.getText());
+            mgl.cant44=Integer.parseInt(this.nn.c_gc_44.getText());
+            mgl.cant45=Integer.parseInt(this.nn.c_gc_45.getText());
+            mgl.cant46=Integer.parseInt(this.nn.c_gc_46.getText());
+            mgl.cant47=Integer.parseInt(this.nn.c_gc_47.getText());
+            mgl.cant48=Integer.parseInt(this.nn.c_gc_48.getText());
+            mgl.cant49=Integer.parseInt(this.nn.c_gc_49.getText());
+            mgl.cant50=Integer.parseInt(this.nn.c_gc_50.getText());
+            mgl.cant51=Integer.parseInt(this.nn.c_gc_51.getText());
+            mgl.cant52=Integer.parseInt(this.nn.c_gc_52.getText());
+            mgl.cantTotal=Integer.parseInt(this.nn.c_gc_total.getText());
+            
+            mgl.num36=Integer.parseInt(this.nn.n_gc_36.getText());
+            mgl.num37=Integer.parseInt(this.nn.n_gc_37.getText());
+            mgl.num38=Integer.parseInt(this.nn.n_gc_38.getText());
+            mgl.num39=Integer.parseInt(this.nn.n_gc_39.getText());
+            mgl.num40=Integer.parseInt(this.nn.n_gc_40.getText());
+            mgl.num41=Integer.parseInt(this.nn.n_gc_41.getText());
+            mgl.num42=Integer.parseInt(this.nn.n_gc_42.getText());
+            mgl.num43=Integer.parseInt(this.nn.n_gc_43.getText());
+            mgl.num44=Integer.parseInt(this.nn.n_gc_44.getText());
+            mgl.num45=Integer.parseInt(this.nn.n_gc_45.getText());
+            mgl.num46=Integer.parseInt(this.nn.n_gc_46.getText());
+            mgl.num47=Integer.parseInt(this.nn.n_gc_47.getText());
+            mgl.num48=Integer.parseInt(this.nn.n_gc_48.getText());
+            mgl.num49=Integer.parseInt(this.nn.n_gc_49.getText());
+            mgl.num50=Integer.parseInt(this.nn.n_gc_50.getText());
+            mgl.num51=Integer.parseInt(this.nn.n_gc_51.getText());
+            mgl.num52=Integer.parseInt(this.nn.n_gc_52.getText());
+            mgl.total_l=Double.parseDouble(this.nn.n_gc_total.getText());
+            mgl.promedio_l=Double.parseDouble(this.nn.n_gc_totalN.getText());
+            
+            id_evalu=dg.id_evaluacion();
+            id_evalu=id_evalu;
+            mgl.id_evaluacion=id_evalu;
+            System.out.println("El id de evaluacion incrementable en la vista grado calibre es: "+id_evalu);
+            id_gc=mgl.id_gc();
+            id_gc=id_gc+1;
+            mgl.id_max=id_gc;
+            System.out.println("El id incrementable de grado calibre es: "+id_gc);
+            
+            boolean dat = mgl.gc_cantidad();
+            boolean dato = mgl.gc_numeros();
+            
+            if (dat==true && dato==true) {
+                JOptionPane.showMessageDialog(nn, "Guardado");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ctrl_gc_ld.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     }

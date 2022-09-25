@@ -24,10 +24,6 @@ public class Ctrl_detalles_gen implements ActionListener {
 
     public Ctrl_detalles_gen(Vista_campo_respaldo nn) {
         this.nn = nn;
-        //cbx_semanas();  
-//        id_eva = dg.id_evaluacion();
-//        id_eva = id_eva;
-//        System.out.println("El id actual de evaluacion es: " + id_eva);
         this.nn.btn_guardar_detgenerales.addActionListener(this);
     }
 
@@ -67,6 +63,7 @@ public class Ctrl_detalles_gen implements ActionListener {
             dg.hora_eva = hora_eva;
             dg.semana = semana;
 
+            id_eva = dg.id_evaluacion();
             id_eva = id_eva + 1;
             dg.id_eva = id_eva;
             System.out.println("El id incrementable de evaluacion es: " + id_eva);

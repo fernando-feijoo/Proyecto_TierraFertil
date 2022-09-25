@@ -41,8 +41,8 @@ public class Mod_detalles_gen {
         st = con.conectarBD().createStatement();
         st.executeUpdate("INSERT INTO public.evaluaciones(\n"
                 + "	id, cod_evaluacion, fecha_eva, hora_eva, vapor, tipo_caja, placa_vehivulo, "
-                + "     id_semana, codigo_inspector, codigo_productor)\n"
-                + "	VALUES ("+id_eva+",'"+cod_eva+"', '"+fecha_eva+"', '"+hora_eva+"', '"+vapor+"','"+tipo_caja+"', '"+placa+"', "+semana+", '"+this.cod_insp+"', '"+this.cod_prod+"');");
+                + "     id_semana, codigo_inspector, codigo_productor, estado)\n"
+                + "	VALUES ("+id_eva+",'"+cod_eva+"', '"+fecha_eva+"', '"+hora_eva+"', '"+vapor+"','"+tipo_caja+"', '"+placa+"', "+semana+", '"+this.cod_insp+"', '"+this.cod_prod+"', 'Activo');");
         return true;
     }
 }

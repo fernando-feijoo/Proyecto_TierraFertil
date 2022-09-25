@@ -12,7 +12,7 @@ public class Modelo_Evaluacion_Defectos {
     ResultSet rs;
     Statement st;
 
-    public String nombre, pcmd;
+    public String nombre, pcmd, codigoCargar2;
     public int id_detalle, id_defecto, total_defectos;
     public int id_calculo;
 
@@ -59,6 +59,22 @@ public class Modelo_Evaluacion_Defectos {
             JOptionPane.showMessageDialog(null, "Error en obtenerTotalGajos");
         }
         return null;
+    }
+    
+     public ResultSet selecionDefectos() {
+        try {
+            st =conexion.conectarBD().createStatement();
+            String sql = "SELECT DISTINCT eva.nombre, eva.total_defectos  FROM defectos_detalle_eva eva INNER JOIN"
+                    + " detalle_evaluacion_emp emp on emp.id = eva.id_detalle_ev INNER JOIN evaluaciones_empacadora eva_emp ON "
+                    + "eva_emp.id = emp.id_evaluacion WHERE eva_emp.codigo = '"+this.codigoCargar2+"';";
+            rs = st.executeQuery(sql);
+
+            return rs;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error en seleccionDefectos modeloDefectos "+e);
+        }
+        return null;
+
     }
 
 }

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>src/Modelo/Grupo2/Modelo_Evaluacion_Tabulacion.java</url>
-            <bookmark id="1">
-                <name/>
-                <line>1</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Daniel%20Bravo/OneDrive/Documentos/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo2/Controlador_Listado_Menu.java</file>
             <file>file:/C:/Users/Daniel%20Bravo/OneDrive/Documentos/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo2/Modelo_Evaluacion_Listado.java</file>
+=======
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo1/Mod_detalles_gen.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo1/Mod_gc_ld.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo1/Vista_campo_respaldo.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo1/Mod_lardo_dedo.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo1/Ctrl_detalles_gen.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Controlador_General.java</file>
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo1/Ctrl_gc_ld.java</file>
+>>>>>>> 7be226c8427c2d81f1468591254f73600cf4d9f3
         </group>
     </open-files>
 </project-private>

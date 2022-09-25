@@ -14,6 +14,7 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
     //Instanciaciones de la vista y modelo
     Vista_Evaluacion_Total vistaEvaluacion;
     Modelo_Evaluacion_Tabulacion modeloEvaluacionTabulacion = new Modelo_Evaluacion_Tabulacion();
+
     ResultSet rs;
     ResultSet rsCargar;
 
@@ -45,9 +46,10 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
                 int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para continuar presione SI. ", "ATENCION", JOptionPane.YES_OPTION);
                 if (respuesta == 0) {
                     modeloEvaluacionTabulacion.guardarTabulacion();
+                    mostrarTabulacion();
+
                     System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente");
                     JOptionPane.showMessageDialog(vistaEvaluacion, "Datos guardados correctamente ", "Registros", JOptionPane.INFORMATION_MESSAGE);
-                    mostrarTabulacion();
 
                 }
                 if (respuesta == 1) {
@@ -106,23 +108,28 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
         }
     }
 
-    public void cargarDatos() {
-        rsCargar = modeloEvaluacionTabulacion.consultarTabulacion();
+    public void cargarTabulacion(String valorTabu) {
         try {
+
+            modeloEvaluacionTabulacion.codigoCargar = valorTabu;
+            modeloEvaluacionTabulacion.selecionTabulacion();
+            rsCargar = modeloEvaluacionTabulacion.selecionTabulacion();
+
             while (rsCargar.next()) {
-                this.vistaEvaluacion.txt_caja_insp.setText(rsCargar.getString("caja_inspeccionada"));
-                this.vistaEvaluacion.txt_embalador.setText(rsCargar.getString("embalador"));
-                this.vistaEvaluacion.txt_peso.setText(rsCargar.getString("peso_neto"));
-                this.vistaEvaluacion.txt_par4.setText(rsCargar.getString("par4"));
-                this.vistaEvaluacion.txt_par6.setText(rsCargar.getString("par6"));
-                this.vistaEvaluacion.txt_par8.setText(rsCargar.getString("par8"));
-                this.vistaEvaluacion.txt_inpar5.setText(rsCargar.getString("impar5"));
-                this.vistaEvaluacion.txt_inpar7.setText(rsCargar.getString("impar7"));
-                
+
+                this.vistaEvaluacion.txt_caja_insp.setText(rsCargar.getString(1));
+                this.vistaEvaluacion.txt_embalador.setText(rsCargar.getString(2));
+                this.vistaEvaluacion.txt_peso_neto.setText(rsCargar.getString(3));
+                this.vistaEvaluacion.txt_par4.setText(rsCargar.getString(4));
+                this.vistaEvaluacion.txt_par6.setText(rsCargar.getString(5));
+                this.vistaEvaluacion.txt_par8.setText(rsCargar.getString(6));
+                this.vistaEvaluacion.txt_inpar5.setText(rsCargar.getString(7));
+                this.vistaEvaluacion.txt_inpar7.setText(rsCargar.getString(8));
 
             }
+
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(vistaEvaluacion, "Error en cargar datos");
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Error en cargarTabulacion" + e);
         }
     }
 

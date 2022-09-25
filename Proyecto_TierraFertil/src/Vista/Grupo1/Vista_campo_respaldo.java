@@ -12,6 +12,7 @@ import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
 
 /**
@@ -108,11 +109,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txt_hora_eva = new com.toedter.components.JSpinField();
         txt_fecha_eva = new com.toedter.calendar.JDateChooser();
         txt_semana_eva = new com.toedter.components.JSpinField();
-        jSpinner1 = new javax.swing.JSpinner();
-        prueba = new javax.swing.JTextField();
+        Date date = new Date();
+        SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
+        txt_hora_eva = new javax.swing.JSpinner(sm);
         btn_guardar_detgenerales = new javax.swing.JButton();
         g1_grado_calibre = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -715,11 +716,12 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jLabel157 = new javax.swing.JLabel();
         txt_observacion = new javax.swing.JTextField();
         btn_ok_sel_emp = new javax.swing.JButton();
+        btn_guardar_total = new javax.swing.JButton();
 
         setBorder(null);
-        setMaximumSize(new java.awt.Dimension(965, 629));
-        setMinimumSize(new java.awt.Dimension(965, 629));
-        setPreferredSize(new java.awt.Dimension(965, 629));
+        setMaximumSize(new java.awt.Dimension(965, 605));
+        setMinimumSize(new java.awt.Dimension(965, 605));
+        setPreferredSize(new java.awt.Dimension(965, 605));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         g1_General.setMaximumSize(new java.awt.Dimension(965, 605));
@@ -804,18 +806,18 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel41)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_cod_insp))
+                        .addComponent(jLabel43)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_apellido_insp, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre_insp, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel43)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txt_apellido_insp, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel41))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_cod_insp, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addComponent(txt_nombre_insp, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))))
+                .addGap(208, 208, 208))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -827,10 +829,12 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(txt_nombre_insp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_nombre_insp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
                     .addComponent(txt_apellido_insp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de la Evaluación"));
@@ -856,7 +860,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel7.setText("SEMANA:");
 
-        txt_hora_eva.setToolTipText("");
+        JSpinner.DateEditor de = new JSpinner.DateEditor(txt_hora_eva, "HH:mm:ss");
+        txt_hora_eva.setEditor(de);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -889,20 +894,14 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                     .addComponent(txt_placa_vehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_tipo_caja_eva, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel7))
-                        .addGap(29, 29, 29))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(prueba)
-                        .addGap(18, 18, 18)))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_semana_eva, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_hora_eva, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54))
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel7))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_semana_eva, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                    .addComponent(txt_hora_eva))
+                .addGap(75, 75, 75))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -914,9 +913,9 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                         .addComponent(txt_cod_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txt_placa_vehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel9))
-                    .addComponent(jLabel6)
-                    .addComponent(txt_hora_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel9)
+                        .addComponent(txt_hora_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -932,13 +931,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txt_fecha_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(txt_semana_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(prueba, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(47, Short.MAX_VALUE))
+                    .addComponent(txt_semana_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         btn_guardar_detgenerales.setText("Guardar");
@@ -950,24 +944,22 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
             .addGroup(g1_detalles_generalesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(g1_detalles_generalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, g1_detalles_generalesLayout.createSequentialGroup()
-                        .addGroup(g1_detalles_generalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(g1_detalles_generalesLayout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(29, 29, 29))
                     .addGroup(g1_detalles_generalesLayout.createSequentialGroup()
                         .addComponent(btn_guardar_detgenerales)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_sig_det_general)
-                        .addGap(50, 50, 50))))
+                        .addGap(24, 24, 24))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, g1_detalles_generalesLayout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(29, 29, 29))
         );
         g1_detalles_generalesLayout.setVerticalGroup(
             g1_detalles_generalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(g1_detalles_generalesLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(48, 48, 48)
                 .addGroup(g1_detalles_generalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2909,7 +2901,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                             .addGroup(g1_grado_calibreLayout.createSequentialGroup()
                                 .addComponent(btn_ok_gc)
                                 .addGap(47, 47, 47)))
-                        .addContainerGap(22, Short.MAX_VALUE))
+                        .addContainerGap(26, Short.MAX_VALUE))
                     .addGroup(g1_grado_calibreLayout.createSequentialGroup()
                         .addGroup(g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(g1_grado_calibreLayout.createSequentialGroup()
@@ -2919,7 +2911,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                                 .addComponent(btn_guardar_c_gc)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btn_sig_gc)))
-                        .addGap(0, 766, Short.MAX_VALUE))))
+                        .addGap(0, 793, Short.MAX_VALUE))))
         );
         g1_grado_calibreLayout.setVerticalGroup(
             g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5334,7 +5326,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel80Layout.setVerticalGroup(
             jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel80Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(jLabel122))
         );
 
@@ -5539,7 +5531,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel84Layout.setVerticalGroup(
             jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel84Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(jLabel126))
         );
 
@@ -5566,7 +5558,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel85Layout.setVerticalGroup(
             jPanel85Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel85Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(jLabel127))
         );
 
@@ -5753,7 +5745,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel94Layout.setVerticalGroup(
             jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel94Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(jLabel136))
         );
 
@@ -5860,7 +5852,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel99Layout.setVerticalGroup(
             jPanel99Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel99Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(jLabel141))
         );
 
@@ -6551,6 +6543,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_peso_neto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 49, -1));
 
         txt_sel_cluster1.setText("0");
+        txt_sel_cluster1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_cluster1FocusLost(evt);
+            }
+        });
+        txt_sel_cluster1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_cluster1MouseClicked(evt);
+            }
+        });
         txt_sel_cluster1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_cluster1ActionPerformed(evt);
@@ -6559,6 +6561,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_cluster1, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 6, 49, -1));
 
         txt_sel_ph1.setText("0");
+        txt_sel_ph1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_ph1FocusLost(evt);
+            }
+        });
+        txt_sel_ph1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ph1MouseClicked(evt);
+            }
+        });
         txt_sel_ph1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ph1ActionPerformed(evt);
@@ -6568,6 +6580,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_seleccion_ct1.setText("0");
         txt_seleccion_ct1.setVerifyInputWhenFocusTarget(false);
+        txt_seleccion_ct1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_seleccion_ct1MouseClicked(evt);
+            }
+        });
         txt_seleccion_ct1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_seleccion_ct1ActionPerformed(evt);
@@ -6576,6 +6593,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_seleccion_ct1, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 8, 26, 20));
 
         txt_sel_br1.setText("0");
+        txt_sel_br1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_br1FocusLost(evt);
+            }
+        });
+        txt_sel_br1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_br1MouseClicked(evt);
+            }
+        });
         txt_sel_br1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_br1ActionPerformed(evt);
@@ -6584,6 +6611,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_br1, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 6, 26, 22));
 
         txt_sel_cc1.setText("0");
+        txt_sel_cc1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_cc1FocusLost(evt);
+            }
+        });
+        txt_sel_cc1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_cc1MouseClicked(evt);
+            }
+        });
         txt_sel_cc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_cc1ActionPerformed(evt);
@@ -6593,6 +6630,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ps1.setText("0");
         txt_sel_ps1.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ps1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ps1MouseClicked(evt);
+            }
+        });
         txt_sel_ps1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ps1ActionPerformed(evt);
@@ -6602,6 +6644,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ni1.setText("0");
         txt_sel_ni1.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ni1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ni1MouseClicked(evt);
+            }
+        });
         txt_sel_ni1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ni1ActionPerformed(evt);
@@ -6610,6 +6657,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_ni1, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 6, 26, 22));
 
         txt_sel_lf1.setText("0");
+        txt_sel_lf1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_lf1MouseClicked(evt);
+            }
+        });
         txt_sel_lf1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_lf1ActionPerformed(evt);
@@ -6619,6 +6671,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_dp1.setText("0");
         txt_sel_dp1.setVerifyInputWhenFocusTarget(false);
+        txt_sel_dp1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_dp1MouseClicked(evt);
+            }
+        });
         txt_sel_dp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_dp1ActionPerformed(evt);
@@ -6628,6 +6685,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_sc1.setText("0");
         txt_sel_sc1.setVerifyInputWhenFocusTarget(false);
+        txt_sel_sc1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sc1MouseClicked(evt);
+            }
+        });
         txt_sel_sc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sc1ActionPerformed(evt);
@@ -6636,6 +6698,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_sc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 6, 26, 22));
 
         txt_sel_yb1.setText("0");
+        txt_sel_yb1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_yb1MouseClicked(evt);
+            }
+        });
         txt_sel_yb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_yb1ActionPerformed(evt);
@@ -6645,6 +6712,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_tf1.setText("0");
         txt_sel_tf1.setVerifyInputWhenFocusTarget(false);
+        txt_sel_tf1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_tf1MouseClicked(evt);
+            }
+        });
         txt_sel_tf1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_tf1ActionPerformed(evt);
@@ -6654,6 +6726,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_tc1.setText("0");
         txt_sel_tc1.setVerifyInputWhenFocusTarget(false);
+        txt_sel_tc1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_tc1MouseClicked(evt);
+            }
+        });
         txt_sel_tc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_tc1ActionPerformed(evt);
@@ -6662,6 +6739,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_tc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 6, 26, 22));
 
         txt_sel_sr1.setText("0");
+        txt_sel_sr1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sr1MouseClicked(evt);
+            }
+        });
         txt_sel_sr1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sr1ActionPerformed(evt);
@@ -6670,6 +6752,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_sr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 6, 26, 22));
 
         txt_sel_sk1.setText("0");
+        txt_sel_sk1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sk1MouseClicked(evt);
+            }
+        });
         txt_sel_sk1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sk1ActionPerformed(evt);
@@ -6685,6 +6772,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_peso_neto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 42, 49, -1));
 
         txt_sel_cluster2.setText("0");
+        txt_sel_cluster2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_cluster2FocusLost(evt);
+            }
+        });
+        txt_sel_cluster2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_cluster2MouseClicked(evt);
+            }
+        });
         txt_sel_cluster2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_cluster2ActionPerformed(evt);
@@ -6700,6 +6797,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_peso_neto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 78, 49, -1));
 
         txt_sel_cluster3.setText("0");
+        txt_sel_cluster3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_cluster3FocusLost(evt);
+            }
+        });
+        txt_sel_cluster3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_cluster3MouseClicked(evt);
+            }
+        });
         txt_sel_cluster3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_cluster3ActionPerformed(evt);
@@ -6709,6 +6816,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ns1.setText("0");
         txt_sel_ns1.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ns1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ns1MouseClicked(evt);
+            }
+        });
         txt_sel_ns1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ns1ActionPerformed(evt);
@@ -6717,6 +6829,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_ns1, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 6, 26, 22));
 
         txt_sel_ph2.setText("0");
+        txt_sel_ph2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_ph2FocusLost(evt);
+            }
+        });
+        txt_sel_ph2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ph2MouseClicked(evt);
+            }
+        });
         txt_sel_ph2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ph2ActionPerformed(evt);
@@ -6725,6 +6847,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_ph2, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 42, 30, -1));
 
         txt_sel_br2.setText("0");
+        txt_sel_br2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_br2FocusLost(evt);
+            }
+        });
+        txt_sel_br2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_br2MouseClicked(evt);
+            }
+        });
         txt_sel_br2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_br2ActionPerformed(evt);
@@ -6733,6 +6865,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_br2, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 42, 26, 22));
 
         txt_sel_cc2.setText("0");
+        txt_sel_cc2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_cc2FocusLost(evt);
+            }
+        });
+        txt_sel_cc2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_cc2MouseClicked(evt);
+            }
+        });
         txt_sel_cc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_cc2ActionPerformed(evt);
@@ -6742,6 +6884,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_seleccion_ct2.setText("0");
         txt_seleccion_ct2.setVerifyInputWhenFocusTarget(false);
+        txt_seleccion_ct2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_seleccion_ct2MouseClicked(evt);
+            }
+        });
         txt_seleccion_ct2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_seleccion_ct2ActionPerformed(evt);
@@ -6750,6 +6897,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_seleccion_ct2, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 42, 26, 22));
 
         txt_sel_lf2.setText("0");
+        txt_sel_lf2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_lf2MouseClicked(evt);
+            }
+        });
         txt_sel_lf2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_lf2ActionPerformed(evt);
@@ -6759,6 +6911,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ni2.setText("0");
         txt_sel_ni2.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ni2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ni2MouseClicked(evt);
+            }
+        });
         txt_sel_ni2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ni2ActionPerformed(evt);
@@ -6768,6 +6925,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ns2.setText("0");
         txt_sel_ns2.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ns2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ns2MouseClicked(evt);
+            }
+        });
         txt_sel_ns2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ns2ActionPerformed(evt);
@@ -6777,6 +6939,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ps2.setText("0");
         txt_sel_ps2.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ps2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ps2MouseClicked(evt);
+            }
+        });
         txt_sel_ps2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ps2ActionPerformed(evt);
@@ -6785,6 +6952,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_ps2, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 42, 26, 22));
 
         txt_sel_sk2.setText("0");
+        txt_sel_sk2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sk2MouseClicked(evt);
+            }
+        });
         txt_sel_sk2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sk2ActionPerformed(evt);
@@ -6793,6 +6965,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_sk2, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 42, 26, 22));
 
         txt_sel_sr2.setText("0");
+        txt_sel_sr2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sr2MouseClicked(evt);
+            }
+        });
         txt_sel_sr2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sr2ActionPerformed(evt);
@@ -6802,6 +6979,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_tc2.setText("0");
         txt_sel_tc2.setVerifyInputWhenFocusTarget(false);
+        txt_sel_tc2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_tc2MouseClicked(evt);
+            }
+        });
         txt_sel_tc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_tc2ActionPerformed(evt);
@@ -6811,6 +6993,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_tf2.setText("0");
         txt_sel_tf2.setVerifyInputWhenFocusTarget(false);
+        txt_sel_tf2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_tf2MouseClicked(evt);
+            }
+        });
         txt_sel_tf2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_tf2ActionPerformed(evt);
@@ -6819,6 +7006,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_tf2, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 42, 26, 22));
 
         txt_sel_yb2.setText("0");
+        txt_sel_yb2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_yb2MouseClicked(evt);
+            }
+        });
         txt_sel_yb2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_yb2ActionPerformed(evt);
@@ -6828,6 +7020,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_sc2.setText("0");
         txt_sel_sc2.setVerifyInputWhenFocusTarget(false);
+        txt_sel_sc2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sc2MouseClicked(evt);
+            }
+        });
         txt_sel_sc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sc2ActionPerformed(evt);
@@ -6837,6 +7034,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_dp2.setText("0");
         txt_sel_dp2.setVerifyInputWhenFocusTarget(false);
+        txt_sel_dp2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_dp2MouseClicked(evt);
+            }
+        });
         txt_sel_dp2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_dp2ActionPerformed(evt);
@@ -6845,6 +7047,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_dp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 42, 26, 22));
 
         txt_sel_ph3.setText("0");
+        txt_sel_ph3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_ph3FocusLost(evt);
+            }
+        });
+        txt_sel_ph3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ph3MouseClicked(evt);
+            }
+        });
         txt_sel_ph3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ph3ActionPerformed(evt);
@@ -6853,6 +7065,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_ph3, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 78, 30, -1));
 
         txt_sel_br3.setText("0");
+        txt_sel_br3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_br3FocusLost(evt);
+            }
+        });
+        txt_sel_br3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_br3MouseClicked(evt);
+            }
+        });
         txt_sel_br3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_br3ActionPerformed(evt);
@@ -6861,6 +7083,16 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_br3, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 78, 26, 22));
 
         txt_sel_cc3.setText("0");
+        txt_sel_cc3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_sel_cc3FocusLost(evt);
+            }
+        });
+        txt_sel_cc3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_cc3MouseClicked(evt);
+            }
+        });
         txt_sel_cc3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_cc3ActionPerformed(evt);
@@ -6870,6 +7102,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_seleccion_ct3.setText("0");
         txt_seleccion_ct3.setVerifyInputWhenFocusTarget(false);
+        txt_seleccion_ct3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_seleccion_ct3MouseClicked(evt);
+            }
+        });
         txt_seleccion_ct3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_seleccion_ct3ActionPerformed(evt);
@@ -6878,6 +7115,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_seleccion_ct3, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 78, 26, 22));
 
         txt_sel_lf3.setText("0");
+        txt_sel_lf3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_lf3MouseClicked(evt);
+            }
+        });
         txt_sel_lf3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_lf3ActionPerformed(evt);
@@ -6887,6 +7129,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ni3.setText("0");
         txt_sel_ni3.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ni3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ni3MouseClicked(evt);
+            }
+        });
         txt_sel_ni3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ni3ActionPerformed(evt);
@@ -6896,6 +7143,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ns3.setText("0");
         txt_sel_ns3.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ns3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ns3MouseClicked(evt);
+            }
+        });
         txt_sel_ns3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ns3ActionPerformed(evt);
@@ -6905,6 +7157,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_ps3.setText("0");
         txt_sel_ps3.setVerifyInputWhenFocusTarget(false);
+        txt_sel_ps3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_ps3MouseClicked(evt);
+            }
+        });
         txt_sel_ps3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_ps3ActionPerformed(evt);
@@ -6913,6 +7170,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_ps3, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 78, 26, 22));
 
         txt_sel_sk3.setText("0");
+        txt_sel_sk3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sk3MouseClicked(evt);
+            }
+        });
         txt_sel_sk3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sk3ActionPerformed(evt);
@@ -6921,6 +7183,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_sk3, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 78, 26, 22));
 
         txt_sel_sr3.setText("0");
+        txt_sel_sr3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sr3MouseClicked(evt);
+            }
+        });
         txt_sel_sr3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sr3ActionPerformed(evt);
@@ -6930,6 +7197,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_tc3.setText("0");
         txt_sel_tc3.setVerifyInputWhenFocusTarget(false);
+        txt_sel_tc3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_tc3MouseClicked(evt);
+            }
+        });
         txt_sel_tc3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_tc3ActionPerformed(evt);
@@ -6939,6 +7211,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_tf3.setText("0");
         txt_sel_tf3.setVerifyInputWhenFocusTarget(false);
+        txt_sel_tf3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_tf3MouseClicked(evt);
+            }
+        });
         txt_sel_tf3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_tf3ActionPerformed(evt);
@@ -6947,6 +7224,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel118.add(txt_sel_tf3, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 78, 26, 22));
 
         txt_sel_yb3.setText("0");
+        txt_sel_yb3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_yb3MouseClicked(evt);
+            }
+        });
         txt_sel_yb3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_yb3ActionPerformed(evt);
@@ -6956,6 +7238,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_sc3.setText("0");
         txt_sel_sc3.setVerifyInputWhenFocusTarget(false);
+        txt_sel_sc3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_sc3MouseClicked(evt);
+            }
+        });
         txt_sel_sc3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_sc3ActionPerformed(evt);
@@ -6965,6 +7252,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         txt_sel_dp3.setText("0");
         txt_sel_dp3.setVerifyInputWhenFocusTarget(false);
+        txt_sel_dp3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_sel_dp3MouseClicked(evt);
+            }
+        });
         txt_sel_dp3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_sel_dp3ActionPerformed(evt);
@@ -6981,6 +7273,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt_empaq_br1.setText("0");
+        txt_empaq_br1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_br1MouseClicked(evt);
+            }
+        });
         txt_empaq_br1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_br1ActionPerformed(evt);
@@ -6989,6 +7286,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_br1, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 6, 28, 22));
 
         txt_empaq_sr1.setText("0");
+        txt_empaq_sr1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_sr1MouseClicked(evt);
+            }
+        });
         txt_empaq_sr1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_sr1ActionPerformed(evt);
@@ -6997,6 +7299,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_sr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 6, 28, 22));
 
         txt_empaq_srf1.setText("0");
+        txt_empaq_srf1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_srf1MouseClicked(evt);
+            }
+        });
         txt_empaq_srf1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_srf1ActionPerformed(evt);
@@ -7005,6 +7312,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_srf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 6, 28, 22));
 
         txt_empaq_dp1.setText("0");
+        txt_empaq_dp1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_dp1MouseClicked(evt);
+            }
+        });
         txt_empaq_dp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_dp1ActionPerformed(evt);
@@ -7013,6 +7325,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_dp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 6, 26, 22));
 
         txt_empaq_br2.setText("0");
+        txt_empaq_br2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_br2MouseClicked(evt);
+            }
+        });
         txt_empaq_br2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_br2ActionPerformed(evt);
@@ -7021,6 +7338,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_br2, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 42, 28, 22));
 
         txt_empaq_sr2.setText("0");
+        txt_empaq_sr2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_sr2MouseClicked(evt);
+            }
+        });
         txt_empaq_sr2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_sr2ActionPerformed(evt);
@@ -7029,6 +7351,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_sr2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 42, 28, 22));
 
         txt_empaq_srf2.setText("0");
+        txt_empaq_srf2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_srf2MouseClicked(evt);
+            }
+        });
         txt_empaq_srf2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_srf2ActionPerformed(evt);
@@ -7037,6 +7364,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_srf2, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 42, 28, 22));
 
         txt_empaq_dp2.setText("0");
+        txt_empaq_dp2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_dp2MouseClicked(evt);
+            }
+        });
         txt_empaq_dp2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_dp2ActionPerformed(evt);
@@ -7045,6 +7377,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_dp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 42, 26, 22));
 
         txt_empaq_br3.setText("0");
+        txt_empaq_br3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_br3MouseClicked(evt);
+            }
+        });
         txt_empaq_br3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_br3ActionPerformed(evt);
@@ -7053,6 +7390,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_br3, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 78, 28, 22));
 
         txt_empaq_sr3.setText("0");
+        txt_empaq_sr3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_sr3MouseClicked(evt);
+            }
+        });
         txt_empaq_sr3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_sr3ActionPerformed(evt);
@@ -7061,6 +7403,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_sr3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 78, 28, 22));
 
         txt_empaq_srf3.setText("0");
+        txt_empaq_srf3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_srf3MouseClicked(evt);
+            }
+        });
         txt_empaq_srf3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_srf3ActionPerformed(evt);
@@ -7069,6 +7416,11 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel121.add(txt_empaq_srf3, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 78, 28, 22));
 
         txt_empaq_dp3.setText("0");
+        txt_empaq_dp3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_empaq_dp3MouseClicked(evt);
+            }
+        });
         txt_empaq_dp3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_empaq_dp3ActionPerformed(evt);
@@ -7155,7 +7507,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
             .addGroup(jPanel125Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabel163)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         jPanel122.add(jPanel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 10, 30, 38));
@@ -7175,7 +7527,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         );
         jPanel126Layout.setVerticalGroup(
             jPanel126Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel164, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel164, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
         );
 
         jPanel122.add(jPanel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 420, 20));
@@ -7680,6 +8032,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         btn_ok_sel_emp.setText("OK");
 
+        btn_guardar_total.setText("GUARDAR");
+
         javax.swing.GroupLayout g1_sel_empLayout = new javax.swing.GroupLayout(g1_sel_emp);
         g1_sel_emp.setLayout(g1_sel_empLayout);
         g1_sel_empLayout.setHorizontalGroup(
@@ -7692,10 +8046,12 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_ok_sel_emp))
                     .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(g1_sel_empLayout.createSequentialGroup()
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, g1_sel_empLayout.createSequentialGroup()
                             .addComponent(btn_guardar_se)
+                            .addGap(253, 253, 253)
+                            .addComponent(btn_sig_det_general1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_sig_det_general1))
+                            .addComponent(btn_guardar_total))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, g1_sel_empLayout.createSequentialGroup()
                             .addComponent(jLabel157)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -7718,7 +8074,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                                 .addGroup(g1_sel_empLayout.createSequentialGroup()
                                     .addGap(125, 125, 125)
                                     .addComponent(jPanel120, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         g1_sel_empLayout.setVerticalGroup(
             g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -7748,13 +8104,14 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_sig_det_general1)
-                    .addComponent(btn_guardar_se))
+                    .addComponent(btn_guardar_se)
+                    .addComponent(btn_guardar_total))
                 .addGap(52, 52, 52))
         );
 
         g1_General.addTab("Seleccion Empaque", g1_sel_emp);
 
-        getContentPane().add(g1_General, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 956, -1));
+        getContentPane().add(g1_General, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 960, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -10579,6 +10936,523 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_txt_gc_f2_29KeyTyped
 
+    private void txt_sel_cluster1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_cluster1MouseClicked
+        
+        int a = Integer.parseInt(txt_sel_cluster1.getText());
+        if (a == 0){
+            txt_sel_cluster1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_cluster1MouseClicked
+
+    private void txt_sel_cluster2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_cluster2MouseClicked
+            int a = Integer.parseInt(txt_sel_cluster2.getText());
+        if (a == 0){
+            txt_sel_cluster2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_cluster2MouseClicked
+
+    private void txt_sel_cluster3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_cluster3MouseClicked
+        int a = Integer.parseInt(txt_sel_cluster3.getText());
+        if (a == 0){
+            txt_sel_cluster3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_cluster3MouseClicked
+
+    private void txt_sel_ph1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ph1MouseClicked
+        int a = Integer.parseInt(txt_sel_ph1.getText());
+        if (a == 0){
+            txt_sel_ph1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ph1MouseClicked
+
+    private void txt_sel_ph2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ph2MouseClicked
+        int a = Integer.parseInt(txt_sel_ph2.getText());
+        if (a == 0){
+            txt_sel_ph2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ph2MouseClicked
+
+    private void txt_sel_ph3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ph3MouseClicked
+        int a = Integer.parseInt(txt_sel_ph3.getText());
+        if (a == 0){
+            txt_sel_ph3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ph3MouseClicked
+
+    private void txt_sel_br1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_br1MouseClicked
+        int a = Integer.parseInt(txt_sel_br1.getText());
+        if (a == 0){
+            txt_sel_br1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_br1MouseClicked
+
+    private void txt_sel_br2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_br2MouseClicked
+        int a = Integer.parseInt(txt_sel_br2.getText());
+        if (a == 0){
+            txt_sel_br2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_br2MouseClicked
+
+    private void txt_sel_br3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_br3MouseClicked
+        int a = Integer.parseInt(txt_sel_br3.getText());
+        if (a == 0){
+            txt_sel_br3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_br3MouseClicked
+
+    private void txt_sel_cc1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_cc1MouseClicked
+        int a = Integer.parseInt(txt_sel_cc1.getText());
+        if (a == 0){
+            txt_sel_cc1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_cc1MouseClicked
+
+    private void txt_sel_cc2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_cc2MouseClicked
+        int a = Integer.parseInt(txt_sel_cc2.getText());
+        if (a == 0){
+            txt_sel_cc2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_cc2MouseClicked
+
+    private void txt_sel_cc3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_cc3MouseClicked
+        int a = Integer.parseInt(txt_sel_cc3.getText());
+        if (a == 0){
+            txt_sel_cc3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_cc3MouseClicked
+
+    private void txt_seleccion_ct1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_seleccion_ct1MouseClicked
+        int a = Integer.parseInt(txt_seleccion_ct1.getText());
+        if (a == 0){
+            txt_seleccion_ct1.setText("");
+        }
+    }//GEN-LAST:event_txt_seleccion_ct1MouseClicked
+
+    private void txt_seleccion_ct2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_seleccion_ct2MouseClicked
+        int a = Integer.parseInt(txt_seleccion_ct2.getText());
+        if (a == 0){
+            txt_seleccion_ct2.setText("");
+        }
+    }//GEN-LAST:event_txt_seleccion_ct2MouseClicked
+
+    private void txt_seleccion_ct3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_seleccion_ct3MouseClicked
+        int a = Integer.parseInt(txt_seleccion_ct3.getText());
+        if (a == 0){
+            txt_seleccion_ct3.setText("");
+        }
+    }//GEN-LAST:event_txt_seleccion_ct3MouseClicked
+
+    private void txt_sel_lf1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_lf1MouseClicked
+        int a = Integer.parseInt(txt_sel_lf1.getText());
+        if (a == 0){
+            txt_sel_lf1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_lf1MouseClicked
+
+    private void txt_sel_lf2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_lf2MouseClicked
+        int a = Integer.parseInt(txt_sel_lf2.getText());
+        if (a == 0){
+            txt_sel_lf2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_lf2MouseClicked
+
+    private void txt_sel_lf3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_lf3MouseClicked
+        int a = Integer.parseInt(txt_sel_lf3.getText());
+        if (a == 0){
+            txt_sel_lf3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_lf3MouseClicked
+
+    private void txt_sel_ni1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ni1MouseClicked
+        int a = Integer.parseInt(txt_sel_ni1.getText());
+        if (a == 0){
+            txt_sel_ni1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ni1MouseClicked
+
+    private void txt_sel_ni2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ni2MouseClicked
+        int a = Integer.parseInt(txt_sel_ni2.getText());
+        if (a == 0){
+            txt_sel_ni2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ni2MouseClicked
+
+    private void txt_sel_ni3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ni3MouseClicked
+        int a = Integer.parseInt(txt_sel_ni3.getText());
+        if (a == 0){
+            txt_sel_ni3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ni3MouseClicked
+
+    private void txt_sel_ns1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ns1MouseClicked
+        int a = Integer.parseInt(txt_sel_ns1.getText());
+        if (a == 0){
+            txt_sel_ns1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ns1MouseClicked
+
+    private void txt_sel_ns2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ns2MouseClicked
+        int a = Integer.parseInt(txt_sel_ns2.getText());
+        if (a == 0){
+            txt_sel_ns2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ns2MouseClicked
+
+    private void txt_sel_ns3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ns3MouseClicked
+        int a = Integer.parseInt(txt_sel_ns3.getText());
+        if (a == 0){
+            txt_sel_ns3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ns3MouseClicked
+
+    private void txt_sel_ps1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ps1MouseClicked
+        int a = Integer.parseInt(txt_sel_ps1.getText());
+        if (a == 0){
+            txt_sel_ps1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ps1MouseClicked
+
+    private void txt_sel_ps2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ps2MouseClicked
+        int a = Integer.parseInt(txt_sel_ps2.getText());
+        if (a == 0){
+            txt_sel_ps2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ps2MouseClicked
+
+    private void txt_sel_ps3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_ps3MouseClicked
+        int a = Integer.parseInt(txt_sel_ps3.getText());
+        if (a == 0){
+            txt_sel_ps3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_ps3MouseClicked
+
+    private void txt_sel_sk1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sk1MouseClicked
+        int a = Integer.parseInt(txt_sel_sk1.getText());
+        if (a == 0){
+            txt_sel_sk1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sk1MouseClicked
+
+    private void txt_sel_sk2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sk2MouseClicked
+        int a = Integer.parseInt(txt_sel_sk2.getText());
+        if (a == 0){
+            txt_sel_sk2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sk2MouseClicked
+
+    private void txt_sel_sk3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sk3MouseClicked
+        int a = Integer.parseInt(txt_sel_sk3.getText());
+        if (a == 0){
+            txt_sel_sk3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sk3MouseClicked
+
+    private void txt_sel_sr1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sr1MouseClicked
+        int a = Integer.parseInt(txt_sel_sr1.getText());
+        if (a == 0){
+            txt_sel_sr1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sr1MouseClicked
+
+    private void txt_sel_sr2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sr2MouseClicked
+        int a = Integer.parseInt(txt_sel_sr2.getText());
+        if (a == 0){
+            txt_sel_sr2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sr2MouseClicked
+
+    private void txt_sel_sr3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sr3MouseClicked
+        int a = Integer.parseInt(txt_sel_sr3.getText());
+        if (a == 0){
+            txt_sel_sr3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sr3MouseClicked
+
+    private void txt_sel_tc1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_tc1MouseClicked
+        int a = Integer.parseInt(txt_sel_tc1.getText());
+        if (a == 0){
+            txt_sel_tc1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_tc1MouseClicked
+
+    private void txt_sel_tc2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_tc2MouseClicked
+        int a = Integer.parseInt(txt_sel_tc2.getText());
+        if (a == 0){
+            txt_sel_tc2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_tc2MouseClicked
+
+    private void txt_sel_tc3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_tc3MouseClicked
+       int a = Integer.parseInt(txt_sel_tc3.getText());
+        if (a == 0){
+            txt_sel_tc3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_tc3MouseClicked
+
+    private void txt_sel_tf1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_tf1MouseClicked
+        int a = Integer.parseInt(txt_sel_tf1.getText());
+        if (a == 0){
+            txt_sel_tf1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_tf1MouseClicked
+
+    private void txt_sel_tf2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_tf2MouseClicked
+        int a = Integer.parseInt(txt_sel_tf2.getText());
+        if (a == 0){
+            txt_sel_tf2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_tf2MouseClicked
+
+    private void txt_sel_tf3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_tf3MouseClicked
+        int a = Integer.parseInt(txt_sel_tf3.getText());
+        if (a == 0){
+            txt_sel_tf3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_tf3MouseClicked
+
+    private void txt_sel_yb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_yb1MouseClicked
+        int a = Integer.parseInt(txt_sel_yb1.getText());
+        if (a == 0){
+            txt_sel_yb1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_yb1MouseClicked
+
+    private void txt_sel_yb2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_yb2MouseClicked
+        int a = Integer.parseInt(txt_sel_yb2.getText());
+        if (a == 0){
+            txt_sel_yb2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_yb2MouseClicked
+
+    private void txt_sel_yb3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_yb3MouseClicked
+        int a = Integer.parseInt(txt_sel_yb3.getText());
+        if (a == 0){
+            txt_sel_yb3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_yb3MouseClicked
+
+    private void txt_sel_sc1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sc1MouseClicked
+        int a = Integer.parseInt(txt_sel_sc1.getText());
+        if (a == 0){
+            txt_sel_sc1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sc1MouseClicked
+
+    private void txt_sel_sc2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sc2MouseClicked
+        int a = Integer.parseInt(txt_sel_sc2.getText());
+        if (a == 0){
+            txt_sel_sc3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sc2MouseClicked
+
+    private void txt_sel_sc3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_sc3MouseClicked
+        int a = Integer.parseInt(txt_sel_sc3.getText());
+        if (a == 0){
+            txt_sel_sc3.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_sc3MouseClicked
+
+    private void txt_sel_dp1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_dp1MouseClicked
+        int a = Integer.parseInt(txt_sel_dp1.getText());
+        if (a == 0){
+            txt_sel_dp1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_dp1MouseClicked
+
+    private void txt_sel_dp2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_dp2MouseClicked
+        int a = Integer.parseInt(txt_sel_dp2.getText());
+        if (a == 0){
+            txt_sel_dp2.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_dp2MouseClicked
+
+    private void txt_sel_dp3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_sel_dp3MouseClicked
+        int a = Integer.parseInt(txt_sel_dp3.getText());
+        if (a == 0){
+            txt_sel_dp1.setText("");
+        }
+    }//GEN-LAST:event_txt_sel_dp3MouseClicked
+
+    private void txt_empaq_br1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_br1MouseClicked
+        int a = Integer.parseInt(txt_empaq_br1.getText());
+        if (a == 0){
+            txt_empaq_br1.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_br1MouseClicked
+
+    private void txt_empaq_br2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_br2MouseClicked
+        int a = Integer.parseInt(txt_empaq_br2.getText());
+        if (a == 0){
+            txt_empaq_br2.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_br2MouseClicked
+
+    private void txt_empaq_br3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_br3MouseClicked
+        int a = Integer.parseInt(txt_empaq_br3.getText());
+        if (a == 0){
+            txt_empaq_br3.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_br3MouseClicked
+
+    private void txt_empaq_sr1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_sr1MouseClicked
+        int a = Integer.parseInt(txt_empaq_sr1.getText());
+        if (a == 0){
+            txt_empaq_sr1.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_sr1MouseClicked
+
+    private void txt_empaq_sr2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_sr2MouseClicked
+        int a = Integer.parseInt(txt_empaq_sr2.getText());
+        if (a == 0){
+            txt_empaq_sr2.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_sr2MouseClicked
+
+    private void txt_empaq_sr3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_sr3MouseClicked
+        int a = Integer.parseInt(txt_empaq_sr3.getText());
+        if (a == 0){
+            txt_empaq_sr3.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_sr3MouseClicked
+
+    private void txt_empaq_srf1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_srf1MouseClicked
+        int a = Integer.parseInt(txt_empaq_srf1.getText());
+        if (a == 0){
+            txt_empaq_srf1.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_srf1MouseClicked
+
+    private void txt_empaq_srf2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_srf2MouseClicked
+        int a = Integer.parseInt(txt_empaq_srf2.getText());
+        if (a == 0){
+            txt_empaq_srf1.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_srf2MouseClicked
+
+    private void txt_empaq_srf3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_srf3MouseClicked
+        int a = Integer.parseInt(txt_empaq_srf3.getText());
+        if (a == 0){
+            txt_empaq_srf3.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_srf3MouseClicked
+
+    private void txt_empaq_dp1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_dp1MouseClicked
+        int a = Integer.parseInt(txt_empaq_dp1.getText());
+        if (a == 0){
+            txt_empaq_dp1.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_dp1MouseClicked
+
+    private void txt_empaq_dp2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_dp2MouseClicked
+        int a = Integer.parseInt(txt_empaq_dp2.getText());
+        if (a == 0){
+            txt_empaq_dp2.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_dp2MouseClicked
+
+    private void txt_empaq_dp3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_empaq_dp3MouseClicked
+        int a = Integer.parseInt(txt_empaq_dp3.getText());
+        if (a == 0){
+            txt_empaq_dp3.setText("");
+        }
+    }//GEN-LAST:event_txt_empaq_dp3MouseClicked
+
+    private void txt_sel_cluster1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_cluster1FocusLost
+        if (txt_sel_cluster1.getText().equals("")){
+            
+            txt_sel_cluster1.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_cluster1FocusLost
+
+    private void txt_sel_cluster2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_cluster2FocusLost
+        if (txt_sel_cluster2.getText().equals("")){
+            
+            txt_sel_cluster2.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_cluster2FocusLost
+
+    private void txt_sel_cluster3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_cluster3FocusLost
+        if (txt_sel_cluster3.getText().equals("")){
+            
+            txt_sel_cluster3.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_cluster3FocusLost
+
+    private void txt_sel_ph1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_ph1FocusLost
+        if (txt_sel_ph1.getText().equals("")){
+            
+            txt_sel_ph1.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_ph1FocusLost
+
+    private void txt_sel_ph2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_ph2FocusLost
+        if (txt_sel_ph2.getText().equals("")){
+            
+            txt_sel_ph2.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_ph2FocusLost
+
+    private void txt_sel_ph3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_ph3FocusLost
+        if (txt_sel_ph3.getText().equals("")){
+            
+            txt_sel_ph3.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_ph3FocusLost
+
+    private void txt_sel_br1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_br1FocusLost
+        if (txt_sel_br1.getText().equals("")){
+            
+            txt_sel_br1.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_br1FocusLost
+
+    private void txt_sel_br2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_br2FocusLost
+        if (txt_sel_br2.getText().equals("")){
+            
+            txt_sel_br2.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_br2FocusLost
+
+    private void txt_sel_br3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_br3FocusLost
+        if (txt_sel_br3.getText().equals("")){
+            
+            txt_sel_br3.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_br3FocusLost
+
+    private void txt_sel_cc1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_cc1FocusLost
+        if (txt_sel_cc1.getText().equals("")){
+            
+            txt_sel_cc1.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_cc1FocusLost
+
+    private void txt_sel_cc2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_cc2FocusLost
+        if (txt_sel_cc2.getText().equals("")){
+            
+            txt_sel_cc2.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_cc2FocusLost
+
+    private void txt_sel_cc3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_sel_cc3FocusLost
+        if (txt_sel_cc3.getText().equals("")){
+            
+            txt_sel_cc3.setText("0");
+            
+        }
+    }//GEN-LAST:event_txt_sel_cc3FocusLost
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_guardar_asepcias;
@@ -10586,6 +11460,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     public javax.swing.JButton btn_guardar_detgenerales;
     public javax.swing.JButton btn_guardar_lardo_dedo;
     public javax.swing.JButton btn_guardar_se;
+    public javax.swing.JButton btn_guardar_total;
     public javax.swing.JButton btn_ok_c;
     public javax.swing.JButton btn_ok_gc;
     public javax.swing.JButton btn_ok_n;
@@ -11070,7 +11945,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator77;
     private javax.swing.JSeparator jSeparator78;
     private javax.swing.JSeparator jSeparator9;
-    public javax.swing.JSpinner jSpinner1;
     public javax.swing.JTextField jTextField90;
     public javax.swing.JTextField n_gc_36;
     public javax.swing.JTextField n_gc_37;
@@ -11091,7 +11965,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     public javax.swing.JTextField n_gc_52;
     public javax.swing.JTextField n_gc_total;
     public javax.swing.JTextField n_gc_totalN;
-    private javax.swing.JTextField prueba;
     public javax.swing.JTextField txt_apellido_insp;
     public javax.swing.JTextField txt_apellido_prod;
     public javax.swing.JTextField txt_cod_eva;
@@ -11174,7 +12047,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_gc_f2_9;
     public javax.swing.JTextField txt_gc_f2_promedio;
     public javax.swing.JTextField txt_gc_f2_total;
-    public com.toedter.components.JSpinField txt_hora_eva;
+    public javax.swing.JSpinner txt_hora_eva;
     public javax.swing.JTextField txt_nombre_insp;
     public javax.swing.JTextField txt_nombre_prod;
     public javax.swing.JTextField txt_observacion;

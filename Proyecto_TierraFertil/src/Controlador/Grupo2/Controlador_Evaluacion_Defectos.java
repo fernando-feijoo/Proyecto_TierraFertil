@@ -12,10 +12,12 @@ import javax.swing.table.DefaultTableModel;
 
 public class Controlador_Evaluacion_Defectos implements MouseListener {
 
-    ResultSet rs;
+    
     Vista_Evaluacion_Total vistaEvaluacion;
     Modelo_Evaluacion_Defectos modeloEvaluacionDefectos = new Modelo_Evaluacion_Defectos();
 
+    ResultSet rs;
+    ResultSet rsCargado;
     public Controlador_Evaluacion_Defectos(Vista_Evaluacion_Total vistaEvaluacion) {
         this.vistaEvaluacion = vistaEvaluacion;
 
@@ -30,9 +32,7 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
             try {
                 modeloEvaluacionDefectos.nombre = this.vistaEvaluacion.txt_nombre_defectos.getText();
                 modeloEvaluacionDefectos.total_defectos = Integer.parseInt(this.vistaEvaluacion.txt_total_defectos.getText());
-                
 
-     
 //                 String total_defectos = this.modeloEvaluacionDefectos.total_defectos;
 //                 double pcmd_total = (Double.parseDouble(total_defectos) * 100 / total_gajos) - 100;
                 boolean aux = modeloEvaluacionDefectos.guardarDefectos();
@@ -53,9 +53,9 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
     }
 
     public void mostrarDefectos() {
-       /* this.vistaEvaluacion.tabla_defectos.setDefaultRenderer(Object.class, new Render());
+        /* this.vistaEvaluacion.tabla_defectos.setDefaultRenderer(Object.class, new Render());
         JLabel btn_eliminar = new JLabel(new ImageIcon(getClass().getResource("/Icon/user.png")));
-        */
+         */
         DefaultTableModel tabla = (DefaultTableModel) this.vistaEvaluacion.tabla_defectos.getModel();
 
         tabla.setColumnCount(0);
@@ -74,14 +74,12 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
                 defectos[1] = rs.getString("nombre");
                 defectos[2] = rs.getString("total_defectos");
                 defectos[3] = rs.getString("pcmd");
-               
+
                 /*tabla.addRow(defectos);
                 tabla.addRow(new Object[]{
                     btn_eliminar
                 });*/
-                
 //                this.vistaEvaluacion.tabla_defectos.setRowHeight(40);
-
             }
 
         } catch (Exception e) {
@@ -103,6 +101,23 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(vistaEvaluacion, "Error en mostrarIdEvaluacion. " + e);
+        }
+
+    }
+
+    public void cargarDefectos(String valor) {
+        try {
+            modeloEvaluacionDefectos.codigoCargar2 = valor;
+            modeloEvaluacionDefectos.selecionDefectos();
+            rsCargado = modeloEvaluacionDefectos.selecionDefectos();
+            while (rsCargado.next()) {
+                this.vistaEvaluacion.txt_nombre_defectos.setText(rsCargado.getString(1));
+                this.vistaEvaluacion.txt_total_defectos.setText(rsCargado.getString(2));
+
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Error en cargarDefectos" + e);
         }
     }
 

@@ -131,6 +131,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuCampo.boton_campo_uno.addMouseListener(this);
         this.vistaMenuCampo.boton_campo_dos.addMouseListener(this);
         this.vistaMenuCampo.boton_listar_uno.addMouseListener(this);
+        this.vistaCampo.btn_guardar_total.addActionListener(this);
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
@@ -492,6 +493,13 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
 
     @Override
     public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource()== this.vistaCampo.btn_guardar_total) {
+            this.ctrlDetGene.guradar_datos_evaluacion();
+            this.ctrlGradoCalib.guardar_cantidad_gc();
+            this.ctrlLargoDe.guardar_datos();
+            this.ctrlAcepcias.guardar_asepcias();
+            this.ctrlSeleEmp.guardar_datos();
+        }
     }
 
     @Override

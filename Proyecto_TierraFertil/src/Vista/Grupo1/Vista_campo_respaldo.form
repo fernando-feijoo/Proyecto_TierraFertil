@@ -10287,10 +10287,12 @@
                               <Component id="btn_ok_sel_emp" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="btn_guardar_se" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
                                   <Component id="btn_sig_det_general1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btn_guardar_total" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel157" min="-2" max="-2" attributes="0"/>
@@ -10362,6 +10364,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btn_sig_det_general1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_guardar_se" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_guardar_total" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
@@ -12671,6 +12674,14 @@
             <Component class="javax.swing.JButton" name="btn_ok_sel_emp">
               <Properties>
                 <Property name="text" type="java.lang.String" value="OK"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_guardar_total">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="GUARDAR"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

@@ -42,11 +42,7 @@ public class Ctrl_sel_emp implements ActionListener{
             this.nn.txt_sel_total_ph.setText(String.valueOf(totalph2));
             this.nn.txt_promedio_se.setText(String.valueOf(promedio));
         }else if (e.getSource() == this.nn.btn_guardar_se) {
-            try {
                 guardar_datos();
-            } catch (SQLException ex) {
-                Logger.getLogger(Ctrl_sel_emp.class.getName()).log(Level.SEVERE, null, ex);
-            }
         }
     }
     
@@ -86,40 +82,44 @@ public class Ctrl_sel_emp implements ActionListener{
         
     }
     
-    public void guardar_datos () throws SQLException {
-        datos();
-        mse.f1_1=f1_1; mse.f1_2=f1_2; mse.f1_3=f1_3; mse.f1_4=f1_4; mse.f1_5=f1_5;
-        mse.f1_6=f1_6; mse.f1_7=f1_7; mse.f1_8=f1_8; mse.f1_9=f1_9; mse.f1_10=f1_10;
-        mse.f1_11=f1_11; mse.f1_12=f1_12; mse.f1_13=f1_13; mse.f1_14=f1_14; mse.f1_15=f1_15;
-        mse.f1_16=f1_16; mse.f1_17=f1_17; mse.f1_18=f1_18;
-        
-        mse.f2_1=f2_1; mse.f2_2=f2_2; mse.f2_3=f2_3; mse.f2_4=f2_4; mse.f2_5=f2_5;
-        mse.f2_6=f2_6; mse.f2_7=f2_7; mse.f2_8=f2_8; mse.f2_9=f2_9; mse.f2_10=f2_10;
-        mse.f2_11=f2_11; mse.f2_12=f2_12; mse.f2_13=f2_13; mse.f2_14=f1_14; mse.f2_15=f2_15;
-        mse.f2_16=f2_16; mse.f2_17=f2_17; mse.f2_18=f2_18;
-        
-        mse.f3_1=f3_1; mse.f3_2=f3_2; mse.f3_3=f1_3; mse.f3_4=f1_4; mse.f3_5=f3_5;
-        mse.f3_6=f3_6; mse.f3_7=f3_7; mse.f3_8=f1_8; mse.f3_9=f1_9; mse.f3_10=f3_10;
-        mse.f3_11=f3_11; mse.f3_12=f3_12; mse.f3_13=f1_13; mse.f1_14=f1_14; mse.f3_15=f3_15;
-        mse.f3_16=f3_16; mse.f3_17=f3_17; mse.f3_18=f3_18;
-        
-        mse.tot_f1=tot_f1; mse.tot_f2=tot_f2; mse.tot_f3=tot_f3;
-        mse.ph1=ph1; mse.ph2=ph2; mse.ph3=ph3;
-        mse.clusterf1=cluster1; mse.clusterf2=cluster2; mse.clusterf3=cluster3;
-        mse.total_ph2=ph2; mse.total_filas=total_filas; mse.promedio=promedio; mse.total_cluster=totalcluster;
-        
-        mse.observacion=this.nn.txt_observacion.getText();
-        
-        id_evaluacion=dg.id_evaluacion();
-        id_evaluacion= id_evaluacion;
-        mse.id_eva=id_evaluacion;
-        System.out.println("El id incrementable de evaluacion en la vista se es: "+id_evaluacion);
-        
-        boolean dato1=mse.registrar_seleccion_empaque();
-        boolean dato2=mse.registrar_totales();
-        
-        if (dato1==true && dato2==true) {
-            JOptionPane.showMessageDialog(nn, "Guardado corectamente");
+    public void guardar_datos ()  {
+        try {
+            datos();
+            mse.f1_1=f1_1; mse.f1_2=f1_2; mse.f1_3=f1_3; mse.f1_4=f1_4; mse.f1_5=f1_5;
+            mse.f1_6=f1_6; mse.f1_7=f1_7; mse.f1_8=f1_8; mse.f1_9=f1_9; mse.f1_10=f1_10;
+            mse.f1_11=f1_11; mse.f1_12=f1_12; mse.f1_13=f1_13; mse.f1_14=f1_14; mse.f1_15=f1_15;
+            mse.f1_16=f1_16; mse.f1_17=f1_17; mse.f1_18=f1_18;
+            
+            mse.f2_1=f2_1; mse.f2_2=f2_2; mse.f2_3=f2_3; mse.f2_4=f2_4; mse.f2_5=f2_5;
+            mse.f2_6=f2_6; mse.f2_7=f2_7; mse.f2_8=f2_8; mse.f2_9=f2_9; mse.f2_10=f2_10;
+            mse.f2_11=f2_11; mse.f2_12=f2_12; mse.f2_13=f2_13; mse.f2_14=f1_14; mse.f2_15=f2_15;
+            mse.f2_16=f2_16; mse.f2_17=f2_17; mse.f2_18=f2_18;
+            
+            mse.f3_1=f3_1; mse.f3_2=f3_2; mse.f3_3=f1_3; mse.f3_4=f1_4; mse.f3_5=f3_5;
+            mse.f3_6=f3_6; mse.f3_7=f3_7; mse.f3_8=f1_8; mse.f3_9=f1_9; mse.f3_10=f3_10;
+            mse.f3_11=f3_11; mse.f3_12=f3_12; mse.f3_13=f1_13; mse.f1_14=f1_14; mse.f3_15=f3_15;
+            mse.f3_16=f3_16; mse.f3_17=f3_17; mse.f3_18=f3_18;
+            
+            mse.tot_f1=tot_f1; mse.tot_f2=tot_f2; mse.tot_f3=tot_f3;
+            mse.ph1=ph1; mse.ph2=ph2; mse.ph3=ph3;
+            mse.clusterf1=cluster1; mse.clusterf2=cluster2; mse.clusterf3=cluster3;
+            mse.total_ph2=ph2; mse.total_filas=total_filas; mse.promedio=promedio; mse.total_cluster=totalcluster;
+            
+            mse.observacion=this.nn.txt_observacion.getText();
+            
+            id_evaluacion=dg.id_evaluacion();
+            id_evaluacion= id_evaluacion;
+            mse.id_eva=id_evaluacion;
+            System.out.println("El id incrementable de evaluacion en la vista se es: "+id_evaluacion);
+            
+            boolean dato1=mse.registrar_seleccion_empaque();
+            boolean dato2=mse.registrar_totales();
+            
+            if (dato1==true && dato2==true) {
+                JOptionPane.showMessageDialog(nn, "Guardado corectamente");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ctrl_sel_emp.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         

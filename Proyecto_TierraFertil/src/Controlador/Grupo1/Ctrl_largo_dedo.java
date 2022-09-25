@@ -5,6 +5,7 @@ import Modelo.Grupo1.Mod_lardo_dedo;
 import Vista.Grupo1.Vista_campo_respaldo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,14 +22,13 @@ public class Ctrl_largo_dedo implements ActionListener {
         
         this.nn.btn_ok_c.addActionListener(this);
         this.nn.btn_ok_n.addActionListener(this);
-        this.nn.btn_guardar_lardo_dedo.addActionListener(this);
         
         datos();
     }
 
     int c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,ctot,can6,can7,can8,can9,can10,can11;
     double n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15,n16,n17,n18,n19,n20,n21,n22,n23,n24,n25,n26,n27,n28,n29,n30,ntot,nprom,num6,num7,num8,num9,num10,num11;
-    int id_ld, id_evalu;
+    int id_ld, id_evalu, id_ld_actualizable;
     
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -38,8 +38,6 @@ public class Ctrl_largo_dedo implements ActionListener {
         }else if (e.getSource()==this.nn.btn_ok_n) {
             this.nn.txt_gc_f2_total.setText(String.valueOf(ntot));
             this.nn.txt_gc_f2_promedio.setText(Double.toString(nprom));
-        }else if (e.getSource()==this.nn.btn_guardar_lardo_dedo) {
-                guardar_datos();
         }
     }
     
@@ -148,6 +146,29 @@ public class Ctrl_largo_dedo implements ActionListener {
             }
         } catch (SQLException ex) {
             Logger.getLogger(Ctrl_largo_dedo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void CargarDatosGradoCalibre (String dato_eva){
+        mla.id_cargar=dato_eva;
+        JOptionPane.showMessageDialog(nn, "ID en largo_dedo es: "+dato_eva);
+        try {
+            ResultSet rs = mla.cargar_largo_dedo();
+            while (rs.next()) {
+
+                this.id_ld_actualizable=rs.getInt(1);
+                JOptionPane.showMessageDialog(nn, "ID local es: "+this.id_ld_actualizable);
+                this.nn.txt_gc_f1_total.setText(rs.getString(2));
+            }
+            
+            mla.id_ld_actualizable=id_ld_actualizable;
+            ResultSet rsL = mla.cargar_datos_largo_dedo();
+            while (rsL.next()) {                
+                this.nn.txt_gc_f2_total.setText(rsL.getString(1));
+                this.nn.txt_gc_f2_promedio.setText(rsL.getString(2));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ctrl_detalles_gen.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

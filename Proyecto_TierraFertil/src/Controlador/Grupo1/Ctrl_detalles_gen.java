@@ -4,10 +4,13 @@ import Modelo.Grupo1.Mod_detalles_gen;
 import Vista.Grupo1.Vista_campo_respaldo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class Ctrl_detalles_gen implements ActionListener {
@@ -24,7 +27,7 @@ public class Ctrl_detalles_gen implements ActionListener {
 
     public Ctrl_detalles_gen(Vista_campo_respaldo nn) {
         this.nn = nn;
-        this.nn.btn_guardar_detgenerales.addActionListener(this);
+        
     }
 
     public void datos() {
@@ -42,7 +45,7 @@ public class Ctrl_detalles_gen implements ActionListener {
         tipo_caja = this.nn.txt_tipo_caja_eva.getText();
         fecha_eva = fecha.format(this.nn.txt_fecha_eva.getDate()).toString();
         hora_eva = hora.format(this.nn.txt_hora_eva.getValue()).toString();
-        semana = this.nn.txt_semana_eva.getValue();
+        semana = (int) this.nn.txt_semana_eva.getValue();
     }
 
     public void guradar_datos_evaluacion() {
@@ -76,7 +79,32 @@ public class Ctrl_detalles_gen implements ActionListener {
             }
         } catch (SQLException e) {
         }
-
+    }
+    
+    public void CargarDatosDetallesGenerales (String dato_eva){
+        dg.id_cargar=dato_eva;
+        JOptionPane.showMessageDialog(nn, "ID en detalles generales es: "+dato_eva );
+        try {
+            ResultSet rs = dg.cargar_dg();
+            while (rs.next()) {
+                this.nn.txt_codigo_prod.setText(rs.getString(1));
+                this.nn.txt_nombre_prod.setText(rs.getString(2));
+                this.nn.txt_apellido_prod.setText(rs.getString(3));
+                this.nn.txt_finca_prod.setText(rs.getString(4));
+                this.nn.txt_cod_insp.setText(rs.getString(5));
+                this.nn.txt_nombre_insp.setText(rs.getString(6));
+                this.nn.txt_apellido_insp.setText(rs.getString(7));
+                this.nn.txt_cod_eva.setText(rs.getString(8));
+                this.nn.txt_fecha_eva.setDate(rs.getDate(9));
+                this.nn.txt_hora_eva.setValue(rs.getString(10));
+                this.nn.txt_vapor.setText(rs.getString(11));
+                this.nn.txt_tipo_caja_eva.setText(rs.getString(12));
+                this.nn.txt_placa_vehiculo.setText(rs.getString(13));
+                this.nn.txt_semana_eva.setValue(rs.getInt(14));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ctrl_detalles_gen.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public Date funcionFecha_Formato(String x) {
@@ -103,9 +131,7 @@ public class Ctrl_detalles_gen implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == this.nn.btn_guardar_detgenerales) {
-            guradar_datos_evaluacion();
-        }
+        
     }
 
 }

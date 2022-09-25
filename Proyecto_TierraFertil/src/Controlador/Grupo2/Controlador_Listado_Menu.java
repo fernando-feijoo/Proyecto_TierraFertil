@@ -43,74 +43,10 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
 
     }
 
-    public void mostrarDatos() {
-        DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
-        tabla.setColumnCount(0);
-        tabla.addColumn("Codigo");
-        tabla.addColumn("Fecha");
-        tabla.addColumn("Semana");
-        tabla.addColumn("Destino");
-        tabla.addColumn("Cajas inspeccionadas");
-        tabla.setRowCount(0);
-
-        try {
-            rs = modeloEvaluacionListado.mostrarListado();
-            String[] tabulacion = new String[5];
-
-            while (rs.next()) {
-
-                tabulacion[0] = rs.getString("codigo");
-                tabulacion[1] = rs.getString("fecha");
-                tabulacion[2] = rs.getString("id_semana");
-                tabulacion[3] = rs.getString("destino");
-                tabulacion[4] = rs.getString("cajas_inspeccionadas");
-                tabla.addRow(tabulacion);
-
-            }
-
-        } catch (Exception e) {
-            System.out.println("Error en mostrarListado. " + e);
-        }
-
-    }
-
-    public void filtrarTabla(String valor) {
-        //Caracteristica de ordenamiento
-        DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
-        //Permite añadir caracteristica de ordenamiento
-        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(tabla);
-        vistaListadoMenu.tabla_listado.setRowSorter(tr);
-        tr.setRowFilter(RowFilter.regexFilter("(?i)" + valor, 1));
-
-    }
-
-    //        this.vistaListadoMenu.tabla_listado.setDefaultRenderer(Object.class, new Render());
-//        JLabel btn_eliminar = new JLabel(new ImageIcon(getClass().getResource("/Icon/user.png")));
-
-    /* tabla.addRow(new Object[]{
-            btn_eliminar
-        });  */
     @Override
     public void mouseClicked(MouseEvent e) {
-
         if (e.getSource() == this.vistaListadoMenu.jb_eliminar) {
-            try {
-                int fila = this.vistaListadoMenu.tabla_listado.getSelectedRow();
-                this.modeloEvaluacionListado.codigo = (String) this.vistaListadoMenu.tabla_listado.getValueAt(fila, 0);
-
-                int respuesta = JOptionPane.showConfirmDialog(vistaListadoMenu, "¿Desea eliminar el registro?", "ATENCION", JOptionPane.YES_OPTION);
-                if (respuesta == 0) {
-                    modeloEvaluacionListado.eliminarRegistro();
-                    mostrarDatos();
-                    JOptionPane.showMessageDialog(vistaListadoMenu, "Registro eliminado correctamente");
-                }
-                DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
-
-                System.out.println("Eliminado ejecutado");
-
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(vistaListadoMenu, "Error :/" + ex);
-            }
+            eliminarDatos();
 
         }
 
@@ -156,10 +92,75 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
 
     }
 
-    
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
     }
+
+    public void mostrarDatos() {
+        DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
+        tabla.setColumnCount(0);
+        tabla.addColumn("Codigo");
+        tabla.addColumn("Fecha");
+        tabla.addColumn("Semana");
+        tabla.addColumn("Destino");
+        tabla.addColumn("Cajas inspeccionadas");
+        tabla.setRowCount(0);
+
+        try {
+            rs = modeloEvaluacionListado.mostrarListado();
+            String[] tabulacion = new String[5];
+
+            while (rs.next()) {
+
+                tabulacion[0] = rs.getString("codigo");
+                tabulacion[1] = rs.getString("fecha");
+                tabulacion[2] = rs.getString("id_semana");
+                tabulacion[3] = rs.getString("destino");
+                tabulacion[4] = rs.getString("cajas_inspeccionadas");
+                tabla.addRow(tabulacion);
+
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error en mostrarListado. " + e);
+        }
+
+    }
+
+    public void filtrarTabla(String valor) {
+        //Caracteristica de ordenamiento
+        DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
+        //Permite añadir caracteristica de ordenamiento
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(tabla);
+        vistaListadoMenu.tabla_listado.setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter("(?i)" + valor, 1));
+
+    }
+
+    public void eliminarDatos() {
+        try {
+            int fila = this.vistaListadoMenu.tabla_listado.getSelectedRow();
+            this.modeloEvaluacionListado.codigo = (String) this.vistaListadoMenu.tabla_listado.getValueAt(fila, 0);
+
+            int respuesta = JOptionPane.showConfirmDialog(vistaListadoMenu, "¿Desea eliminar el registro?", "ATENCION", JOptionPane.YES_OPTION);
+            if (respuesta == 0) {
+                modeloEvaluacionListado.eliminarRegistro();
+                mostrarDatos();
+                JOptionPane.showMessageDialog(vistaListadoMenu, "Registro eliminado correctamente");
+            }
+            DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
+
+            System.out.println("Eliminado ejecutado");
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(vistaListadoMenu, "Error :/" + ex);
+        }
+    }
+    //        this.vistaListadoMenu.tabla_listado.setDefaultRenderer(Object.class, new Render());
+//        JLabel btn_eliminar = new JLabel(new ImageIcon(getClass().getResource("/Icon/user.png")));
+
+    /* tabla.addRow(new Object[]{
+            btn_eliminar
+        });  */
 }

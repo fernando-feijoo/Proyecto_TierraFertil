@@ -1,17 +1,23 @@
 package Controlador.Grupo2;
 import Modelo.Grupo2.Modelo_Evaluacion_Reportes;
+import Modelo.Grupo2.Modelo_Evaluacion_Datos;
+import Vista.Grupo2.Vista_Evaluacion_Total;
 import Vista.Grupo2.Vista_Reportes_Menu;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 public class Controlador_Evaluacion_Reportes implements MouseListener{
     Vista_Reportes_Menu vistaReportes = new Vista_Reportes_Menu();
     Modelo_Evaluacion_Reportes modeloReportes = new Modelo_Evaluacion_Reportes();
+    Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     ResultSet rs;
-    public Controlador_Evaluacion_Reportes(Vista_Reportes_Menu vistaReportes_Menu) {
+    ResultSet rsCarga;
+    
+    public Controlador_Evaluacion_Reportes(Vista_Reportes_Menu vistaReportes) {
         this.vistaReportes = vistaReportes;
-        mostrarDatos();
+        mostrarDatosReports();
         this.vistaReportes.rdn_imprimir.addMouseListener(this);
         
         
@@ -37,7 +43,8 @@ public class Controlador_Evaluacion_Reportes implements MouseListener{
     @Override
     public void mouseExited(MouseEvent e) {
     }
-     public void mostrarDatos() {
+    
+     public void mostrarDatosReports() {
         DefaultTableModel tabla = (DefaultTableModel) this.vistaReportes.tabla_listado.getModel();
         tabla.setColumnCount(0);
         tabla.addColumn("Codigo");
@@ -67,6 +74,7 @@ public class Controlador_Evaluacion_Reportes implements MouseListener{
         }
 
     }
+     
     
     
     

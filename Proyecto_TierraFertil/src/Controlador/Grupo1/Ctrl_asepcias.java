@@ -20,7 +20,6 @@ public class Ctrl_asepcias implements ActionListener{
         this.nn = nn;
         
         this.nn.btn_sig_det_general.addActionListener(this);
-        this.nn.btn_guardar_asepcias.addActionListener(this);
         
         this.nn.btn_sig_gc.addActionListener(this);
         
@@ -51,10 +50,7 @@ public class Ctrl_asepcias implements ActionListener{
     int id_evalu;
     @Override
     public void actionPerformed(ActionEvent e) {
-         if (e.getSource()==this.nn.btn_guardar_asepcias) {
-            guardar_asepcias();
-            limpiar();
-        }
+
     }
     
     public void guardar_asepcias (){

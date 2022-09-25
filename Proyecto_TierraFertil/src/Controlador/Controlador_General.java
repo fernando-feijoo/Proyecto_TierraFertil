@@ -9,10 +9,12 @@ import Controlador.Grupo1.Ctrl_menu;
 import Controlador.Grupo1.Ctrl_sel_emp;
 import Controlador.Grupo2.Controlador_Evaluacion_Datos;
 import static Controlador.Grupo2.Controlador_Evaluacion_Datos.mensaje;
+import Controlador.Grupo2.Controlador_Listado_Menu;
 import Controlador.Grupo2.Controlador_Evaluacion_Defectos;
 import Controlador.Grupo2.Controlador_Evaluacion_Tabulacion;
 import Controlador.Grupo2.Controlador_Listado_Menu;
 import Controlador.Grupo2.Controlador_Menu_General;
+import Controlador.Grupo2.Controlador_Evaluacion_Reportes;
 import Controlador.Grupo3.Controlador_Datos_Llegada;
 import Controlador.Grupo3.Controlador_Despacho;
 import Controlador.Grupo3.Controlador_Higiene_Contenedor;
@@ -38,6 +40,7 @@ import Vista.Grupo3.Vista_Obtener_Reportes;
 import Vista.Vista_General;
 import Vista.Vista_Login;
 import Modelo.Grupo2.Modelo_Evaluacion_Tabulacion;
+import Vista.Grupo2.Vista_Reportes_Menu;
 import java.awt.Color;
 import static java.awt.Frame.ICONIFIED;
 import java.awt.event.ActionEvent;
@@ -48,6 +51,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener, ComponentListener {
 
@@ -83,11 +87,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     Vista_Listado_Menu vistaEvaluacionListado = new Vista_Listado_Menu();
     Vista_Home_Calidad vistaHomeCalidad = new Vista_Home_Calidad();
+    Vista_Reportes_Menu vistaEvaluacionReportes = new Vista_Reportes_Menu();
+    Vista_Listado_Menu vistaListadoMenu = new Vista_Listado_Menu();
+
     Controlador_Listado_Menu controlaListado = new Controlador_Listado_Menu(vistaEvaluacionListado);
     Controlador_Evaluacion_Datos controlEvaluacion = new Controlador_Evaluacion_Datos(vistaEvaluacion);
     Controlador_Evaluacion_Tabulacion controlaEvaTabu = new Controlador_Evaluacion_Tabulacion(vistaEvaluacion);
     Controlador_Evaluacion_Defectos controlEvaDefec = new Controlador_Evaluacion_Defectos(vistaEvaluacion);
-
+    Controlador_Evaluacion_Reportes controlEvaReportes = new Controlador_Evaluacion_Reportes(vistaEvaluacionReportes);
+    Controlador_Listado_Menu controladorListado = new Controlador_Listado_Menu(vistaListadoMenu);
 //    Controlador_Listado_Menu controladorLisMenu = new Controlador_Listado_Menu(vistaEvaluacion);
     //  GRUPO 3
     Vista_Home vistaHome = new Vista_Home();
@@ -116,6 +124,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
     //  Variables locales para usar en vista general de la clase.
     int xMouse, yMouse, contTemp = 0;
 
+    public static String id_evaluacion;
+
     //  Fin de variables locales de case.
     public Controlador_General(Vista_General vistaGeneral) {
         this.vistaGeneral = vistaGeneral;
@@ -135,11 +145,15 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuCampo.boton_campo_dos.addMouseListener(this);
         this.vistaMenuCampo.boton_listar_uno.addMouseListener(this);
         this.vistaCampo.btn_guardar_total.addActionListener(this);
+        this.vistaListaCampo.btn_actualizar.addActionListener(this);
         // Grupo 2
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
         this.vistaMenuCalidad.btn_acopio_listado.addMouseListener(this);
+        this.vistaMenuCalidad.btn_reportes.addMouseListener(this);
+
         this.vistaEvaluacionListado.rdn_actualizar.addMouseListener(this);
+        this.vistaEvaluacionReportes.rdn_imprimir.addMouseListener(this);
 
         // Grupo 3
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
@@ -266,36 +280,63 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaCampo.dispose();
             this.vistaListaCampo.setVisible(true);
         }
+
         //  GRUPO 2 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaMenuCalidad.btn_acopio_control) {
-            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
             this.vistaEvaluacion.setBorder(null);
-            this.vistaEvaluacion.setVisible(true);
-            this.vistaEvaluacionListado.dispose();
+
             this.vistaHomeCalidad.dispose();
+            this.vistaEvaluacionListado.dispose();
+            this.vistaEvaluacionReportes.dispose();
+
+            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
+            this.vistaEvaluacion.setVisible(true);
+
+        }
+        if (me.getSource() == this.vistaMenuCalidad.btn_reportes) {
+            this.vistaEvaluacionReportes.setBorder(null);
+
+            this.vistaHomeCalidad.dispose();
+            this.vistaEvaluacion.dispose();
+            this.vistaEvaluacionListado.dispose();
+
+            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacionReportes);
+            this.vistaEvaluacionReportes.setVisible(true);
 
         }
         if (me.getSource() == this.vistaMenuCalidad.btn_acopio_listado) {
-            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacionListado);
             this.vistaEvaluacionListado.setBorder(null);
-            this.vistaEvaluacionListado.setVisible(true);
+
             this.vistaEvaluacion.dispose();
             this.vistaHomeCalidad.dispose();
+            this.vistaEvaluacionReportes.dispose();
+            this.controlaListado.mostrarDatos();
+            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacionListado);
+
+            this.vistaEvaluacionListado.setVisible(true);
 
         }
         //Boton de listado para actualizar datos GRUPO2
         if (me.getSource() == this.vistaEvaluacionListado.rdn_actualizar) {
+            //Carga todos los datos en los campos para la actualizacion
             this.controlEvaluacion.cargarDatos();
-            this.controlEvaDefec.cargarDefectos(this.controlEvaluacion.mensaje);
-            this.controlaEvaTabu.cargarTabulacion(this.controlEvaluacion.mensaje);
+            
+            //Actualiza la tabla
+            this.controladorListado.mostrarDatos();
+           // this.controlEvaDefec.cargarDefectos(this.controlEvaluacion.mensaje);
+            //this.controlaEvaTabu.cargarTabulacion(this.controlEvaluacion.mensaje);
+
             this.vistaEvaluacion.setBorder(null);
             this.vistaEvaluacionListado.dispose();
             this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
-
+            
+            
             this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
             this.vistaEvaluacion.setVisible(true);
+            JOptionPane.showMessageDialog(vistaListado, "No cambie el campo CODIGO", "ATENCION", JOptionPane.ERROR_MESSAGE);
 
         }
+
         //  GRUPO 3 OPCIONES DE BOTONES
         if (me.getSource() == this.vistaLlegada.btn_guardar) {
             tempClickG3 = 1;
@@ -517,6 +558,27 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.ctrlLargoDe.guardar_datos();
             this.ctrlAcepcias.guardar_asepcias();
             this.ctrlSeleEmp.guardar_datos();
+        }
+        if (ae.getSource() == this.vistaListaCampo.btn_actualizar) {
+            int fila = this.vistaListaCampo.tabla_campo.getSelectedRow();
+            this.id_evaluacion = (String) this.vistaListaCampo.tabla_campo.getValueAt(fila, 0);
+
+            JOptionPane.showMessageDialog(this.vistaListaCampo, "El id de eva a actualizar es: " + this.id_evaluacion);
+
+            int respuesta = JOptionPane.showConfirmDialog(this.vistaListaCampo, "¿Desea Actualizar el registro?", "ATENCION", JOptionPane.YES_OPTION);
+            if (respuesta == 0) {
+                this.vistaListaCampo.dispose();
+                this.vistaCampo.setBorder(null);
+                this.vistaCampo.setVisible(true);
+
+                this.ctrlSeleEmp.CargarDatosSE(id_evaluacion);
+                this.ctrlLargoDe.CargarDatosGradoCalibre(id_evaluacion);
+                this.ctrlGradoCalib.CargarDatosGradoCalibre(id_evaluacion);
+                this.ctrlDetGene.CargarDatosDetallesGenerales(id_evaluacion);
+
+                this.ctrlListarCamp.tabla_listado_campo();
+            }
+            DefaultTableModel tabla = (DefaultTableModel) this.vistaListaCampo.tabla_campo.getModel();
         }
     }
 

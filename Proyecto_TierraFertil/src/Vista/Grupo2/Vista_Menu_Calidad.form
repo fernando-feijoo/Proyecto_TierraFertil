@@ -284,7 +284,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="Recursos_Codigo.Redondeado" name="btn_reportes_opcion_dos">
+        <Container class="Recursos_Codigo.Redondeado" name="btn_reportes">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>

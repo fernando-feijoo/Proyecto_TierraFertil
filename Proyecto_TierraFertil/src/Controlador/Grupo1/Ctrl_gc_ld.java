@@ -5,6 +5,7 @@ import Modelo.Grupo1.Mod_gc_ld;
 import Vista.Grupo1.Vista_campo_respaldo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,7 +21,6 @@ public class Ctrl_gc_ld implements ActionListener{
         this.nn=nn;
         
         this.nn.btn_ok_gc.addActionListener(this);
-        this.nn.btn_guardar_c_gc.addActionListener(this);
         datos();
     }
     int c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47, c48, c49, c50, c51, c52, total; int id_gc, id_evalu;
@@ -57,8 +57,6 @@ public class Ctrl_gc_ld implements ActionListener{
             this.nn.n_gc_total.setText(String.valueOf(ntotal)); 
             this.nn.n_gc_totalN.setText(Double.toString(nprom)); 
             
-        }else if (e.getSource()==this.nn.btn_guardar_c_gc) {
-                guardar_cantidad_gc ();     
         }
 }
     public void datos(){
@@ -171,6 +169,36 @@ public class Ctrl_gc_ld implements ActionListener{
             }
         } catch (SQLException ex) {
             Logger.getLogger(Ctrl_gc_ld.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void CargarDatosGradoCalibre (String dato_eva){
+        mgl.id_cargar=dato_eva;
+        JOptionPane.showMessageDialog(nn, "ID en grado calibre es: "+dato_eva);
+        try {
+            ResultSet rs = mgl.cargar_grado_calibre();
+            while (rs.next()) {
+                this.nn.c_gc_36.setText(rs.getString(1));
+                this.nn.c_gc_37.setText(rs.getString(2));
+                this.nn.c_gc_38.setText(rs.getString(3));
+                this.nn.c_gc_39.setText(rs.getString(4));
+                this.nn.c_gc_40.setText(rs.getString(5));
+                this.nn.c_gc_41.setText(rs.getString(6));
+                this.nn.c_gc_42.setText(rs.getString(7));
+                this.nn.c_gc_43.setText(rs.getString(8));
+                this.nn.c_gc_44.setText(rs.getString(9));
+                this.nn.c_gc_45.setText(rs.getString(10));
+                this.nn.c_gc_46.setText(rs.getString(11));
+                this.nn.c_gc_47.setText(rs.getString(12));
+                this.nn.c_gc_48.setText(rs.getString(13));
+                this.nn.c_gc_49.setText(rs.getString(14));
+                this.nn.c_gc_50.setText(rs.getString(15));
+                this.nn.c_gc_51.setText(rs.getString(16));
+                this.nn.c_gc_52.setText(rs.getString(17));
+                this.nn.c_gc_total.setText(rs.getString(18));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ctrl_detalles_gen.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     }

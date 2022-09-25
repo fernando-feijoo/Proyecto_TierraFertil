@@ -23,46 +23,33 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
         this.vistaEvaluacion = vistaEvaluacion;
 
         this.vistaEvaluacion.jb_btn_guardar.addMouseListener(this);
-        mostrarTabulacion();
+       
 
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaEvaluacion.jb_btn_guardar) {
-            System.out.println("Boton guardar tabulacion presionado");
-            try {
-                modeloEvaluacionTabulacion.caja_inspeccionada = Integer.parseInt(this.vistaEvaluacion.txt_caja_insp.getText());
-
-                modeloEvaluacionTabulacion.embalador = Integer.parseInt(this.vistaEvaluacion.txt_embalador.getText());
-
-                modeloEvaluacionTabulacion.peso_neto = Double.parseDouble(this.vistaEvaluacion.txt_peso_neto.getText());
-                modeloEvaluacionTabulacion.par4 = Integer.parseInt(this.vistaEvaluacion.txt_par4.getText());
-                modeloEvaluacionTabulacion.par6 = Integer.parseInt(this.vistaEvaluacion.txt_par6.getText());
-                modeloEvaluacionTabulacion.par8 = Integer.parseInt(this.vistaEvaluacion.txt_par8.getText());
-                modeloEvaluacionTabulacion.impar5 = Integer.parseInt(this.vistaEvaluacion.txt_inpar5.getText());
-                modeloEvaluacionTabulacion.impar7 = Integer.parseInt(this.vistaEvaluacion.txt_inpar7.getText());
-
-                int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para continuar presione SI. ", "ATENCION", JOptionPane.YES_OPTION);
-                if (respuesta == 0) {
-                    modeloEvaluacionTabulacion.guardarTabulacion();
-                    mostrarTabulacion();
-
-                    System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente");
-                    JOptionPane.showMessageDialog(vistaEvaluacion, "Datos guardados correctamente ", "Registros", JOptionPane.INFORMATION_MESSAGE);
-
-                }
-                if (respuesta == 1) {
-                    System.out.println("Guardar datos de tabulacion cancelado.");
-
-                }
-
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(vistaEvaluacion, "Error al intentar guardar los datos." + ex);
-            }
+            guardarDatos();
 
         }
 
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
     }
 
     public void mostrarTabulacion() {
@@ -83,22 +70,26 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
         tabla.setRowCount(0);
 //        tabla.setRowCount(0);
         try {
+            
+            modeloEvaluacionTabulacion.codigoCargaTabulacion = vistaEvaluacion.lb_id_evaluacion.getText();
+          
+       
             rs = modeloEvaluacionTabulacion.consultarTabulacion();
-            String[] tabulacion = new String[12];
+            String[] tabulacion = new String[11];
 
             while (rs.next()) {
 
-                tabulacion[0] = rs.getString("id");
-                tabulacion[1] = rs.getString("caja_inspeccionada");
-                tabulacion[2] = rs.getString("embalador");
-                tabulacion[3] = rs.getString("peso_neto");
-                tabulacion[4] = rs.getString("par4");
-                tabulacion[5] = rs.getString("par6");
-                tabulacion[6] = rs.getString("par8");
-                tabulacion[7] = rs.getString("impar5");
-                tabulacion[8] = rs.getString("impar7");
-                tabulacion[10] = rs.getString("total_gajos");
-                tabulacion[11] = rs.getString("pcmd_final");
+                tabulacion[0] = rs.getString(1);
+                tabulacion[1] = rs.getString(2);
+                tabulacion[2] = rs.getString(3);
+                tabulacion[3] = rs.getString(4);
+                tabulacion[4] = rs.getString(5);
+                tabulacion[5] = rs.getString(6);
+                tabulacion[6] = rs.getString(7);
+                tabulacion[7] = rs.getString(8);
+                tabulacion[8] = rs.getString(9);
+                tabulacion[9] = rs.getString(10);
+                tabulacion[10] = rs.getString(11);
                 tabla.addRow(tabulacion);
 
             }
@@ -133,6 +124,54 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
         }
     }
 
+    public void guardarDatos() {
+        System.out.println("Boton guardar tabulacion presionado");
+        try {
+            modeloEvaluacionTabulacion.caja_inspeccionada = Integer.parseInt(this.vistaEvaluacion.txt_caja_insp.getText());
+
+            modeloEvaluacionTabulacion.embalador = Integer.parseInt(this.vistaEvaluacion.txt_embalador.getText());
+
+            modeloEvaluacionTabulacion.peso_neto = Double.parseDouble(this.vistaEvaluacion.txt_peso_neto.getText());
+            modeloEvaluacionTabulacion.par4 = Integer.parseInt(this.vistaEvaluacion.txt_par4.getText());
+            modeloEvaluacionTabulacion.par6 = Integer.parseInt(this.vistaEvaluacion.txt_par6.getText());
+            modeloEvaluacionTabulacion.par8 = Integer.parseInt(this.vistaEvaluacion.txt_par8.getText());
+            modeloEvaluacionTabulacion.impar5 = Integer.parseInt(this.vistaEvaluacion.txt_inpar5.getText());
+            modeloEvaluacionTabulacion.impar7 = Integer.parseInt(this.vistaEvaluacion.txt_inpar7.getText());
+
+            int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para continuar presione SI. ", "ATENCION", JOptionPane.YES_OPTION);
+            if (respuesta == 0) {
+                modeloEvaluacionTabulacion.guardarTabulacion();
+                mostrarTabulacion();
+                
+
+                System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente");
+                ID_Tabulacion();
+                JOptionPane.showMessageDialog(vistaEvaluacion, "Datos guardados correctamente ", "Registros", JOptionPane.INFORMATION_MESSAGE);
+
+            }
+            if (respuesta == 1) {
+                System.out.println("Guardar datos de tabulacion cancelado.");
+
+            }
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Error al intentar guardar los datos." + ex);
+        }
+
+    }
+
+    public void ID_Tabulacion() {
+        try {
+            ResultSet rs = modeloEvaluacionTabulacion.obtenerIdTabulacion();
+
+            while (rs.next()) {
+                this.vistaEvaluacion.lb_id_tabulacion.setText(rs.getString("id_det"));
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error en busqueda " + e);
+        }
+    }
+
 //    public void cargarDatosLlegada() {
 //        String sellosInternos = "", sellosExternos = "";
 //        rsC = modeloDatosLlegada.consultaDatos_entidadDatosLlegada();
@@ -162,20 +201,4 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
 //            System.out.println("Error al cargar componentes Modelo_Datos_LLegada: " + e);
 //        }
 //    }
-    @Override
-    public void mousePressed(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-    }
-
 }

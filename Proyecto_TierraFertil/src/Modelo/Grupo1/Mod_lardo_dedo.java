@@ -4,6 +4,8 @@ import Modelo.Modelo_Conexion;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Mod_lardo_dedo {
 
@@ -12,7 +14,7 @@ public class Mod_lardo_dedo {
     
     public int can6,can7,can8,can9,can10,can11,cantot;
     public double num6,num7,num8,num9,num10,num11,numtot,numprom;
-    public int id_max_ld, id_eva;
+    public int id_max_ld, id_eva, id_ld_actualizable; public String id_cargar;
     
     public boolean ld_can () throws SQLException {
         st=con.conectarBD().createStatement();
@@ -40,5 +42,32 @@ public class Mod_lardo_dedo {
             id=rs.getInt(1);
         }
         return id;
+    }
+    
+    public ResultSet cargar_largo_dedo() {
+        try {
+            st = con.conectarBD().createStatement();
+            rs = st.executeQuery("SELECT DISTINCT ld.id, ld.total_cant_ld\n" +
+            "FROM evaluaciones eva inner join largo_dedo ld ON \n" +
+            "(eva.id = ld.id_evaluacion) WHERE eva.id ='"+id_cargar+"';");
+            return rs;
+        } catch (SQLException ex) {
+            Logger.getLogger(Mod_detalles_gen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    public ResultSet cargar_datos_largo_dedo() {
+        try {
+            st = con.conectarBD().createStatement();
+            rs = st.executeQuery("SELECT DISTINCT \n" +
+            "dls.total_res_ld, dls.promedio_ld \n" +
+            "FROM largo_dedo ld inner join datos_ld dls on\n" +
+            "ld.id = dls.id_largo_dedo WHERE ld.id="+this.id_ld_actualizable+";");
+            return rs;
+        } catch (SQLException ex) {
+            Logger.getLogger(Mod_detalles_gen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 }

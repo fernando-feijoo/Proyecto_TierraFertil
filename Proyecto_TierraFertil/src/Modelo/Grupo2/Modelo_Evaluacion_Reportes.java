@@ -7,6 +7,8 @@ public class Modelo_Evaluacion_Reportes {
     Modelo_Conexion conexion = new Modelo_Conexion();
     ResultSet rs;
     Statement st;
+    public String codigoCarga;
+        
     
     public ResultSet mostrarListado() {
         try {
@@ -22,8 +24,10 @@ public class Modelo_Evaluacion_Reportes {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en mostrarListado en ModeloListado" + e);
         }
+        
 
         return null;
 
     }
+    
 }

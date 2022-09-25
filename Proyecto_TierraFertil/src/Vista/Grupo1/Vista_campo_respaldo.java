@@ -110,11 +110,10 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txt_fecha_eva = new com.toedter.calendar.JDateChooser();
-        txt_semana_eva = new com.toedter.components.JSpinField();
         Date date = new Date();
         SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         txt_hora_eva = new javax.swing.JSpinner(sm);
-        btn_guardar_detgenerales = new javax.swing.JButton();
+        txt_semana_eva = new javax.swing.JSpinner();
         g1_grado_calibre = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -229,10 +228,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel40 = new javax.swing.JPanel();
         jLabel73 = new javax.swing.JLabel();
         btn_ok_gc = new javax.swing.JButton();
-        btn_guardar_c_gc = new javax.swing.JButton();
         jLabel158 = new javax.swing.JLabel();
         g1_lardo_dedo = new javax.swing.JPanel();
-        btn_guardar_lardo_dedo = new javax.swing.JButton();
         btn_sig_det_general2 = new javax.swing.JButton();
         jPanel41 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
@@ -571,7 +568,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         cbx_f20_c3 = new javax.swing.JCheckBox();
         cbx_f20_c2 = new javax.swing.JCheckBox();
         jSeparator1 = new javax.swing.JSeparator();
-        btn_guardar_asepcias = new javax.swing.JButton();
         btn_sig_asepacias1 = new javax.swing.JButton();
         g1_sel_emp = new javax.swing.JPanel();
         jPanel117 = new javax.swing.JPanel();
@@ -711,8 +707,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jPanel152 = new javax.swing.JPanel();
         jLabel187 = new javax.swing.JLabel();
         jLabel189 = new javax.swing.JLabel();
-        btn_guardar_se = new javax.swing.JButton();
-        btn_sig_det_general1 = new javax.swing.JButton();
         jLabel157 = new javax.swing.JLabel();
         txt_observacion = new javax.swing.JTextField();
         btn_ok_sel_emp = new javax.swing.JButton();
@@ -899,8 +893,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                     .addComponent(jLabel7))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_semana_eva, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                    .addComponent(txt_hora_eva))
+                    .addComponent(txt_hora_eva, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                    .addComponent(txt_semana_eva))
                 .addGap(75, 75, 75))
         );
         jPanel5Layout.setVerticalGroup(
@@ -920,7 +914,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
-                        .addComponent(txt_tipo_caja_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_tipo_caja_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_semana_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -930,12 +925,9 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                         .addGap(19, 19, 19)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txt_fecha_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)))
-                    .addComponent(txt_semana_eva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel5))))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
-
-        btn_guardar_detgenerales.setText("Guardar");
 
         javax.swing.GroupLayout g1_detalles_generalesLayout = new javax.swing.GroupLayout(g1_detalles_generales);
         g1_detalles_generales.setLayout(g1_detalles_generalesLayout);
@@ -945,8 +937,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(g1_detalles_generalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(g1_detalles_generalesLayout.createSequentialGroup()
-                        .addComponent(btn_guardar_detgenerales)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btn_sig_det_general)
                         .addGap(24, 24, 24))
                     .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -966,9 +957,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addGap(48, 48, 48)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addGroup(g1_detalles_generalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_guardar_detgenerales)
-                    .addComponent(btn_sig_det_general))
+                .addComponent(btn_sig_det_general)
                 .addGap(66, 66, 66))
         );
 
@@ -2672,8 +2661,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         btn_ok_gc.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         btn_ok_gc.setText("OK");
 
-        btn_guardar_c_gc.setText("Guardar");
-
         jLabel158.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
         jLabel158.setText("INGRESE LA CANTIDAD:");
 
@@ -2891,27 +2878,22 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                                 .addGroup(g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(n_gc_total, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(g1_grado_calibreLayout.createSequentialGroup()
-                                        .addGap(47, 47, 47)
-                                        .addGroup(g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(n_gc_totalN, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(c_gc_total, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(g1_grado_calibreLayout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addGroup(g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(btn_sig_gc)
+                                            .addGroup(g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(n_gc_totalN, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                             .addGroup(g1_grado_calibreLayout.createSequentialGroup()
                                 .addComponent(btn_ok_gc)
                                 .addGap(47, 47, 47)))
                         .addContainerGap(26, Short.MAX_VALUE))
                     .addGroup(g1_grado_calibreLayout.createSequentialGroup()
-                        .addGroup(g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(g1_grado_calibreLayout.createSequentialGroup()
-                                .addComponent(jLabel158)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(g1_grado_calibreLayout.createSequentialGroup()
-                                .addComponent(btn_guardar_c_gc)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btn_sig_gc)))
-                        .addGap(0, 793, Short.MAX_VALUE))))
+                        .addComponent(jLabel158)
+                        .addGap(0, 824, Short.MAX_VALUE))))
         );
         g1_grado_calibreLayout.setVerticalGroup(
             g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3004,19 +2986,15 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                             .addComponent(n_gc_43, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(n_gc_50, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(n_gc_38, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(152, 152, 152)
-                .addGroup(g1_grado_calibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_sig_gc)
-                    .addComponent(btn_guardar_c_gc)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addComponent(btn_sig_gc)
+                .addGap(57, 57, 57))
         );
 
         g1_General.addTab("Grado calibre", g1_grado_calibre);
 
         g1_lardo_dedo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         g1_lardo_dedo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btn_guardar_lardo_dedo.setText("Guardar");
-        g1_lardo_dedo.add(btn_guardar_lardo_dedo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
 
         btn_sig_det_general2.setText("Siguiente");
         g1_lardo_dedo.add(btn_sig_det_general2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 470, -1, -1));
@@ -6518,9 +6496,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         g1_asepcias.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 53, -1, 410));
 
-        btn_guardar_asepcias.setText("Guardar");
-        g1_asepcias.add(btn_guardar_asepcias, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
-
         btn_sig_asepacias1.setText("Siguiente");
         g1_asepcias.add(btn_sig_asepacias1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 510, -1, -1));
 
@@ -8024,10 +7999,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         jLabel189.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/cu2.png"))); // NOI18N
 
-        btn_guardar_se.setText("Guardar");
-
-        btn_sig_det_general1.setText("Siguiente");
-
         jLabel157.setText("OBSERVACIÓNES");
 
         btn_ok_sel_emp.setText("OK");
@@ -8046,12 +8017,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_ok_sel_emp))
                     .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, g1_sel_empLayout.createSequentialGroup()
-                            .addComponent(btn_guardar_se)
-                            .addGap(253, 253, 253)
-                            .addComponent(btn_sig_det_general1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_guardar_total))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, g1_sel_empLayout.createSequentialGroup()
                             .addComponent(jLabel157)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -8073,7 +8038,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                                         .addComponent(jPanel142, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)))
                                 .addGroup(g1_sel_empLayout.createSequentialGroup()
                                     .addGap(125, 125, 125)
-                                    .addComponent(jPanel120, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jPanel120, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btn_guardar_total)))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         g1_sel_empLayout.setVerticalGroup(
@@ -8102,10 +8068,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                     .addComponent(jLabel157)
                     .addComponent(txt_observacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_sig_det_general1)
-                    .addComponent(btn_guardar_se)
-                    .addComponent(btn_guardar_total))
+                .addComponent(btn_guardar_total)
                 .addGap(52, 52, 52))
         );
 
@@ -11455,11 +11418,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btn_guardar_asepcias;
-    public javax.swing.JButton btn_guardar_c_gc;
-    public javax.swing.JButton btn_guardar_detgenerales;
-    public javax.swing.JButton btn_guardar_lardo_dedo;
-    public javax.swing.JButton btn_guardar_se;
     public javax.swing.JButton btn_guardar_total;
     public javax.swing.JButton btn_ok_c;
     public javax.swing.JButton btn_ok_gc;
@@ -11467,7 +11425,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     public javax.swing.JButton btn_ok_sel_emp;
     public javax.swing.JButton btn_sig_asepacias1;
     public javax.swing.JButton btn_sig_det_general;
-    public javax.swing.JButton btn_sig_det_general1;
     public javax.swing.JButton btn_sig_det_general2;
     public javax.swing.JButton btn_sig_gc;
     public javax.swing.JTextField c_gc_36;
@@ -12107,7 +12064,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_seleccion_ct1;
     public javax.swing.JTextField txt_seleccion_ct2;
     public javax.swing.JTextField txt_seleccion_ct3;
-    public com.toedter.components.JSpinField txt_semana_eva;
+    public javax.swing.JSpinner txt_semana_eva;
     public javax.swing.JTextField txt_tipo_caja_eva;
     public javax.swing.JTextField txt_total_defectos;
     public javax.swing.JTextField txt_total_defectos1;

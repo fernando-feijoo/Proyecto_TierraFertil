@@ -29,7 +29,7 @@ public class Controlador_Menu_General implements MouseListener {
 
         this.vistaMenu.btn_acopio_control.addMouseListener(this);
         this.vistaMenu.btn_acopio_control.addMouseListener(this);
-        this.vistaMenu.btn_reportes_opcion_dos.addMouseListener(this);
+        this.vistaMenu.btn_reportes.addMouseListener(this);
 
     }
 
@@ -53,8 +53,8 @@ public class Controlador_Menu_General implements MouseListener {
             this.vistaMenu.btn_acopio_control.setBackground(colorUsuarioSeleccion);
         }
 
-        if (e.getSource() == this.vistaMenu.btn_reportes_opcion_dos) {
-            this.vistaMenu.btn_reportes_opcion_dos.setBackground(colorUsuarioSeleccion);
+        if (e.getSource() == this.vistaMenu.btn_reportes) {
+            this.vistaMenu.btn_reportes.setBackground(colorUsuarioSeleccion);
 
         }
         if (e.getSource() == this.vistaMenu.btn_acopio_listado) {
@@ -74,8 +74,8 @@ public class Controlador_Menu_General implements MouseListener {
             this.vistaMenu.btn_acopio_listado.setBackground(colorNormal);
 
         }
-        if (e.getSource() == this.vistaMenu.btn_reportes_opcion_dos) {
-            this.vistaMenu.btn_reportes_opcion_dos.setBackground(colorNormal);
+        if (e.getSource() == this.vistaMenu.btn_reportes) {
+            this.vistaMenu.btn_reportes.setBackground(colorNormal);
 
         }
     }

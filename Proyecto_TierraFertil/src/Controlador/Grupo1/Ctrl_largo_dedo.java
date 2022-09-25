@@ -21,7 +21,7 @@ public class Ctrl_largo_dedo implements ActionListener {
         
         this.nn.btn_ok_c.addActionListener(this);
         this.nn.btn_ok_n.addActionListener(this);
-        this.nn.btn_guardar_lardo_dedo.addActionListener(this);
+        
         
         datos();
     }
@@ -38,8 +38,6 @@ public class Ctrl_largo_dedo implements ActionListener {
         }else if (e.getSource()==this.nn.btn_ok_n) {
             this.nn.txt_gc_f2_total.setText(String.valueOf(ntot));
             this.nn.txt_gc_f2_promedio.setText(Double.toString(nprom));
-        }else if (e.getSource()==this.nn.btn_guardar_lardo_dedo) {
-                guardar_datos();
         }
     }
     

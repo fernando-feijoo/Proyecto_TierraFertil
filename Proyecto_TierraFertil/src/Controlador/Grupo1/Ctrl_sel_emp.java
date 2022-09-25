@@ -20,7 +20,7 @@ public class Ctrl_sel_emp implements ActionListener{
     
         this.nn=nn;
         this.nn.btn_ok_sel_emp.addActionListener(this);
-        this.nn.btn_guardar_se.addActionListener(this);
+        
     }
     int f1_1,f1_2,f1_3,f1_4,f1_5,f1_6,f1_7,f1_8,f1_9,f1_10,f1_11,f1_12,f1_13,f1_14,f1_15,f1_16,f1_17,f1_18, tot_f1;
     int f2_1,f2_2,f2_3,f2_4,f2_5,f2_6,f2_7,f2_8,f2_9,f2_10,f2_11,f2_12,f2_13,f2_14,f2_15,f2_16,f2_17,f2_18,tot_f2;
@@ -41,8 +41,6 @@ public class Ctrl_sel_emp implements ActionListener{
             this.nn.txt_sel_total_cluster.setText(String.valueOf(totalcluster));
             this.nn.txt_sel_total_ph.setText(String.valueOf(totalph2));
             this.nn.txt_promedio_se.setText(String.valueOf(promedio));
-        }else if (e.getSource() == this.nn.btn_guardar_se) {
-                guardar_datos();
         }
     }
     

@@ -14,10 +14,11 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
     //Instanciaciones de la vista y modelo
     Vista_Evaluacion_Total vistaEvaluacion;
     Modelo_Evaluacion_Tabulacion modeloEvaluacionTabulacion = new Modelo_Evaluacion_Tabulacion();
-    ResultSet rs;
-    
-    //Constructor
 
+    ResultSet rs;
+    ResultSet rsCargar;
+
+    //Constructor
     public Controlador_Evaluacion_Tabulacion(Vista_Evaluacion_Total vistaEvaluacion) {
         this.vistaEvaluacion = vistaEvaluacion;
 
@@ -45,9 +46,10 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
                 int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para continuar presione SI. ", "ATENCION", JOptionPane.YES_OPTION);
                 if (respuesta == 0) {
                     modeloEvaluacionTabulacion.guardarTabulacion();
+                    mostrarTabulacion();
+
                     System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente");
                     JOptionPane.showMessageDialog(vistaEvaluacion, "Datos guardados correctamente ", "Registros", JOptionPane.INFORMATION_MESSAGE);
-                    mostrarTabulacion();
 
                 }
                 if (respuesta == 1) {
@@ -106,6 +108,60 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener {
         }
     }
 
+    public void cargarTabulacion(String valorTabu) {
+        try {
+
+            modeloEvaluacionTabulacion.codigoCargar = valorTabu;
+            modeloEvaluacionTabulacion.selecionTabulacion();
+            rsCargar = modeloEvaluacionTabulacion.selecionTabulacion();
+
+            while (rsCargar.next()) {
+
+                this.vistaEvaluacion.txt_caja_insp.setText(rsCargar.getString(1));
+                this.vistaEvaluacion.txt_embalador.setText(rsCargar.getString(2));
+                this.vistaEvaluacion.txt_peso_neto.setText(rsCargar.getString(3));
+                this.vistaEvaluacion.txt_par4.setText(rsCargar.getString(4));
+                this.vistaEvaluacion.txt_par6.setText(rsCargar.getString(5));
+                this.vistaEvaluacion.txt_par8.setText(rsCargar.getString(6));
+                this.vistaEvaluacion.txt_inpar5.setText(rsCargar.getString(7));
+                this.vistaEvaluacion.txt_inpar7.setText(rsCargar.getString(8));
+
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Error en cargarTabulacion" + e);
+        }
+    }
+
+//    public void cargarDatosLlegada() {
+//        String sellosInternos = "", sellosExternos = "";
+//        rsC = modeloDatosLlegada.consultaDatos_entidadDatosLlegada();
+//        try {
+//            while (rsC.next()) {
+//                this.vistaLlegada.datosLlegada_fechaInsp.setDate(funcionFecha_Formato(rsC.getString("fecha_insp")));
+//                this.vistaLlegada.datosLlegada_semana.setValue(Integer.parseInt(rsC.getString("semana")));
+//                this.vistaLlegada.datosLlegada_fechaSalida.setDate(funcionFecha_Formato(rsC.getString("fecha_hora_salida").substring(0, 10)));
+//                this.vistaLlegada.datosLlegada_horaSalida.setValue(funcionHora_Formato(rsC.getString("fecha_hora_salida").substring(11, 19)));
+//                this.vistaLlegada.datosLlegada_horaLlegada.setValue(funcionHora_Formato(rsC.getString("hora_llegada")));
+//                this.vistaLlegada.datosLlegada_tipocaja.setText(rsC.getString("tipo_caja"));
+//                this.vistaLlegada.datosLlegada_cupo.setText(rsC.getString("cupo"));
+//                this.vistaLlegada.datosLlegada_contenedor.setText(rsC.getString("contenedor"));
+//                this.vistaLlegada.datosLlegada_placa.setText(rsC.getString("placa"));
+//                this.vistaLlegada.datosLlegada_chasis.setText(rsC.getString("chasis"));
+//                this.vistaLlegada.datosLlegada_chofer.setText(rsC.getString("chofer_contenedor"));
+//                this.vistaLlegada.datosLlegada_ci.setText(rsC.getString("cedula_chofer"));
+//                this.vistaLlegada.datosLlegada_nombrefinca.setText(rsC.getString("nombre_finca"));
+//                this.vistaLlegada.datosLlegada_candadosllegada.setText(rsC.getString("candados"));
+//                sellosInternos = rsC.getString("sellos_internos");
+//                sellosExternos = rsC.getString("sellos_externos");
+//            }
+//            /*  
+//               
+//
+//        } catch (Exception e) {
+//            System.out.println("Error al cargar componentes Modelo_Datos_LLegada: " + e);
+//        }
+//    }
     @Override
     public void mousePressed(MouseEvent e) {
     }

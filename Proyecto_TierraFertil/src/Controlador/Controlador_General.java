@@ -8,6 +8,7 @@ import Controlador.Grupo1.Ctrl_listar_campo;
 import Controlador.Grupo1.Ctrl_menu;
 import Controlador.Grupo1.Ctrl_sel_emp;
 import Controlador.Grupo2.Controlador_Evaluacion_Datos;
+import static Controlador.Grupo2.Controlador_Evaluacion_Datos.mensaje;
 import Controlador.Grupo2.Controlador_Evaluacion_Defectos;
 import Controlador.Grupo2.Controlador_Evaluacion_Tabulacion;
 import Controlador.Grupo2.Controlador_Listado_Menu;
@@ -36,6 +37,7 @@ import Vista.Grupo3.Vista_Menu_Acopio;
 import Vista.Grupo3.Vista_Obtener_Reportes;
 import Vista.Vista_General;
 import Vista.Vista_Login;
+import Modelo.Grupo2.Modelo_Evaluacion_Tabulacion;
 import java.awt.Color;
 import static java.awt.Frame.ICONIFIED;
 import java.awt.event.ActionEvent;
@@ -45,6 +47,7 @@ import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import javax.swing.JOptionPane;
 
 public class Controlador_General implements MouseListener, ActionListener, MouseMotionListener, ComponentListener {
 
@@ -136,6 +139,8 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
         this.vistaMenuCalidad.btn_acopio_control.addMouseListener(this);
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
         this.vistaMenuCalidad.btn_acopio_listado.addMouseListener(this);
+        this.vistaEvaluacionListado.rdn_actualizar.addMouseListener(this);
+
         // Grupo 3
         this.vistaMenuAcopio.btn_acopio_opcion_uno.addMouseListener(this);
         this.vistaMenuAcopio.btn_acopio_opcion_dos.addMouseListener(this);
@@ -253,7 +258,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaHome.dispose();
             this.vistaListaCampo.dispose();
             this.vistaCampo.setVisible(true);
-        } 
+        }
         if (me.getSource() == this.vistaMenuCampo.boton_campo_dos) {
             this.menuUsuarioSwitchOnOFF();
             this.vistaListaCampo.setBorder(null);
@@ -276,6 +281,19 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.vistaEvaluacionListado.setVisible(true);
             this.vistaEvaluacion.dispose();
             this.vistaHomeCalidad.dispose();
+
+        }
+        //Boton de listado para actualizar datos GRUPO2
+        if (me.getSource() == this.vistaEvaluacionListado.rdn_actualizar) {
+            this.controlEvaluacion.cargarDatos();
+            this.controlEvaDefec.cargarDefectos(this.controlEvaluacion.mensaje);
+            this.controlaEvaTabu.cargarTabulacion(this.controlEvaluacion.mensaje);
+            this.vistaEvaluacion.setBorder(null);
+            this.vistaEvaluacionListado.dispose();
+            this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
+
+            this.vistaGeneral.jp_escritorio_general.add(vistaEvaluacion);
+            this.vistaEvaluacion.setVisible(true);
 
         }
         //  GRUPO 3 OPCIONES DE BOTONES
@@ -493,7 +511,7 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if (ae.getSource()== this.vistaCampo.btn_guardar_total) {
+        if (ae.getSource() == this.vistaCampo.btn_guardar_total) {
             this.ctrlDetGene.guradar_datos_evaluacion();
             this.ctrlGradoCalib.guardar_cantidad_gc();
             this.ctrlLargoDe.guardar_datos();

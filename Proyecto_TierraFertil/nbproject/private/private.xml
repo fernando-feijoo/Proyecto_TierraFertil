@@ -3,10 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Daniel%20Bravo/OneDrive/Documentos/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo2/Controlador_Listado_Menu.java</file>
+            <file>file:/C:/Users/Daniel%20Bravo/OneDrive/Documentos/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo2/Modelo_Evaluacion_Listado.java</file>
+=======
+            <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo1/Mod_detalles_gen.java</file>
+>>>>>>> 581fa8f065a724056a99acd1df42b934fcfefa61
             <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Modelo/Grupo1/Mod_gc_ld.java</file>
             <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Vista/Grupo1/Vista_campo_respaldo.java</file>
             <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo1/Ctrl_detalles_gen.java</file>
             <file>file:/C:/Users/SITRAYAS-LENOVO/Documents/NetBeansProjects/Proyecto_TierraFertil/Proyecto_TierraFertil/src/Controlador/Grupo1/Ctrl_gc_ld.java</file>
+>>>>>>> 7be226c8427c2d81f1468591254f73600cf4d9f3
         </group>
     </open-files>
 </project-private>

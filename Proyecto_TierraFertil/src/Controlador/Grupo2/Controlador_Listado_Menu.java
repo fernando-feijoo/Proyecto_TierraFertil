@@ -19,13 +19,19 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import sun.tools.jar.resources.jar;
+import Controlador.Grupo2.Controlador_Evaluacion_Tabulacion;
+import Modelo.Grupo2.Modelo_Evaluacion_Datos;
+import Vista.Grupo2.Vista_Evaluacion_Total;
 
 public class Controlador_Listado_Menu implements MouseListener, KeyListener, ActionListener {
 
     Vista_Listado_Menu vistaListadoMenu = new Vista_Listado_Menu();
+
     Modelo_Evaluacion_Listado modeloEvaluacionListado = new Modelo_Evaluacion_Listado();
+    Modelo_Evaluacion_Datos modeloEvaluacionDatos = new Modelo_Evaluacion_Datos();
+    Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     ResultSet rs;
-    public String estado;
+    ResultSet rsCarga;
 
     public Controlador_Listado_Menu(Vista_Listado_Menu vistaListadoMenu) {
         this.vistaListadoMenu = vistaListadoMenu;
@@ -33,14 +39,11 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
         this.vistaListadoMenu.txt_buscar.addMouseListener(this);
         this.vistaListadoMenu.jb_buscar.addMouseListener(this);
         this.vistaListadoMenu.jb_eliminar.addMouseListener(this);
-        
-     
-
         mostrarDatos();
 
     }
 
-    public void mostrarDatos() {    
+    public void mostrarDatos() {
         DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
         tabla.setColumnCount(0);
         tabla.addColumn("Codigo");
@@ -89,7 +92,7 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
         });  */
     @Override
     public void mouseClicked(MouseEvent e) {
-        
+
         if (e.getSource() == this.vistaListadoMenu.jb_eliminar) {
             try {
                 int fila = this.vistaListadoMenu.tabla_listado.getSelectedRow();
@@ -99,6 +102,7 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
                 if (respuesta == 0) {
                     modeloEvaluacionListado.eliminarRegistro();
                     mostrarDatos();
+                    JOptionPane.showMessageDialog(vistaListadoMenu, "Registro eliminado correctamente");
                 }
                 DefaultTableModel tabla = (DefaultTableModel) this.vistaListadoMenu.tabla_listado.getModel();
 
@@ -109,6 +113,7 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
             }
 
         }
+
     }
 
     @Override
@@ -151,9 +156,10 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
 
     }
 
+    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-    
 
     }
 }

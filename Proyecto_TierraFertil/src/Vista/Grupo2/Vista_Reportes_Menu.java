@@ -92,6 +92,13 @@ public class Vista_Reportes_Menu extends javax.swing.JInternalFrame {
 
             }
         ));
+        tabla_reportes = new javax.swing.JTable(){
+            public boolean isCellEditable (int rowIndex, int colIndex){
+                return false;
+            }
+        };
+        tabla_reportes.getTableHeader().setResizingAllowed(false);
+        tabla_reportes.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabla_reportes);
 
         rdn_imprimir.setBackground(new java.awt.Color(51, 153, 0));

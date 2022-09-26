@@ -33,8 +33,7 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener, KeyList
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaEvaluacion.jb_btn_guardar) {
-            guardarDatos();
-
+            validarCamposTabulacion();
         }
 
     }
@@ -243,6 +242,18 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener, KeyList
 
     }
 
+    public void validarCamposTabulacion() {
+        if (this.vistaEvaluacion.txt_caja_insp.getText().isEmpty() || this.vistaEvaluacion.txt_embalador.getText().isEmpty() || this.vistaEvaluacion.txt_peso_neto.getText().isEmpty()
+                || this.vistaEvaluacion.txt_par4.getText().isEmpty() || this.vistaEvaluacion.txt_par6.getText().isEmpty() || this.vistaEvaluacion.txt_par8.getText().isEmpty() || this.vistaEvaluacion.txt_inpar5.getText().isEmpty()
+                || this.vistaEvaluacion.txt_inpar7.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "No deje ningun campo vacio.", "ATENCION", JOptionPane.ERROR_MESSAGE);
+
+        } else {
+            guardarDatos();
+
+        }
+    }
+
     public void mostrarDefectosUpdate() {
         /* this.vistaEvaluacion.tabla_defectos.setDefaultRenderer(Object.class, new Render());
         JLabel btn_eliminar = new JLabel(new ImageIcon(getClass().getResource("/Icon/user.png")));
@@ -260,7 +271,6 @@ public class Controlador_Evaluacion_Tabulacion implements MouseListener, KeyList
             modeloEvaluacionDefectos.id_detalle = this.vistaEvaluacion.lb_id_tabulacion.getText();
             modeloEvaluacionDefectos.consultarDefectos();
             rs = modeloEvaluacionDefectos.consultarDefectos();
-            
 
             String[] defectos = new String[4];
 

@@ -269,6 +269,8 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
         txt_observaciones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
+        js_semana.setModel(new javax.swing.SpinnerNumberModel(1, 1, 54, 1));
+
         javax.swing.GroupLayout jp_contenedorGrupoLayout = new javax.swing.GroupLayout(jp_contenedorGrupo);
         jp_contenedorGrupo.setLayout(jp_contenedorGrupoLayout);
         jp_contenedorGrupoLayout.setHorizontalGroup(
@@ -516,6 +518,13 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
             }
         ));
+        tabla_defectos = new javax.swing.JTable(){
+            public boolean isCellEditable (int rowIndex, int colIndex){
+                return false;
+            }
+        };
+        tabla_defectos.getTableHeader().setResizingAllowed(false);
+        tabla_defectos.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabla_defectos);
 
         jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -781,6 +790,13 @@ public class Vista_Evaluacion_Total extends javax.swing.JInternalFrame {
 
             }
         ));
+        tabla_tabulacion = new javax.swing.JTable(){
+            public boolean isCellEditable (int rowIndex, int colIndex){
+                return false;
+            }
+        };
+        tabla_tabulacion.getTableHeader().setResizingAllowed(false);
+        tabla_tabulacion.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tabla_tabulacion);
 
         javax.swing.GroupLayout redondeado_contenedor_3Layout = new javax.swing.GroupLayout(redondeado_contenedor_3);

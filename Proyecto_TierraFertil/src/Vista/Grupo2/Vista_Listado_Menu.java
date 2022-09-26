@@ -89,6 +89,18 @@ public class Vista_Listado_Menu extends javax.swing.JInternalFrame {
 
             }
         ));
+        tabla_listado = new javax.swing.JTable(){
+            public boolean isCellEditable (int rowIndex, int colIndex){
+                return false;
+            }
+        };
+        tabla_listado.getTableHeader().setResizingAllowed(false);
+        tabla_listado.getTableHeader().setReorderingAllowed(false);
+        tabla_listado = new javax.swing.JTable(){
+            public boolean isCellEditable (int rowIndex, int colIndex){
+                return false;
+            }
+        };
         jScrollPane1.setViewportView(tabla_listado);
 
         texto_inicio.setFont(new java.awt.Font("Roboto Black", 1, 34)); // NOI18N

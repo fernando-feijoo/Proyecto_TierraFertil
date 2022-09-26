@@ -31,8 +31,7 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaEvaluacion.jb_agregar_defecto) {
-            agregarDefecto();
-
+            validarCamposDefectos();
         }
         if (e.getSource() == this.vistaEvaluacion.jb_guardar_caja) {
 
@@ -148,8 +147,10 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
             boolean aux = modeloEvaluacionDefectos.guardarDefectos();
             if (aux = true) {
                 System.out.println("SEGUIMIENTO: Campos de tabulacion almacenados corretamente. ");
+                limpiarDefectos();
                 JOptionPane.showMessageDialog(vistaEvaluacion, "Datos almacenados correctamente. ", "REGISTROS", JOptionPane.INFORMATION_MESSAGE);
                 mostrarDefectos();
+                
 
             }
         } catch (Exception ex) {
@@ -251,6 +252,20 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
             }
         }
 
+    }
+
+    public void validarCamposDefectos() {
+        if (this.vistaEvaluacion.txt_nombre_defectos.getText().isBlank() || this.vistaEvaluacion.txt_total_defectos.getText().isBlank()) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Ingrese al menos 1 Defecto." , "ATENCION", JOptionPane.ERROR_MESSAGE);
+            
+        } else {
+            agregarDefecto();
+
+        }
+    }
+    public void limpiarDefectos(){
+        this.vistaEvaluacion.txt_nombre_defectos.setText("");
+        this.vistaEvaluacion.txt_total_defectos.setText("");
     }
 
 }

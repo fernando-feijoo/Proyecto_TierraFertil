@@ -27,19 +27,23 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
-public class Controlador_Evaluacion_Datos implements ActionListener, AncestorListener, MouseListener {
+public class Controlador_Evaluacion_Datos implements AncestorListener, MouseListener {
+
+    //Instancias de vistas
     Vista_Home_Calidad vistaHome = new Vista_Home_Calidad();
     Vista_General vistaGeneral = new Vista_General();
+    Vista_Listado_Menu vistaListado = new Vista_Listado_Menu();
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
+
+    //Instancias de modelos de las vistas
     Modelo_Evaluacion_Datos modeloEvaluacionCalidad = new Modelo_Evaluacion_Datos();
     Modelo_Conexion conexion = new Modelo_Conexion();
-   
-    Vista_Listado_Menu vistaListado = new Vista_Listado_Menu();
-
     Modelo_Evaluacion_Listado modeloListado = new Modelo_Evaluacion_Listado();
+
     ResultSet rs;
     ResultSet rsCarga;
 
+    //Mensaje estatico el cual me permitira guardar el valor seleccionado para el cargado de datos
     public static String mensaje;
 
     public Controlador_Evaluacion_Datos(Vista_Evaluacion_Total vistaEvaluacion) {
@@ -49,39 +53,17 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
         this.vistaEvaluacion.rdn_finalizar.addMouseListener(this);
 
-        //Evita que se acceda a la pestaña tabulacion
+        //Bloquea la pestaña tabulacion
         this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, false);
 
     }
 
     @Override
-
-    public void actionPerformed(ActionEvent e) {
-
-    }
-
-    @Override
-    public void ancestorAdded(AncestorEvent event) {
-    }
-
-    @Override
-    public void ancestorRemoved(AncestorEvent event) {
-    }
-
-    @Override
-    public void ancestorMoved(AncestorEvent event) {
-    }
-
-    @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == this.vistaEvaluacion.btn_siguiente) {
-
-            System.out.println("Boton siguiente presionado");
-            guardarDatos();
-
+            validarCampoDatos();
         }
         if (e.getSource() == this.vistaEvaluacion.rdn_finalizar) {
-
             int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Se ah registrado la evaluacion correctamente.\n ¿Desea generar su reporte?", "REPORTES", JOptionPane.INFORMATION_MESSAGE);
             if (respuesta == 0) {
                 generarReporteEvaluacion();
@@ -89,34 +71,21 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
                 this.vistaGeneral.jp_escritorio_general.add(vistaHome);
                 this.vistaHome.setBorder(null);
                 this.vistaHome.setVisible(true);
-                
+                limpiarCamposFinalizar();
+                setearDefectos();
+                setearTabulacion();
+                this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(0);
+                this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, false);
 
+                // this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, false);
             }
+            limpiarCamposFinalizar();
             this.vistaEvaluacion.dispose();
+            setearDefectos();
+            setearTabulacion();
+            this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(0);
+            this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, false);
 
-        }
-    }
-
-    public void generarReporteEvaluacion() {
-        try {
-
-            String respuesta = this.vistaEvaluacion.txt_codigo.getText();
-            JasperReport reporte;
-            JasperPrint jprint;
-
-            HashMap<String, Object> parameters = new HashMap<>();
-
-            parameters.put("parametro_codigo", respuesta);
-
-            reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes_Grupo2/Reporte_Evaluacion.jasper"));
-            jprint = JasperFillManager.fillReport(reporte, parameters, conexion.conectarBD());
-
-            if (jprint != null) {
-                JasperViewer view = new JasperViewer(jprint);
-                view.setVisible(true);
-            }
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(vistaEvaluacion, "Error al generar reporte: " + ex);
         }
     }
 
@@ -138,10 +107,15 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
 
     public void guardarDatos() {
         try {
-            // SimpleDateFormat formatoP = new SimpleDateFormat("dd/MM/yyyy");
-            // this.vistaLlegada.datosLlegada_fechaInsp.setDate(formatoP.format(28/09/2022).toDate);
+            /*El if permite dar a saber al programa si hacer un INSERT o UPDATE - lb_id_evaluacion es el id
+                que se visualiza en la ventana datos, al principio no mostrara ningun id por ende ejecutara lo 
+                    que esta dentro del if
+             */
             if (this.vistaEvaluacion.lb_id_evaluacion.getText().isEmpty()) {
 
+                /*Obtiene las cajas de texto de la vista y las envia a las variables del modelo para ejecutarlas 
+                    en el respectivo INSERT
+                 */
                 modeloEvaluacionCalidad.semana = (int) this.vistaEvaluacion.js_semana.getValue();
                 modeloEvaluacionCalidad.finca = this.vistaEvaluacion.txt_finca.getText();
                 modeloEvaluacionCalidad.calibracion = this.vistaEvaluacion.txt_calibracion.getText();
@@ -156,33 +130,30 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
                 modeloEvaluacionCalidad.peso = this.vistaEvaluacion.txt_peso.getText();
                 modeloEvaluacionCalidad.observaciones = this.vistaEvaluacion.txt_observaciones.getText();
                 modeloEvaluacionCalidad.fecha = ((JTextField) this.vistaEvaluacion.jd_fecha.getDateEditor().getUiComponent()).getText();
-//
-//                    if (this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_calibracion.getText().isEmpty() || this.vistaEvaluacion.txt_vapor.getText().isEmpty()
-//                            || this.vistaEvaluacion.txt_transporte.getText().isEmpty() || this.vistaEvaluacion.txt_peso.getText().isEmpty() || this.vistaEvaluacion.txt_dedos.getText().isEmpty()
-//                            || this.vistaEvaluacion.txt_pedidos.getText().isEmpty() || this.vistaEvaluacion.txt_caja_insp.getText().isEmpty() || this.vistaEvaluacion.txt_destino.getText().isEmpty()
-//                            || this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_fumigacion.getText().isEmpty()) {
-//
-//                        JOptionPane.showMessageDialog(visÇtaEvaluacion, "No deje ningun campo vacio. ");
 
-//                    } else {
-//                        System.out.println("Validacion Correcta");
+                System.out.println("Validacion Correcta");
                 int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para confirmar sus datos presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
-
                 if (respuesta == 0) {
-
                     modeloEvaluacionCalidad.guardarDatos();
+
+                    /*Metodo el cual me carga el id en el componente id de la primera pestaña, esto me sera de utilidad
+                        en la siguiente pestaña, debido a que en el siguiente INSERT se hara la inserccion dependiendo del 
+                            id que aparezca en la primera pestaña
+                     */
                     ID_eval();
 
                     System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
                     JOptionPane.showMessageDialog(vistaEvaluacion, "Datos Almacenados Correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
 
-                    //da acceso a la pestaña tabulacion 
+                    //Una vez que se guarde los datos la pestaña tabulacion se activara, ademas me pasara a la misma.
                     this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(1);
                     this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
 
                 }
-
-//                    }
+                /*En caso contrario de que el id que muestra en la pestaña datos este cargado, hara una actualizacion 
+                    el id se cargara cuando en la opcion actualizar de la ventana de listado se seleccione el registro 
+                        a actualizar
+                 */
             } else {
                 modeloEvaluacionCalidad.id_actualizar = this.vistaEvaluacion.lb_id_evaluacion.getText();
 
@@ -203,13 +174,12 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
                 int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Para continuar la actualizacion presiones SI.", "ATENCION", JOptionPane.YES_OPTION);
 
                 if (respuesta == 0) {
-
+                    //En vez de llamar al metodo con la sentencia de insert, se llamara al metodo con sentencia UPDATE
                     modeloEvaluacionCalidad.actualizarDatos();
 
                     System.out.println("SEGUIMIENTO: Campos de datos almacenados correctamente. ");
                     JOptionPane.showMessageDialog(vistaEvaluacion, "Datos actualizados correctamente", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
 
-                    //da acceso a la pestaña tabulacion 
                     this.vistaEvaluacion.pestaña_tabulacion.setSelectedIndex(1);
                     this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);
 
@@ -295,6 +265,114 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en busqueda id_eval " + e);
         }
+    }
+
+    public void generarReporteEvaluacion() {
+        try {
+
+            String respuesta = this.vistaEvaluacion.txt_codigo.getText();
+            JasperReport reporte;
+            JasperPrint jprint;
+
+            HashMap<String, Object> parameters = new HashMap<>();
+
+            parameters.put("parametro_codigo", respuesta);
+
+            reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes_Grupo2/Reporte_Evaluacion.jasper"));
+            jprint = JasperFillManager.fillReport(reporte, parameters, conexion.conectarBD());
+
+            if (jprint != null) {
+                JasperViewer view = new JasperViewer(jprint);
+                view.setVisible(true);
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Error al generar reporte: " + ex);
+        }
+    }
+
+    public void validarCampoDatos() {
+        if (this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_calibracion.getText().isEmpty() || this.vistaEvaluacion.txt_vapor.getText().isEmpty()
+                || this.vistaEvaluacion.txt_transporte.getText().isEmpty() || this.vistaEvaluacion.txt_peso.getText().isEmpty() || this.vistaEvaluacion.txt_dedos.getText().isEmpty()
+                || this.vistaEvaluacion.txt_pedidos.getText().isEmpty() || this.vistaEvaluacion.txt_destino.getText().isEmpty()
+                || this.vistaEvaluacion.txt_codigo.getText().isEmpty() || this.vistaEvaluacion.txt_fumigacion.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "No deje ningun campo vacio.", "ATENCION", JOptionPane.ERROR_MESSAGE);
+
+        } else {
+            guardarDatos();
+
+        }
+    }
+
+    public void limpiarCamposFinalizar() {
+        this.vistaEvaluacion.jd_fecha.setDate(null);
+        this.vistaEvaluacion.txt_calibracion.setText("");
+        this.vistaEvaluacion.txt_vapor.setText("");
+        this.vistaEvaluacion.txt_transporte.setText("");
+        this.vistaEvaluacion.txt_peso.setText("");
+        this.vistaEvaluacion.txt_observaciones.setText("");
+        this.vistaEvaluacion.txt_dedos.setText("");
+        this.vistaEvaluacion.txt_pedidos.setText("");
+        this.vistaEvaluacion.txt_tipoCaja.setText("");
+        this.vistaEvaluacion.txt_finca.setText("");
+        this.vistaEvaluacion.txt_destino.setText("");
+        this.vistaEvaluacion.txt_codigo.setText("");
+        this.vistaEvaluacion.txt_fumigacion.setText("");
+        this.vistaEvaluacion.txt_caja_insp.setText("");
+        this.vistaEvaluacion.txt_embalador.setText("");
+        this.vistaEvaluacion.txt_peso_neto.setText("");
+        this.vistaEvaluacion.txt_par4.setText("");
+        this.vistaEvaluacion.txt_par6.setText("");
+        this.vistaEvaluacion.txt_par8.setText("");
+        this.vistaEvaluacion.txt_inpar5.setText("");
+        this.vistaEvaluacion.txt_inpar7.setText("");
+        this.vistaEvaluacion.txt_total_defectos.setText("");
+        this.vistaEvaluacion.txt_nombre_defectos.setText("");
+        this.vistaEvaluacion.lb_id_evaluacion.setText("");
+        this.vistaEvaluacion.lb_id_tabulacion.setText("");
+
+    }
+
+    public void setearDefectos() {
+
+        DefaultTableModel tabla = (DefaultTableModel) this.vistaEvaluacion.tabla_defectos.getModel();
+
+        tabla.setColumnCount(0);
+        tabla.addColumn("Id");
+        tabla.addColumn("Nombre");
+        tabla.addColumn("Total de defectos");
+        tabla.addColumn("Pcmd");
+        tabla.setRowCount(0);
+
+    }
+
+    public void setearTabulacion() {
+        DefaultTableModel tabla = (DefaultTableModel) this.vistaEvaluacion.tabla_tabulacion.getModel();
+        tabla.setColumnCount(0);
+        tabla.addColumn("ID");
+        tabla.addColumn("Caja Inspeccionada");
+        tabla.addColumn("Embalador");
+        tabla.addColumn("Peso Neto");
+        tabla.addColumn("Par4");
+        tabla.addColumn("par6");
+        tabla.addColumn("Par8");
+        tabla.addColumn("Impar5");
+        tabla.addColumn("Impar7");
+        tabla.addColumn("Total Gajos");
+        tabla.addColumn("Pcmd");
+        tabla.setRowCount(0);
+
+    }
+
+    @Override
+    public void ancestorAdded(AncestorEvent event) {
+    }
+
+    @Override
+    public void ancestorRemoved(AncestorEvent event) {
+    }
+
+    @Override
+    public void ancestorMoved(AncestorEvent event) {
     }
 
 }

@@ -671,6 +671,11 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="js_semana">
+                          <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="1" maximum="54" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txt_finca">
                         </Component>
@@ -1008,14 +1013,14 @@
                           <SubComponents>
                             <Component class="javax.swing.JTable" name="tabla_defectos">
                               <Properties>
-                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor" postCode="tabla_defectos = new javax.swing.JTable(){&#xa;public boolean isCellEditable (int rowIndex, int colIndex){&#xa;return false;&#xa;}&#xa;};">
                                   <Table columnCount="0" rowCount="0"/>
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                   <TableColumnModel selectionModel="0"/>
                                 </Property>
                                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                  <TableHeader reorderingAllowed="false" resizingAllowed="false"/>
                                 </Property>
                               </Properties>
                             </Component>
@@ -1414,14 +1419,14 @@
                           <SubComponents>
                             <Component class="javax.swing.JTable" name="tabla_tabulacion">
                               <Properties>
-                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor" postCode="tabla_tabulacion = new javax.swing.JTable(){&#xa;public boolean isCellEditable (int rowIndex, int colIndex){&#xa;return false;&#xa;}&#xa;};">
                                   <Table columnCount="0" rowCount="4"/>
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                   <TableColumnModel selectionModel="0"/>
                                 </Property>
                                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                  <TableHeader reorderingAllowed="false" resizingAllowed="false"/>
                                 </Property>
                               </Properties>
                             </Component>

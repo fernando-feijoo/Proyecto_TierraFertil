@@ -65,7 +65,7 @@ public class Controlador_Evaluacion_Reportes implements MouseListener {
     public void generarReporte() {
         try {
 
-            int fila = this.vistaReportes.tabla_reportes.getSelectedRow();
+            int fila = this.vistaReportes.tabla_reportes.getSelectedRow();  
             String respuesta = this.vistaReportes.tabla_reportes.getValueAt(fila, 0).toString();
 
             JasperReport reporte;

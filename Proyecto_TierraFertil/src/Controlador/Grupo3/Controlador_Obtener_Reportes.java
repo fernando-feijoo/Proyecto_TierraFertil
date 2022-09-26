@@ -1,36 +1,45 @@
 package Controlador.Grupo3;
 
 import Modelo.Grupo3.Modelo_Obtener_Reportes;
+import Modelo.Modelo_Conexion;
 import Vista.Grupo3.Vista_Obtener_Reportes;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
-public class Controlador_Obtener_Reportes implements MouseListener{
+public class Controlador_Obtener_Reportes implements MouseListener {
 
     Vista_Obtener_Reportes vistaObtReport;
     Modelo_Obtener_Reportes modeloObtenerReportes = new Modelo_Obtener_Reportes();
+    Modelo_Conexion modeloConexion = Modelo_Conexion.getInstancia();
 
     ResultSet rs;
     public static String busqueda;
     public static int idContenedor;
+    public String parametro;
 
     public Controlador_Obtener_Reportes(Vista_Obtener_Reportes vistaObtReport) {
         this.vistaObtReport = vistaObtReport;
         this.vistaObtReport.boton_Buscar.addMouseListener(this);
         this.vistaObtReport.tabla_reporte_contenedores.addMouseListener(this);
     }
-    
-    public void cargaDatosInicial(){
+
+    public void cargaDatosInicial() {
         this.busquedaDatos();
     }
-    
-     public void busquedaDatos() {
+
+    public void busquedaDatos() {
         this.busqueda = this.vistaObtReport.ListadoContenedor_txf_Busqueda.getText();
         this.modeloObtenerReportes.busquedaGeneral = this.busqueda;
         this.modeloObtenerReportes.consultarDatos();
@@ -52,6 +61,7 @@ public class Controlador_Obtener_Reportes implements MouseListener{
             System.out.println("Error de consulta ID_Contenedor LC: " + ex);
         }
     }
+
     public void mostrarDatos() {
         ImageIcon iconoUno = (new ImageIcon(getClass().getResource("/Icon/imprimir_32px.png")));
         JLabel botonUno = new JLabel(iconoUno);
@@ -70,7 +80,7 @@ public class Controlador_Obtener_Reportes implements MouseListener{
         tabla.addColumn("SELLO VERF");
         tabla.addColumn("OB GENERAL");
         tabla.addColumn(" ");
-        
+
         try {
             rs = modeloObtenerReportes.consultarDatos();
             Object[] registros = new Object[10];
@@ -89,7 +99,6 @@ public class Controlador_Obtener_Reportes implements MouseListener{
                 registros[7] = rs.getString("sello_verificador");
                 registros[8] = rs.getString("obser_general");
                 registros[9] = botonUno;
-                
 
                 tabla.addRow(registros);
             }
@@ -99,6 +108,29 @@ public class Controlador_Obtener_Reportes implements MouseListener{
         }
     }
 
+    public void generarReporte() {
+        try {
+            JasperReport reporte;
+            JasperPrint jprint = null;
+            reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes/Grupo3/Reporte_Pricipal.jasper"));
+            HashMap<String, Object> param = new HashMap<String, Object>();
+            param.put("contenedor", this.parametro);
+            
+            System.out.println("## Ingreso RP: " + this.parametro);
+            
+            jprint = JasperFillManager.fillReport(reporte, null, modeloConexion.conectarBD());
+//            if (jprint != null) {
+                JasperViewer view = new JasperViewer(jprint);
+                view.setVisible(true);
+//            }
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex);
+        }
+        try {
+            modeloConexion.conectarBD().close();
+        } catch (SQLException ex) {
+        }
+    }
 
     @Override
     public void mouseClicked(MouseEvent me) {
@@ -107,10 +139,12 @@ public class Controlador_Obtener_Reportes implements MouseListener{
             this.busquedaDatos();
         }
         if (this.vistaObtReport.tabla_reporte_contenedores.getSelectedColumn() == 9) {
-
+            this.parametro = this.vistaObtReport.tabla_reporte_contenedores.getValueAt(filaSeleccionada, 0).toString();
+            System.out.println("Ingreso Genrar reporte Parametro: " + this.parametro);
+            this.generarReporte();
         }
     }
-    
+
     @Override
     public void mousePressed(MouseEvent e) {
     }
@@ -127,6 +161,3 @@ public class Controlador_Obtener_Reportes implements MouseListener{
     public void mouseExited(MouseEvent e) {
     }
 }
-
-
-

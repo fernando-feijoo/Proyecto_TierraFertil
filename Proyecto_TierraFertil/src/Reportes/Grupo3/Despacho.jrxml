@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Despacho" pageWidth="612" pageHeight="125" whenNoDataType="NoPages" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6a67e4f4-d7b9-4c96-8b94-ed830a3e9034">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="database\DataAdapter.xml"/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+	<parameter name="contenedor" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT co.id,
+	dd.filtro,
+	dd.termografo,
+	dd.termografo_numero,
+	dd.sello_adhesivo,
+	dd.sello_verificador,
+	dd.sello_exp_candado,
+	dd.fecha_hora_salida,
+	dd.sello_exp_cable,
+	dd.compania_transportista,
+	dd.sello_naviero,
+	dd.vapor,
+	dd.destino,
+	dd.nombre_paletizadores,
+	dd.total_viajar,
+	dd.cajas,
+	dd.cant_palet,
+	dd.observacion
+FROM contenedores co
+	inner join datos_despacho dd ON 
+	 co.id = dd.id_contenedor 
+	 where co.codigo= $P{contenedor}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="contenedores"/>
+	</field>
+	<field name="filtro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="filtro"/>
+		<property name="com.jaspersoft.studio.field.label" value="filtro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="termografo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="termografo"/>
+		<property name="com.jaspersoft.studio.field.label" value="termografo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="termografo_numero" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="termografo_numero"/>
+		<property name="com.jaspersoft.studio.field.label" value="termografo_numero"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="sello_adhesivo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sello_adhesivo"/>
+		<property name="com.jaspersoft.studio.field.label" value="sello_adhesivo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="sello_verificador" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sello_verificador"/>
+		<property name="com.jaspersoft.studio.field.label" value="sello_verificador"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="sello_exp_candado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sello_exp_candado"/>
+		<property name="com.jaspersoft.studio.field.label" value="sello_exp_candado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="fecha_hora_salida" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_hora_salida"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_hora_salida"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="sello_exp_cable" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sello_exp_cable"/>
+		<property name="com.jaspersoft.studio.field.label" value="sello_exp_cable"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="compania_transportista" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="compania_transportista"/>
+		<property name="com.jaspersoft.studio.field.label" value="compania_transportista"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="sello_naviero" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sello_naviero"/>
+		<property name="com.jaspersoft.studio.field.label" value="sello_naviero"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="vapor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vapor"/>
+		<property name="com.jaspersoft.studio.field.label" value="vapor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="destino" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="destino"/>
+		<property name="com.jaspersoft.studio.field.label" value="destino"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="nombre_paletizadores" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre_paletizadores"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre_paletizadores"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="total_viajar" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="total_viajar"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_viajar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="cajas" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cajas"/>
+		<property name="com.jaspersoft.studio.field.label" value="cajas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="cant_palet" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cant_palet"/>
+		<property name="com.jaspersoft.studio.field.label" value="cant_palet"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<field name="observacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="observacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="observacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_despacho"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="612" height="20" uuid="1f65a071-7fec-4f6d-8c10-e2d6a8b7f330"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Datos Despacho]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="100" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="30" height="20" uuid="1fdd9443-1b73-460c-970b-226748d507fe"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{filtro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" uuid="cc7401d6-8321-43dc-8e17-db75b78f53ae"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Filtro:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="0" width="40" height="20" uuid="831f7d3b-f496-4337-95c3-e174fae0bf48"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{termografo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="0" width="60" height="20" uuid="9c229eaf-55ae-47a3-aee3-05456217b3dd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Termografo:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="229" y="0" width="50" height="20" uuid="9cb95155-58bc-490c-9122-321775ba453b"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{termografo_numero}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="0" width="70" height="20" uuid="63a13f0a-b5fa-46ca-ace1-777da581824e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Termografo#:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="356" y="0" width="256" height="20" uuid="c411f1a5-b370-4b68-9b8a-834603f142f5"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sello_adhesivo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="0" width="76" height="20" uuid="8077a137-749e-414a-9ea4-2626fdfc26f4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sello adhesivo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="20" width="130" height="20" uuid="93cd2226-8ff6-4935-8da5-6f4427cbc332"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sello_verificador}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="90" height="20" uuid="583a069d-c3b5-450f-8df0-121f4d56932c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sello Verificador:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="20" width="262" height="20" uuid="d6503870-61f8-4ce9-aa0b-2e56dbe70d93"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sello_exp_candado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="20" width="130" height="20" uuid="d15fe787-7f04-45dc-99bf-cc4bd5a2f362"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sello Exportador candado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="40" width="70" height="20" uuid="ff5dc3e8-f4ad-432b-ae0b-2144881fdddb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{fecha_hora_salida}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="c64f8f81-04cb-4d56-a0dc-457a3e81f0c2"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha y hora salida:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="40" width="60" height="20" uuid="0b5233a1-223c-44a4-a6ee-90b26e99cdf3"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sello_exp_cable}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="170" y="40" width="120" height="20" uuid="4c5440b2-9319-4118-bdff-7a79e1880838"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sello exportador cable:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="470" y="40" width="142" height="20" uuid="35fb54ce-9a7b-420a-aa90-fbf3989b6f79"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{compania_transportista}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="350" y="40" width="120" height="20" uuid="4e3c686e-8210-43e0-9ee0-4f801cb1fae1"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Compañia Transportista:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="60" width="80" height="20" uuid="1a402da2-189f-4344-bfd7-fd577f56c3d4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sello_naviero}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="70" height="20" uuid="85185109-2875-425d-b56c-a718be27131d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sello Naviero:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="60" width="100" height="20" uuid="a7407ac2-e41a-43e1-bbd0-465eaf665ee8"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vapor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="60" width="40" height="20" uuid="6f61fe19-38fe-4847-8c4b-324bbb4d66a5"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vapor:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="60" width="70" height="20" uuid="b9e64623-4ea3-45e5-9886-906f4c2cc024"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{destino}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="60" width="40" height="20" uuid="ba7f1b16-2926-4ccc-b667-3e99d56b44be"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Destino:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="508" y="60" width="104" height="20" uuid="dc5c65e5-7a5f-4885-bbf0-7de6b8eecf3e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre_paletizadores}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="60" width="120" height="20" uuid="9dcd13cf-4d88-44f2-9fd3-aa813aebfa15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre de Paletizador:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="74" y="80" width="26" height="20" uuid="4d6c5284-a81f-4949-ab41-e5c84df9cd11"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{total_viajar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="80" width="74" height="20" uuid="ed8b3bd7-6a0d-4be7-ba09-2a4ae64243cc"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total a viajar:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="80" width="20" height="20" uuid="68db1d2a-aae9-48ec-897a-0dce61961f8d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cajas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="80" width="40" height="20" uuid="5247944c-c595-446a-807d-d92ac4560e44"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cajas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="240" y="80" width="70" height="20" uuid="d2a3f285-6565-4f49-a0ce-c7b6b586257e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{cant_palet}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="80" width="80" height="20" uuid="99da50e7-4ea8-4a3a-968d-93487227ff7c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Palet:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="80" width="232" height="20" uuid="b331cec9-5864-4a28-ab44-e5494e395b19"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{observacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="80" width="70" height="20" uuid="1d810153-bc81-4eea-ab62-70c2bac94556"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observación:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

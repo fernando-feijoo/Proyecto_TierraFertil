@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Inspeccion" pageWidth="612" pageHeight="180" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2f7dc871-1d97-46f5-a667-1fc505c3b386">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="database\DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="Dataset1" uuid="fa011459-bf16-42e3-8866-01370a6b2f64">
+		<property name="com.jaspersoft.studio.data.sql.tables">
+			<![CDATA[Y29udGVuZWRvcmVzICwxNSwxNSxjN2YwZDk1Ny0wNzgwLTRlMTMtODQ0Zi05Njg2ZTRlMDEzNjA7
+aW5zcGVjY2lvbl9jb250ZW5lZG9yICwxNjgsMjIwLGI2Y2E0NmQwLWJmNDQtNDI1OS05NjYzLTdh
+ZWY1Y2U4NDNjYjt2ZXJpZmljYXJfbHVnYXIgLDE1LDI0OCw5ODE4ZWZkMS02NjM2LTQwM2MtYmIw
+Ny0yOWY0ZDg2NDU0NmU7]]>
+		</property>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="database\DataAdapter.xml"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT inc.id,
+	vl.lugar,
+	inc.verificacion
+FROM contenedores co
+	inner join inspeccion_contenedor inc ON 
+	 co.id = inc.id_contenedor 
+	inner join verificar_lugar vl ON 
+	 vl.id = inc.id_verificar_lugar]]>
+		</queryString>
+		<field name="id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id"/>
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="inspeccion_contenedor"/>
+		</field>
+		<field name="lugar" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="lugar"/>
+			<property name="com.jaspersoft.studio.field.label" value="lugar"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="verificar_lugar"/>
+		</field>
+		<field name="verificacion" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="verificacion"/>
+			<property name="com.jaspersoft.studio.field.label" value="verificacion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="inspeccion_contenedor"/>
+		</field>
+		<group name="id">
+			<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		</group>
+		<group name="lugar">
+			<groupExpression><![CDATA[$F{lugar}]]></groupExpression>
+		</group>
+		<group name="verificacion">
+			<groupExpression><![CDATA[$F{verificacion}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="contenedor" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select vl.id as sona,inc.id,inc.id_contenedor,vl.lugar,inc.verificacion,co.obser_ins_cont
+from 
+contenedores co inner join inspeccion_contenedor inc on co.id=inc.id_contenedor 
+inner join verificar_lugar vl on vl.id=inc.id_verificar_lugar
+where co.codigo= $P{contenedor}]]>
+	</queryString>
+	<field name="sona" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="sona"/>
+		<property name="com.jaspersoft.studio.field.label" value="sona"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="verificar_lugar"/>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inspeccion_contenedor"/>
+	</field>
+	<field name="id_contenedor" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_contenedor"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_contenedor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inspeccion_contenedor"/>
+	</field>
+	<field name="lugar" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lugar"/>
+		<property name="com.jaspersoft.studio.field.label" value="lugar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="verificar_lugar"/>
+	</field>
+	<field name="verificacion" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="verificacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="verificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inspeccion_contenedor"/>
+	</field>
+	<field name="obser_ins_cont" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obser_ins_cont"/>
+		<property name="com.jaspersoft.studio.field.label" value="obser_ins_cont"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="contenedores"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="612" height="20" uuid="9f76051e-ac66-4684-9767-a5e5fbd4a8c0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Datos de Inspección de Contenedor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="26">
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="16" uuid="6446b622-2515-448f-82eb-443acb1825d9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e932ba5b-4367-4931-b653-588643466635"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="16" uuid="410d4a98-234b-43dd-b97b-54442ebf4c47">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a36a1acc-c27a-4cb4-99ab-c3c537ea5c03"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="16" uuid="7313be0a-ae51-4bf7-97e2-015e8eb7ee18">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aed31259-8c5d-458b-aa32-597e626f351c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Opciones]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="-10" width="100" height="20" uuid="00086cb8-1ed8-401e-b3a2-75466401e2a1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e932ba5b-4367-4931-b653-588643466635"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{lugar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="200" y="-10" width="100" height="20" uuid="f6635aef-ab81-4888-bc4b-34cd7c1b6e6a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a36a1acc-c27a-4cb4-99ab-c3c537ea5c03"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{verificacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="-10" width="100" height="20" uuid="272c714c-706d-4785-a0e5-dd616f1b8cc9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aed31259-8c5d-458b-aa32-597e626f351c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sona}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="22">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="3b29f4c2-a19f-4ed9-b8d6-ce02c44115d0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5257435-e6d5-4b44-bc1a-751a4eeb8804"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observación:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="512" height="20" uuid="893c7068-edc0-4c7e-9452-0f1966aa9326">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5257435-e6d5-4b44-bc1a-751a4eeb8804"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obser_ins_cont}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

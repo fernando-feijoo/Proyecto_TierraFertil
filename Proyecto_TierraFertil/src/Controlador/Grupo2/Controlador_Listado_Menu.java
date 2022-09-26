@@ -141,10 +141,11 @@ public class Controlador_Listado_Menu implements MouseListener, KeyListener, Act
     public void eliminarDatos() {
         try {
             int fila = this.vistaListadoMenu.tabla_listado.getSelectedRow();
-            this.modeloEvaluacionListado.codigo = (String) this.vistaListadoMenu.tabla_listado.getValueAt(fila, 0);
 
             int respuesta = JOptionPane.showConfirmDialog(vistaListadoMenu, "¿Desea eliminar el registro?", "ATENCION", JOptionPane.YES_OPTION);
             if (respuesta == 0) {
+                this.modeloEvaluacionListado.codigo = this.vistaListadoMenu.tabla_listado.getValueAt(fila, 0).toString();
+
                 modeloEvaluacionListado.eliminarRegistro();
                 mostrarDatos();
                 JOptionPane.showMessageDialog(vistaListadoMenu, "Registro eliminado correctamente");

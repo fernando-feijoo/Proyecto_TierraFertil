@@ -325,7 +325,9 @@ public class Controlador_General implements MouseListener, ActionListener, Mouse
             this.controladorListado.mostrarDatos();
            // this.controlEvaDefec.cargarDefectos(this.controlEvaluacion.mensaje);
             //this.controlaEvaTabu.cargarTabulacion(this.controlEvaluacion.mensaje);
-
+            this.controlaEvaTabu.mostrarTabulacion();
+            
+            
             this.vistaEvaluacion.setBorder(null);
             this.vistaEvaluacionListado.dispose();
             this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, true);

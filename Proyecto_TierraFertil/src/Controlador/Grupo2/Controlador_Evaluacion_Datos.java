@@ -15,14 +15,25 @@ import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 import Modelo.Modelo_Conexion;
 import Modelo.Grupo2.Modelo_Evaluacion_Datos;
-
+import Modelo.Modelo_Conexion;
 import javax.swing.table.DefaultTableModel;
 import Vista.Grupo2.Vista_Listado_Menu;
+import Vista.Grupo2.Vista_Home_Calidad;
+import Vista.Vista_General;
+import java.util.HashMap;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 public class Controlador_Evaluacion_Datos implements ActionListener, AncestorListener, MouseListener {
-
+    Vista_Home_Calidad vistaHome = new Vista_Home_Calidad();
+    Vista_General vistaGeneral = new Vista_General();
     Vista_Evaluacion_Total vistaEvaluacion = new Vista_Evaluacion_Total();
     Modelo_Evaluacion_Datos modeloEvaluacionCalidad = new Modelo_Evaluacion_Datos();
+    Modelo_Conexion conexion = new Modelo_Conexion();
+   
     Vista_Listado_Menu vistaListado = new Vista_Listado_Menu();
 
     Modelo_Evaluacion_Listado modeloListado = new Modelo_Evaluacion_Listado();
@@ -36,6 +47,7 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
 
         //Botones de datos
         this.vistaEvaluacion.btn_siguiente.addMouseListener(this);
+        this.vistaEvaluacion.rdn_finalizar.addMouseListener(this);
 
         //Evita que se acceda a la pestaña tabulacion
         this.vistaEvaluacion.pestaña_tabulacion.setEnabledAt(1, false);
@@ -67,6 +79,44 @@ public class Controlador_Evaluacion_Datos implements ActionListener, AncestorLis
             System.out.println("Boton siguiente presionado");
             guardarDatos();
 
+        }
+        if (e.getSource() == this.vistaEvaluacion.rdn_finalizar) {
+
+            int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "Se ah registrado la evaluacion correctamente.\n ¿Desea generar su reporte?", "REPORTES", JOptionPane.INFORMATION_MESSAGE);
+            if (respuesta == 0) {
+                generarReporteEvaluacion();
+                this.vistaEvaluacion.dispose();
+                this.vistaGeneral.jp_escritorio_general.add(vistaHome);
+                this.vistaHome.setBorder(null);
+                this.vistaHome.setVisible(true);
+                
+
+            }
+            this.vistaEvaluacion.dispose();
+
+        }
+    }
+
+    public void generarReporteEvaluacion() {
+        try {
+
+            String respuesta = this.vistaEvaluacion.txt_codigo.getText();
+            JasperReport reporte;
+            JasperPrint jprint;
+
+            HashMap<String, Object> parameters = new HashMap<>();
+
+            parameters.put("parametro_codigo", respuesta);
+
+            reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes_Grupo2/Reporte_Evaluacion.jasper"));
+            jprint = JasperFillManager.fillReport(reporte, parameters, conexion.conectarBD());
+
+            if (jprint != null) {
+                JasperViewer view = new JasperViewer(jprint);
+                view.setVisible(true);
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(vistaEvaluacion, "Error al generar reporte: " + ex);
         }
     }
 

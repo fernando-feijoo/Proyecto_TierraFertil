@@ -16,7 +16,8 @@ public class Modelo_Evaluacion_Tabulacion {
     public Double peso_neto;
     public int caja_inspeccionada, embalador, par4, par6, par8, impar5, impar7, total_gajos;
     public double pcmd_total;
-    public String codigoCargar, codigoCargaTabulacion;
+    public String codigoCargar, codigoCargaTabulacion, idTabulacionActualizar, num_id;
+    
 
     public boolean guardarTabulacion() {
         try {
@@ -44,6 +45,24 @@ public class Modelo_Evaluacion_Tabulacion {
             st = conexion.conectarBD().createStatement();
             String sql = "select id , caja_inspeccionada ,embalador, peso_neto, par4, par6, par8, impar5, impar7, total_gajos, pcmd_final from "
                     + " detalle_evaluacion_emp where id_evaluacion = '"+this.codigoCargaTabulacion+"'"
+                    
+                    + "order by id asc;";
+
+            rs = st.executeQuery(sql);
+
+            return rs;
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error en constultarTabulacion" + e);
+        }
+        return null;
+
+    }
+    public ResultSet seleccionIdTabulacion() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "select id , caja_inspeccionada ,embalador, peso_neto, par4, par6, par8, impar5, impar7, total_gajos, pcmd_final from "
+                    + " detalle_evaluacion_emp where id_evaluacion = '"+this.codigoCargaTabulacion+"' AND id = '"+this.num_id+"'"
                     
                     + "order by id asc;";
 
@@ -86,5 +105,26 @@ public class Modelo_Evaluacion_Tabulacion {
         }
         return null;
     }
+     public boolean actualizarTabulacion() {
+        try {
+            st = conexion.conectarBD().createStatement();
 
+            total_gajos = par4 + par6 + par8 + impar5 + impar7;
+
+            // (total defecto x 100) / total gajos  después 100-respuesta calculo anterior
+            String sql = "update detalle_evaluacion_emp set caja_inspeccionada='"+this.caja_inspeccionada+"', embalador='"+this.embalador+
+                    "', peso_neto='"+this.peso_neto+"', par4='"+this.par4+"', par6='"+this.par6
+                    +"', par8='"+this.par8+"', impar5='"+this.impar5+"', impar7='"+this.impar7+"', total_gajos='"+total_gajos+"' where id='"+this.idTabulacionActualizar+"';";
+
+            st.executeUpdate(sql);
+            st.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error en guardarTabulacion en modeloTabulacion. " + e);
+        }
+
+        return false;
+        
+
+    }
+     
 }

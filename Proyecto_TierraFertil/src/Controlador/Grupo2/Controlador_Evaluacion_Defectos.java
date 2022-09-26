@@ -24,6 +24,7 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
 
         this.vistaEvaluacion.jb_agregar_defecto.addMouseListener(this);
         this.vistaEvaluacion.jb_guardar_caja.addMouseListener(this);
+        this.vistaEvaluacion.lb_eliminar_defecto.addMouseListener(this);
 
     }
 
@@ -34,8 +35,18 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
 
         }
         if (e.getSource() == this.vistaEvaluacion.jb_guardar_caja) {
+
             guardadoPcmdFinal();
             limpiarDefectosTabulacion();
+
+        }
+        if (e.getSource() == this.vistaEvaluacion.lb_eliminar_defecto) {
+            int respuesta = JOptionPane.showConfirmDialog(vistaEvaluacion, "¿Desea eliminar el registro seleccionado?", "ATENCION", JOptionPane.ERROR_MESSAGE);
+
+            if (respuesta == 0) {
+                seleccionDefectoEliminar();
+
+            }
 
         }
     }
@@ -70,6 +81,7 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
         tabla.setRowCount(0);
         try {
             modeloEvaluacionDefectos.id_detalle = this.vistaEvaluacion.lb_id_tabulacion.getText();
+
             rs = modeloEvaluacionDefectos.consultarDefectos();
             String[] defectos = new String[4];
 
@@ -85,7 +97,6 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
                 });*/
 //                this.vistaEvaluacion.tabla_defectos.setRowHeight(40);
             }
-
         } catch (Exception e) {
             System.out.println("Error al llenar los datos de defectos. " + e);
         }
@@ -221,8 +232,25 @@ public class Controlador_Evaluacion_Defectos implements MouseListener {
         this.vistaEvaluacion.txt_par8.setText("");
         this.vistaEvaluacion.txt_inpar5.setText("");
         this.vistaEvaluacion.txt_inpar7.setText("");
+        mostrarDefectos();
 
     }
 
-   
+    public void seleccionDefectoEliminar() {
+        if (this.vistaEvaluacion.tabla_defectos.getSelectedRowCount() == 1) {
+            try {
+                int fila = this.vistaEvaluacion.tabla_defectos.getSelectedRow();
+
+                modeloEvaluacionDefectos.id_detalle_eliminar = this.vistaEvaluacion.tabla_defectos.getValueAt(fila, 0).toString();
+                modeloEvaluacionDefectos.eliminarDefectoPermanente();
+                mostrarDefectos();
+                JOptionPane.showMessageDialog(vistaEvaluacion, "Registro eliminado con exito.");
+
+            } catch (Exception ex) {
+                System.out.println("Error al seleccionar datos: " + ex);
+            }
+        }
+
+    }
+
 }

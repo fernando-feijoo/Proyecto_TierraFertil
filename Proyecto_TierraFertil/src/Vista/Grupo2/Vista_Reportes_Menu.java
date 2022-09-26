@@ -34,7 +34,7 @@ public class Vista_Reportes_Menu extends javax.swing.JInternalFrame {
         txt_buscar = new javax.swing.JTextField();
         jb_buscar = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabla_listado = new javax.swing.JTable();
+        tabla_reportes = new javax.swing.JTable();
         rdn_imprimir = new Recursos_Codigo.Redondeado();
         jb_actualizar = new javax.swing.JLabel();
 
@@ -81,7 +81,7 @@ public class Vista_Reportes_Menu extends javax.swing.JInternalFrame {
             .addComponent(jb_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        tabla_listado.setModel(new javax.swing.table.DefaultTableModel(
+        tabla_reportes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -92,7 +92,7 @@ public class Vista_Reportes_Menu extends javax.swing.JInternalFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(tabla_listado);
+        jScrollPane1.setViewportView(tabla_reportes);
 
         rdn_imprimir.setBackground(new java.awt.Color(51, 153, 0));
         rdn_imprimir.setRoundBottomLeft(20);
@@ -183,7 +183,7 @@ public class Vista_Reportes_Menu extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jb_buscar;
     public Recursos_Codigo.Redondeado rdn_buscar;
     public Recursos_Codigo.Redondeado rdn_imprimir;
-    public javax.swing.JTable tabla_listado;
+    public javax.swing.JTable tabla_reportes;
     public javax.swing.JLabel texto_inicio;
     public javax.swing.JTextField txt_buscar;
     // End of variables declaration//GEN-END:variables

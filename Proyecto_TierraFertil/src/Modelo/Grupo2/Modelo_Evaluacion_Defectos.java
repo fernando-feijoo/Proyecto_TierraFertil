@@ -12,7 +12,7 @@ public class Modelo_Evaluacion_Defectos {
     ResultSet rs;
     Statement st;
 
-    public String nombre, pcmd, codigoCargar2, id_detalle, codigoCargaTabulacionFinal;
+    public String nombre, pcmd, codigoCargar2, id_detalle, codigoCargaTabulacionFinal, id_detalle_eliminar;
     public int id_defecto, total_defectos;
     public int id_calculo;
     public int pcmd_total;
@@ -109,6 +109,18 @@ public class Modelo_Evaluacion_Defectos {
 
     }
 
-    
+    public boolean eliminarDefectoPermanente() {
+        try {
+            st = conexion.conectarBD().createStatement();
+            String sql = "delete from defectos_detalle_eva WHERE id='"+this.id_detalle_eliminar+"';";
+            st.executeUpdate(sql);
+            st.close();
+
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error en eliminar defecto " +e);
+        }
+        return true;
+    }
 
 }

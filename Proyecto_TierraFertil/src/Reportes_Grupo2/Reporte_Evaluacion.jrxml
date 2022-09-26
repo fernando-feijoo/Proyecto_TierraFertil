@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4df35390-d5ab-4216-9685-4f5d385d8977">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Data_Adapter\DataAdapter.jrdax"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="db8fe880-ea7f-4e70-adfe-aee7d9ce643c">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Data_Adapter\DataAdapter.jrdax"/>
+		<parameter name="parametroCodigo" class="java.lang.String"/>
+		<parameter name="Parameter1" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT detalle_evaluacion_emp.caja_inspeccionada,
+	detalle_evaluacion_emp.embalador,
+	detalle_evaluacion_emp.peso_neto,
+	detalle_evaluacion_emp.par4,
+	detalle_evaluacion_emp.par6,
+	detalle_evaluacion_emp.par8,
+	detalle_evaluacion_emp.impar5,
+	detalle_evaluacion_emp.impar7,
+	defectos_detalle_eva.nombre,
+	defectos_detalle_eva.total_defectos,
+	detalle_evaluacion_emp.total_gajos,
+	defectos_detalle_eva.pcmd,
+	detalle_evaluacion_emp.pcmd_final
+FROM defectos_detalle_eva
+	INNER JOIN detalle_evaluacion_emp ON 
+	 defectos_detalle_eva.id_detalle_ev = detalle_evaluacion_emp.id 
+	INNER JOIN evaluaciones_empacadora ON 
+	 evaluaciones_empacadora.id = detalle_evaluacion_emp.id_evaluacion 
+	 WHERE 
+	 evaluaciones_empacadora.codigo =    $P{parametroCodigo} 
+]]>
+		</queryString>
+		<field name="caja_inspeccionada" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="caja_inspeccionada"/>
+			<property name="com.jaspersoft.studio.field.label" value="caja_inspeccionada"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="embalador" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="embalador"/>
+			<property name="com.jaspersoft.studio.field.label" value="embalador"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="peso_neto" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.name" value="peso_neto"/>
+			<property name="com.jaspersoft.studio.field.label" value="peso_neto"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="par4" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="par4"/>
+			<property name="com.jaspersoft.studio.field.label" value="par4"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="par6" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="par6"/>
+			<property name="com.jaspersoft.studio.field.label" value="par6"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="par8" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="par8"/>
+			<property name="com.jaspersoft.studio.field.label" value="par8"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="impar5" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="impar5"/>
+			<property name="com.jaspersoft.studio.field.label" value="impar5"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="impar7" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="impar7"/>
+			<property name="com.jaspersoft.studio.field.label" value="impar7"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="defectos_detalle_eva"/>
+		</field>
+		<field name="total_defectos" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="total_defectos"/>
+			<property name="com.jaspersoft.studio.field.label" value="total_defectos"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="defectos_detalle_eva"/>
+		</field>
+		<field name="total_gajos" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="total_gajos"/>
+			<property name="com.jaspersoft.studio.field.label" value="total_gajos"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<field name="pcmd" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="pcmd"/>
+			<property name="com.jaspersoft.studio.field.label" value="pcmd"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="defectos_detalle_eva"/>
+		</field>
+		<field name="pcmd_final" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="pcmd_final"/>
+			<property name="com.jaspersoft.studio.field.label" value="pcmd_final"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="detalle_evaluacion_emp"/>
+		</field>
+		<group name="caja_inspeccionada">
+			<groupExpression><![CDATA[$F{caja_inspeccionada}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="parametro_codigo" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT estado_act_inac,
+	observaciones,
+	fumigacion,
+	transporte,
+	calibracion,
+	l_dedos,
+	destino,
+	peso,
+	tipo_caja,
+	vapor,
+	pdo,
+	finca,
+	fecha,
+	codigo,
+	id_semana,
+	id_semana,
+	codigo,
+	fecha,
+	finca,
+	pdo,
+	tipo_caja,
+	vapor,
+	peso,
+	destino,
+	l_dedos,
+	calibracion,
+	fumigacion,
+	transporte,
+	observaciones,
+	estado_act_inac,
+	id_semana,
+	codigo,
+	fecha,
+	finca,
+	pdo,
+	vapor,
+	tipo_caja,
+	peso,
+	destino,
+	l_dedos,
+	calibracion,
+	fumigacion,
+	transporte,
+	observaciones,
+	estado_act_inac
+FROM evaluaciones_empacadora
+WHERE 
+	 evaluaciones_empacadora.codigo =  $P{parametro_codigo} ]]>
+	</queryString>
+	<field name="observaciones" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="observaciones"/>
+		<property name="com.jaspersoft.studio.field.label" value="observaciones"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="fumigacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fumigacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="fumigacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="transporte" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="transporte"/>
+		<property name="com.jaspersoft.studio.field.label" value="transporte"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="calibracion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="calibracion"/>
+		<property name="com.jaspersoft.studio.field.label" value="calibracion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="l_dedos" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="l_dedos"/>
+		<property name="com.jaspersoft.studio.field.label" value="l_dedos"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="destino" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="destino"/>
+		<property name="com.jaspersoft.studio.field.label" value="destino"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="peso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="peso"/>
+		<property name="com.jaspersoft.studio.field.label" value="peso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="tipo_caja" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo_caja"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo_caja"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="vapor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vapor"/>
+		<property name="com.jaspersoft.studio.field.label" value="vapor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="pdo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pdo"/>
+		<property name="com.jaspersoft.studio.field.label" value="pdo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="finca" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="finca"/>
+		<property name="com.jaspersoft.studio.field.label" value="finca"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="codigo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<field name="id_semana" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_semana"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_semana"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="evaluaciones_empacadora"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="540" splitType="Stretch">
+			<staticText>
+				<reportElement x="92" y="32" width="44" height="20" uuid="100326f9-e4cd-4c62-826a-71e4abd3bfdf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71ec5b01-54e5-4fca-9cd2-9403e481420f"/>
+				</reportElement>
+				<text><![CDATA[Semana:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="136" y="32" width="50" height="20" uuid="de94a4d8-c417-42ae-8cf1-c90bd70e9b52">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71ec5b01-54e5-4fca-9cd2-9403e481420f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id_semana}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="32" width="36" height="20" uuid="9c107fc8-9323-495e-8ec9-3ea579c4dc29">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66efdb3d-e667-43a1-8362-3ccf4169068f"/>
+				</reportElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="32" width="66" height="20" uuid="60bcf3a5-dc0a-41d7-88da-6bd765deec34">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66efdb3d-e667-43a1-8362-3ccf4169068f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="187" y="32" width="24" height="20" uuid="55f072ac-b6f0-4a88-a668-ecde475b830c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6963a711-4db9-49ba-b59b-89ee2071ea31"/>
+				</reportElement>
+				<text><![CDATA[Pdo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="32" width="26" height="20" uuid="262b965f-4812-4ed9-8176-6b87f72cbe3d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a47d2ead-5401-42e9-88b7-7faface4bebb"/>
+				</reportElement>
+				<text><![CDATA[Peso:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="32" width="50" height="20" uuid="502e76c0-a7e5-4af9-8b4c-bd6e5168c0ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af0d1cd7-218a-4e61-ab3c-4afcc131b32b"/>
+				</reportElement>
+				<text><![CDATA[Tipo Caja:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="32" width="34" height="20" uuid="2b3908d0-5c4f-4fb1-a915-5a3cfdd9a9cb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c6004bf0-5fb5-4685-bad6-aee58ef2e74d"/>
+				</reportElement>
+				<text><![CDATA[Vapor:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="211" y="32" width="58" height="20" uuid="de453924-99c4-44b9-9a95-c12376734024">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6963a711-4db9-49ba-b59b-89ee2071ea31"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pdo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="32" width="64" height="20" uuid="60d52658-a389-4ec5-943a-26c2b793d54f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c6004bf0-5fb5-4685-bad6-aee58ef2e74d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{vapor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="32" width="70" height="20" uuid="f8b2ab70-07e3-496a-92f7-74a7bc5fa18c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af0d1cd7-218a-4e61-ab3c-4afcc131b32b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_caja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="32" width="54" height="20" uuid="9cee9f29-df0b-4e1f-9a50-ead88d43ddac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a47d2ead-5401-42e9-88b7-7faface4bebb"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{peso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="52" width="38" height="20" uuid="0163a08f-8305-478b-9d40-54199209b737">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa8b5eb6-82be-4319-905c-48b611ec2edb"/>
+				</reportElement>
+				<text><![CDATA[Destino:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="37" y="52" width="50" height="20" uuid="793c17ae-e8de-452f-91b1-52c82c4a70fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa8b5eb6-82be-4319-905c-48b611ec2edb"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{destino}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="117" y="52" width="50" height="20" uuid="0d86990d-a779-4520-9beb-f1e59cb7921d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="94658b78-6c52-4d85-9014-41a2618f4f02"/>
+				</reportElement>
+				<text><![CDATA[L.Dedos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="167" y="52" width="50" height="20" uuid="1cd312fb-1763-4046-b54c-0c6b3efff222">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="94658b78-6c52-4d85-9014-41a2618f4f02"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{l_dedos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="52" width="60" height="20" uuid="d360daf1-28c7-4b9f-ae34-2580763ea4d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d740cf62-b0c5-4318-ae91-cd35e532cb6a"/>
+				</reportElement>
+				<text><![CDATA[Calibracion:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="52" width="80" height="20" uuid="13c5bc32-0ee2-4868-afdc-dc39dad6c2b8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d740cf62-b0c5-4318-ae91-cd35e532cb6a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{calibracion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="386" y="52" width="60" height="20" uuid="8b4642b7-ddae-415a-8665-c68a5fa50924">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3312a092-770c-4037-87d0-dbb96bd5440e"/>
+				</reportElement>
+				<text><![CDATA[Fumigacion:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="446" y="52" width="80" height="20" uuid="7eef8c42-f8cd-4807-80d0-289580ef9aa9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3312a092-770c-4037-87d0-dbb96bd5440e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fumigacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="86" width="50" height="20" uuid="5a894068-5845-4566-b31f-d9a027631474">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72c842b1-20f2-41a6-a61b-5522c85f5803"/>
+				</reportElement>
+				<text><![CDATA[Transporte:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="86" width="30" height="20" uuid="0d08c536-323f-4dd6-ba6c-afb073e65003">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4398421c-de99-464f-9a13-ef7c376ed866"/>
+				</reportElement>
+				<text><![CDATA[Finca:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="86" width="40" height="20" uuid="462b2c84-487d-4338-a60e-228fca77eb0d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="54a167ff-241c-4687-9ffc-c5998becbba5"/>
+				</reportElement>
+				<text><![CDATA[Codigo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="86" width="80" height="20" uuid="e8acfbeb-e75e-4fc8-9452-5db75e48eb06">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72c842b1-20f2-41a6-a61b-5522c85f5803"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{transporte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="86" width="80" height="20" uuid="42737193-829c-4d8e-988e-20d0c9292a70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4398421c-de99-464f-9a13-ef7c376ed866"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{finca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="86" width="48" height="20" uuid="8f2d6919-49fa-42c5-af0e-90b59b2fcee8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="54a167ff-241c-4687-9ffc-c5998becbba5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="127" y="87" width="100" height="21" uuid="fc7c133f-18e5-4e6c-bd89-9a0e9236ec34"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[% Gajeo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="5" width="348" height="24" uuid="0b222099-d163-4b1d-a3a1-a73cdf4491ec"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Evaluacion de PCMS en Planta Empacadora]]></text>
+			</staticText>
+			<line>
+				<reportElement x="408" y="98" width="48" height="1" uuid="ac25cef6-15d6-4c4d-bc34-a54e29bee215"/>
+			</line>
+			<line>
+				<reportElement x="299" y="44" width="65" height="1" uuid="1b321fe4-0ffa-451f-b0aa-515b255805f4"/>
+			</line>
+			<line>
+				<reportElement x="298" y="64" width="81" height="1" uuid="793aa4ca-2140-4d6d-86a7-1fe644e0ed4a"/>
+			</line>
+			<line>
+				<reportElement x="487" y="98" width="79" height="1" uuid="42e35657-042e-4860-9a5d-351f92c5fc68"/>
+			</line>
+			<line>
+				<reportElement x="290" y="98" width="79" height="1" uuid="5e9dd0b3-7c64-41a9-962e-6be6e77d0068"/>
+			</line>
+			<line>
+				<reportElement x="444" y="64" width="79" height="1" uuid="8cdf3855-9abf-4265-9cdf-fcc963b8d2fe"/>
+			</line>
+			<line>
+				<reportElement x="512" y="44" width="48" height="1" uuid="048067b2-5ed9-45ef-a26c-c4d604db68f9"/>
+			</line>
+			<line>
+				<reportElement x="416" y="44" width="69" height="1" uuid="09e5f9e5-50b2-4081-a1d9-a57f4bf671aa"/>
+			</line>
+			<line>
+				<reportElement x="208" y="44" width="59" height="1" uuid="dea22dcf-88f9-44c8-b791-63a54bf36d88"/>
+			</line>
+			<line>
+				<reportElement x="164" y="63" width="59" height="1" uuid="7607c65f-997a-4c1d-9127-89cf1515106c"/>
+			</line>
+			<line>
+				<reportElement x="134" y="43" width="49" height="1" uuid="e03b873d-db51-4a18-b337-33b1e645651c"/>
+			</line>
+			<line>
+				<reportElement x="22" y="44" width="63" height="1" uuid="0e5b366f-fcb4-4116-9de2-0f5141c8e4b9"/>
+			</line>
+			<line>
+				<reportElement x="36" y="64" width="49" height="1" uuid="a0a78ece-7537-4f34-b018-e501e5422819"/>
+			</line>
+			<componentElement>
+				<reportElement x="25" y="168" width="460" height="40" uuid="bbac15fd-6d40-49eb-9513-31800ac331d8">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="5307d99e-dedd-4923-8ac0-7a46c961c7cd">
+						<datasetParameter name="parametroCodigo">
+							<datasetParameterExpression><![CDATA[$P{parametro_codigo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="39" uuid="10048158-c023-4bdf-8376-fd0c61cc1ee4">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="39" height="30" uuid="92b6a444-352a-4a7d-93bb-6a1556ab1246"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{caja_inspeccionada}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="31" uuid="f16faa92-dab9-4f04-9bf1-6dfcc632a844">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="31" height="30" uuid="366afb32-8b4c-4d67-8474-7e84a6c8647f"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{embalador}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="30" uuid="e95dc8cb-24c0-4d7e-bf73-b722222e1d2b">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="30" uuid="e972e19f-7f47-4a0f-862b-aa087cc5391c"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{peso_neto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="20" uuid="5e9b1cac-0b59-4a82-9578-a47ef457fe7d">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="20" height="30" uuid="ced0f7b8-8305-4d16-978b-5aab7cf19082"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{par4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="20" uuid="a2687cfd-aec7-4406-868d-7cbbaa3b908c">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="20" height="30" uuid="0d16a05e-d567-47e2-ba38-c054f36d719b"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{par6}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="20" uuid="0b377d89-a4b9-41bd-8712-aa88b30e864d">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="20" height="30" uuid="6a3bcda6-f4e2-405a-9e4a-cd949e9c0d5d"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{par8}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="20" uuid="f6e3a01a-b416-413a-8659-82f481991467">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="20" height="30" uuid="3eb12184-9faf-4f93-938a-dc99b66db3e1"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{impar5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="20" uuid="e10261e1-9bf8-48da-8eac-1c9b67b138e9">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="20" height="30" uuid="9ca5beed-73ae-479b-b932-c3c559ec6840"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{impar7}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="103" uuid="d7718965-af91-4ba7-b2e6-5046023b0c04">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="103" height="30" uuid="904d0516-8797-4b33-8fff-db039a0af673"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="37" uuid="ec3d0b83-d7a1-4547-8789-47a16846d993">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="37" height="30" uuid="8205af4c-356f-4725-9d3b-508dac9de2ea"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total_defectos}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="39" uuid="c9fa93e1-d6df-487e-be67-497e1fb1ec26">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="39" height="30" uuid="4b16d26c-3de9-4f50-94f1-16d83c5a7f21"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total_gajos}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="41" uuid="a40aa577-384c-4ca1-a363-1e4ba41f4ed7">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="41" height="30" uuid="f8d31d11-0f8e-4ba5-b1c2-0066a3283e25"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pcmd}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="39" uuid="1ff84067-5fcf-43a0-9b75-1a739c2f396f">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="39" height="30" uuid="4cdbf417-137e-4821-9ee9-092b7d302d2d"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pcmd_final}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<line>
+				<reportElement x="328" y="141" width="1" height="27" uuid="634774a4-4b73-465b-9a23-cc9a3481dbce"/>
+			</line>
+			<staticText>
+				<reportElement x="165" y="140" width="20" height="28" uuid="06f7616f-dde3-4135-92b1-e90204fea9b3"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="140" width="102" height="28" uuid="70712663-f8e0-480d-8fd2-714e716e8c5e"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Defectos Encontrados]]></text>
+			</staticText>
+			<line>
+				<reportElement x="225" y="141" width="1" height="27" uuid="27ba8a78-3ac0-4ca3-8029-a404932d0569"/>
+			</line>
+			<line>
+				<reportElement x="95" y="141" width="1" height="27" uuid="67761d4c-37a8-47da-bc04-9f3421e0718f"/>
+			</line>
+			<staticText>
+				<reportElement x="126" y="111" width="60" height="30" uuid="b94d6b29-9de0-465e-9e5e-a334a64877a4"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total      Pares]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="140" width="32" height="28" uuid="9e063239-2d12-44f9-8e65-6a5106113333"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Caja Insp.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="165" y="141" width="1" height="27" uuid="2055a911-3308-4a4c-a468-ba7178ff2b17"/>
+			</line>
+			<line>
+				<reportElement x="145" y="141" width="1" height="27" uuid="c615c140-03ab-451b-a63e-81c8c0a3615f"/>
+			</line>
+			<staticText>
+				<reportElement x="145" y="140" width="20" height="28" uuid="314839ae-372d-4aed-800f-d77e4280a697"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<line>
+				<reportElement x="205" y="141" width="1" height="27" uuid="cdc97950-556b-4dbb-af72-8402a28b600e"/>
+			</line>
+			<line>
+				<reportElement x="185" y="141" width="1" height="27" uuid="4782f22a-8760-4627-ae77-a3573c1a8613"/>
+			</line>
+			<line>
+				<reportElement x="64" y="141" width="1" height="27" uuid="2234dd23-2f16-4d89-b5ba-9fcf1f66c5b0"/>
+			</line>
+			<line>
+				<reportElement x="365" y="140" width="1" height="28" uuid="82d1d545-6f5f-4b7e-9156-db2264667f2e"/>
+			</line>
+			<line>
+				<reportElement x="125" y="141" width="1" height="27" uuid="312d4462-b67a-46a7-b108-e2870371165e"/>
+			</line>
+			<staticText>
+				<reportElement x="185" y="140" width="20" height="28" uuid="6236a2d1-46f1-4fba-b834-1cd4823946ba"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="140" width="31" height="28" uuid="11354d7a-a6c2-442c-a800-b5effb3cb5b7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Peso Neto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="140" width="19" height="28" uuid="0580e59b-0712-4a70-b110-9e8fc19384c3"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<line>
+				<reportElement x="404" y="140" width="1" height="28" uuid="ecd2098b-49b6-4f96-a14c-47f156f41243"/>
+			</line>
+			<staticText>
+				<reportElement x="368" y="140" width="34" height="28" uuid="0bf54d0b-f987-45b6-b68b-3b30d5c22e3a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Gajos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="445" y="140" width="1" height="28" uuid="e439df13-cc10-4378-b058-0e8d66695c37"/>
+			</line>
+			<staticText>
+				<reportElement x="205" y="140" width="21" height="28" uuid="86de6d89-789e-484c-8229-9a3a7be16400"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="140" width="34" height="28" uuid="27229d13-e5e8-4d8d-8790-9142d034c021"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[% PCMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="140" width="36" height="28" uuid="c06789e6-030f-4375-a911-39eeb28bfb12"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Defectos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="140" width="32" height="28" uuid="11a689c0-ab7c-414d-92d7-d05cc0df71ba"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Emba-lador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="140" width="34" height="28" uuid="9c85cdfb-c0d0-4c12-91fe-ebd1b787e89c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[X PCMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="111" width="40" height="30" uuid="ac6ad8b3-0f38-4851-b167-37479a642b0c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Impares]]></text>
+			</staticText>
+			<line>
+				<reportElement x="27" y="141" width="458" height="1" uuid="f256d3a5-62e1-41d1-afba-848afe20ca1f"/>
+			</line>
+			<line>
+				<reportElement x="25" y="141" width="1" height="27" uuid="e53700f5-3b41-406c-881b-4e57004a8d49"/>
+			</line>
+			<line>
+				<reportElement x="484" y="141" width="1" height="28" uuid="16fcba4f-50f2-437f-b309-449c79d75cd9"/>
+			</line>
+		</band>
+		<band height="2"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="452" height="30" uuid="7bc61d40-2af2-467c-a7e9-3ab94585ceea"/>
+				<textFieldExpression><![CDATA[$F{observaciones}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="0" width="80" height="30" uuid="3a514f1f-149b-47ee-8f77-9ca05254125e"/>
+				<text><![CDATA[Observaciones:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="87" y="25" width="457" height="1" uuid="63361adf-6a87-49ac-949a-d96723e5ffc5"/>
+			</line>
+			<line>
+				<reportElement x="-10" y="40" width="578" height="1" uuid="d0d27eb4-ca84-49da-bc07-f3b0d6fe33a2"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

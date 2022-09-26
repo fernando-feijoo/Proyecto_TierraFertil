@@ -114,13 +114,12 @@ public class Controlador_Obtener_Reportes implements MouseListener {
                 JasperPrint jprint = null;
                 HashMap<String, Object> param = new HashMap<String, Object>();
                 param.put("OBS_GENERAL", this.parametro);
-                param.put("subReporteUno", "/C:\\Users\\User\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Reporte_Principal\\datosLlegada.jasper");
-                param.put("subReporteDos", "/C:\\Users\\User\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Reporte_Principal\\Inspeccion.jasper");
-                param.put("subReporteTres", "/C:\\Users\\User\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Reporte_Principal\\Higiene.jasper");
-                param.put("subReporteTresObs", "/C:\\Users\\User\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Reporte_Principal\\Observacion_Higiene.jasper");
-                param.put("subReporteCuatro", "/C:\\Users\\User\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Reporte_Principal\\Despacho.jasper");
-//                param.put("subReporteCinco", "/C:\\Users\\User\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Reporte_Principal\\ControlPalet.jasper");
-                param.put("subReporteCinco", "/C:\\Users\\User\\Documents\\Git\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\src\\Reportes\\Grupo3\\ControlPalet.jasper");
+                param.put("subReporteUno", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\datosLlegada.jasper");
+                param.put("subReporteDos", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Inspeccion.jasper");
+                param.put("subReporteTres", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Higiene.jasper");
+                param.put("subReporteTresObs", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Observacion_Higiene.jasper");
+                param.put("subReporteCuatro", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Despacho.jasper");
+                param.put("subReporteCinco", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\ControlPalet.jasper");
                 reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes/Grupo3/Reporte.jasper"));
                 jprint = JasperFillManager.fillReport(reporte, param, modeloConexion.conectarBD());
                 if (jprint != null) {

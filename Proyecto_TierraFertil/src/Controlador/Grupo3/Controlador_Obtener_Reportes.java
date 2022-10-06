@@ -114,7 +114,8 @@ public class Controlador_Obtener_Reportes implements MouseListener {
                 JasperPrint jprint = null;
                 HashMap<String, Object> param = new HashMap<String, Object>();
                 param.put("OBS_GENERAL", this.parametro);
-                param.put("subReporteUno", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\datosLlegada.jasper");
+//                param.put("subReporteUno", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\datosLlegada.jasper");
+                param.put("subReporteUno", "Reportes\\Grupo3\\datosLlegada.jasper");
                 param.put("subReporteDos", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Inspeccion.jasper");
                 param.put("subReporteTres", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Higiene.jasper");
                 param.put("subReporteTresObs", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Observacion_Higiene.jasper");

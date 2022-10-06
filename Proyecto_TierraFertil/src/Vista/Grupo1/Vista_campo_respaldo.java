@@ -710,7 +710,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         jLabel186 = new javax.swing.JLabel();
         jPanel152 = new javax.swing.JPanel();
         jLabel187 = new javax.swing.JLabel();
-        jLabel189 = new javax.swing.JLabel();
         btn_guardar_se = new javax.swing.JButton();
         btn_sig_det_general1 = new javax.swing.JButton();
         jLabel157 = new javax.swing.JLabel();
@@ -8021,8 +8020,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
 
         jPanel150.add(jPanel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 20));
 
-        jLabel189.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/cu2.png"))); // NOI18N
-
         btn_guardar_se.setText("Guardar");
 
         btn_sig_det_general1.setText("Siguiente");
@@ -8039,8 +8036,7 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
                 .addGap(38, 38, 38)
                 .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(g1_sel_empLayout.createSequentialGroup()
-                        .addComponent(jLabel189)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(814, 814, 814)
                         .addComponent(btn_ok_sel_emp))
                     .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(g1_sel_empLayout.createSequentialGroup()
@@ -8074,10 +8070,8 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
         g1_sel_empLayout.setVerticalGroup(
             g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(g1_sel_empLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel189)
-                    .addComponent(btn_ok_sel_emp))
+                .addGap(97, 97, 97)
+                .addComponent(btn_ok_sel_emp)
                 .addGap(18, 18, 18)
                 .addGroup(g1_sel_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel144, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -11673,7 +11667,6 @@ public class Vista_campo_respaldo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel185;
     private javax.swing.JLabel jLabel186;
     private javax.swing.JLabel jLabel187;
-    private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;

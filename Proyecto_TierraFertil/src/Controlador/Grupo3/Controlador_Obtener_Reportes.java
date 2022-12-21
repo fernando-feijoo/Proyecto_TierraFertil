@@ -116,16 +116,17 @@ public class Controlador_Obtener_Reportes implements MouseListener {
                 param.put("OBS_GENERAL", this.parametro);
 //                param.put("subReporteUno", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\datosLlegada.jasper");
                 param.put("subReporteUno", "Reportes\\Grupo3\\datosLlegada.jasper");
-                param.put("subReporteDos", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Inspeccion.jasper");
-                param.put("subReporteTres", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Higiene.jasper");
-                param.put("subReporteTresObs", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Observacion_Higiene.jasper");
-                param.put("subReporteCuatro", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\Despacho.jasper");
-                param.put("subReporteCinco", "/C:\\Users\\USUARIO PC\\JaspersoftWorkspace\\Proyecto_TierraFertil\\Proyecto_TierraFertil\\Reporte_Principal\\ControlPalet.jasper");
+                param.put("subReporteDos", "Reportes\\Grupo3\\Inspeccion.jasper");
+                param.put("subReporteTres", "Reportes\\Grupo3\\Higiene.jasper");
+                param.put("subReporteTresObs", "Reportes\\Grupo3\\Observacion_Higiene.jasper");
+                param.put("subReporteCuatro", "Reportes\\Grupo3\\Despacho.jasper");
+                param.put("subReporteCinco", "Reportes\\Grupo3\\ControlPalet.jasper");
                 reporte = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes/Grupo3/Reporte.jasper"));
                 jprint = JasperFillManager.fillReport(reporte, param, modeloConexion.conectarBD());
                 if (jprint != null) {
-                    JasperViewer view = new JasperViewer(jprint);
-                    view.setVisible(true);
+                    JasperViewer view = new JasperViewer(jprint, false);
+//                    view.setVisible(true);
+                    view.show();
                 }
             } catch (Exception ex) {
                 System.out.println("Error: " + ex);

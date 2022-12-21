@@ -214,7 +214,7 @@ codigo =  $P{OBS_GENERAL}]]>
 			</staticText>
 			<image>
 				<reportElement x="9" y="3" width="50" height="50" uuid="caccab2f-3d78-4262-9684-d96c51826a4d"/>
-				<imageExpression><![CDATA["C:/Users/USUARIO PC/OneDrive/ISTJOL/3.- Tercer Semestre/Proyecto Vinculacion/Imagenes/Logo_tierra fertil.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:/Users/USUARIO PC/OneDrive/ISTJOL/0.- Semestres Pasados/3.- Tercer Semestre/Proyecto Vinculacion/Imagenes/Logo_tierra fertil.png"]]></imageExpression>
 			</image>
 		</band>
 	</title>
@@ -397,7 +397,7 @@ codigo =  $P{OBS_GENERAL}]]>
 			</line>
 			<image>
 				<reportElement x="330" y="135" width="219" height="145" uuid="d1748755-4a5d-45cd-8b41-8a04c697ac70"/>
-				<imageExpression><![CDATA["C:/Users/USUARIO PC/OneDrive/ISTJOL/3.- Tercer Semestre/Proyecto Vinculacion/Imagenes/contenedor.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:/Users/USUARIO PC/OneDrive/ISTJOL/0.- Semestres Pasados/3.- Tercer Semestre/Proyecto Vinculacion/Imagenes/contenedor.png"]]></imageExpression>
 			</image>
 			<line>
 				<reportElement x="553" y="100" width="1" height="210" uuid="176fafd8-c514-4039-b355-ff811ff99826"/>
